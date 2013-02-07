@@ -1,0 +1,130 @@
+﻿@model IEnumerable<Inbid.Models.vw_CompanyAdmins>
+
+
+@{
+    ViewBag.Title = "Company Admins";
+}
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")" type="text/javascript"></script>
+<link href="@Url.Content("~/Content/Account.css")" rel="stylesheet" type="text/css" />
+
+
+
+
+
+<script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $.ajaxSetup({ cache: false });
+
+            $(".deleteDialog").live("click", function (e) {
+                e.preventDefault();
+
+                $("<div></div>")
+                        .addClass("dialog")
+                         .attr("id", $(this)
+                        .attr("data-dialog-id"))
+                        .appendTo("body")
+                        .dialog({
+                            title: $(this).attr("data-dialog-title"),
+                            close: function () { $(this).remove() },
+                            modal: true
+                            //                        width: 500,
+                            //                        height: 450
+
+                        })
+                        .load(this.href);
+            });
+
+            $(".close").live("click", function (e) {
+                e.preventDefault();
+              
+                $(this).closest(".dialog").dialog("close");
+            });
+
+            $('#tbauctions tr td:not(.editRow)').click(function () {
+                var href = $(this).parent().attr("companyAdmin");
+                if (href)
+                    var url = '@Url.Action("Company","Account")?companyAdmin=' + href;
+                window.location = url;
+                    //window.location = 'Offer/index?auctionNumber=' + href;
+            });
+       
+
+        });
+       
+</script>
+
+@*@Html.ActionLink("Add Company Admin", "RegisterAdmin", "Account", null, new { @class = "openDialog", data_dialog_id = "registerDialog", data_dialog_title = "New Company Admin" })*@
+
+
+<h4>@ViewBag.Message</h4>
+<h4>@TempData["Message"]</h4>
+
+@Html.ActionLink("Add Company Admin", "RegisterAdmin", "Account")
+<br ></br>
+
+<table id="tbauctions">
+    <tr>
+         <th>
+            User Name
+        </th>
+         <th>
+            Company Name
+        </th>
+        <th>
+            FirstName
+        </th>
+        <th>
+            LastName
+        </th>
+        <th>
+            Email
+        </th>      
+        <th>
+            Phone
+        </th>
+        <th>
+            Aktywny
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr id="@item.Name" companyAdmin="@item.UserName">
+        <td >
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsApproved)
+        </td>
+        <td class="editRow">
+            @Html.ActionLink("Edit", "EditCompanyAdmin", new { id = item.UserName }) |
+            @Html.ActionLink("Details", "Details", new { companyAdmin = item.UserName }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.UserName }/*, new { @class = "deleteDialog", data_dialog_id = "delDialog", data_dialog_title = "Delete" }*/)
+        </td>
+    </tr>
+}
+
+</table>
+@*@Html.Partial("_ComAdminsPagination")*@

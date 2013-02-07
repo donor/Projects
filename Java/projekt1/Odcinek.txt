@@ -1,0 +1,24 @@
+package projekt1;
+
+class Odcinek
+{
+  private Punkt pt1;
+  private Punkt pt2;
+
+  Odcinek(int x1, int y1, int x2, int y2) //konstruktor
+  {
+    pt1 = new Punkt(x1,y1);
+    pt2 = new Punkt(x2,y2);
+  }
+
+  Odcinek(Punkt pt1, Punkt pt2) //konstruktor
+  {
+    this.pt1 = pt1;
+    this.pt2 = pt2;
+  }
+
+  public double dlugosc()
+  {
+    return pt1.odleglosc(pt2);
+  }
+}

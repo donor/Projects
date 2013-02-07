@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BazaRezerwacjeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="BazaRezerwacjeModelStoreContainer">
+    <EntitySet Name="Imprezy" EntityType="BazaRezerwacjeModel.Store.Imprezy" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Klienci" EntityType="BazaRezerwacjeModel.Store.Klienci" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Koszyk" EntityType="BazaRezerwacjeModel.Store.Koszyk" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="BazaRezerwacjeModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Klienci_Imprezy" Association="BazaRezerwacjeModel.Store.FK_Klienci_Imprezy">
+      <End Role="Imprezy" EntitySet="Imprezy" />
+      <End Role="Klienci" EntitySet="Klienci" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Koszyk_Imprezy" Association="BazaRezerwacjeModel.Store.FK_Koszyk_Imprezy">
+      <End Role="Imprezy" EntitySet="Imprezy" />
+      <End Role="Koszyk" EntitySet="Koszyk" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Imprezy">
+    <Key>
+      <PropertyRef Name="idImprezy" />
+    </Key>
+    <Property Name="idImprezy" Type="int" Nullable="false" />
+    <Property Name="nazwa" Type="varchar" MaxLength="50" />
+    <Property Name="data" Type="smalldatetime" />
+    <Property Name="miejsce" Type="varchar" MaxLength="50" />
+    <Property Name="cenaPodstawowa" Type="varchar" MaxLength="50" />
+    <Property Name="liczbaBiletów" Type="nchar" MaxLength="10" />
+    <Property Name="obrazek" Type="varchar" MaxLength="50" />
+    <Property Name="szczegoly" Type="text" />
+  </EntityType>
+  <EntityType Name="Klienci">
+    <Key>
+      <PropertyRef Name="IdKlienta" />
+    </Key>
+    <Property Name="IdKlienta" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="wiek" Type="int" />
+    <Property Name="idImprezy" Type="int" />
+  </EntityType>
+  <EntityType Name="Koszyk">
+    <Key>
+      <PropertyRef Name="RekordID" />
+    </Key>
+    <Property Name="RekordID" Type="int" Nullable="false" />
+    <Property Name="KoszykID" Type="int" />
+    <Property Name="Ilosc" Type="int" />
+    <Property Name="ImprezaID" Type="int" />
+    <Property Name="DataUtworzenia" Type="datetime" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Klienci_Imprezy">
+    <End Role="Imprezy" Type="BazaRezerwacjeModel.Store.Imprezy" Multiplicity="0..1" />
+    <End Role="Klienci" Type="BazaRezerwacjeModel.Store.Klienci" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Imprezy">
+        <PropertyRef Name="idImprezy" />
+      </Principal>
+      <Dependent Role="Klienci">
+        <PropertyRef Name="idImprezy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Koszyk_Imprezy">
+    <End Role="Imprezy" Type="BazaRezerwacjeModel.Store.Imprezy" Multiplicity="0..1" />
+    <End Role="Koszyk" Type="BazaRezerwacjeModel.Store.Koszyk" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Imprezy">
+        <PropertyRef Name="idImprezy" />
+      </Principal>
+      <Dependent Role="Koszyk">
+        <PropertyRef Name="Ilosc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>

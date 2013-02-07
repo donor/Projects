@@ -1,0 +1,165 @@
+﻿@using Resources
+@model IEnumerable<Inbid.Models.Auction>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";     
+    
+}
+<link href="@Url.Content("~/Content/Auction.css")" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $.ajaxSetup({ cache: false });
+
+        $(".openDialog").live("click", function (e) {
+            e.preventDefault();
+
+            $("<div></div>")
+                    .addClass("dialog")
+                    .appendTo("body")
+                    .dialog({
+                        title: $(this).attr("data-dialog-title"),
+                        close: function () { $(this).remove() },
+                        modal: true,
+                        width: 500,
+                        height: 600
+
+                    })
+                    .load(this.href);
+        });
+
+        $(".close").live("click", function (e) {
+            e.preventDefault();
+            $(this).closest(".dialog").dialog("close");
+        });
+
+        $('#tbauctions tr td:not(.editRow)').click(function () {
+            var href = $(this).parent().attr("id");
+            if (href)
+            //window.location = 'Offer/index?auctionNumber=' + href;
+                var url = '@Url.Action("Index","Offer")?auctionNumber=' + href;
+            window.location = url;
+        });
+
+
+    });
+
+//    function openPopup() {
+//        $("#customerdetails2").dialog("open");
+//    }   
+</script>
+
+<div id="customerdetails2" ></div>
+
+
+@using (Html.BeginForm() ) {
+      <fieldset id="searcher">
+   
+        <strong>
+            Search
+        </strong>
+        <span>        
+            @Html.TextBox("q")
+        </span>
+        <input id ="btnSearch"name="q" type="submit" value="" />
+            
+     
+    </fieldset>
+}
+
+@Html.Partial("_Auctions")
+
+@*
+
+
+
+
+@if (Model.Count() > 0)
+{
+<table id="tbauctions">
+    <tr>
+        <th>
+            ID
+        </th>
+      <th>
+            Nazwa
+        </th>
+         <th>
+            Początek aukcji
+        </th>   
+        <th>
+           Status
+        </th>
+         <th>
+            Koniec aukcji
+        </th>
+        <th>
+         
+        </th>     
+    </tr>
+
+@foreach (var item in Model)
+{
+    
+    <tr id="@item.AuctionId">
+    
+        <td >
+            @Html.DisplayFor(m => item.AuctionNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(m => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(m => item.StartTime, "DateWithoutSec")
+        </td>
+       
+        <td>
+            @if (item.StartTime > System.DateTime.Now)
+            {
+                @:Nie rozpoczęta
+            }
+            else if (item.EndTime < System.DateTime.Now)
+            {
+                @:Zakończona   
+            }
+            else if ((item.EnableDisable == true) && (item.StartTime < System.DateTime.Now) && (item.EndTime > System.DateTime.Now))
+            {
+                @:Trwa
+            }
+            else if ((item.EnableDisable == false) && (item.StartTime < System.DateTime.Now) && (item.EndTime > System.DateTime.Now))
+            {
+                @:Zawieszona             
+            }
+         
+        </td>
+         <td>
+            @Html.DisplayFor(m => item.EndTime, "DateWithoutSec")
+        </td>
+        
+          
+
+        
+        
+        <td class="editRow">
+            @if ((Request.IsAuthenticated) && (Roles.IsUserInRole(User.Identity.Name, @"SuperAdmin") || item.IsHostedBy()))
+            {
+                @Html.ActionLink("Edit", "Edit", new { id = item.AuctionId })@:               
+                @Html.ActionLink("Details", "_Details", "Auction", new { id = item.AuctionId }, new { @class = "openDialog", data_dialog_title = "Details" })@:                
+                @Html.ActionLink(Resources.Delete, "Delete", new { id = item.AuctionId })
+            }
+        </td>
+      
+    </tr>
+}
+
+</table>
+    
+
+}
+else
+{
+<p>Brak Aukcji</p>
+}*@

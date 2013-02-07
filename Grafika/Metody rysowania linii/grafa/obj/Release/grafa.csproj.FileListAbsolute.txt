@@ -1,0 +1,16 @@
+D:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\bin\Release\grafa.exe
+D:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\bin\Release\grafa.pdb
+D:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Release\ResolveAssemblyReference.cache
+D:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Release\grafa.MainWindow.resources
+D:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Release\grafa.Properties.Resources.resources
+D:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Release\grafa.csproj.GenerateResource.Cache
+D:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Release\grafa.exe
+D:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Release\grafa.pdb
+F:\grafa\grafa\bin\Release\grafa.exe
+F:\grafa\grafa\bin\Release\grafa.pdb
+F:\grafa\grafa\obj\Release\ResolveAssemblyReference.cache
+F:\grafa\grafa\obj\Release\grafa.MainWindow.resources
+F:\grafa\grafa\obj\Release\grafa.Properties.Resources.resources
+F:\grafa\grafa\obj\Release\grafa.csproj.GenerateResource.Cache
+F:\grafa\grafa\obj\Release\grafa.exe
+F:\grafa\grafa\obj\Release\grafa.pdb

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <customers>
+    <customer>
+      <customerid>1111</customerid>
+      <companyname>seaneerrt</companyname>
+      <city>kielce</city>
+    </customer>
+    <customer>
+      <customerid>1112</customerid>
+      <companyname>tom </companyname>
+      <city>kielce</city>
+    </customer>
+    <customer>
+      <customerid>1113</customerid>
+      <companyname>tomer </companyname>
+      <city>kielce</city>
+    </customer>
+    <customer>
+      <customerid>111</customerid>
+      <companyname>iner </companyname>
+      <city>krakow</city>
+    </customer>
+    <customer>
+      <customerid>10</customerid>
+      <companyname>firma</companyname>
+      <city>krakow</city>
+    </customer>
+    <customer>
+      <customerid>10</customerid>
+      <companyname>null</companyname>
+      <city>krakow</city>
+    </customer>
+  </customers>
+  <orders>
+    <order>
+      <orderid>1</orderid>
+      <price>15</price>
+    </order>
+    <order>
+      <orderid>2</orderid>
+      <price>13</price>
+    </order>
+    <order>
+      <orderid>5</orderid>
+      <price>5</price>
+    </order>
+  </orders>
+  <!--Deklaracje typów-->
+  <Types>
+    <customers>
+      <strings>
+        <string>companyname</string>
+        <string>city</string>
+      </strings>
+      <numbers>
+        <number>customerid</number>
+      </numbers>
+    </customers>
+    <orders>
+      <strings>
+      </strings>
+      <numbers>
+        <number>orderid</number>
+        <number>price</number>
+      </numbers>
+    </orders>
+  </Types>
+</root>

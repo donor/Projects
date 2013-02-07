@@ -1,0 +1,24 @@
+﻿@model Inbid.Models.aspnet_Users
+@using Resources
+
+
+
+
+
+<div>
+	<p>Potwierdź usunięcie <strong>@Model.UserName</strong>.     
+
+    @if (Roles.IsUserInRole(Model.UserName,@"Bidder"))
+    {
+    <p> Spowoduje to usuniecie  ofert stworzynych przez tego Biddera.</p>
+     }
+     
+	
+</div>
+	
+@using (Html.BeginForm())
+{ 
+
+	<input name="confirmButton" type="submit" value="@Resources.Delete" />        
+
+}

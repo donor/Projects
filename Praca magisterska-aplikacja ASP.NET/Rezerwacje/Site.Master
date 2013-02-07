@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#"  Debug="true" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Rezerwacje.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 155px;
+        }
+        .style2
+        {
+            width: 132px;
+        }
+        .style3
+        {
+            width: 148px;
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title" style=" color:White; background-color:Black">
+                <h1 >
+                    <a href="Default.aspx"  style=" color:White" >Rezerwacje</a>
+                </h1>
+                <table align="right" 
+                    style="width: 360px; margin-top:-50px; margin-left:600px; margin-top:-40px; height: 50px;" >
+                    <tr>
+                        <td align="center" class="style2">
+                            
+                        <%--    <a href="~/Account/Login.aspx" >--%>
+                            
+                         <%--   "Account/Login.aspx--%>
+                            
+                           
+                            <asp:LoginView ID="MenuLoginView" runat="server" EnableViewState="false">
+                            <AnonymousTemplate>
+                       <%--     Zaloguj--%>
+                       [ <a href="/rezerwacje/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Zaloguj</a> ]
+                           
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                       <%--     Wyloguj--%>
+                        <a href="Default.aspx">Witaj <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!</a>
+                        [ <asp:LoginStatus  ID="HeadLoginStatus" 
+                    runat="server" LogoutAction="Redirect" LogoutText="Wyloguj" 
+                    LogoutPageUrl="/rezerwacje" onloggedout="HeadLoginStatus_LoggedOut"/>]
+                        </LoggedInTemplate>
+                            </asp:LoginView>
+                            </a>
+                        </td>
+                        <td class="style3" align="center">
+                                <%-- <a href="http://localhost//Account/Register.aspx" >Zarejestruj</a>--%>
+                                 <a href="/rezerwacje/Account/Register.aspx" >Zarejestruj</a>
+                                  <%--"Account/Register.aspx"--%>
+                        
+                        </td>
+                        <td class="style1" align="center">
+                           <a href="/rezerwacje/Account/ChangePassword.aspx" >Zmień hasło</a>
+                        </td>
+                    </tr>
+                    </table>
+                   
+            </div>
+            <div class="clear hideSkiplink" style="position:absolute; margin-top:55px; height:40px; " >
+                
+                  
+                <asp:Menu ID="NavigationMenu" runat="server" ForeColor="#CC3300" CssClass="menu"  
+                    EnableViewState="False" Orientation="Horizontal" 
+                    BackColor="#FFFFCC" DynamicHorizontalOffset="2" Font-Names="Verdana" Height="27px" 
+                    Font-Bold="True"
+                 DataSourceID="SiteMapDataSource1"  staticDisplayLevels="2" Font-Size="1em" 
+                     StaticSubMenuIndent="10px" BorderColor="#FFCC00" BorderWidth="2px" 
+                    Font-Underline="True" >
+                    <DynamicHoverStyle BackColor="#284E98" ForeColor="White" Font-Size="X-Large" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px"  />
+                    <DynamicMenuStyle BackColor="#B5C7DE" />
+                    <DynamicSelectedStyle BackColor="#507CD1" />
+               
+                    <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticSelectedStyle BackColor="#507CD1" />
+                </asp:Menu>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/Web.sitemap">
+                </asp:XmlDataSource>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright &copy; 2011 Rezerwacje</p>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EDS_Imprezy.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="EDS_ImprezyStoreContainer">
+    <EntitySet Name="Imprezy" EntityType="EDS_Imprezy.Store.Imprezy" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Imprezy">
+    <Key>
+      <PropertyRef Name="IdImprezy" />
+    </Key>
+    <Property Name="IdImprezy" Type="int" Nullable="false" />
+    <Property Name="nazwa" Type="varchar" MaxLength="50" />
+    <Property Name="data" Type="date" />
+    <Property Name="miejsce" Type="varchar" MaxLength="50" />
+    <Property Name="cenaPodstawowa" Type="varchar" MaxLength="50" />
+    <Property Name="liczbaBiletów" Type="nchar" MaxLength="10" />
+    <Property Name="obrazek" Type="varchar" MaxLength="50" />
+  </EntityType>
+</Schema>

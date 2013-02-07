@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <customers>
+    <customer>
+      <customerID>1111</customerID>
+      <companyName>Seaneerrt</companyName>
+      <city>NewYordddddddddddddde</city>
+    </customer>
+    <customer>
+      <customerID>1112</customerID>
+      <companyName>Tom </companyName>
+      <city>LosCos</city>
+    </customer>
+    <customer>
+      <customerID>1113</customerID>
+      <companyName>Tomer </companyName>
+      <city>Coser</city>
+    </customer>
+    <customer>
+      <customerID>111</customerID>
+      <companyName>Iner </companyName>
+      <city>Veril</city>
+    </customer>
+  </customers>
+  <orders>
+    <order>
+      <orderID>1</orderID>
+      <price>15</price>
+    </order>
+    <order>
+      <orderID>2</orderID>
+      <price>13</price>
+    </order>
+    <order>
+      <orderID>5</orderID>
+      <price>5</price>
+    </order>
+  </orders>
+  <!--Deklaracje typów-->
+  <Types>
+    <customers>
+      <strings>
+        <string>CompanyName</string>
+        <string>City</string>
+      </strings>
+        <numbers>
+          <number>CustomerID</number>
+        </numbers>
+     
+      </customers>
+    <orders>
+      <strings>
+        
+      </strings>
+      <numbers>
+        <number>OrderID</number>
+        <number>price</number>    
+      </numbers>
+    </orders>
+   
+  </Types>
+ </root>

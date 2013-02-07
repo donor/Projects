@@ -1,0 +1,21 @@
+﻿@model Inbid.Models.Auction
+@using Resources
+
+@{
+	ViewBag.Title = Resources.DeleteConfirmation + ": " + Model.Name;
+}
+
+<h2>
+	@Resources.DeleteConfirmation
+</h2>
+
+<div>
+	<p>@Resources.PleaseConfirmCancelDinner
+	<i> @Model.Name ? </i> </p>
+</div>
+	
+@using (Html.BeginForm()) { 
+
+	<input name="confirmButton" type="submit" value="@Resources.Delete" />        
+
+}

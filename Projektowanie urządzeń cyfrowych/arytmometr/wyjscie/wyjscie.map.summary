@@ -1,0 +1,15 @@
+Analysis & Synthesis Status : Successful - Wed Apr 28 21:23:11 2010
+Quartus II Version : 9.1 Build 304 01/25/2010 SP 1 SJ Web Edition
+Revision Name : wyjscie
+Top-level Entity Name : wyjscie
+Family : Stratix II
+Logic utilization : N/A
+    Combinational ALUTs : 8
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 25
+Total virtual pins : 0
+Total block memory bits : 0
+DSP block 9-bit elements : 0
+Total PLLs : 0
+Total DLLs : 0

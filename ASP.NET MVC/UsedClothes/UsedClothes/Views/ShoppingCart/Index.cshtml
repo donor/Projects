@@ -1,0 +1,110 @@
+﻿@model UsedClothes.ViewModels.ShoppingCartViewModel
+@using UsedClothes.Helpers           
+@using ClientDependency.Core.Mvc           
+@{
+    ViewBag.Title = "Shopping Cart";
+    Html.RequiresJs("jquery-1.8.3.js", "Scripts", 1);    
+    Html.RequiresCss("ShoppingCart.css", "Content", 2); 
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+       
+        $("select").change(function () {
+            var newQuantity = $(this).val();
+            var clothesId = $(this).attr("clothes-id");
+            $.getJSON("/ShoppingCart/UpdateTotal", { quantity: newQuantity, clothesid: clothesId },
+                    function (data) {
+                        $(".total-from span").text(data);
+                    })
+                    .error(function () {
+                        alert("error");
+                    });
+        });
+    });
+    function removeItem(recordToDelete) {    
+       if (recordToDelete != '') {
+       //Perform the ajax post
+            $.post("/ShoppingCart/RemoveFromCart", { "id": recordToDelete },
+                function (data) {
+                    //Successful requests get here
+                    //Update the page elements                              
+                    $('#row-' + data.DeleteId).fadeOut('slow');
+                    $('.total-from span').text(data.CartTotal);
+                    $('#update-message').text(data.Message);
+                    $('#cart-status').text('Cart (' + data.CartCount + ')');
+                });
+            }
+    }
+</script>
+<div class="cart">
+@if (Model.CartItems.Count == 0)
+{
+    <h1>
+        <em>Your cart is Empty</em>
+    </h1>
+    <p class="button">
+        <a class="button-med grey" href="@Url.Action("Index", "Home")" style="float:left;">Continue Shopping</a>
+    </p>
+}
+else
+{    
+<h1>
+    <em>Review your cart:</em>
+ </h1>
+<p class="button">
+<a class="button-med grey" href="@Url.Action("Index", "Home")" style="float:left;">Continue Shopping</a>
+  @*<a class="button-lrg red" style="float:right;" onclick="Checkout.purchase_all(this.form)" href="javascript:void(0)">Checkout</a>*@
+  <a class="button-lrg red" style="float:right;" href="@Url.Action("AddressAndPayment","Checkout")">Checkout</a>
+</p>
+<div id="update-message">
+</div>
+
+<div class="purchase">
+<table width="100%">
+    <tbody>
+     @foreach (var item in Model.CartItems)
+     {
+        <tr id="row-@item.RecordId">        
+            <td  width="300" valign="top">               
+                <a href="@Url.Action("Details", "Store", new { id = item.ClothesId })">                   
+                   @Html.ImageDataForCart(item.ClothesId.Value, item.Cloth.ClothesName)
+                </a>
+                <p class="item-title">                
+                   <a href="@Url.Action("Details", "Store", new { id = item.ClothesId })">
+                        @item.Cloth.ClothesName
+                   </a>
+                </p>
+            </td>
+            <td width="130" valign="top">
+                <span class="label">Quantity:</span>
+                <br>
+                <span>
+                    @{int q = item.Cloth.Quantity.Value;  }
+                    @Html.QuantityDDList(q, "quantity", item.ClothesId.Value, item.Quantity.Value)                    
+                </span>
+             </td>
+            
+             <td width="70" valign="top" align="right" id="1134943953-total" class="total">
+               <span class="label">Price(each)</span>
+                <br>
+                <span>
+                    @item.Cloth.Price
+                </span> 
+             </td>
+             <td class="removetd" width="70">
+                <a href="javascript:removeItem(@item.RecordId)" class="remove"><span>Remove from cart</span></a>
+            </td>
+       </tr>
+     }      
+       <tr>
+            <td align="right" class="total section" colspan="3">
+                <span class="total-from">Total:<span>@Model.CartTotal</span>
+                    <br>               
+                </span>
+            </td>
+       </tr>
+    </tbody>
+</table>
+</div>
+}
+</div>

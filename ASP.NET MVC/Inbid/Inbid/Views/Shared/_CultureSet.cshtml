@@ -1,0 +1,63 @@
+﻿@using Resources;
+
+       
+        
+     @if (Request.Cookies["Culture"] != null)
+     {
+         if (Request.Cookies["Culture"].Value.ToString() == "pl-PL") 
+            
+         {         
+             <a href="@(Url.Action("SetCulture/de-DE", "Home"))" >         
+            <img src="@Url.Content("~/Content/Flags/de.png")"  alt="Niemiecki" height="24" width="32" />
+            </a>         
+            <a href="@(Url.Action("SetCulture/en-GB", "Home"))">
+            <img src="@Url.Content("~/Content/Flags/en.png")"  alt="Angielski" height="24" width="32" />
+            </a>
+         }
+         else if (Request.Cookies["Culture"].Value.ToString() == "en-GB")
+         
+         { 
+             <a href="@(Url.Action("SetCulture/pl-PL", "Home"))" >
+             <img src="@Url.Content("~/Content/Flags/pl.png")"  alt="Polish" height="24" width="32" />
+             </a>         
+             <a href="@(Url.Action("SetCulture/de-DE", "Home"))">
+             <img src="@Url.Content("~/Content/Flags/de.png")"  alt="German" height="24" width="32" />
+             </a>     
+         }
+         else if (Request.Cookies["Culture"].Value.ToString() == "de-DE")
+         
+         {
+             <a href="@(Url.Action("SetCulture/pl-PL", "Home"))" >
+             <img src="@Url.Content("~/Content/Flags/pl.png")"  alt="Polnisch" height="24" width="32" />
+             </a>         
+             <a href="@(Url.Action("SetCulture/en-GB", "Home"))">
+             <img src="@Url.Content("~/Content/Flags/en.png")"  alt="Englisch" height="24" width="32" />
+             </a>  
+         }
+         else
+         {
+             <a href="@(Url.Action("SetCulture/pl-PL", "Home"))" >
+             <img src="@Url.Content("~/Content/Flags/pl.png")"  alt="Polish" height="24" width="32" />
+             </a>  
+             <a href="@(Url.Action("SetCulture/en-GB", "Home"))">
+             <img src="@Url.Content("~/Content/Flags/en.png")"  alt="Englisch" height="24" width="32" />
+             </a>         
+             <a href="@(Url.Action("SetCulture/de-DE", "Home"))">
+             <img src="@Url.Content("~/Content/Flags/de.png")"  alt="German" height="24" width="32" />
+             </a>
+         }
+     }
+     else
+     {
+              <a href="@(Url.Action("SetCulture/pl-PL", "Home"))" >
+             <img src="@Url.Content("~/Content/Flags/pl.png")"  alt="Polish" height="24" width="32" />
+             </a>  
+             <a href="@(Url.Action("SetCulture/en-GB", "Home"))">
+             <img src="@Url.Content("~/Content/Flags/en.png")"  alt="Englisch" height="24" width="32" />
+             </a>         
+             <a href="@(Url.Action("SetCulture/de-DE", "Home"))">
+             <img src="@Url.Content("~/Content/Flags/de.png")"  alt="German" height="24" width="32" />
+             </a>     
+     }
+
+    

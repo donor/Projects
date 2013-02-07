@@ -1,0 +1,35 @@
+|notvector
+A[0] => notvectorWyj[0].DATAIN
+A[1] => notvectorWyj[1].DATAIN
+A[2] => notvectorWyj[2].DATAIN
+A[3] => notvectorWyj[3].DATAIN
+A[4] => notvectorWyj[4].DATAIN
+A[5] => notvectorWyj[5].DATAIN
+A[6] => notvectorWyj[6].DATAIN
+A[7] => notvectorWyj[7].DATAIN
+A[8] => notvectorWyj[8].DATAIN
+A[9] => notvectorWyj[9].DATAIN
+A[10] => notvectorWyj[10].DATAIN
+A[11] => notvectorWyj[11].DATAIN
+A[12] => notvectorWyj[12].DATAIN
+A[13] => notvectorWyj[13].DATAIN
+A[14] => notvectorWyj[14].DATAIN
+A[15] => notvectorWyj[15].DATAIN
+notvectorWyj[0] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+notvectorWyj[1] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+notvectorWyj[2] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+notvectorWyj[3] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
+notvectorWyj[4] <= A[4].DB_MAX_OUTPUT_PORT_TYPE
+notvectorWyj[5] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+notvectorWyj[6] <= A[6].DB_MAX_OUTPUT_PORT_TYPE
+notvectorWyj[7] <= A[7].DB_MAX_OUTPUT_PORT_TYPE
+notvectorWyj[8] <= A[8].DB_MAX_OUTPUT_PORT_TYPE
+notvectorWyj[9] <= A[9].DB_MAX_OUTPUT_PORT_TYPE
+notvectorWyj[10] <= A[10].DB_MAX_OUTPUT_PORT_TYPE
+notvectorWyj[11] <= A[11].DB_MAX_OUTPUT_PORT_TYPE
+notvectorWyj[12] <= A[12].DB_MAX_OUTPUT_PORT_TYPE
+notvectorWyj[13] <= A[13].DB_MAX_OUTPUT_PORT_TYPE
+notvectorWyj[14] <= A[14].DB_MAX_OUTPUT_PORT_TYPE
+notvectorWyj[15] <= A[15].DB_MAX_OUTPUT_PORT_TYPE
+
+

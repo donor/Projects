@@ -1,0 +1,194 @@
+﻿/*div z ofertami */
+#tOferts
+{
+ overflow: auto; height:600px; width: 717px;
+ float:left;
+ 
+ 
+}
+#body
+{
+     display: block;
+}
+
+#mesagesAndAdminPanel
+{
+    /*border-style: solid;
+    border-width: thin;*/
+    float: right;
+    width: 250px;
+    height:150px;
+    max-height:600px;
+}
+
+
+/*table of offerts*/
+#oferts
+{
+    
+    border: 2px solid #666666;
+    border-collapse: collapse;
+    width: 700px;
+    background-color: #FFFF99;
+    font-size: 12px;
+}
+
+#oferts tr
+{
+    border: 2px groove #808080;
+    padding: 10px;
+    margin:8px 0px 8px o px;
+    width: 750px;
+    z-index: 0;
+    min-height: 30px;
+    
+    }
+
+#oferts td
+{
+    text-align: center;
+}
+#oferts thead
+{
+    text-align: center;
+    border-bottom-style: double;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 15px;
+    color: #333333;
+    font-family: 'Times New Roman' , Times, serif;
+    background-color: #FFFF66;
+}
+
+#oferts thead td
+{
+    padding:5px;      
+}
+
+#oferts th {
+    padding: 6px 5px;
+    text-align:left;
+    background-color: #e8eef4;
+    border: solid 1px #e8eef4;
+   
+}
+
+ 
+
+#oferts tr:hover {
+    /*color: white;*/
+    /*  cursor: pointer;
+    text-decoration: none;*/
+    /*background-color:rgb(231,231,231);*/
+}
+
+
+.innerOfferts
+{
+     
+   width:300px;
+        margin-top:5px;
+    
+    }
+    
+  .innerOfferts tr
+  {
+     
+      border:none !important;
+   
+      
+  }   
+  
+  .secondColumn  {
+      vertical-align:top !important;   
+      text-align:left !important;
+  }
+
+.firstColumn
+{
+     width:120px;
+    vertical-align:top;   
+    
+    text-align:right !important;
+}
+
+
+#auctionProporties
+{
+   
+}
+
+#tbAuctionProporties
+{
+    width: 100%;
+    
+}
+
+#tbAuctionProporties td
+{
+ vertical-align: top;   
+}
+
+.secondColumn
+{
+    width:200px;
+}
+
+.description
+{
+     width:400px;
+    
+}
+
+.label
+{
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+}
+
+#tbAuctionProporties thead td 
+{
+    
+    text-align: center;
+    font-weight: bold;
+}
+
+#messages
+{
+    overflow: auto; /*height:600px; width: 717px;*/
+    float: right;
+    width: 250px;
+    height:600px;
+    /*max-height:600px;   */
+}
+
+#tbMessages
+{
+ 
+  width: 230px;
+   /* height:150px;
+    max-height:600px;*/
+    
+}
+
+#tbMessages thead
+{
+    font-weight: bold;
+}
+
+#tbMessages tr
+{
+ /*min-height:30px;   */
+}
+
+#tbMessages td
+{
+    min-height: 30px;
+    margin-bottom: 20px;
+}
+
+#messagePublishing
+{
+    color: #FF0000;
+}

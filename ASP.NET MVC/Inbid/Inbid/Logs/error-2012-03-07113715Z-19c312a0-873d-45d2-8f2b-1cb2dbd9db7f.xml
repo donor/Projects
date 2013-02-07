@@ -1,0 +1,190 @@
+﻿<error errorId="19c312a0-873d-45d2-8f2b-1cb2dbd9db7f" application="/LM/W3SVC/1/ROOT/Inbid" host="DONOR-HP" type="System.InvalidOperationException" message="Upłynął limit czasu. Limit upłynął przed uzyskaniem połączenia z puli. Mogło to nastąpić z powodu użycia całej puli połączeń i osiągnięcia maksymalnego rozmiaru puli." source="System.Data" detail="System.Data.EntityException: Działanie podstawowego dostawcy nie powiodło się przy wykonywaniu operacji Open. ---&gt; System.InvalidOperationException: Upłynął limit czasu. Limit upłynął przed uzyskaniem połączenia z puli. Mogło to nastąpić z powodu użycia całej puli połączeń i osiągnięcia maksymalnego rozmiaru puli.&#xD;&#xA;   w System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)&#xD;&#xA;   w System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)&#xD;&#xA;   w System.Data.SqlClient.SqlConnection.Open()&#xD;&#xA;   w System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)&#xD;&#xA;   --- Koniec śladu stosu wyjątków wewnętrznych ---&#xD;&#xA;   w System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)&#xD;&#xA;   w System.Data.EntityClient.EntityConnection.Open()&#xD;&#xA;   w System.Data.Objects.ObjectContext.EnsureConnection()&#xD;&#xA;   w System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)&#xD;&#xA;   w System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()&#xD;&#xA;   w System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)&#xD;&#xA;   w System.Data.Objects.ELinq.ObjectQueryProvider.&lt;GetElementFunction&gt;b__2[TResult](IEnumerable`1 sequence)&#xD;&#xA;   w System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)&#xD;&#xA;   w System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)&#xD;&#xA;   w System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source)&#xD;&#xA;   w Inbid.Controllers.OfferController.GetOffers(Nullable`1 auctionNumber) w C:\zlecenia\projekt\Inbid\Inbid\Controllers\OfferController.cs:wiersz 757&#xD;&#xA;   w Inbid.Controllers.OfferController.Update(String[] ids, Int32 id) w C:\zlecenia\projekt\Inbid\Inbid\Controllers\OfferController.cs:wiersz 417&#xD;&#xA;   w lambda_method(Closure , ControllerBase , Object[] )&#xD;&#xA;   w System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)&#xD;&#xA;   w System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)&#xD;&#xA;   w System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   w System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;InvokeActionMethodWithFilters&gt;b__12()&#xD;&#xA;   w System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   w System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;&gt;c__DisplayClass17.&lt;InvokeActionMethodWithFilters&gt;b__14()&#xD;&#xA;   w System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   w System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)&#xD;&#xA;   w System.Web.Mvc.Controller.ExecuteCore()&#xD;&#xA;   w Inbid.Infrastructure.BaseController.ExecuteCore() w C:\zlecenia\projekt\Inbid\Inbid\Infrastructure\BaseController.cs:wiersz 46&#xD;&#xA;   w System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)&#xD;&#xA;   w System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClass6.&lt;&gt;c__DisplayClassb.&lt;BeginProcessRequest&gt;b__5()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass1.&lt;MakeVoidDelegate&gt;b__0()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass8`1.&lt;BeginSynchronous&gt;b__7(IAsyncResult _)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()&#xD;&#xA;   w System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClasse.&lt;EndProcessRequest&gt;b__d()&#xD;&#xA;   w System.Web.Mvc.SecurityUtil.&lt;GetCallInAppTrustThunk&gt;b__0(Action f)&#xD;&#xA;   w System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   w System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   w System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="bider2-1" time="2012-03-07T11:37:15.0993963Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:no-cache&#xD;&#xA;HTTP_CONNECTION:Keep-Alive&#xD;&#xA;HTTP_CONTENT_LENGTH:4&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded&#xD;&#xA;HTTP_ACCEPT:*/*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pl-PL,en;q=0.5&#xD;&#xA;HTTP_COOKIE:TimeZone=1; TimeZone=1; ASP.NET_SessionId=erfvq31cmkrf354mv4np2b10; Culture=pl-PL; TimeZone=1; .ASPXAUTH=F447B4E6D5940F61B842F64EA89B1C6D14193F1484F52650F51EBA9CB1329625AF1F2F625C91CFF9443DEFBE532BA5CB2BC798C711C233C68762740082D824EED12A61D69DF6484F8B44CA71A1432AA00194A3CC892CD72745093D5211C361954B2D4EEB9CDA344C3E853AA06AE25A7FA7F2AC17C28BB3AD8F584BCCEE2172711434592102D2DD2084F6E3A260D515CA&#xD;&#xA;HTTP_HOST:localhost&#xD;&#xA;HTTP_REFERER:http://localhost/Inbid/Offer?auctionNumber=59&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)&#xD;&#xA;HTTP_X_REQUESTED_WITH:XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: no-cache&#xD;&#xA;Connection: Keep-Alive&#xD;&#xA;Content-Length: 4&#xD;&#xA;Content-Type: application/x-www-form-urlencoded&#xD;&#xA;Accept: */*&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: pl-PL,en;q=0.5&#xD;&#xA;Cookie: TimeZone=1; TimeZone=1; ASP.NET_SessionId=erfvq31cmkrf354mv4np2b10; Culture=pl-PL; TimeZone=1; .ASPXAUTH=F447B4E6D5940F61B842F64EA89B1C6D14193F1484F52650F51EBA9CB1329625AF1F2F625C91CFF9443DEFBE532BA5CB2BC798C711C233C68762740082D824EED12A61D69DF6484F8B44CA71A1432AA00194A3CC892CD72745093D5211C361954B2D4EEB9CDA344C3E853AA06AE25A7FA7F2AC17C28BB3AD8F584BCCEE2172711434592102D2DD2084F6E3A260D515CA&#xD;&#xA;Host: localhost&#xD;&#xA;Referer: http://localhost/Inbid/Offer?auctionNumber=59&#xD;&#xA;User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)&#xD;&#xA;X-Requested-With: XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/1/ROOT/Inbid" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\zlecenia\projekt\Inbid\Inbid\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="In" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="bider2-1" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="bider2-1" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="bider2-1" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="4" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="1" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/1" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Inbid/Offer/Update/59" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\zlecenia\projekt\Inbid\Inbid\Offer\Update\59" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="53333" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Inbid/Offer/Update/59" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="80" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/7.5" />
+    </item>
+    <item name="URL">
+      <value string="/Inbid/Offer/Update/59" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="no-cache" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="Keep-Alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="4" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="*/*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pl-PL,en;q=0.5" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="TimeZone=1; TimeZone=1; ASP.NET_SessionId=erfvq31cmkrf354mv4np2b10; Culture=pl-PL; TimeZone=1; .ASPXAUTH=F447B4E6D5940F61B842F64EA89B1C6D14193F1484F52650F51EBA9CB1329625AF1F2F625C91CFF9443DEFBE532BA5CB2BC798C711C233C68762740082D824EED12A61D69DF6484F8B44CA71A1432AA00194A3CC892CD72745093D5211C361954B2D4EEB9CDA344C3E853AA06AE25A7FA7F2AC17C28BB3AD8F584BCCEE2172711434592102D2DD2084F6E3A260D515CA" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost/Inbid/Offer?auctionNumber=59" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)" />
+    </item>
+    <item name="HTTP_X_REQUESTED_WITH">
+      <value string="XMLHttpRequest" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="ids">
+      <value string="" />
+    </item>
+  </form>
+  <cookies>
+    <item name="TimeZone">
+      <value string="1" />
+      <value string="1" />
+      <value string="1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="erfvq31cmkrf354mv4np2b10" />
+    </item>
+    <item name="Culture">
+      <value string="pl-PL" />
+    </item>
+    <item name=".ASPXAUTH">
+      <value string="F447B4E6D5940F61B842F64EA89B1C6D14193F1484F52650F51EBA9CB1329625AF1F2F625C91CFF9443DEFBE532BA5CB2BC798C711C233C68762740082D824EED12A61D69DF6484F8B44CA71A1432AA00194A3CC892CD72745093D5211C361954B2D4EEB9CDA344C3E853AA06AE25A7FA7F2AC17C28BB3AD8F584BCCEE2172711434592102D2DD2084F6E3A260D515CA" />
+    </item>
+  </cookies>
+</error>

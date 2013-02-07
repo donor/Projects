@@ -1,0 +1,1 @@
+exec [dbo].[InsertNewClothes] @BrandName='vistula'

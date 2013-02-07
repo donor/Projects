@@ -1,0 +1,72 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 368 147)
+	(text "altmult_add0" (rect 147 0 234 16)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 131 25 143)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "dataa_0[15..0]" (rect 0 0 81 14)(font "Arial" (font_size 8)))
+		(text "dataa_0[15..0]" (rect 4 59 73 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 79 72)(line_width 3))
+	)
+	(port
+		(pt 0 104)
+		(input)
+		(text "datab_0[15..0]" (rect 0 0 81 14)(font "Arial" (font_size 8)))
+		(text "datab_0[15..0]" (rect 4 91 73 104)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 79 104)(line_width 3))
+	)
+	(port
+		(pt 368 88)
+		(output)
+		(text "result[15..0]" (rect 0 0 67 14)(font "Arial" (font_size 8)))
+		(text "result[15..0]" (rect 308 75 363 88)(font "Arial" (font_size 8)))
+		(line (pt 368 88)(pt 303 88)(line_width 3))
+	)
+	(drawing
+		(text "dataa: Signed" (rect 304 121 361 133)(font "Arial" ))
+		(text "datab: Signed" (rect 304 112 361 124)(font "Arial" ))
+		(text "MULT0" (rect 198 50 233 63)(font "Arial" (font_size 8)))
+		(line (pt 0 0)(pt 369 0)(line_width 1))
+		(line (pt 369 0)(pt 369 148)(line_width 1))
+		(line (pt 0 148)(pt 369 148)(line_width 1))
+		(line (pt 0 0)(pt 0 148)(line_width 1))
+		(line (pt 159 88)(pt 165 94)(line_width 3))
+		(line (pt 159 88)(pt 165 82)(line_width 3))
+		(line (pt 159 88)(pt 153 94)(line_width 3))
+		(line (pt 159 88)(pt 153 82)(line_width 3))
+		(line (pt 79 72)(pt 143 72)(line_width 3))
+		(line (pt 143 72)(pt 147 76)(line_width 3))
+		(line (pt 79 104)(pt 143 104)(line_width 3))
+		(line (pt 143 104)(pt 147 100)(line_width 3))
+		(line (pt 175 88)(pt 231 88)(line_width 3))
+		(line (pt 79 48)(pt 231 48)(line_width 1))
+		(line (pt 231 48)(pt 231 129)(line_width 1))
+		(line (pt 79 129)(pt 231 129)(line_width 1))
+		(line (pt 79 48)(pt 79 129)(line_width 1))
+		(line (pt 231 88)(pt 247 88)(line_width 3))
+		(line (pt 247 88)(pt 303 88)(line_width 3))
+		(circle (rect 143 72 175 104)(line_width 1))
+	)
+)

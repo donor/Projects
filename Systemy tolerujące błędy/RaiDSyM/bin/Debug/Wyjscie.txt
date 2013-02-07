@@ -1,0 +1,15 @@
+﻿2010-12-10 18:22:08  Program Włączono
+2010-12-10 18:22:09  Do dysku 0 zapisano pasek 0, zawartość: 00000000000000000000000000000000
+2010-12-10 18:22:11  Do Kontrola Parzystości trafił pasek 0, zawartość: 00000000000000000000000000000000
+2010-12-10 18:22:13  Do dysku 1 zapisano pasek 1, zawartość: 00000000000000000000000000000001
+2010-12-10 18:22:13  Wystąpił błąd w dysku 0 w pasku 0 zawartość paska: null
+2010-12-10 18:22:14  Do Kontrola Parzystości trafił pasek 1, zawartość: 00000000000000000000000000000001
+2010-12-10 18:22:16  Do dysku 2 zapisano pasek 2, zawartość: 00000000000000000000000000000010
+2010-12-10 18:22:17  Do Kontrola Parzystości trafił pasek 2, zawartość: 00000000000000000000000000000010
+2010-12-10 18:22:17  Do dysku Parzystości zapisano pasek o zawartość: 00000000000000000000000000000011
+2010-12-10 18:22:19  Do kontroler parzystości z dysku 1 trafił pasek 1 o zawartości 00000000000000000000000000000001 
+2010-12-10 18:22:20  Do kontroler parzystości z dysku 2 trafił pasek 2 o zawartości 00000000000000000000000000000010 
+2010-12-10 18:22:20  Do kontroler parzystości z dysku Parzystości trafił pasek 0 o zawartości 00000000000000000000000000000011 
+2010-12-10 18:22:20  W dysku 0 został naprawiony pasek 0, poprzez obliczenie jego wartości w kontrolerze parzystości, jego zawartość: 00000000000000000000000000000000 
+2010-12-10 18:22:25  Do dysku 0 zapisano pasek 3, zawartość: 00000000000000000000000000000011
+2010-12-10 18:22:26  Do Kontrola Parzystości trafił pasek 3, zawartość: 00000000000000000000000000000011

@@ -1,0 +1,14 @@
+﻿<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/tags/1.8rc3/ui/jquery-ui.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.rozwin').click(function (e) {
+            e.preventDefault();
+            $('#main').hide('explode');
+            $('#main').show('explode');
+        });
+    });
+</script>
+
+<a href="" class="rozwin">hide and show</a>
+<div id='main'>...</div>

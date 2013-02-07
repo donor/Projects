@@ -1,0 +1,18 @@
+package projekt1;
+
+class Punkt
+{
+  private int x;
+  private int y;
+
+  Punkt(int a, int b) //konstruktor
+  {
+    x = a;
+    y = b;
+  }
+
+  public double odleglosc(Punkt pt)
+  {
+    return Math.sqrt((x - pt.x)*(x - pt.x) + (y - pt.y)*(y - pt.y));
+  }
+}

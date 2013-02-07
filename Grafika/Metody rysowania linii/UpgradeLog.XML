@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="grafa">
+</Property><Property Name="Solution File" Value="C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa.sln">
+</Property><Property Name="User Options File" Value="C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa.suo">
+</Property><Property Name="Date" Value="10 listopada 2010">
+</Property><Property Name="Time" Value="20:24">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="grafa.sln" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa.sln">
+</Event><Event ErrorLevel="0" Project="" Source="grafa.suo" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa.suo">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\grafa.csproj" Description="Project file successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\grafa.csproj">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\grafa.csproj.user" Description="Project user file successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\grafa.csproj.user">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\Algorytm.cs" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\Algorytm.cs">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\Algorytm.Designer.cs" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\Algorytm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\Autorzy.cs" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\Autorzy.cs">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\Autorzy.Designer.cs" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\Autorzy.Designer.cs">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\InstrukcjaObslugi.cs" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\InstrukcjaObslugi.cs">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\InstrukcjaObslugi.Designer.cs" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\InstrukcjaObslugi.Designer.cs">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\MainWindow.cs" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\MainWindow.cs">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\MainWindow.Designer.cs" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\MainWindow.Designer.cs">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\Program.cs" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\Program.cs">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\Properties\Settings.settings" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\Algorytm.resx" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\Algorytm.resx">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\Autorzy.resx" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\Autorzy.resx">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\InstrukcjaObslugi.resx" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\InstrukcjaObslugi.resx">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\MainWindow.resx" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\MainWindow.resx">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\Properties\Resources.resx" Description="File successfully backed up as C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\Backup\grafa\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\grafa.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="grafa" Source="grafa\grafa.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="grafa.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="grafa.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="grafa" Source="grafa\grafa.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

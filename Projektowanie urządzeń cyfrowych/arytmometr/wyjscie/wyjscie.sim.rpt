@@ -1,0 +1,217 @@
+Simulator report for wyjscie
+Wed Apr 28 21:20:16 2010
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 10.0 us      ;
+; Simulation Netlist Size     ; 34 nodes     ;
+; Simulation Coverage         ;       2.94 % ;
+; Total Number of Transitions ; 13           ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
+; Device                      ; EP2S15F484C3 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       2.94 % ;
+; Total nodes checked                                 ; 34           ;
+; Total output ports checked                          ; 34           ;
+; Total output ports with complete 1/0-value coverage ; 1            ;
+; Total output ports with no 1/0-value coverage       ; 22           ;
+; Total output ports with no 1-value coverage         ; 33           ;
+; Total output ports with no 0-value coverage         ; 22           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                 ;
++-----------------+------------------------+------------------+
+; Node Name       ; Output Port Name       ; Output Port Type ;
++-----------------+------------------------+------------------+
+; |wyjscie|SEL[0] ; |wyjscie|SEL[0]~corein ; combout          ;
++-----------------+------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------+
+; Missing 1-Value Coverage                                      ;
++------------------+-------------------------+------------------+
+; Node Name        ; Output Port Name        ; Output Port Type ;
++------------------+-------------------------+------------------+
+; |wyjscie|Y1~0    ; |wyjscie|Y1~0           ; combout          ;
+; |wyjscie|Y1~1    ; |wyjscie|Y1~1           ; combout          ;
+; |wyjscie|Y1~2    ; |wyjscie|Y1~2           ; combout          ;
+; |wyjscie|Y1~3    ; |wyjscie|Y1~3           ; combout          ;
+; |wyjscie|Y1~4    ; |wyjscie|Y1~4           ; combout          ;
+; |wyjscie|Y1~5    ; |wyjscie|Y1~5           ; combout          ;
+; |wyjscie|Y1~6    ; |wyjscie|Y1~6           ; combout          ;
+; |wyjscie|Y1~7    ; |wyjscie|Y1~7           ; combout          ;
+; |wyjscie|Y1[0]   ; |wyjscie|Y1[0]          ; padio            ;
+; |wyjscie|Y1[1]   ; |wyjscie|Y1[1]          ; padio            ;
+; |wyjscie|Y1[2]   ; |wyjscie|Y1[2]          ; padio            ;
+; |wyjscie|Y1[3]   ; |wyjscie|Y1[3]          ; padio            ;
+; |wyjscie|Y1[4]   ; |wyjscie|Y1[4]          ; padio            ;
+; |wyjscie|Y1[5]   ; |wyjscie|Y1[5]          ; padio            ;
+; |wyjscie|Y1[6]   ; |wyjscie|Y1[6]          ; padio            ;
+; |wyjscie|Y1[7]   ; |wyjscie|Y1[7]          ; padio            ;
+; |wyjscie|Y1[8]   ; |wyjscie|Y1[8]          ; padio            ;
+; |wyjscie|Wej[0]  ; |wyjscie|Wej[0]~corein  ; combout          ;
+; |wyjscie|Wej[8]  ; |wyjscie|Wej[8]~corein  ; combout          ;
+; |wyjscie|Wej[1]  ; |wyjscie|Wej[1]~corein  ; combout          ;
+; |wyjscie|Wej[9]  ; |wyjscie|Wej[9]~corein  ; combout          ;
+; |wyjscie|Wej[2]  ; |wyjscie|Wej[2]~corein  ; combout          ;
+; |wyjscie|Wej[10] ; |wyjscie|Wej[10]~corein ; combout          ;
+; |wyjscie|Wej[3]  ; |wyjscie|Wej[3]~corein  ; combout          ;
+; |wyjscie|Wej[11] ; |wyjscie|Wej[11]~corein ; combout          ;
+; |wyjscie|Wej[4]  ; |wyjscie|Wej[4]~corein  ; combout          ;
+; |wyjscie|Wej[12] ; |wyjscie|Wej[12]~corein ; combout          ;
+; |wyjscie|Wej[5]  ; |wyjscie|Wej[5]~corein  ; combout          ;
+; |wyjscie|Wej[13] ; |wyjscie|Wej[13]~corein ; combout          ;
+; |wyjscie|Wej[6]  ; |wyjscie|Wej[6]~corein  ; combout          ;
+; |wyjscie|Wej[14] ; |wyjscie|Wej[14]~corein ; combout          ;
+; |wyjscie|Wej[7]  ; |wyjscie|Wej[7]~corein  ; combout          ;
+; |wyjscie|Wej[15] ; |wyjscie|Wej[15]~corein ; combout          ;
++------------------+-------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------+
+; Missing 0-Value Coverage                                      ;
++------------------+-------------------------+------------------+
+; Node Name        ; Output Port Name        ; Output Port Type ;
++------------------+-------------------------+------------------+
+; |wyjscie|Y1~0    ; |wyjscie|Y1~0           ; combout          ;
+; |wyjscie|Y1~4    ; |wyjscie|Y1~4           ; combout          ;
+; |wyjscie|Y1~5    ; |wyjscie|Y1~5           ; combout          ;
+; |wyjscie|Y1~6    ; |wyjscie|Y1~6           ; combout          ;
+; |wyjscie|Y1~7    ; |wyjscie|Y1~7           ; combout          ;
+; |wyjscie|Y1[0]   ; |wyjscie|Y1[0]          ; padio            ;
+; |wyjscie|Y1[4]   ; |wyjscie|Y1[4]          ; padio            ;
+; |wyjscie|Y1[5]   ; |wyjscie|Y1[5]          ; padio            ;
+; |wyjscie|Y1[6]   ; |wyjscie|Y1[6]          ; padio            ;
+; |wyjscie|Y1[7]   ; |wyjscie|Y1[7]          ; padio            ;
+; |wyjscie|Y1[8]   ; |wyjscie|Y1[8]          ; padio            ;
+; |wyjscie|Wej[0]  ; |wyjscie|Wej[0]~corein  ; combout          ;
+; |wyjscie|Wej[8]  ; |wyjscie|Wej[8]~corein  ; combout          ;
+; |wyjscie|Wej[1]  ; |wyjscie|Wej[1]~corein  ; combout          ;
+; |wyjscie|Wej[2]  ; |wyjscie|Wej[2]~corein  ; combout          ;
+; |wyjscie|Wej[12] ; |wyjscie|Wej[12]~corein ; combout          ;
+; |wyjscie|Wej[5]  ; |wyjscie|Wej[5]~corein  ; combout          ;
+; |wyjscie|Wej[13] ; |wyjscie|Wej[13]~corein ; combout          ;
+; |wyjscie|Wej[6]  ; |wyjscie|Wej[6]~corein  ; combout          ;
+; |wyjscie|Wej[14] ; |wyjscie|Wej[14]~corein ; combout          ;
+; |wyjscie|Wej[7]  ; |wyjscie|Wej[7]~corein  ; combout          ;
+; |wyjscie|Wej[15] ; |wyjscie|Wej[15]~corein ; combout          ;
++------------------+-------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Apr 28 21:20:15 2010
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off wyjscie -c wyjscie
+Info: Using vector source file "F:/wyjscie/wyjscie.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       2.94 %
+Info: Number of transitions in simulation is 13
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 114 megabytes
+    Info: Processing ended: Wed Apr 28 21:20:17 2010
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

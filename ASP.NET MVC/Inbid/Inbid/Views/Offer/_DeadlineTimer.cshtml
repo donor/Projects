@@ -1,0 +1,46 @@
+﻿@model Inbid.ViewModels.OfferViewModel
+
+
+@*<script src="@Url.Content("~/Scripts/date.format.js")" type="text/javascript"></script>*@
+
+
+<script type="text/javascript">
+    $(document).ready(function () {              
+
+    downCounting();
+    //setInterval("downCounting()", 1000);
+     
+        });
+
+       function downCounting() {
+        var year=@Model.Auction.EndTime.Year;
+        var month=@Model.Auction.EndTime.Month-1;
+        var day=@Model.Auction.EndTime.Day;
+        var hour=@Model.Auction.EndTime.Hour;
+        var minute=@Model.Auction.EndTime.Minute;
+        var second=@Model.Auction.EndTime.Second;
+
+            var auctionEndTime = new Date(year,month,day);
+            var now = new Date();           
+            var display = auctionEndTime - now;
+            var date = getTimeSpan(display);            
+            $("#data").html("Do zakończenia aukcji pozostało: "+date.hour+" godzin "+date.minute+" minut "+date.second +" sekund");            
+            setInterval("downCounting()", 1000);
+        };
+
+        function getTimeSpan(ticks) {
+            var d = new Date(ticks);
+            return {   
+                hour: Math.floor(ticks / 3600000),              
+                minute: d.getMinutes(),
+                second: d.getSeconds()
+            }
+        }
+
+
+    </script>
+
+
+<label id="data"> </label>
+
+    

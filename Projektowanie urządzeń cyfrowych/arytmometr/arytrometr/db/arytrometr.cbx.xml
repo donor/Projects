@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="arytrometr">
+		<CBX_INST_ENTRY INSTANCE_NAME="|arytrometr|lpm_add:dodowanie|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_1ih.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|arytrometr|lpm_mult0:mnozenie|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_e7n.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|arytrometr|lpm_mux0:Multpilexer|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_l9e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|arytrometr|lpm_add_sub0:dekrementacja|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_mmh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|arytrometr|lpm_add_sub0:inkrementacja|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_mmh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|arytrometr|lpm_clshift2:Przesuniecewprawo|lpm_clshift:lpm_clshift_component" CBX_FILE_NAME="lpm_clshift_0kc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|arytrometr|lpm_clshift2:przesuniecewlewo|lpm_clshift:lpm_clshift_component" CBX_FILE_NAME="lpm_clshift_0kc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|arytrometr|lpm_sub:odejmowanie|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_2jh.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

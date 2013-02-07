@@ -1,0 +1,77 @@
+import java.util.*;
+
+class Zwierze{};
+class Bocian extends Zwierze  {}
+class Pies extends Zwierze  {}
+class Zaba extends Zwierze  {}
+class Krokodyl extends Zwierze  {}
+
+public class KolekcjaObiektow 
+{
+private static List<Zwierze> z=new ArrayList<Zwierze>();
+
+public static void dodawanieDoKolekcji()
+  {
+      z.add(new Pies());
+      z.add(new Zaba());
+      z.add(new Krokodyl());
+      z.add(new Bocian());
+      z.add(new Zaba());
+      z.add(new Pies());
+      z.add(new Zaba());
+      z.add(new Krokodyl());
+      z.add(new Bocian());
+
+      System.out.println(z);
+  }
+
+public static void usuwanie()
+  {
+      z.remove(2);
+      z.remove(3);
+
+      System.out.println(z);
+  }
+
+public static void wyswietlenie()
+  {
+ Iterator<Zwierze> i=z.iterator();
+    while (i.hasNext())
+  {
+        System.out.println(i.next());
+    }
+  }
+
+public static void sprawdzenieRozmiaru()
+{
+    System.out.println("Kolekcja zwiera "+z.size()+" elementy");
+}
+
+public static void porownanie()
+{
+  boolean rowne=false;
+if  (z.get(2)==z.get(6))
+{
+    rowne=true;
+}
+   System.out.println("Elementy 2 i 6 s¹ równe:"+rowne);
+}
+
+public static void main(String[] args)
+{
+    System.out.println("Dodano nastepujace obiekty do kolekcji");
+    dodawanieDoKolekcji();
+    System.out.println();
+    System.out.println("Kolekcja po usunieciu elementów 2,3");
+    usuwanie();
+    System.out.println();
+    System.out.println("Wyswietlenie kolekcji");
+    wyswietlenie();
+    System.out.println();
+    sprawdzenieRozmiaru();
+    System.out.println();
+    porownanie();
+
+    }
+   
+}

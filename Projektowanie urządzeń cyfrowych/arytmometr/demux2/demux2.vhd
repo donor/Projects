@@ -1,0 +1,71 @@
+library ieee; 
+use ieee.std_logic_1164.all; 
+
+entity demux2 is 
+  
+  port ( 
+    Wej   : in  std_logic_vector(7 downto 0); 
+    SEL : in  integer range 7 downto 0; 
+    Y1  : out  std_logic_vector(15 downto 0); 
+    Y2  : out  std_logic_vector(15 downto 0)); 
+    
+end demux2; 
+
+architecture behave of demux2 is 
+
+begin 
+process(Wej,SEL) 
+begin 
+
+if (SEL=0)    then       
+ 
+   Y1(7) <= Wej(7);
+   Y1(6) <= Wej(6);
+   Y1(5) <= Wej(5);
+   Y1(4) <= Wej(4);
+   Y1(3) <= Wej(3);
+   Y1(2) <= Wej(2);
+   Y1(1) <= Wej(1);
+   Y1(0) <= Wej(0);
+
+end if;
+
+   
+if  SEL=1 then
+   Y1(15) <= Wej(7);
+   Y1(14) <= Wej(6);
+   Y1(13) <= Wej(5); 
+   Y1(12) <= Wej(4);  
+   Y1(11) <= Wej(3); 
+   Y1(10) <= Wej(2);  
+   Y1(9) <= Wej(1);  
+   Y1(8) <= Wej(0);  
+
+end if;   
+
+if SEL=2 then 
+
+   Y2(7) <= Wej(7);
+   Y2(6) <= Wej(6);
+   Y2(5) <= Wej(5);
+   Y2(4) <= Wej(4);
+   Y2(3) <= Wej(3);
+   Y2(2) <= Wej(2);
+   Y2(1) <= Wej(1);
+   Y2(0) <= Wej(0);
+
+end if;
+if SEL=3 then 
+   Y2(15) <= Wej(7);
+   Y2(14) <= Wej(6); 
+   Y2(13) <= Wej(5); 
+   Y2(12) <= Wej(4);  
+   Y2(11) <= Wej(3); 
+   Y2(10) <= Wej(2);  
+   Y2(9) <= Wej(1);  
+   Y2(8) <= Wej(0);  
+
+end if;   
+
+end process; 
+end behave; 

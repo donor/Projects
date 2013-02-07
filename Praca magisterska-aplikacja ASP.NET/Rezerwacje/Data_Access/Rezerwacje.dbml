@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BazaRezerwacje" Class="RezerwacjeDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\BazaRezerwacje.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BazaRezerwacjeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Klienci" Member="Kliencis">
+    <Type Name="Klienci">
+      <Column Name="KlientID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Wiek" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Imprezy" Member="Imprezies">
+    <Type Name="Imprezy">
+      <Column Name="ImprezaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nazwa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Miejsce" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CenaPodstawowa" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CenaStudent" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CenaUlgowa" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="LiczbaBiletow" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Obrazek" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Szczegoly" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SprzedaneBilety" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Imprezy_Koszyk" Member="Koszyks" ThisKey="ImprezaID" OtherKey="ImprezaID" Type="Koszyk" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Koszyk" Member="Koszyks">
+    <Type Name="Koszyk">
+      <Column Name="RekordID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Identyfikator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DataUtworzenia" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ImprezaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ilosc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TypKlienta" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Imprezy_Koszyk" Member="Imprezy" ThisKey="ImprezaID" OtherKey="ImprezaID" Type="Imprezy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WidokCenaKoszyka" Member="WidokCenaKoszykas">
+    <Type Name="WidokCenaKoszyka">
+      <Column Name="ImprezaID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Identyfikator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CenaPodstawowa" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CenaStudent" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CenaUlgowa" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Ilosc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TypKlienta" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Zamowienia" Member="Zamowienias">
+    <Type Name="Zamowienia">
+      <Column Name="ZamowienieID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Klient" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DataZamowienia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Zamowienia_ZlecenieSzczegoly" Member="ZlecenieSzczegolies" ThisKey="ZamowienieID" OtherKey="ZamowienieID" Type="ZlecenieSzczegoly" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZlecenieSzczegoly" Member="ZlecenieSzczegolies">
+    <Type Name="ZlecenieSzczegoly">
+      <Column Name="SzczegolyZleceniaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ZamowienieID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImprezaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cena" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Kod" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TypKlienta" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Zaplacono" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Zamowienia_ZlecenieSzczegoly" Member="Zamowienia" ThisKey="ZamowienieID" OtherKey="ZamowienieID" Type="Zamowienia" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

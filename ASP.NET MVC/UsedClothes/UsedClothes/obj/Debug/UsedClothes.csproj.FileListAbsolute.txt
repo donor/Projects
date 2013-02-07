@@ -1,0 +1,12 @@
+C:\zlecenia\UsedClothes\UsedClothes\bin\UsedClothes.dll
+C:\zlecenia\UsedClothes\UsedClothes\bin\UsedClothes.pdb
+C:\zlecenia\UsedClothes\UsedClothes\bin\EntityFramework.xml
+C:\zlecenia\UsedClothes\UsedClothes\obj\Debug\ResolveAssemblyReference.cache
+C:\zlecenia\UsedClothes\UsedClothes\obj\Debug\UsedClothes.dll
+C:\zlecenia\UsedClothes\UsedClothes\obj\Debug\UsedClothes.pdb
+C:\zlecenia\UsedClothes\UsedClothes\bin\ClientDependency.Core.dll
+C:\zlecenia\UsedClothes\UsedClothes\bin\ClientDependency.Core.Mvc.dll
+C:\zlecenia\UsedClothes\UsedClothes\obj\Debug\UsedClothes.Properties.Resources.resources
+C:\zlecenia\UsedClothes\UsedClothes\obj\Debug\GenerateResource.read.1.tlog
+C:\zlecenia\UsedClothes\UsedClothes\obj\Debug\GenerateResource.write.1.tlog
+C:\zlecenia\UsedClothes\UsedClothes\bin\Elmah.dll

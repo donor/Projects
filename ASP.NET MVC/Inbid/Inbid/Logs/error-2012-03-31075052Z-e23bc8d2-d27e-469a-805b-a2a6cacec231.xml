@@ -1,0 +1,183 @@
+﻿<error errorId="e23bc8d2-d27e-469a-805b-a2a6cacec231" application="/LM/W3SVC/1/ROOT/Inbid" host="DONOR-HP" type="System.InvalidOperationException" message="There is already an open DataReader associated with this Command which must be closed first." source="System.Data" detail="System.Data.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---&gt; System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.&#xD;&#xA;   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)&#xD;&#xA;   at System.Data.SqlClient.SqlConnection.ValidateConnectionForExecute(String method, SqlCommand command)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)&#xD;&#xA;   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)&#xD;&#xA;   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)&#xD;&#xA;   at System.Data.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)&#xD;&#xA;   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)&#xD;&#xA;   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()&#xD;&#xA;   at Inbid.Controllers.AuctionController.RelatedColors(IQueryable`1 auctions) in C:\zlecenia\projekt\Inbid\Inbid\Controllers\AuctionController.cs:line 103&#xD;&#xA;   at Inbid.Controllers.AuctionController.Index(Nullable`1 page, String q) in C:\zlecenia\projekt\Inbid\Inbid\Controllers\AuctionController.cs:line 89&#xD;&#xA;   at lambda_method(Closure , ControllerBase , Object[] )&#xD;&#xA;   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)&#xD;&#xA;   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;InvokeActionMethodWithFilters&gt;b__12()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;&gt;c__DisplayClass17.&lt;InvokeActionMethodWithFilters&gt;b__14()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)&#xD;&#xA;   at System.Web.Mvc.Controller.ExecuteCore()&#xD;&#xA;   at Inbid.Infrastructure.BaseController.ExecuteCore() in C:\zlecenia\projekt\Inbid\Inbid\Infrastructure\BaseController.cs:line 46&#xD;&#xA;   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClass6.&lt;&gt;c__DisplayClassb.&lt;BeginProcessRequest&gt;b__5()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass1.&lt;MakeVoidDelegate&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass8`1.&lt;BeginSynchronous&gt;b__7(IAsyncResult _)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClasse.&lt;EndProcessRequest&gt;b__d()&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.&lt;GetCallInAppTrustThunk&gt;b__0(Action f)&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="franek0" time="2012-03-31T07:50:52.0615179Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pl,de-at;q=0.8,en-gb;q=0.6,en-us;q=0.4,en;q=0.2&#xD;&#xA;HTTP_COOKIE:Culture=en-GB; __utma=111872281.1167657228.1333131129.1333131129.1333180210.2; __utmc=111872281; __utmz=111872281.1333131129.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); TimeZone=2; .ASPXAUTH=245E668C477928A0EDDBC16C3AC8CFE09DB8A9DE4A75C57D350961F7806EDAD07DDFEFE22264D58B60B016AFEDF428D9983DF17BF231DF325831817DC640DB0B58294EAFCC956F6E653F2B5FE9471F791C6A531BF74A31604CF3B303FBEE4F848752EAE2B8D7A1EDEF296EAC1634572F98A85190171386497BB342D7E8897608F15A236A66490B00D4443D96DEE81630; __utmb=111872281.1.10.1333180210&#xD;&#xA;HTTP_HOST:localhost&#xD;&#xA;HTTP_REFERER:http://localhost/Inbid/Account/LogOn?ReturnUrl=%2fInbid%2fAuction&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: pl,de-at;q=0.8,en-gb;q=0.6,en-us;q=0.4,en;q=0.2&#xD;&#xA;Cookie: Culture=en-GB; __utma=111872281.1167657228.1333131129.1333131129.1333180210.2; __utmc=111872281; __utmz=111872281.1333131129.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); TimeZone=2; .ASPXAUTH=245E668C477928A0EDDBC16C3AC8CFE09DB8A9DE4A75C57D350961F7806EDAD07DDFEFE22264D58B60B016AFEDF428D9983DF17BF231DF325831817DC640DB0B58294EAFCC956F6E653F2B5FE9471F791C6A531BF74A31604CF3B303FBEE4F848752EAE2B8D7A1EDEF296EAC1634572F98A85190171386497BB342D7E8897608F15A236A66490B00D4443D96DEE81630; __utmb=111872281.1.10.1333180210&#xD;&#xA;Host: localhost&#xD;&#xA;Referer: http://localhost/Inbid/Account/LogOn?ReturnUrl=%2fInbid%2fAuction&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/1/ROOT/Inbid" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\zlecenia\projekt\Inbid\Inbid\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="In" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="franek0" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="franek0" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="1" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/1" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Inbid/Auction" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\zlecenia\projekt\Inbid\Inbid\Auction" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="52207" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Inbid/Auction" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="80" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/7.5" />
+    </item>
+    <item name="URL">
+      <value string="/Inbid/Auction" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pl,de-at;q=0.8,en-gb;q=0.6,en-us;q=0.4,en;q=0.2" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="Culture=en-GB; __utma=111872281.1167657228.1333131129.1333131129.1333180210.2; __utmc=111872281; __utmz=111872281.1333131129.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); TimeZone=2; .ASPXAUTH=245E668C477928A0EDDBC16C3AC8CFE09DB8A9DE4A75C57D350961F7806EDAD07DDFEFE22264D58B60B016AFEDF428D9983DF17BF231DF325831817DC640DB0B58294EAFCC956F6E653F2B5FE9471F791C6A531BF74A31604CF3B303FBEE4F848752EAE2B8D7A1EDEF296EAC1634572F98A85190171386497BB342D7E8897608F15A236A66490B00D4443D96DEE81630; __utmb=111872281.1.10.1333180210" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost/Inbid/Account/LogOn?ReturnUrl=%2fInbid%2fAuction" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="Culture">
+      <value string="en-GB" />
+    </item>
+    <item name="__utma">
+      <value string="111872281.1167657228.1333131129.1333131129.1333180210.2" />
+    </item>
+    <item name="__utmc">
+      <value string="111872281" />
+    </item>
+    <item name="__utmz">
+      <value string="111872281.1333131129.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)" />
+    </item>
+    <item name="TimeZone">
+      <value string="2" />
+    </item>
+    <item name=".ASPXAUTH">
+      <value string="245E668C477928A0EDDBC16C3AC8CFE09DB8A9DE4A75C57D350961F7806EDAD07DDFEFE22264D58B60B016AFEDF428D9983DF17BF231DF325831817DC640DB0B58294EAFCC956F6E653F2B5FE9471F791C6A531BF74A31604CF3B303FBEE4F848752EAE2B8D7A1EDEF296EAC1634572F98A85190171386497BB342D7E8897608F15A236A66490B00D4443D96DEE81630" />
+    </item>
+    <item name="__utmb">
+      <value string="111872281.1.10.1333180210" />
+    </item>
+  </cookies>
+</error>

@@ -1,0 +1,69 @@
+﻿@model Inbid.ViewModels.BidderViewModel
+
+
+
+@if (Model.Offers.Count()>0)
+{
+
+<table id="tbauctions" >
+<thead>
+    <tr>
+    <th colspan="5">
+    Aukcje w których bierzesz udział
+    </th>
+    </tr>
+    <tr>
+    
+        <th>Name</th>
+        <th>
+        Status Aukcji
+        </th>
+        <th>Twoja Pozycja </th>
+        <th>Twoja Oferta</th>
+        <th>Najlepsza Oferta</th>
+    </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Offers)
+{
+    <tr id="@item.AuctionId">
+    
+    <td>
+    @item.Name    
+    </td>
+    <td>
+      @if (item.StartTime.ToUniversalTime() > System.DateTime.Now.ToUniversalTime())
+            {
+                @:Nie rozpoczęta
+            }
+      else if (item.EndTime.ToUniversalTime() < System.DateTime.Now.ToUniversalTime())
+            {
+                @:Zakończona   
+            }
+      else if ((item.EnableDisable == true) && (item.StartTime.ToUniversalTime() < System.DateTime.Now.ToUniversalTime()) && (item.EndTime.ToUniversalTime() > System.DateTime.Now.ToUniversalTime()))
+            {
+                @:Trwa
+            }
+      else if ((item.EnableDisable == false) && (item.StartTime.ToUniversalTime() < System.DateTime.Now.ToUniversalTime()) && (item.EndTime.ToUniversalTime() > System.DateTime.Now.ToUniversalTime()))
+            {
+                @:Zawieszona             
+            }
+    </td>
+       <td>
+       @item.StartPrice
+       </td>
+       <td>
+       @item.CurrentPrice
+       </td>
+       <td>
+       @item.AuctionCurrentPrice
+       </td>
+    </tr>
+}
+</tbody>
+</table>
+}
+else
+{
+<p>Brak ofert</p>
+}

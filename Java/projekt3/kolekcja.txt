@@ -1,0 +1,102 @@
+
+
+import java.util.*;
+
+public class Kolekcja
+{
+  private static List<String> c=new ArrayList<String>();
+  
+    public static void dodawanieDoKolekcji()
+  {
+      c.add("pies");
+      c.add("kot");
+      c.add("bocian");
+      c.add("kaczka");
+      c.add("jelen");
+      c.add("wilk");
+      c.add("lis");
+
+      System.out.println(c);
+  }
+
+  public static void usuwanie()
+  {
+      c.remove("bocian");
+      c.remove("kaczka");
+
+      System.out.println(c);
+  }
+
+  public static void przegladanie()
+  {
+
+ Iterator<String> i=c.iterator();
+    while (i.hasNext())
+  { 
+        System.out.println(i.next());
+    }
+  }
+
+
+
+  public static void wyszukiwanie(String s)
+  {
+     ListIterator<String> w=c.listIterator();
+      boolean status=false;
+      while ((w.hasNext()&&(!status)))
+      {
+          if (w.next().equals(s))
+          {
+              System.out.println(w.previous());
+              status=true;
+          }
+      }
+
+      if (!status)
+              System.out.println("Nie ma takiego zwierzaka");
+   }
+
+ public static void sortowanie()
+ {
+        Collections.sort(c);
+        System.out.println("Kolekcja po sortowaniu: "+c);
+  }
+
+  public static void main(String[] args)
+    {
+      
+        dodawanieDoKolekcji();
+        System.out.println();
+        usuwanie();
+        System.out.println();
+        przegladanie();
+        System.out.println();
+        wyszukiwanie("jelen");
+        wyszukiwanie("wilk");
+        wyszukiwanie("pies");
+        wyszukiwanie("lis");
+        wyszukiwanie("mamut");
+        System.out.println();
+        sortowanie();
+    }
+}
+/* wyjscie
+
+[pies, kot, bocian, kaczka, jelen, wilk, lis]
+
+[pies, kot, jelen, wilk, lis]
+
+pies
+kot
+jelen
+wilk
+lis
+
+jelen
+wilk
+pies
+Nie ma takiego zwierzaka
+
+Kolekcja po sortowaniu: [jelen, kot, lis, pies, wilk]
+
+ */

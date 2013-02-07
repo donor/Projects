@@ -1,0 +1,64 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 224 112)
+	(text "altddio_in0" (rect 81 1 154 17)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 96 25 108)(font "Arial" ))
+	(port
+		(pt 0 24)
+		(input)
+		(text "datain[7..0]" (rect 0 0 62 14)(font "Arial" (font_size 8)))
+		(text "datain[7..0]" (rect 4 11 58 24)(font "Arial" (font_size 8)))
+		(line (pt 0 24)(pt 80 24)(line_width 3))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "inclock" (rect 0 0 38 14)(font "Arial" (font_size 8)))
+		(text "inclock" (rect 4 27 36 40)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 80 40)(line_width 1))
+	)
+	(port
+		(pt 224 24)
+		(output)
+		(text "dataout_h[7..0]" (rect 0 0 84 14)(font "Arial" (font_size 8)))
+		(text "dataout_h[7..0]" (rect 149 11 221 24)(font "Arial" (font_size 8)))
+		(line (pt 224 24)(pt 128 24)(line_width 3))
+	)
+	(port
+		(pt 224 40)
+		(output)
+		(text "dataout_l[7..0]" (rect 0 0 80 14)(font "Arial" (font_size 8)))
+		(text "dataout_l[7..0]" (rect 153 27 222 40)(font "Arial" (font_size 8)))
+		(line (pt 224 40)(pt 128 40)(line_width 3))
+	)
+	(drawing
+		(text "ddio" (rect 94 27 115 40)(font "Arial" (font_size 8)))
+		(text "input" (rect 93 42 117 55)(font "Arial" (font_size 8)))
+		(text "power up" (rect 84 66 121 78)(font "Arial" ))
+		(text "high" (rect 84 76 101 88)(font "Arial" ))
+		(line (pt 80 16)(pt 128 16)(line_width 1))
+		(line (pt 128 16)(pt 128 88)(line_width 1))
+		(line (pt 128 88)(pt 80 88)(line_width 1))
+		(line (pt 80 88)(pt 80 16)(line_width 1))
+	)
+)

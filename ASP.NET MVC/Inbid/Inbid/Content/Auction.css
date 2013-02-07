@@ -1,0 +1,24 @@
+﻿body {
+}
+
+#searcher
+{
+   /* border: 1px solid #ddd;*/
+    padding:    4px 5px 2px 5px;
+    margin:    0 0 0 330px;
+    text-align: center;
+    display: block; 
+    width:300px;
+}
+
+#btnSearch
+{
+    /*  font-size: 1.2em;*/ /*padding: 5px;*/
+    margin: -4px 0 0 -29px;
+    vertical-align: middle;
+    height: 23px;
+    width: 24px;
+    background-image: url('Img/loupe.jpg');
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+}

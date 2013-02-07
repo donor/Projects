@@ -1,0 +1,959 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UCModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="UCEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="aspnet_Applications" EntityType="UCModel.aspnet_Applications" />
+    <EntitySet Name="aspnet_Membership" EntityType="UCModel.aspnet_Membership" />
+    <EntitySet Name="aspnet_Paths" EntityType="UCModel.aspnet_Paths" />
+    <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="UCModel.aspnet_PersonalizationAllUsers" />
+    <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="UCModel.aspnet_PersonalizationPerUser" />
+    <EntitySet Name="aspnet_Profile" EntityType="UCModel.aspnet_Profile" />
+    <EntitySet Name="aspnet_Roles" EntityType="UCModel.aspnet_Roles" />
+    <EntitySet Name="aspnet_SchemaVersions" EntityType="UCModel.aspnet_SchemaVersions" />
+    <EntitySet Name="aspnet_Users" EntityType="UCModel.aspnet_Users" />
+    <EntitySet Name="aspnet_WebEvent_Events" EntityType="UCModel.aspnet_WebEvent_Events" />
+    <EntitySet Name="Brands" EntityType="UCModel.Brand" />
+    <EntitySet Name="Clothes" EntityType="UCModel.Cloth" />
+    <EntitySet Name="Colors" EntityType="UCModel.Color" />
+    <EntitySet Name="Materials" EntityType="UCModel.Material" />
+    <EntitySet Name="Opinions" EntityType="UCModel.Opinion" />
+    <EntitySet Name="OrderDetails" EntityType="UCModel.OrderDetail" />
+    <EntitySet Name="Orders" EntityType="UCModel.Order" />
+    <EntitySet Name="Patterns" EntityType="UCModel.Pattern" />
+    <EntitySet Name="Pictures" EntityType="UCModel.Picture" />
+    <EntitySet Name="Ratings" EntityType="UCModel.Rating" />
+    <EntitySet Name="ShoppingCarts" EntityType="UCModel.ShoppingCart" />
+    <EntitySet Name="Sizes" EntityType="UCModel.Size" />
+    <EntitySet Name="SubTypes" EntityType="UCModel.SubType" />
+    <EntitySet Name="sysdiagrams" EntityType="UCModel.sysdiagram" />
+    <EntitySet Name="Types" EntityType="UCModel.Type" />
+    <EntitySet Name="LastMensPositions" EntityType="UCModel.LastMensPosition" />
+    <EntitySet Name="LastWomensPositions" EntityType="UCModel.LastWomensPosition" />
+    <EntitySet Name="LastYouthPositions" EntityType="UCModel.LastYouthPosition" />
+    <EntitySet Name="vw_aspnet_Applications" EntityType="UCModel.vw_aspnet_Applications" />
+    <EntitySet Name="vw_aspnet_MembershipUsers" EntityType="UCModel.vw_aspnet_MembershipUsers" />
+    <EntitySet Name="vw_aspnet_Profiles" EntityType="UCModel.vw_aspnet_Profiles" />
+    <EntitySet Name="vw_aspnet_Roles" EntityType="UCModel.vw_aspnet_Roles" />
+    <EntitySet Name="vw_aspnet_Users" EntityType="UCModel.vw_aspnet_Users" />
+    <EntitySet Name="vw_aspnet_UsersInRoles" EntityType="UCModel.vw_aspnet_UsersInRoles" />
+    <EntitySet Name="vw_aspnet_WebPartState_Paths" EntityType="UCModel.vw_aspnet_WebPartState_Paths" />
+    <EntitySet Name="vw_aspnet_WebPartState_Shared" EntityType="UCModel.vw_aspnet_WebPartState_Shared" />
+    <EntitySet Name="vw_aspnet_WebPartState_User" EntityType="UCModel.vw_aspnet_WebPartState_User" />
+    <AssociationSet Name="FK__aspnet_Me__Appli__0A9D95DB" Association="UCModel.FK__aspnet_Me__Appli__0A9D95DB">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pa__Appli__10566F31" Association="UCModel.FK__aspnet_Pa__Appli__10566F31">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Ro__Appli__151B244E" Association="UCModel.FK__aspnet_Ro__Appli__151B244E">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__Appli__160F4887" Association="UCModel.FK__aspnet_Us__Appli__160F4887">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Me__UserI__0B91BA14" Association="UCModel.FK__aspnet_Me__UserI__0B91BA14">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__114A936A" Association="UCModel.FK__aspnet_Pe__PathI__114A936A">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__123EB7A3" Association="UCModel.FK__aspnet_Pe__PathI__123EB7A3">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__UserI__1332DBDC" Association="UCModel.FK__aspnet_Pe__UserI__1332DBDC">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pr__UserI__14270015" Association="UCModel.FK__aspnet_Pr__UserI__14270015">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clothes_aspnet_Users" Association="UCModel.FK_Clothes_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="Clothes" EntitySet="Clothes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Opinions_aspnet_Users" Association="UCModel.FK_Opinions_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="Opinions" EntitySet="Opinions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clothes_Brands" Association="UCModel.FK_Clothes_Brands">
+      <End Role="Brands" EntitySet="Brands" />
+      <End Role="Clothes" EntitySet="Clothes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clothes_Colors" Association="UCModel.FK_Clothes_Colors">
+      <End Role="Colors" EntitySet="Colors" />
+      <End Role="Clothes" EntitySet="Clothes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clothes_Materials" Association="UCModel.FK_Clothes_Materials">
+      <End Role="Materials" EntitySet="Materials" />
+      <End Role="Clothes" EntitySet="Clothes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clothes_Patterns" Association="UCModel.FK_Clothes_Patterns">
+      <End Role="Patterns" EntitySet="Patterns" />
+      <End Role="Clothes" EntitySet="Clothes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clothes_Sizes" Association="UCModel.FK_Clothes_Sizes">
+      <End Role="Sizes" EntitySet="Sizes" />
+      <End Role="Clothes" EntitySet="Clothes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clothes_SubTypes" Association="UCModel.FK_Clothes_SubTypes">
+      <End Role="SubTypes" EntitySet="SubTypes" />
+      <End Role="Clothes" EntitySet="Clothes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clothes_Types" Association="UCModel.FK_Clothes_Types">
+      <End Role="Types" EntitySet="Types" />
+      <End Role="Clothes" EntitySet="Clothes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pictures_Clothes" Association="UCModel.FK_Pictures_Clothes">
+      <End Role="Clothes" EntitySet="Clothes" />
+      <End Role="Pictures" EntitySet="Pictures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ratings_Clothes" Association="UCModel.FK_Ratings_Clothes">
+      <End Role="Clothes" EntitySet="Clothes" />
+      <End Role="Ratings" EntitySet="Ratings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ShopingCarts_Clothes" Association="UCModel.FK_ShopingCarts_Clothes">
+      <End Role="Clothes" EntitySet="Clothes" />
+      <End Role="ShoppingCart" EntitySet="ShoppingCarts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetails_Orders" Association="UCModel.FK_OrderDetails_Orders">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="aspnet_UsersInRoles" Association="UCModel.aspnet_UsersInRoles">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="SubTypesInTypes" Association="UCModel.SubTypesInTypes">
+      <End Role="SubTypes" EntitySet="SubTypes" />
+      <End Role="Types" EntitySet="Types" />
+    </AssociationSet>
+    <FunctionImport Name="GetSizesForType" EntitySet="Sizes" ReturnType="Collection(UCModel.Size)">
+      <Parameter Name="IdType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetSubTypesInType" EntitySet="SubTypes" ReturnType="Collection(UCModel.SubType)">
+      <Parameter Name="IdType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertNewClothes">
+      <Parameter Name="ClothesName" Mode="In" Type="String" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+      <Parameter Name="SellerId" Mode="In" Type="Guid" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="Sex" Mode="In" Type="Boolean" />
+      <Parameter Name="Condition" Mode="In" Type="Boolean" />
+      <Parameter Name="BrandName" Mode="In" Type="String" />
+      <Parameter Name="ColorId" Mode="In" Type="Int32" />
+      <Parameter Name="SizeId" Mode="In" Type="Int32" />
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="TypeId" Mode="In" Type="Int32" />
+      <Parameter Name="AddDate" Mode="In" Type="DateTime" />
+      <Parameter Name="MaterialId" Mode="In" Type="Int32" />
+      <Parameter Name="PatternId" Mode="In" Type="Int32" />
+      <Parameter Name="IsVintage" Mode="In" Type="Boolean" />
+      <Parameter Name="SubTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="NewClothesId" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertPicture">
+      <Parameter Name="PictureName" Mode="In" Type="String" />
+      <Parameter Name="Image" Mode="In" Type="Binary" />
+      <Parameter Name="ClothesId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetClothesDetails" ReturnType="Collection(UCModel.ClothesDetailsViewModel)">
+      <Parameter Name="ClothesId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetPicturesForClothes" ReturnType="Collection(UCModel.PicturesViewModel)">
+      <Parameter Name="ClothesId" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Membership" Relationship="UCModel.FK__aspnet_Me__Appli__0A9D95DB" FromRole="aspnet_Applications" ToRole="aspnet_Membership" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="UCModel.FK__aspnet_Pa__Appli__10566F31" FromRole="aspnet_Applications" ToRole="aspnet_Paths" />
+    <NavigationProperty Name="aspnet_Roles" Relationship="UCModel.FK__aspnet_Ro__Appli__151B244E" FromRole="aspnet_Applications" ToRole="aspnet_Roles" />
+    <NavigationProperty Name="aspnet_Users" Relationship="UCModel.FK__aspnet_Us__Appli__160F4887" FromRole="aspnet_Applications" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+    <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="MobilePIN" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredEmail" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordQuestion" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordAnswer" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+    <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="UCModel.FK__aspnet_Me__Appli__0A9D95DB" FromRole="aspnet_Membership" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Users" Relationship="UCModel.FK__aspnet_Me__UserI__0B91BA14" FromRole="aspnet_Membership" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Paths">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="Path" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredPath" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="UCModel.FK__aspnet_Pa__Appli__10566F31" FromRole="aspnet_Paths" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_PersonalizationAllUsers" Relationship="UCModel.FK__aspnet_Pe__PathI__114A936A" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationAllUsers" />
+    <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="UCModel.FK__aspnet_Pe__PathI__123EB7A3" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationPerUser" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationAllUsers">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="UCModel.FK__aspnet_Pe__PathI__114A936A" FromRole="aspnet_PersonalizationAllUsers" ToRole="aspnet_Paths" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationPerUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" />
+    <Property Name="UserId" Type="Guid" />
+    <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="UCModel.FK__aspnet_Pe__PathI__123EB7A3" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Paths" />
+    <NavigationProperty Name="aspnet_Users" Relationship="UCModel.FK__aspnet_Pe__UserI__1332DBDC" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Profile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="PropertyNames" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PropertyValuesString" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PropertyValuesBinary" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="aspnet_Users" Relationship="UCModel.FK__aspnet_Pr__UserI__14270015" FromRole="aspnet_Profile" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredRoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="UCModel.FK__aspnet_Ro__Appli__151B244E" FromRole="aspnet_Roles" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Users" Relationship="UCModel.aspnet_UsersInRoles" FromRole="aspnet_Roles" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_SchemaVersions">
+    <Key>
+      <PropertyRef Name="Feature" />
+      <PropertyRef Name="CompatibleSchemaVersion" />
+    </Key>
+    <Property Name="Feature" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="CompatibleSchemaVersion" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="IsCurrentVersion" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredUserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="UCModel.FK__aspnet_Us__Appli__160F4887" FromRole="aspnet_Users" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Membership" Relationship="UCModel.FK__aspnet_Me__UserI__0B91BA14" FromRole="aspnet_Users" ToRole="aspnet_Membership" />
+    <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="UCModel.FK__aspnet_Pe__UserI__1332DBDC" FromRole="aspnet_Users" ToRole="aspnet_PersonalizationPerUser" />
+    <NavigationProperty Name="aspnet_Profile" Relationship="UCModel.FK__aspnet_Pr__UserI__14270015" FromRole="aspnet_Users" ToRole="aspnet_Profile" />
+    <NavigationProperty Name="Clothes" Relationship="UCModel.FK_Clothes_aspnet_Users" FromRole="aspnet_Users" ToRole="Clothes" />
+    <NavigationProperty Name="Opinions" Relationship="UCModel.FK_Opinions_aspnet_Users" FromRole="aspnet_Users" ToRole="Opinions" />
+    <NavigationProperty Name="aspnet_Roles" Relationship="UCModel.aspnet_UsersInRoles" FromRole="aspnet_Users" ToRole="aspnet_Roles" />
+  </EntityType>
+  <EntityType Name="aspnet_WebEvent_Events">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="true" />
+    <Property Name="EventTimeUtc" Type="DateTime" Nullable="false" />
+    <Property Name="EventTime" Type="DateTime" Nullable="false" />
+    <Property Name="EventType" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="EventSequence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
+    <Property Name="EventOccurrence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
+    <Property Name="EventCode" Type="Int32" Nullable="false" />
+    <Property Name="EventDetailCode" Type="Int32" Nullable="false" />
+    <Property Name="Message" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationPath" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationVirtualPath" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="MachineName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="RequestUrl" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+    <Property Name="ExceptionType" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="Details" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="BrandId" />
+    </Key>
+    <Property Name="BrandId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrandName" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Clothes" Relationship="UCModel.FK_Clothes_Brands" FromRole="Brands" ToRole="Clothes" />
+  </EntityType>
+  <EntityType Name="Cloth">
+    <Key>
+      <PropertyRef Name="ClothesId" />
+    </Key>
+    <Property Name="ClothesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClothesName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="SellerId" Type="Guid" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Sex" Type="Boolean" />
+    <Property Name="Condition" Type="Boolean" />
+    <Property Name="BrandId" Type="Int32" />
+    <Property Name="ColorId" Type="Int32" />
+    <Property Name="SizeId" Type="Int32" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="TypeId" Type="Int32" />
+    <Property Name="AddDate" Type="DateTime" />
+    <Property Name="IsSold" Type="Boolean" />
+    <Property Name="DisplayCount" Type="Int32" />
+    <Property Name="MaterialId" Type="Int32" />
+    <Property Name="PatternId" Type="Int32" />
+    <Property Name="IsVintage" Type="Boolean" />
+    <Property Name="SubTypeId" Type="Int32" />
+    <NavigationProperty Name="aspnet_Users" Relationship="UCModel.FK_Clothes_aspnet_Users" FromRole="Clothes" ToRole="aspnet_Users" />
+    <NavigationProperty Name="Brand" Relationship="UCModel.FK_Clothes_Brands" FromRole="Clothes" ToRole="Brands" />
+    <NavigationProperty Name="Color" Relationship="UCModel.FK_Clothes_Colors" FromRole="Clothes" ToRole="Colors" />
+    <NavigationProperty Name="Material" Relationship="UCModel.FK_Clothes_Materials" FromRole="Clothes" ToRole="Materials" />
+    <NavigationProperty Name="Pattern" Relationship="UCModel.FK_Clothes_Patterns" FromRole="Clothes" ToRole="Patterns" />
+    <NavigationProperty Name="Size" Relationship="UCModel.FK_Clothes_Sizes" FromRole="Clothes" ToRole="Sizes" />
+    <NavigationProperty Name="SubType" Relationship="UCModel.FK_Clothes_SubTypes" FromRole="Clothes" ToRole="SubTypes" />
+    <NavigationProperty Name="Type" Relationship="UCModel.FK_Clothes_Types" FromRole="Clothes" ToRole="Types" />
+    <NavigationProperty Name="Pictures" Relationship="UCModel.FK_Pictures_Clothes" FromRole="Clothes" ToRole="Pictures" />
+    <NavigationProperty Name="Ratings" Relationship="UCModel.FK_Ratings_Clothes" FromRole="Clothes" ToRole="Ratings" />
+    <NavigationProperty Name="ShoppingCarts" Relationship="UCModel.FK_ShopingCarts_Clothes" FromRole="Clothes" ToRole="ShoppingCart" />
+  </EntityType>
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="ColorId" />
+    </Key>
+    <Property Name="ColorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ColorName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="IsDefault" Type="Boolean" />
+    <NavigationProperty Name="Clothes" Relationship="UCModel.FK_Clothes_Colors" FromRole="Colors" ToRole="Clothes" />
+  </EntityType>
+  <EntityType Name="Material">
+    <Key>
+      <PropertyRef Name="MaterialId" />
+    </Key>
+    <Property Name="MaterialId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaterialName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IsDefault" Type="Boolean" />
+    <NavigationProperty Name="Clothes" Relationship="UCModel.FK_Clothes_Materials" FromRole="Materials" ToRole="Clothes" />
+  </EntityType>
+  <EntityType Name="Opinion">
+    <Key>
+      <PropertyRef Name="OpinionId" />
+    </Key>
+    <Property Name="OpinionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Guid" />
+    <Property Name="Rating" Type="Int32" />
+    <Property Name="Opinion1" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Users" Relationship="UCModel.FK_Opinions_aspnet_Users" FromRole="Opinions" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="OrderDetailsId" />
+    </Key>
+    <Property Name="OrderDetailsId" Type="Int32" Nullable="false" />
+    <Property Name="OrderId" Type="Int32" />
+    <Property Name="ClotheId" Type="Int32" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="UnitCost" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="Order" Relationship="UCModel.FK_OrderDetails_Orders" FromRole="OrderDetails" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BuyerId" Type="Guid" />
+    <Property Name="TotalPrice" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="OrderDetails" Relationship="UCModel.FK_OrderDetails_Orders" FromRole="Orders" ToRole="OrderDetails" />
+    <Property Type="String" Name="FirstName" MaxLength="160" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastName" MaxLength="160" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="City" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="State" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PostalCode" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Country" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="OrderDate" />
+    <Property Type="String" Name="Address" MaxLength="70" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Pattern">
+    <Key>
+      <PropertyRef Name="PatternId" />
+    </Key>
+    <Property Name="PatternId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PatternName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="IsDefault" Type="Boolean" />
+    <NavigationProperty Name="Clothes" Relationship="UCModel.FK_Clothes_Patterns" FromRole="Patterns" ToRole="Clothes" />
+  </EntityType>
+  <EntityType Name="Picture">
+    <Key>
+      <PropertyRef Name="PictureId" />
+    </Key>
+    <Property Name="PictureId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PictureName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ClothesId" Type="Int32" />
+    <NavigationProperty Name="Cloth" Relationship="UCModel.FK_Pictures_Clothes" FromRole="Pictures" ToRole="Clothes" />
+  </EntityType>
+  <EntityType Name="Rating">
+    <Key>
+      <PropertyRef Name="RatingId" />
+    </Key>
+    <Property Name="RatingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClothesId" Type="Int32" />
+    <Property Name="Rating1" Type="Int32" />
+    <Property Name="Comment" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Cloth" Relationship="UCModel.FK_Ratings_Clothes" FromRole="Ratings" ToRole="Clothes" />
+  </EntityType>
+  <EntityType Name="ShoppingCart">
+    <Key>
+      <PropertyRef Name="RecordId" />
+    </Key>
+    <Property Name="RecordId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CartId" Type="String" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="ClothesId" Type="Int32" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <NavigationProperty Name="Cloth" Relationship="UCModel.FK_ShopingCarts_Clothes" FromRole="ShoppingCart" ToRole="Clothes" />
+  </EntityType>
+  <EntityType Name="Size">
+    <Key>
+      <PropertyRef Name="SizeId" />
+    </Key>
+    <Property Name="SizeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SizeName" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Clothes" Relationship="UCModel.FK_Clothes_Sizes" FromRole="Sizes" ToRole="Clothes" />
+  </EntityType>
+  <EntityType Name="SubType">
+    <Key>
+      <PropertyRef Name="SubTypeId" />
+    </Key>
+    <Property Name="SubTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubTypeName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Clothes" Relationship="UCModel.FK_Clothes_SubTypes" FromRole="SubTypes" ToRole="Clothes" />
+    <NavigationProperty Name="Types" Relationship="UCModel.SubTypesInTypes" FromRole="SubTypes" ToRole="Types" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Type">
+    <Key>
+      <PropertyRef Name="TypeId" />
+    </Key>
+    <Property Name="TypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Sex" Type="Boolean" />
+    <NavigationProperty Name="Clothes" Relationship="UCModel.FK_Clothes_Types" FromRole="Types" ToRole="Clothes" />
+    <NavigationProperty Name="SubTypes" Relationship="UCModel.SubTypesInTypes" FromRole="Types" ToRole="SubTypes" />
+  </EntityType>
+  <EntityType Name="LastMensPosition">
+    <Key>
+      <PropertyRef Name="ClothesId" />
+      <PropertyRef Name="PictureId" />
+    </Key>
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SizeName" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ClothesName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SellerId" Type="Guid" />
+    <Property Name="ClothesId" Type="Int32" Nullable="false" />
+    <Property Name="PictureId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LastWomensPosition">
+    <Key>
+      <PropertyRef Name="ClothesId" />
+      <PropertyRef Name="PictureId" />
+    </Key>
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SizeName" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ClothesName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ClothesId" Type="Int32" Nullable="false" />
+    <Property Name="SellerId" Type="Guid" />
+    <Property Name="PictureId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LastYouthPosition">
+    <Key>
+      <PropertyRef Name="ClothesId" />
+      <PropertyRef Name="PictureId" />
+    </Key>
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SizeName" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ClothesName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ClothesId" Type="Int32" Nullable="false" />
+    <Property Name="SellerId" Type="Guid" />
+    <Property Name="PictureId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationName" />
+      <PropertyRef Name="LoweredApplicationName" />
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_MembershipUsers">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="PasswordFormat" />
+      <PropertyRef Name="IsApproved" />
+      <PropertyRef Name="IsLockedOut" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="LastLoginDate" />
+      <PropertyRef Name="LastPasswordChangedDate" />
+      <PropertyRef Name="LastLockoutDate" />
+      <PropertyRef Name="FailedPasswordAttemptCount" />
+      <PropertyRef Name="FailedPasswordAttemptWindowStart" />
+      <PropertyRef Name="FailedPasswordAnswerAttemptCount" />
+      <PropertyRef Name="FailedPasswordAnswerAttemptWindowStart" />
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="IsAnonymous" />
+      <PropertyRef Name="LastActivityDate" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+    <Property Name="MobilePIN" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredEmail" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordQuestion" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordAnswer" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+    <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_Profiles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+    <Property Name="DataSize" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_Roles">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="RoleName" />
+      <PropertyRef Name="LoweredRoleName" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredRoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_Users">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="LoweredUserName" />
+      <PropertyRef Name="IsAnonymous" />
+      <PropertyRef Name="LastActivityDate" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredUserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_WebPartState_Paths">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="PathId" />
+      <PropertyRef Name="Path" />
+      <PropertyRef Name="LoweredPath" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="Path" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredPath" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_WebPartState_Shared">
+    <Key>
+      <PropertyRef Name="PathId" />
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="DataSize" Type="Int32" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_WebPartState_User">
+    <Key>
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="PathId" Type="Guid" />
+    <Property Name="UserId" Type="Guid" />
+    <Property Name="DataSize" Type="Int32" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__aspnet_Me__Appli__0A9D95DB">
+    <End Role="aspnet_Applications" Type="UCModel.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="UCModel.aspnet_Membership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pa__Appli__10566F31">
+    <End Role="aspnet_Applications" Type="UCModel.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Paths" Type="UCModel.aspnet_Paths" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Paths">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Ro__Appli__151B244E">
+    <End Role="aspnet_Applications" Type="UCModel.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Roles" Type="UCModel.aspnet_Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Roles">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__Appli__160F4887">
+    <End Role="aspnet_Applications" Type="UCModel.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Users" Type="UCModel.aspnet_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Users">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Me__UserI__0B91BA14">
+    <End Role="aspnet_Users" Type="UCModel.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="UCModel.aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__114A936A">
+    <End Role="aspnet_Paths" Type="UCModel.aspnet_Paths" Multiplicity="1" />
+    <End Role="aspnet_PersonalizationAllUsers" Type="UCModel.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationAllUsers">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__123EB7A3">
+    <End Role="aspnet_Paths" Type="UCModel.aspnet_Paths" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="UCModel.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__UserI__1332DBDC">
+    <End Role="aspnet_Users" Type="UCModel.aspnet_Users" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="UCModel.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pr__UserI__14270015">
+    <End Role="aspnet_Users" Type="UCModel.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Profile" Type="UCModel.aspnet_Profile" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Profile">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clothes_aspnet_Users">
+    <End Role="aspnet_Users" Type="UCModel.aspnet_Users" Multiplicity="0..1" />
+    <End Role="Clothes" Type="UCModel.Cloth" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Clothes">
+        <PropertyRef Name="SellerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Opinions_aspnet_Users">
+    <End Role="aspnet_Users" Type="UCModel.aspnet_Users" Multiplicity="0..1" />
+    <End Role="Opinions" Type="UCModel.Opinion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Opinions">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clothes_Brands">
+    <End Role="Brands" Type="UCModel.Brand" Multiplicity="0..1" />
+    <End Role="Clothes" Type="UCModel.Cloth" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brands">
+        <PropertyRef Name="BrandId" />
+      </Principal>
+      <Dependent Role="Clothes">
+        <PropertyRef Name="BrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clothes_Colors">
+    <End Role="Colors" Type="UCModel.Color" Multiplicity="0..1" />
+    <End Role="Clothes" Type="UCModel.Cloth" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Colors">
+        <PropertyRef Name="ColorId" />
+      </Principal>
+      <Dependent Role="Clothes">
+        <PropertyRef Name="ColorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clothes_Materials">
+    <End Role="Materials" Type="UCModel.Material" Multiplicity="0..1" />
+    <End Role="Clothes" Type="UCModel.Cloth" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Materials">
+        <PropertyRef Name="MaterialId" />
+      </Principal>
+      <Dependent Role="Clothes">
+        <PropertyRef Name="MaterialId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clothes_Patterns">
+    <End Role="Patterns" Type="UCModel.Pattern" Multiplicity="0..1" />
+    <End Role="Clothes" Type="UCModel.Cloth" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patterns">
+        <PropertyRef Name="PatternId" />
+      </Principal>
+      <Dependent Role="Clothes">
+        <PropertyRef Name="PatternId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clothes_Sizes">
+    <End Role="Sizes" Type="UCModel.Size" Multiplicity="0..1" />
+    <End Role="Clothes" Type="UCModel.Cloth" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sizes">
+        <PropertyRef Name="SizeId" />
+      </Principal>
+      <Dependent Role="Clothes">
+        <PropertyRef Name="SizeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clothes_SubTypes">
+    <End Role="SubTypes" Type="UCModel.SubType" Multiplicity="0..1" />
+    <End Role="Clothes" Type="UCModel.Cloth" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubTypes">
+        <PropertyRef Name="SubTypeId" />
+      </Principal>
+      <Dependent Role="Clothes">
+        <PropertyRef Name="SubTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clothes_Types">
+    <End Role="Types" Type="UCModel.Type" Multiplicity="0..1" />
+    <End Role="Clothes" Type="UCModel.Cloth" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Types">
+        <PropertyRef Name="TypeId" />
+      </Principal>
+      <Dependent Role="Clothes">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pictures_Clothes">
+    <End Role="Clothes" Type="UCModel.Cloth" Multiplicity="0..1" />
+    <End Role="Pictures" Type="UCModel.Picture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clothes">
+        <PropertyRef Name="ClothesId" />
+      </Principal>
+      <Dependent Role="Pictures">
+        <PropertyRef Name="ClothesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ratings_Clothes">
+    <End Role="Clothes" Type="UCModel.Cloth" Multiplicity="0..1" />
+    <End Role="Ratings" Type="UCModel.Rating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clothes">
+        <PropertyRef Name="ClothesId" />
+      </Principal>
+      <Dependent Role="Ratings">
+        <PropertyRef Name="ClothesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ShopingCarts_Clothes">
+    <End Role="Clothes" Type="UCModel.Cloth" Multiplicity="0..1" />
+    <End Role="ShoppingCart" Type="UCModel.ShoppingCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clothes">
+        <PropertyRef Name="ClothesId" />
+      </Principal>
+      <Dependent Role="ShoppingCart">
+        <PropertyRef Name="ClothesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetails_Orders">
+    <End Role="Orders" Type="UCModel.Order" Multiplicity="0..1" />
+    <End Role="OrderDetails" Type="UCModel.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="aspnet_UsersInRoles">
+    <End Role="aspnet_Roles" Type="UCModel.aspnet_Roles" Multiplicity="*" />
+    <End Role="aspnet_Users" Type="UCModel.aspnet_Users" Multiplicity="*" />
+  </Association>
+  <Association Name="SubTypesInTypes">
+    <End Role="SubTypes" Type="UCModel.SubType" Multiplicity="*" />
+    <End Role="Types" Type="UCModel.Type" Multiplicity="*" />
+  </Association>
+  <ComplexType Name="ClothesDetailsViewModel">
+    <Property Type="String" Name="BrandName" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="MaterialName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ClothesName" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Price" Nullable="true" Precision="19" />
+    <Property Type="Boolean" Name="Condition" Nullable="true" />
+    <Property Type="Int32" Name="DisplayCount" Nullable="true" />
+    <Property Type="Boolean" Name="IsVintage" Nullable="true" />
+    <Property Type="String" Name="SizeName" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="ColorName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" />
+    <Property Type="Int32" Name="ClothesId" Nullable="false" />
+    <Property Type="String" Name="PatternName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Quantity" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="PicturesViewModel">
+    <Property Type="Int32" Name="PictureId" Nullable="false" />
+  </ComplexType>
+</Schema>

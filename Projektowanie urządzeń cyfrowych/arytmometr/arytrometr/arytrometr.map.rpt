@@ -1,0 +1,942 @@
+Analysis & Synthesis report for arytrometr
+Sat May 29 20:16:57 2010
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Analysis & Synthesis DSP Block Usage Summary
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: licznik7:inst1
+ 14. Parameter Settings for User Entity Instance: lpm_mux0:Multpilexer|LPM_MUX:lpm_mux_component
+ 15. Parameter Settings for User Entity Instance: lpm_add_sub0:inkrementacja|lpm_add_sub:lpm_add_sub_component
+ 16. Parameter Settings for User Entity Instance: lpm_mult0:mnozenie|lpm_mult:lpm_mult_component
+ 17. Parameter Settings for User Entity Instance: lpm_sub:odejmowanie|lpm_add_sub:lpm_add_sub_component
+ 18. Parameter Settings for User Entity Instance: lpm_add:dodowanie|lpm_add_sub:lpm_add_sub_component
+ 19. Parameter Settings for User Entity Instance: lpm_clshift2:Przesuniecewprawo|lpm_clshift:lpm_clshift_component
+ 20. Parameter Settings for User Entity Instance: lpm_clshift2:przesuniecewlewo|lpm_clshift:lpm_clshift_component
+ 21. Parameter Settings for User Entity Instance: lpm_add_sub0:dekrementacja|lpm_add_sub:lpm_add_sub_component
+ 22. Parameter Settings for Inferred Entity Instance: lpm_add:dodowanie|lpm_add_sub:lpm_add_sub_component|add_sub_1ih:auto_generated|lpm_add_sub:op_1
+ 23. lpm_mult Parameter Settings by Entity Instance
+ 24. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat May 29 20:16:56 2010        ;
+; Quartus II Version                 ; 9.1 Build 304 01/25/2010 SP 1 SJ Web Edition ;
+; Revision Name                      ; arytrometr                                   ;
+; Top-level Entity Name              ; arytrometr                                   ;
+; Family                             ; Cyclone III                                  ;
+; Total logic elements               ; 369                                          ;
+;     Total combinational functions  ; 369                                          ;
+;     Dedicated logic registers      ; 5                                            ;
+; Total registers                    ; 5                                            ;
+; Total pins                         ; 26                                           ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0                                            ;
+; Embedded Multiplier 9-bit elements ; 2                                            ;
+; Total PLLs                         ; 0                                            ;
++------------------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; arytrometr         ; arytrometr         ;
+; Family name                                                                ; Cyclone III        ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                        ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------+
+; ../notvector/notvector.vhd       ; yes             ; User VHDL File                     ; C:/Documents and Settings/donor/Pulpit/arytmometr/notvector/notvector.vhd           ;
+; ../licznik7/licznik7.vhd         ; yes             ; User VHDL File                     ; C:/Documents and Settings/donor/Pulpit/arytmometr/licznik7/licznik7.vhd             ;
+; ../mux2x16/mux2x16.vhd           ; yes             ; User VHDL File                     ; C:/Documents and Settings/donor/Pulpit/arytmometr/mux2x16/mux2x16.vhd               ;
+; ../swap/swap.vhd                 ; yes             ; User VHDL File                     ; C:/Documents and Settings/donor/Pulpit/arytmometr/swap/swap.vhd                     ;
+; ../rejestr/rejestr.vhd           ; yes             ; User VHDL File                     ; C:/Documents and Settings/donor/Pulpit/arytmometr/rejestr/rejestr.vhd               ;
+; ../wyjscie/wyjscie.vhd           ; yes             ; User VHDL File                     ; C:/Documents and Settings/donor/Pulpit/arytmometr/wyjscie/wyjscie.vhd               ;
+; ../demux2/demux2.vhd             ; yes             ; User VHDL File                     ; C:/Documents and Settings/donor/Pulpit/arytmometr/demux2/demux2.vhd                 ;
+; ../nandvector/nandvector.bdf     ; yes             ; User Block Diagram/Schematic File  ; C:/Documents and Settings/donor/Pulpit/arytmometr/nandvector/nandvector.bdf         ;
+; ../norvector/norvector.bdf       ; yes             ; User Block Diagram/Schematic File  ; C:/Documents and Settings/donor/Pulpit/arytmometr/norvector/norvector.bdf           ;
+; ../xorvector/xorvector.bdf       ; yes             ; User Block Diagram/Schematic File  ; C:/Documents and Settings/donor/Pulpit/arytmometr/xorvector/xorvector.bdf           ;
+; ../orvector/orvector.bdf         ; yes             ; User Block Diagram/Schematic File  ; C:/Documents and Settings/donor/Pulpit/arytmometr/orvector/orvector.bdf             ;
+; ../andvector/andvector.bdf       ; yes             ; User Block Diagram/Schematic File  ; C:/Documents and Settings/donor/Pulpit/arytmometr/andvector/andvector.bdf           ;
+; lpm_add.vhd                      ; yes             ; User Wizard-Generated File         ; C:/Documents and Settings/donor/Pulpit/arytmometr/arytrometr/lpm_add.vhd            ;
+; arytrometr.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Documents and Settings/donor/Pulpit/arytmometr/arytrometr/arytrometr.bdf         ;
+; lpm_mux0.vhd                     ; yes             ; User Wizard-Generated File         ; C:/Documents and Settings/donor/Pulpit/arytmometr/arytrometr/lpm_mux0.vhd           ;
+; lpm_sub.vhd                      ; yes             ; User Wizard-Generated File         ; C:/Documents and Settings/donor/Pulpit/arytmometr/arytrometr/lpm_sub.vhd            ;
+; lpm_mult0.vhd                    ; yes             ; User Wizard-Generated File         ; C:/Documents and Settings/donor/Pulpit/arytmometr/arytrometr/lpm_mult0.vhd          ;
+; lpm_add_sub0.vhd                 ; yes             ; User Wizard-Generated File         ; C:/Documents and Settings/donor/Pulpit/arytmometr/arytrometr/lpm_add_sub0.vhd       ;
+; lpm_clshift2.vhd                 ; yes             ; User Wizard-Generated File         ; C:/Documents and Settings/donor/Pulpit/arytmometr/arytrometr/lpm_clshift2.vhd       ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; f:/altera/91sp1/quartus/libraries/megafunctions/lpm_mux.tdf                         ;
+; db/mux_l9e.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Documents and Settings/donor/Pulpit/arytmometr/arytrometr/db/mux_l9e.tdf         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                       ; f:/altera/91sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf                     ;
+; db/add_sub_mmh.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Documents and Settings/donor/Pulpit/arytmometr/arytrometr/db/add_sub_mmh.tdf     ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                       ; f:/altera/91sp1/quartus/libraries/megafunctions/lpm_mult.tdf                        ;
+; db/mult_e7n.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Documents and Settings/donor/Pulpit/arytmometr/arytrometr/db/mult_e7n.tdf        ;
+; db/add_sub_2jh.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Documents and Settings/donor/Pulpit/arytmometr/arytrometr/db/add_sub_2jh.tdf     ;
+; db/add_sub_1ih.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Documents and Settings/donor/Pulpit/arytmometr/arytrometr/db/add_sub_1ih.tdf     ;
+; lpm_clshift.tdf                  ; yes             ; Megafunction                       ; f:/altera/91sp1/quartus/libraries/megafunctions/lpm_clshift.tdf                     ;
+; db/lpm_clshift_0kc.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Documents and Settings/donor/Pulpit/arytmometr/arytrometr/db/lpm_clshift_0kc.tdf ;
+; db/add_sub_iui.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Documents and Settings/donor/Pulpit/arytmometr/arytrometr/db/add_sub_iui.tdf     ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+; Estimated Total logic elements              ; 369               ;
+;                                             ;                   ;
+; Total combinational functions               ; 369               ;
+; Logic element usage by number of LUT inputs ;                   ;
+;     -- 4 input functions                    ; 192               ;
+;     -- 3 input functions                    ; 126               ;
+;     -- <=2 input functions                  ; 51                ;
+;                                             ;                   ;
+; Logic elements by mode                      ;                   ;
+;     -- normal mode                          ; 338               ;
+;     -- arithmetic mode                      ; 31                ;
+;                                             ;                   ;
+; Total registers                             ; 5                 ;
+;     -- Dedicated logic registers            ; 5                 ;
+;     -- I/O registers                        ; 0                 ;
+;                                             ;                   ;
+; I/O pins                                    ; 26                ;
+; Embedded Multiplier 9-bit elements          ; 2                 ;
+; Maximum fan-out node                        ; Operacja[0]~input ;
+; Maximum fan-out                             ; 99                ;
+; Total fan-out                               ; 1321              ;
+; Average fan-out                             ; 3.09              ;
++---------------------------------------------+-------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                             ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                    ; Library Name ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |arytrometr                                 ; 369 (0)           ; 5 (0)        ; 0           ; 2            ; 0       ; 1         ; 26   ; 0            ; |arytrometr                                                                                                                            ; work         ;
+;    |demux2:inst11|                          ; 38 (38)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|demux2:inst11                                                                                                              ;              ;
+;    |licznik7:inst1|                         ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|licznik7:inst1                                                                                                             ; work         ;
+;    |lpm_add:dodowanie|                      ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|lpm_add:dodowanie                                                                                                          ; work         ;
+;       |lpm_add_sub:lpm_add_sub_component|   ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|lpm_add:dodowanie|lpm_add_sub:lpm_add_sub_component                                                                        ;              ;
+;          |add_sub_1ih:auto_generated|       ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|lpm_add:dodowanie|lpm_add_sub:lpm_add_sub_component|add_sub_1ih:auto_generated                                             ; work         ;
+;             |lpm_add_sub:op_1|              ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|lpm_add:dodowanie|lpm_add_sub:lpm_add_sub_component|add_sub_1ih:auto_generated|lpm_add_sub:op_1                            ;              ;
+;                |add_sub_iui:auto_generated| ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|lpm_add:dodowanie|lpm_add_sub:lpm_add_sub_component|add_sub_1ih:auto_generated|lpm_add_sub:op_1|add_sub_iui:auto_generated ;              ;
+;    |lpm_add_sub0:dekrementacja|             ; 36 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|lpm_add_sub0:dekrementacja                                                                                                 ; work         ;
+;       |lpm_add_sub:lpm_add_sub_component|   ; 36 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|lpm_add_sub0:dekrementacja|lpm_add_sub:lpm_add_sub_component                                                               ;              ;
+;          |add_sub_mmh:auto_generated|       ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|lpm_add_sub0:dekrementacja|lpm_add_sub:lpm_add_sub_component|add_sub_mmh:auto_generated                                    ; work         ;
+;    |lpm_clshift2:Przesuniecewprawo|         ; 54 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|lpm_clshift2:Przesuniecewprawo                                                                                             ; work         ;
+;       |lpm_clshift:lpm_clshift_component|   ; 54 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|lpm_clshift2:Przesuniecewprawo|lpm_clshift:lpm_clshift_component                                                           ; work         ;
+;          |lpm_clshift_0kc:auto_generated|   ; 54 (54)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|lpm_clshift2:Przesuniecewprawo|lpm_clshift:lpm_clshift_component|lpm_clshift_0kc:auto_generated                            ;              ;
+;    |lpm_mult0:mnozenie|                     ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |arytrometr|lpm_mult0:mnozenie                                                                                                         ; work         ;
+;       |lpm_mult:lpm_mult_component|         ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |arytrometr|lpm_mult0:mnozenie|lpm_mult:lpm_mult_component                                                                             ;              ;
+;          |mult_e7n:auto_generated|          ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |arytrometr|lpm_mult0:mnozenie|lpm_mult:lpm_mult_component|mult_e7n:auto_generated                                                     ; work         ;
+;    |lpm_mux0:Multpilexer|                   ; 146 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|lpm_mux0:Multpilexer                                                                                                       ;              ;
+;       |lpm_mux:lpm_mux_component|           ; 146 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|lpm_mux0:Multpilexer|lpm_mux:lpm_mux_component                                                                             ; work         ;
+;          |mux_l9e:auto_generated|           ; 146 (146)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|lpm_mux0:Multpilexer|lpm_mux:lpm_mux_component|mux_l9e:auto_generated                                                      ;              ;
+;    |mux2x16:inst9|                          ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|mux2x16:inst9                                                                                                              ;              ;
+;    |rejestr:inst|                           ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|rejestr:inst                                                                                                               ; work         ;
+;    |wyjscie:inst6|                          ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arytrometr|wyjscie:inst6                                                                                                              ;              ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 1           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 2           ;
+; Signed Embedded Multipliers           ; 1           ;
+; Unsigned Embedded Multipliers         ; 0           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++-----------------------------------------------------+----------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal  ; Free of Timing Hazards ;
++-----------------------------------------------------+----------------------+------------------------+
+; wyjscie:inst6|Y1[7]                                 ; wyjscie:inst6|Y1[7]  ; yes                    ;
+; wyjscie:inst6|Y1[6]                                 ; wyjscie:inst6|Y1[7]  ; yes                    ;
+; wyjscie:inst6|Y1[5]                                 ; wyjscie:inst6|Y1[7]  ; yes                    ;
+; wyjscie:inst6|Y1[4]                                 ; wyjscie:inst6|Y1[7]  ; yes                    ;
+; wyjscie:inst6|Y1[3]                                 ; wyjscie:inst6|Y1[7]  ; yes                    ;
+; wyjscie:inst6|Y1[2]                                 ; wyjscie:inst6|Y1[7]  ; yes                    ;
+; wyjscie:inst6|Y1[1]                                 ; wyjscie:inst6|Y1[7]  ; yes                    ;
+; wyjscie:inst6|Y1[0]                                 ; wyjscie:inst6|Y1[7]  ; yes                    ;
+; rejestr:inst|Wyj[15]                                ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y1[15]                                ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y2[15]                                ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|Wyj[14]                                ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y1[14]                                ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|Wyj[13]                                ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y1[13]                                ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|Wyj[12]                                ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y1[12]                                ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|Wyj[11]                                ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y1[11]                                ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|Wyj[10]                                ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y1[10]                                ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|Wyj[9]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y1[9]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|Wyj[8]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y1[8]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|Wyj[7]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y1[7]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|Wyj[6]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y1[6]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|Wyj[5]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y1[5]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|Wyj[4]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y1[4]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|Wyj[3]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y1[3]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|Wyj[2]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y1[2]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|Wyj[1]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y1[1]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|Wyj[0]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y1[0]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y2[7]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y2[14]                                ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y2[6]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y2[13]                                ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y2[5]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y2[12]                                ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y2[4]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y2[11]                                ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y2[3]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y2[10]                                ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y2[2]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y2[9]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y2[1]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y2[8]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; demux2:inst11|Y2[0]                                 ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|wnetrze[15]                            ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|wnetrze[14]                            ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|wnetrze[13]                            ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|wnetrze[12]                            ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|wnetrze[11]                            ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|wnetrze[10]                            ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|wnetrze[9]                             ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|wnetrze[8]                             ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|wnetrze[7]                             ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|wnetrze[6]                             ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|wnetrze[5]                             ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|wnetrze[4]                             ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|wnetrze[3]                             ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|wnetrze[2]                             ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|wnetrze[1]                             ; demux2:inst11|Equal1 ; yes                    ;
+; rejestr:inst|wnetrze[0]                             ; demux2:inst11|Equal1 ; yes                    ;
+; Number of user-specified and inferred latches = 72  ;                      ;                        ;
++-----------------------------------------------------+----------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++---------------------------------------+---------------------------------------------+
+; Register name                         ; Reason for Removal                          ;
++---------------------------------------+---------------------------------------------+
+; licznik7:inst1|q[0]                   ; Merged with licznik7:inst1|\licz:wartosc[0] ;
+; Total Number of Removed Registers = 1 ;                                             ;
++---------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 5     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; licznik7:inst1|q[2]                    ; 7       ;
+; licznik7:inst1|q[1]                    ; 7       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |arytrometr|lpm_clshift2:Przesuniecewprawo|lpm_clshift:lpm_clshift_component|lpm_clshift_0kc:auto_generated|sbit_w[71] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |arytrometr|lpm_clshift2:Przesuniecewprawo|lpm_clshift:lpm_clshift_component|lpm_clshift_0kc:auto_generated|sbit_w[66] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |arytrometr|lpm_clshift2:Przesuniecewprawo|lpm_clshift:lpm_clshift_component|lpm_clshift_0kc:auto_generated|sbit_w[65] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: licznik7:inst1 ;
++----------------+-------------+------------------------------+
+; Parameter Name ; Value       ; Type                         ;
++----------------+-------------+------------------------------+
+; czas_prop      ; 10000000 fs ; Physical                     ;
++----------------+-------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_mux0:Multpilexer|LPM_MUX:lpm_mux_component ;
++------------------------+-------------+------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                 ;
++------------------------+-------------+------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                       ;
+; LPM_WIDTH              ; 16          ; Signed Integer                                       ;
+; LPM_SIZE               ; 14          ; Signed Integer                                       ;
+; LPM_WIDTHS             ; 4           ; Signed Integer                                       ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                       ;
+; CBXI_PARAMETER         ; mux_l9e     ; Untyped                                              ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                              ;
++------------------------+-------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_add_sub0:inkrementacja|lpm_add_sub:lpm_add_sub_component ;
++------------------------+-------------+--------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                               ;
++------------------------+-------------+--------------------------------------------------------------------+
+; LPM_WIDTH              ; 16          ; Signed Integer                                                     ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                            ;
+; LPM_DIRECTION          ; SUB         ; Untyped                                                            ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                                            ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                            ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                            ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                            ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                            ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                            ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                 ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                            ;
+; USE_WYS                ; OFF         ; Untyped                                                            ;
+; STYLE                  ; FAST        ; Untyped                                                            ;
+; CBXI_PARAMETER         ; add_sub_mmh ; Untyped                                                            ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                       ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                     ;
++------------------------+-------------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_mult0:mnozenie|lpm_mult:lpm_mult_component ;
++------------------------------------------------+-------------+------------------------------+
+; Parameter Name                                 ; Value       ; Type                         ;
++------------------------------------------------+-------------+------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON          ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS                           ; OFF         ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS                            ; ON          ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF         ; IGNORE_CASCADE               ;
+; LPM_WIDTHA                                     ; 16          ; Signed Integer               ;
+; LPM_WIDTHB                                     ; 16          ; Signed Integer               ;
+; LPM_WIDTHP                                     ; 16          ; Signed Integer               ;
+; LPM_WIDTHR                                     ; 0           ; Untyped                      ;
+; LPM_WIDTHS                                     ; 1           ; Untyped                      ;
+; LPM_REPRESENTATION                             ; SIGNED      ; Untyped                      ;
+; LPM_PIPELINE                                   ; 0           ; Untyped                      ;
+; LATENCY                                        ; 0           ; Untyped                      ;
+; INPUT_A_IS_CONSTANT                            ; NO          ; Untyped                      ;
+; INPUT_B_IS_CONSTANT                            ; NO          ; Untyped                      ;
+; USE_EAB                                        ; OFF         ; Untyped                      ;
+; MAXIMIZE_SPEED                                 ; 5           ; Untyped                      ;
+; DEVICE_FAMILY                                  ; Cyclone III ; Untyped                      ;
+; CARRY_CHAIN                                    ; MANUAL      ; Untyped                      ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT         ; TECH_MAPPER_APEX20K          ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO        ; Untyped                      ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0           ; Untyped                      ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0           ; Untyped                      ;
+; CBXI_PARAMETER                                 ; mult_e7n    ; Untyped                      ;
+; INPUT_A_FIXED_VALUE                            ; Bx          ; Untyped                      ;
+; INPUT_B_FIXED_VALUE                            ; Bx          ; Untyped                      ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF         ; Untyped                      ;
++------------------------------------------------+-------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_sub:odejmowanie|lpm_add_sub:lpm_add_sub_component ;
++------------------------+-------------+-------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                        ;
++------------------------+-------------+-------------------------------------------------------------+
+; LPM_WIDTH              ; 16          ; Signed Integer                                              ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                     ;
+; LPM_DIRECTION          ; SUB         ; Untyped                                                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                     ;
+; USE_WYS                ; OFF         ; Untyped                                                     ;
+; STYLE                  ; FAST        ; Untyped                                                     ;
+; CBXI_PARAMETER         ; add_sub_2jh ; Untyped                                                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                              ;
++------------------------+-------------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_add:dodowanie|lpm_add_sub:lpm_add_sub_component ;
++------------------------+-------------+-----------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                      ;
++------------------------+-------------+-----------------------------------------------------------+
+; LPM_WIDTH              ; 16          ; Signed Integer                                            ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                   ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                                   ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                   ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                   ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                   ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                   ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                   ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                        ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                   ;
+; USE_WYS                ; OFF         ; Untyped                                                   ;
+; STYLE                  ; FAST        ; Untyped                                                   ;
+; CBXI_PARAMETER         ; add_sub_1ih ; Untyped                                                   ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                              ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                            ;
++------------------------+-------------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_clshift2:Przesuniecewprawo|lpm_clshift:lpm_clshift_component ;
++----------------+-----------------+----------------------------------------------------------------------------+
+; Parameter Name ; Value           ; Type                                                                       ;
++----------------+-----------------+----------------------------------------------------------------------------+
+; LPM_PIPELINE   ; 0               ; Untyped                                                                    ;
+; LPM_SHIFTTYPE  ; LOGICAL         ; Untyped                                                                    ;
+; LPM_WIDTH      ; 16              ; Signed Integer                                                             ;
+; LPM_WIDTHDIST  ; 4               ; Signed Integer                                                             ;
+; CBXI_PARAMETER ; lpm_clshift_0kc ; Untyped                                                                    ;
++----------------+-----------------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_clshift2:przesuniecewlewo|lpm_clshift:lpm_clshift_component ;
++----------------+-----------------+---------------------------------------------------------------------------+
+; Parameter Name ; Value           ; Type                                                                      ;
++----------------+-----------------+---------------------------------------------------------------------------+
+; LPM_PIPELINE   ; 0               ; Untyped                                                                   ;
+; LPM_SHIFTTYPE  ; LOGICAL         ; Untyped                                                                   ;
+; LPM_WIDTH      ; 16              ; Signed Integer                                                            ;
+; LPM_WIDTHDIST  ; 4               ; Signed Integer                                                            ;
+; CBXI_PARAMETER ; lpm_clshift_0kc ; Untyped                                                                   ;
++----------------+-----------------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_add_sub0:dekrementacja|lpm_add_sub:lpm_add_sub_component ;
++------------------------+-------------+--------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                               ;
++------------------------+-------------+--------------------------------------------------------------------+
+; LPM_WIDTH              ; 16          ; Signed Integer                                                     ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                            ;
+; LPM_DIRECTION          ; SUB         ; Untyped                                                            ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                                            ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                            ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                            ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                            ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                            ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                            ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                 ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                            ;
+; USE_WYS                ; OFF         ; Untyped                                                            ;
+; STYLE                  ; FAST        ; Untyped                                                            ;
+; CBXI_PARAMETER         ; add_sub_mmh ; Untyped                                                            ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                       ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                     ;
++------------------------+-------------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add:dodowanie|lpm_add_sub:lpm_add_sub_component|add_sub_1ih:auto_generated|lpm_add_sub:op_1 ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                      ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 16          ; Untyped                                                                                                   ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                                                   ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                                   ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                   ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                                                   ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                   ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                   ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                   ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                        ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                                                                   ;
+; USE_WYS                ; OFF         ; Untyped                                                                                                   ;
+; STYLE                  ; FAST        ; Untyped                                                                                                   ;
+; CBXI_PARAMETER         ; add_sub_iui ; Untyped                                                                                                   ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                            ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                         ;
++---------------------------------------+------------------------------------------------+
+; Name                                  ; Value                                          ;
++---------------------------------------+------------------------------------------------+
+; Number of entity instances            ; 1                                              ;
+; Entity Instance                       ; lpm_mult0:mnozenie|lpm_mult:lpm_mult_component ;
+;     -- LPM_WIDTHA                     ; 16                                             ;
+;     -- LPM_WIDTHB                     ; 16                                             ;
+;     -- LPM_WIDTHP                     ; 16                                             ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                         ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                             ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                             ;
+;     -- USE_EAB                        ; OFF                                            ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                           ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                             ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                             ;
++---------------------------------------+------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat May 29 20:15:30 2010
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off arytrometr -c arytrometr
+Info: Found 2 design units, including 1 entities, in source file /documents and settings/donor/pulpit/arytmometr/notvector/notvector.vhd
+    Info: Found design unit 1: notvector-behave
+    Info: Found entity 1: notvector
+Info: Found 2 design units, including 1 entities, in source file /documents and settings/donor/pulpit/arytmometr/licznik7/licznik7.vhd
+    Info: Found design unit 1: licznik7-behawior_licznika
+    Info: Found entity 1: licznik7
+Info: Found 2 design units, including 1 entities, in source file /documents and settings/donor/pulpit/arytmometr/mux2x16/mux2x16.vhd
+    Info: Found design unit 1: mux2x16-mux2x16_arch
+    Info: Found entity 1: mux2x16
+Info: Found 2 design units, including 1 entities, in source file /documents and settings/donor/pulpit/arytmometr/swap/swap.vhd
+    Info: Found design unit 1: swap-behave
+    Info: Found entity 1: swap
+Info: Found 2 design units, including 1 entities, in source file /documents and settings/donor/pulpit/arytmometr/rejestr/rejestr.vhd
+    Info: Found design unit 1: rejestr-behave
+    Info: Found entity 1: rejestr
+Info: Found 2 design units, including 1 entities, in source file /documents and settings/donor/pulpit/arytmometr/wyjscie/wyjscie.vhd
+    Info: Found design unit 1: wyjscie-behave
+    Info: Found entity 1: wyjscie
+Info: Found 2 design units, including 1 entities, in source file /documents and settings/donor/pulpit/arytmometr/demux2/demux2.vhd
+    Info: Found design unit 1: demux2-behave
+    Info: Found entity 1: demux2
+Info: Found 1 design units, including 1 entities, in source file /documents and settings/donor/pulpit/arytmometr/nandvector/nandvector.bdf
+    Info: Found entity 1: nandvector
+Info: Found 1 design units, including 1 entities, in source file /documents and settings/donor/pulpit/arytmometr/norvector/norvector.bdf
+    Info: Found entity 1: norvector
+Info: Found 1 design units, including 1 entities, in source file /documents and settings/donor/pulpit/arytmometr/xorvector/xorvector.bdf
+    Info: Found entity 1: xorvector
+Info: Found 1 design units, including 1 entities, in source file /documents and settings/donor/pulpit/arytmometr/orvector/orvector.bdf
+    Info: Found entity 1: orvector
+Info: Found 1 design units, including 1 entities, in source file /documents and settings/donor/pulpit/arytmometr/andvector/andvector.bdf
+    Info: Found entity 1: andvector
+Info: Found 2 design units, including 1 entities, in source file lpm_add.vhd
+    Info: Found design unit 1: lpm_add-SYN
+    Info: Found entity 1: lpm_add
+Info: Found 1 design units, including 1 entities, in source file arytrometr.bdf
+    Info: Found entity 1: arytrometr
+Info: Found 2 design units, including 1 entities, in source file lpm_mux0.vhd
+    Info: Found design unit 1: lpm_mux0-SYN
+    Info: Found entity 1: lpm_mux0
+Info: Found 2 design units, including 1 entities, in source file lpm_sub.vhd
+    Info: Found design unit 1: lpm_sub-SYN
+    Info: Found entity 1: lpm_sub
+Info: Found 2 design units, including 1 entities, in source file lpm_counter0.vhd
+    Info: Found design unit 1: lpm_counter0-SYN
+    Info: Found entity 1: lpm_counter0
+Info: Found 2 design units, including 1 entities, in source file lpm_mult0.vhd
+    Info: Found design unit 1: lpm_mult0-SYN
+    Info: Found entity 1: lpm_mult0
+Info: Found 2 design units, including 1 entities, in source file altmult_add0.vhd
+    Info: Found design unit 1: altmult_add0-SYN
+    Info: Found entity 1: altmult_add0
+Info: Found 2 design units, including 1 entities, in source file lpm_add_sub0.vhd
+    Info: Found design unit 1: lpm_add_sub0-SYN
+    Info: Found entity 1: lpm_add_sub0
+Info: Found 1 design units, including 1 entities, in source file lpm_clshift0.v
+    Info: Found entity 1: lpm_clshift0
+Info: Found 2 design units, including 1 entities, in source file lpm_clshift1.vhd
+    Info: Found design unit 1: lpm_clshift1-SYN
+    Info: Found entity 1: lpm_clshift1
+Info: Found 2 design units, including 1 entities, in source file lpm_clshift2.vhd
+    Info: Found design unit 1: lpm_clshift2-SYN
+    Info: Found entity 1: lpm_clshift2
+Info: Found 2 design units, including 1 entities, in source file altddio_in0.vhd
+    Info: Found design unit 1: altddio_in0-SYN
+    Info: Found entity 1: altddio_in0
+Info: Found 2 design units, including 1 entities, in source file altdpram0.vhd
+    Info: Found design unit 1: altdpram0-SYN
+    Info: Found entity 1: altdpram0
+Info: Found 2 design units, including 1 entities, in source file lpm_decode0.vhd
+    Info: Found design unit 1: lpm_decode0-SYN
+    Info: Found entity 1: lpm_decode0
+Info: Elaborating entity "arytrometr" for the top level hierarchy
+Info: Elaborating entity "wyjscie" for hierarchy "wyjscie:inst6"
+Warning (10631): VHDL Process Statement warning at wyjscie.vhd(14): inferring latch(es) for signal or variable "Y1", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Y1[0]" at wyjscie.vhd(14)
+Info (10041): Inferred latch for "Y1[1]" at wyjscie.vhd(14)
+Info (10041): Inferred latch for "Y1[2]" at wyjscie.vhd(14)
+Info (10041): Inferred latch for "Y1[3]" at wyjscie.vhd(14)
+Info (10041): Inferred latch for "Y1[4]" at wyjscie.vhd(14)
+Info (10041): Inferred latch for "Y1[5]" at wyjscie.vhd(14)
+Info (10041): Inferred latch for "Y1[6]" at wyjscie.vhd(14)
+Info (10041): Inferred latch for "Y1[7]" at wyjscie.vhd(14)
+Info: Elaborating entity "licznik7" for hierarchy "licznik7:inst1"
+Info: Elaborating entity "lpm_mux0" for hierarchy "lpm_mux0:Multpilexer"
+Info: Elaborating entity "LPM_MUX" for hierarchy "lpm_mux0:Multpilexer|LPM_MUX:lpm_mux_component"
+Info: Elaborated megafunction instantiation "lpm_mux0:Multpilexer|LPM_MUX:lpm_mux_component"
+Info: Instantiated megafunction "lpm_mux0:Multpilexer|LPM_MUX:lpm_mux_component" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "16"
+    Info: Parameter "LPM_SIZE" = "14"
+    Info: Parameter "LPM_WIDTHS" = "4"
+    Info: Parameter "LPM_PIPELINE" = "0"
+    Info: Parameter "LPM_TYPE" = "LPM_MUX"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Found 1 design units, including 1 entities, in source file db/mux_l9e.tdf
+    Info: Found entity 1: mux_l9e
+Info: Elaborating entity "mux_l9e" for hierarchy "lpm_mux0:Multpilexer|LPM_MUX:lpm_mux_component|mux_l9e:auto_generated"
+Info: Elaborating entity "notvector" for hierarchy "notvector:inst2"
+Info: Elaborating entity "mux2x16" for hierarchy "mux2x16:inst9"
+Info: Elaborating entity "rejestr" for hierarchy "rejestr:inst"
+Warning (10631): VHDL Process Statement warning at rejestr.vhd(14): inferring latch(es) for signal or variable "wnetrze", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at rejestr.vhd(14): inferring latch(es) for signal or variable "Wyj", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Wyj[0]" at rejestr.vhd(14)
+Info (10041): Inferred latch for "Wyj[1]" at rejestr.vhd(14)
+Info (10041): Inferred latch for "Wyj[2]" at rejestr.vhd(14)
+Info (10041): Inferred latch for "Wyj[3]" at rejestr.vhd(14)
+Info (10041): Inferred latch for "Wyj[4]" at rejestr.vhd(14)
+Info (10041): Inferred latch for "Wyj[5]" at rejestr.vhd(14)
+Info (10041): Inferred latch for "Wyj[6]" at rejestr.vhd(14)
+Info (10041): Inferred latch for "Wyj[7]" at rejestr.vhd(14)
+Info (10041): Inferred latch for "Wyj[8]" at rejestr.vhd(14)
+Info (10041): Inferred latch for "Wyj[9]" at rejestr.vhd(14)
+Info (10041): Inferred latch for "Wyj[10]" at rejestr.vhd(14)
+Info (10041): Inferred latch for "Wyj[11]" at rejestr.vhd(14)
+Info (10041): Inferred latch for "Wyj[12]" at rejestr.vhd(14)
+Info (10041): Inferred latch for "Wyj[13]" at rejestr.vhd(14)
+Info (10041): Inferred latch for "Wyj[14]" at rejestr.vhd(14)
+Info (10041): Inferred latch for "Wyj[15]" at rejestr.vhd(14)
+Info (10041): Inferred latch for "wnetrze[0]" at rejestr.vhd(18)
+Info (10041): Inferred latch for "wnetrze[1]" at rejestr.vhd(18)
+Info (10041): Inferred latch for "wnetrze[2]" at rejestr.vhd(18)
+Info (10041): Inferred latch for "wnetrze[3]" at rejestr.vhd(18)
+Info (10041): Inferred latch for "wnetrze[4]" at rejestr.vhd(18)
+Info (10041): Inferred latch for "wnetrze[5]" at rejestr.vhd(18)
+Info (10041): Inferred latch for "wnetrze[6]" at rejestr.vhd(18)
+Info (10041): Inferred latch for "wnetrze[7]" at rejestr.vhd(18)
+Info (10041): Inferred latch for "wnetrze[8]" at rejestr.vhd(18)
+Info (10041): Inferred latch for "wnetrze[9]" at rejestr.vhd(18)
+Info (10041): Inferred latch for "wnetrze[10]" at rejestr.vhd(18)
+Info (10041): Inferred latch for "wnetrze[11]" at rejestr.vhd(18)
+Info (10041): Inferred latch for "wnetrze[12]" at rejestr.vhd(18)
+Info (10041): Inferred latch for "wnetrze[13]" at rejestr.vhd(18)
+Info (10041): Inferred latch for "wnetrze[14]" at rejestr.vhd(18)
+Info (10041): Inferred latch for "wnetrze[15]" at rejestr.vhd(18)
+Info: Elaborating entity "demux2" for hierarchy "demux2:inst11"
+Warning (10631): VHDL Process Statement warning at demux2.vhd(17): inferring latch(es) for signal or variable "Y1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at demux2.vhd(17): inferring latch(es) for signal or variable "Y2", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Y2[0]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y2[1]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y2[2]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y2[3]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y2[4]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y2[5]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y2[6]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y2[7]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y2[8]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y2[9]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y2[10]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y2[11]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y2[12]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y2[13]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y2[14]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y2[15]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y1[0]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y1[1]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y1[2]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y1[3]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y1[4]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y1[5]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y1[6]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y1[7]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y1[8]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y1[9]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y1[10]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y1[11]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y1[12]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y1[13]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y1[14]" at demux2.vhd(17)
+Info (10041): Inferred latch for "Y1[15]" at demux2.vhd(17)
+Info: Elaborating entity "lpm_add_sub0" for hierarchy "lpm_add_sub0:inkrementacja"
+Info: Elaborating entity "lpm_add_sub" for hierarchy "lpm_add_sub0:inkrementacja|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborated megafunction instantiation "lpm_add_sub0:inkrementacja|lpm_add_sub:lpm_add_sub_component"
+Info: Instantiated megafunction "lpm_add_sub0:inkrementacja|lpm_add_sub:lpm_add_sub_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "SUB"
+    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=YES,CIN_USED=NO"
+    Info: Parameter "lpm_representation" = "SIGNED"
+    Info: Parameter "lpm_type" = "LPM_ADD_SUB"
+    Info: Parameter "lpm_width" = "16"
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_mmh.tdf
+    Info: Found entity 1: add_sub_mmh
+Info: Elaborating entity "add_sub_mmh" for hierarchy "lpm_add_sub0:inkrementacja|lpm_add_sub:lpm_add_sub_component|add_sub_mmh:auto_generated"
+Info: Elaborating entity "lpm_mult0" for hierarchy "lpm_mult0:mnozenie"
+Info: Elaborating entity "lpm_mult" for hierarchy "lpm_mult0:mnozenie|lpm_mult:lpm_mult_component"
+Info: Elaborated megafunction instantiation "lpm_mult0:mnozenie|lpm_mult:lpm_mult_component"
+Info: Instantiated megafunction "lpm_mult0:mnozenie|lpm_mult:lpm_mult_component" with the following parameter:
+    Info: Parameter "lpm_hint" = "MAXIMIZE_SPEED=5"
+    Info: Parameter "lpm_representation" = "SIGNED"
+    Info: Parameter "lpm_type" = "LPM_MULT"
+    Info: Parameter "lpm_widtha" = "16"
+    Info: Parameter "lpm_widthb" = "16"
+    Info: Parameter "lpm_widthp" = "16"
+Info: Found 1 design units, including 1 entities, in source file db/mult_e7n.tdf
+    Info: Found entity 1: mult_e7n
+Info: Elaborating entity "mult_e7n" for hierarchy "lpm_mult0:mnozenie|lpm_mult:lpm_mult_component|mult_e7n:auto_generated"
+Info: Elaborating entity "lpm_sub" for hierarchy "lpm_sub:odejmowanie"
+Info: Elaborating entity "lpm_add_sub" for hierarchy "lpm_sub:odejmowanie|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborated megafunction instantiation "lpm_sub:odejmowanie|lpm_add_sub:lpm_add_sub_component"
+Info: Instantiated megafunction "lpm_sub:odejmowanie|lpm_add_sub:lpm_add_sub_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "SUB"
+    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
+    Info: Parameter "lpm_representation" = "SIGNED"
+    Info: Parameter "lpm_type" = "LPM_ADD_SUB"
+    Info: Parameter "lpm_width" = "16"
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_2jh.tdf
+    Info: Found entity 1: add_sub_2jh
+Info: Elaborating entity "add_sub_2jh" for hierarchy "lpm_sub:odejmowanie|lpm_add_sub:lpm_add_sub_component|add_sub_2jh:auto_generated"
+Info: Elaborating entity "lpm_add" for hierarchy "lpm_add:dodowanie"
+Info: Elaborating entity "lpm_add_sub" for hierarchy "lpm_add:dodowanie|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborated megafunction instantiation "lpm_add:dodowanie|lpm_add_sub:lpm_add_sub_component"
+Info: Instantiated megafunction "lpm_add:dodowanie|lpm_add_sub:lpm_add_sub_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "ADD"
+    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
+    Info: Parameter "lpm_representation" = "SIGNED"
+    Info: Parameter "lpm_type" = "LPM_ADD_SUB"
+    Info: Parameter "lpm_width" = "16"
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_1ih.tdf
+    Info: Found entity 1: add_sub_1ih
+Info: Elaborating entity "add_sub_1ih" for hierarchy "lpm_add:dodowanie|lpm_add_sub:lpm_add_sub_component|add_sub_1ih:auto_generated"
+Info: Elaborating entity "swap" for hierarchy "swap:inst3"
+Info: Elaborating entity "nandvector" for hierarchy "nandvector:NAND16x2"
+Info: Elaborating entity "norvector" for hierarchy "norvector:NOR16x2"
+Info: Elaborating entity "xorvector" for hierarchy "xorvector:XOR16x2"
+Info: Elaborating entity "orvector" for hierarchy "orvector:OR16x2"
+Info: Elaborating entity "andvector" for hierarchy "andvector:AND16x2"
+Info: Elaborating entity "lpm_clshift2" for hierarchy "lpm_clshift2:Przesuniecewprawo"
+Info: Elaborating entity "lpm_clshift" for hierarchy "lpm_clshift2:Przesuniecewprawo|lpm_clshift:lpm_clshift_component"
+Info: Elaborated megafunction instantiation "lpm_clshift2:Przesuniecewprawo|lpm_clshift:lpm_clshift_component"
+Info: Instantiated megafunction "lpm_clshift2:Przesuniecewprawo|lpm_clshift:lpm_clshift_component" with the following parameter:
+    Info: Parameter "lpm_shifttype" = "LOGICAL"
+    Info: Parameter "lpm_type" = "LPM_CLSHIFT"
+    Info: Parameter "lpm_width" = "16"
+    Info: Parameter "lpm_widthdist" = "4"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_clshift_0kc.tdf
+    Info: Found entity 1: lpm_clshift_0kc
+Info: Elaborating entity "lpm_clshift_0kc" for hierarchy "lpm_clshift2:Przesuniecewprawo|lpm_clshift:lpm_clshift_component|lpm_clshift_0kc:auto_generated"
+Info: Inferred 1 megafunctions from design logic
+    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "lpm_add:dodowanie|lpm_add_sub:lpm_add_sub_component|add_sub_1ih:auto_generated|op_1"
+Info: Elaborated megafunction instantiation "lpm_add:dodowanie|lpm_add_sub:lpm_add_sub_component|add_sub_1ih:auto_generated|lpm_add_sub:op_1"
+Info: Instantiated megafunction "lpm_add:dodowanie|lpm_add_sub:lpm_add_sub_component|add_sub_1ih:auto_generated|lpm_add_sub:op_1" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "16"
+    Info: Parameter "LPM_DIRECTION" = "DEFAULT"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_iui.tdf
+    Info: Found entity 1: add_sub_iui
+Warning: Latch wyjscie:inst6|Y1[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal licznik7:inst1|q[2]
+    Warning: Ports ENA and CLR on the latch are fed by the same signal licznik7:inst1|q[2]
+Warning: Latch wyjscie:inst6|Y1[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal licznik7:inst1|q[2]
+    Warning: Ports ENA and CLR on the latch are fed by the same signal licznik7:inst1|q[2]
+Warning: Latch wyjscie:inst6|Y1[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal licznik7:inst1|q[2]
+    Warning: Ports ENA and CLR on the latch are fed by the same signal licznik7:inst1|q[2]
+Warning: Latch wyjscie:inst6|Y1[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal licznik7:inst1|q[2]
+    Warning: Ports ENA and CLR on the latch are fed by the same signal licznik7:inst1|q[2]
+Warning: Latch wyjscie:inst6|Y1[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal licznik7:inst1|q[2]
+    Warning: Ports ENA and CLR on the latch are fed by the same signal licznik7:inst1|q[2]
+Warning: Latch wyjscie:inst6|Y1[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal licznik7:inst1|q[2]
+    Warning: Ports ENA and CLR on the latch are fed by the same signal licznik7:inst1|q[2]
+Warning: Latch wyjscie:inst6|Y1[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal licznik7:inst1|q[2]
+    Warning: Ports ENA and CLR on the latch are fed by the same signal licznik7:inst1|q[2]
+Warning: Latch wyjscie:inst6|Y1[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal licznik7:inst1|q[2]
+    Warning: Ports ENA and CLR on the latch are fed by the same signal licznik7:inst1|q[2]
+Info: Timing-Driven Synthesis is running
+Info: Implemented 397 device resources after synthesis - the final resource count might be different
+    Info: Implemented 18 input pins
+    Info: Implemented 8 output pins
+    Info: Implemented 369 logic cells
+    Info: Implemented 2 DSP elements
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 206 megabytes
+    Info: Processing ended: Sat May 29 20:16:58 2010
+    Info: Elapsed time: 00:01:28
+    Info: Total CPU time (on all processors): 00:00:18
+
+

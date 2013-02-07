@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'licznik7:inst1|\licz:wartosc[0]'
+Slack : -8.044
+TNS   : -134.640
+
+Type  : Slow 1200mV 85C Model Setup 'zegar'
+Slack : -0.511
+TNS   : -0.772
+
+Type  : Slow 1200mV 85C Model Hold 'zegar'
+Slack : 0.069
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'licznik7:inst1|\licz:wartosc[0]'
+Slack : 0.751
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'zegar'
+Slack : -3.000
+TNS   : -8.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'licznik7:inst1|\licz:wartosc[0]'
+Slack : 0.286
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'licznik7:inst1|\licz:wartosc[0]'
+Slack : -7.178
+TNS   : -118.512
+
+Type  : Slow 1200mV 0C Model Setup 'zegar'
+Slack : -0.347
+TNS   : -0.452
+
+Type  : Slow 1200mV 0C Model Hold 'zegar'
+Slack : 0.053
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'licznik7:inst1|\licz:wartosc[0]'
+Slack : 0.717
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'zegar'
+Slack : -3.000
+TNS   : -8.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'licznik7:inst1|\licz:wartosc[0]'
+Slack : 0.343
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'licznik7:inst1|\licz:wartosc[0]'
+Slack : -4.367
+TNS   : -70.085
+
+Type  : Fast 1200mV 0C Model Setup 'zegar'
+Slack : 0.087
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'zegar'
+Slack : -0.008
+TNS   : -0.008
+
+Type  : Fast 1200mV 0C Model Hold 'licznik7:inst1|\licz:wartosc[0]'
+Slack : 0.634
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'zegar'
+Slack : -3.000
+TNS   : -8.186
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'licznik7:inst1|\licz:wartosc[0]'
+Slack : 0.304
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.625" name="Rezerwacje">
+  <DataContextMoniker Name="/RezerwacjeDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ea1d3463-3cf7-4a77-b258-13cb1be7e5fc" absoluteBounds="6.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/RezerwacjeDataContext/Klienci" />
+      <nestedChildShapes>
+        <elementListCompartment Id="56003a6d-8019-4ff5-8155-4fadf2d99842" absoluteBounds="6.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="252ec64a-492f-4497-b93d-a60706f5b69f" absoluteBounds="0.75, 3.875, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/RezerwacjeDataContext/Imprezy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66db2f06-2cac-4afd-af99-9bce6d51cae9" absoluteBounds="0.76500000000000012, 4.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b7dac207-679f-400a-bb9e-1e66c0e3f791" absoluteBounds="4.625, 4.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/RezerwacjeDataContext/Koszyk" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cde9bb5b-41bb-44b7-a190-dbec17f7de92" absoluteBounds="4.64, 4.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 5.35659912109375); (4.625 : 5.35659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RezerwacjeDataContext/Imprezy/Imprezy_Koszyk" />
+      <nodes>
+        <classShapeMoniker Id="252ec64a-492f-4497-b93d-a60706f5b69f" />
+        <classShapeMoniker Id="b7dac207-679f-400a-bb9e-1e66c0e3f791" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="50f95e52-2f7e-4582-9ae8-26a994745889" absoluteBounds="2.375, 8.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/RezerwacjeDataContext/WidokCenaKoszyka" />
+      <nestedChildShapes>
+        <elementListCompartment Id="49895a14-e0b5-4005-97c9-90d19e1a8059" absoluteBounds="2.39, 8.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="481517da-59e2-40f1-a9fe-633177a85254" absoluteBounds="1.25, 1.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/RezerwacjeDataContext/Zamowienia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ad0be60-2dd7-4dd0-9b91-c480ac579202" absoluteBounds="1.2650000000000001, 1.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ff989408-b030-4830-b442-bda90eb8a947" absoluteBounds="4.75, 1.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/RezerwacjeDataContext/ZlecenieSzczegoly" />
+      <nestedChildShapes>
+        <elementListCompartment Id="976fdc24-59dc-4309-ba36-7ad849fa326e" absoluteBounds="4.765, 1.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.25 : 2.19314697265625); (4.75 : 2.19314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RezerwacjeDataContext/Zamowienia/Zamowienia_ZlecenieSzczegoly" />
+      <nodes>
+        <classShapeMoniker Id="481517da-59e2-40f1-a9fe-633177a85254" />
+        <classShapeMoniker Id="ff989408-b030-4830-b442-bda90eb8a947" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

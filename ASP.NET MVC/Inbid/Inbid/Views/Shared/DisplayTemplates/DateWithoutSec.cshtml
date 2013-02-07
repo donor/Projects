@@ -1,0 +1,14 @@
+﻿
+
+@model DateTime?  
+
+@*<span class="datewithoutsec">
+@String.Format("{0:g}", Model)
+</span>
+*@
+
+<span class="datewithoutsec">
+@String.Format("{0:d}", Model)
+<br />
+@Model.Value.ToShortTimeString()
+</span>

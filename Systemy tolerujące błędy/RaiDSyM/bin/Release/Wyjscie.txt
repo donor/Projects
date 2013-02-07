@@ -1,0 +1,13 @@
+﻿2010-11-13 17:58:10  Program Włączono
+2010-11-13 17:58:11  Do dysku 0 zapisano pasek 0, zawartość: 00000000000000000000000000000000
+2010-11-13 17:58:13  Do dysku 1 zapisano pasek 1, zawartość: 00000000000000000000000000000001
+2010-11-13 17:58:15  Do dysku 0 zapisano pasek 2, zawartość: 00000000000000000000000000000010
+2010-11-13 17:58:16  Do dysku 1 zapisano pasek 3, zawartość: 00000000000000000000000000000011
+2010-11-13 17:58:18  Do dysku 0 zapisano pasek 4, zawartość: 00000000000000000000000000000100
+2010-11-13 17:58:19  Do dysku 1 zapisano pasek 5, zawartość: 00000000000000000000000000000101
+2010-11-13 17:58:21  Do dysku 0 zapisano pasek 6, zawartość: 00000000000000000000000000000110
+2010-11-13 17:58:23  Do dysku 1 zapisano pasek 7, zawartość: 00000000000000000000000000000111
+2010-11-13 17:58:31  Wystąpił bład w Dysku 0, w pasku 0, Zapis został wstrzymany, ponieważ ten błąd uniemożliwia odczyt zapisanych danych w Raid0 (dalszy zapis nie ma sensu)
+2010-11-13 17:58:43  Wystąpił bład w Dysku 0, w pasku 0, Zapis został wstrzymany, ponieważ ten błąd uniemożliwia odczyt zapisanych danych w Raid0 (dalszy zapis nie ma sensu)
+2010-11-13 17:58:45  Wystąpił bład w Dysku 0, w pasku 0, Zapis został wstrzymany, ponieważ ten błąd uniemożliwia odczyt zapisanych danych w Raid0 (dalszy zapis nie ma sensu)
+2010-11-13 17:58:47  Wystąpił bład w Dysku 0, w pasku 0, Zapis został wstrzymany, ponieważ ten błąd uniemożliwia odczyt zapisanych danych w Raid0 (dalszy zapis nie ma sensu)

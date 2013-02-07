@@ -1,0 +1,191 @@
+﻿
+@model Browser.Models.Element
+@using Browser.Helpers
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    });
+  
+   function browse(sender) {
+       $('#' + sender).toggleClass("sbfc").toggleClass("sbfe").next().toggle();
+
+       
+       var height = $('pre').height();
+       if (height > 200){
+         
+           $('#widget').height(height + 50);
+           $('.left').height(height + 30);
+           $('.right').height(height + 30);
+
+       }
+              
+   }
+    function explore(sender) {
+        var ElementId = $('#'+sender).attr("id");
+        $.getJSON("/Home/ExploreFile", { id: ElementId },
+                    function (data) {
+                        $('#filename').text(data.Name);
+                        $("pre").text(data.Content);
+                        var height = $('pre').height();
+                        var rightheight = $('.right').height();
+                        if (height < 250) {
+                            $('#widget').height(310);
+                            $('.left').height(300);
+                            $('.right').height(300);
+                            $('#filecontent').height(250);
+                            return;
+
+                        }
+                        if (height < 1200) {
+                            $('#widget').height(height + 100);
+                            $('.left').height(height + 90);
+                            $('.right').height(height + 90);
+                            $('#filecontent').height(height + 40);
+                            return;
+                        }
+                        if (height >= 1200) {
+                            $('#widget').height(1260);
+                            $('.left').height(1250);
+                            $('.right').height(1250);
+                            $('#filecontent').height(1200);
+                            return;
+                        }
+                    })
+                    .error(function () {
+                        alert("error");
+                    });
+    }
+    
+</script>
+
+<ul id="browser">
+    @ExtractElements(Model,0)
+</ul>
+
+    @helper ExtractElements(Browser.Models.Element ele, byte level)
+    {       
+        level+=1;
+        if (ele.Extension == null)  
+        {      
+            @Html.Raw("<li>")
+            @Html.Raw("<a id=\""+@ele.Id+"\" class=\"sbfc\" href=\"javascript:browse("+ele.Id+")\">")             
+        }
+        else
+        {
+            @Html.Raw("<a id=\"" + @ele.Id + "\" href=\"javascript:explore(" + ele.Id + ")\" style=\"display:block;\" class=\"brf\" >")
+        }       
+       
+        @ele.Name
+        @Html.Raw("</a>")
+        if ((ele.Extension == null) && (ele.Children != null))
+        {
+            if (level >= 2)
+            {
+                   @Html.Raw("<ul style=\"display:none;\">")
+                
+            }
+            else
+            {
+            @Html.Raw("<ul>")                
+            }
+
+
+            foreach (var item in ele.Children)
+            {              
+                    @ExtractElements(item, level)             
+            }
+            
+            @Html.Raw("</ul>")          
+        }
+        else
+        {
+            level -= 1;
+        }
+       @Html.Raw("</li>")
+    }
+
+
+
+
+
+
+
+ 
+@*<ul id="browser">
+    <li>Example
+        <ul>
+            <li>
+                glyphicos.png
+            </li>
+            <li>
+                Jeden1
+                <ul>
+                    <li>
+                        Hydrangeas.png
+                    </li>
+                    <li>Dwa-0-0
+                        <ul>
+                            <li>
+                                SQLQuery7.sql
+                            </li>
+                            <li>
+                                SQLQuery9.sql
+                            </li>
+                            <li>trzy0-1
+                                <ul>
+                                    <li>
+                                        koala.jpeg
+                                    </li>
+                                    <li>NowyFolder
+                                    
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>                       
+                    </li>
+                    <li>Dwa-0-1
+                        <ul>
+                            <li>
+                                NowyMicropsft.docx
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Jeden2
+                <ul>
+                    <li>dwa1-1
+                        <ul>
+                            <li>
+                                desert.jpeg
+                            </li>
+                            <li>
+                                Hydrangeos.jpeg
+                            </li>
+                        </ul>            
+                     </li>
+                     <li>dwa1-2
+                        <ul>
+                            <li>
+                               Maid.TMT3
+                            </li>                            
+                        </ul>            
+                     </li>
+                     <li>dwa1-3
+                        <ul>
+                            <li>
+                                jhgfh.sql
+                            </li>
+                            <li>
+                                ms accoun.png
+                            </li>
+                        </ul>            
+                     </li>       
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+*@

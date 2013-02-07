@@ -1,0 +1,58 @@
+﻿@*@model Inbid.Models.aspnet_Users*@
+@model Inbid.ViewModels.BidderViewModel
+
+@{
+    ViewBag.Title = "Bidder " + @Model.BidderData.UserName;
+}
+
+<link href="@Url.Content("~/Content/Account.css")" rel="stylesheet" type="text/css" />
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        
+        $('#tbauctions tbody  tr').click(function () {
+            var href = $(this).attr("id");
+            if (href)
+                var url = '@Url.Action("Index","Offer")?auctionNumber=' + href;
+            window.location = url;
+            //window.location = 'Offer/index?auctionNumber=' + href;
+        });
+
+
+    });
+       
+</script>
+
+<h2>Bidder @Model.BidderData.UserName</h2>
+
+<div>
+<div class="bidderInfo">
+
+    <p>Informacje</p>       
+    
+    <p>
+       <strong>@Html.LabelFor(model => model.BidderData.UserName):</strong>
+       <span> @Html.DisplayFor(model => model.BidderData.UserName)</span>
+    </p>
+    <p>
+    <strong>@Html.LabelFor(model => model.BidderData.FirstName):</strong>
+        <span>@Html.DisplayFor(model => model.BidderData.FirstName)</span>
+    </p>
+    <p>
+    <strong>@Html.LabelFor(model => model.BidderData.LastName):</strong>
+        <span>@Html.DisplayFor(model => model.BidderData.LastName)</span>
+    </p>
+    <p>
+    <strong>@Html.LabelFor(model => model.BidderData.Phone):</strong>
+        <span>@Html.DisplayFor(model => model.BidderData.Phone)</span>
+    </p>
+ 
+
+</div>
+<div class="bidderOffers">
+@Html.Partial("_BidderOffers")
+</div>
+</div>

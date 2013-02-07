@@ -1,0 +1,235 @@
+﻿.m-screen {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1999;
+}
+.modal {
+    background: none repeat scroll 0 0 rgba(100, 100, 100, 0.5);
+    border-radius: 6px 6px 6px 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 100000;
+}
+.modal div {
+    background: url("../Content/images/bg/login_popup.jpg") repeat-x scroll left top #FFFFFF;
+    border-radius: 4px 4px 4px 4px;
+    overflow: hidden;
+    padding: 15px;
+    z-index: 5;
+    position:static;
+}
+.modal .m-close {
+    background: url("../Content/images/buttons/modal-close.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 56px;
+    left: -28px;
+    position: absolute !Important;
+    top: -28px;
+    width: 56px;
+    z-index: 10000;
+}
+.modal .m-close span {
+    display: none;
+}
+
+#quick-view div {
+    border-radius: 0 0 0 0;
+}
+.modal div div {
+    background: none repeat scroll 0 0 transparent;
+    padding: 0;
+}
+/**ClothesDetails************/
+#quick-view .item-photos, #quick-view .item-detail {
+    float: left;
+    width: 300px;
+}
+
+#quick-view .item-detail {
+    color: #152027;
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: 100;
+    padding-left: 40px;
+    width: 440px;
+}
+
+#quick-view div {
+    border-radius: 0 0 0 0;
+    clear:none;
+}
+#quick-view .thumbs {
+    height: 120px;
+    top: 8px;
+    z-index: 100;
+}
+
+#quick-view #listing-photo {
+    border-top: 1px solid #BFBFC1;
+    border-width: 1px 0;
+    height: 450px;
+    overflow: hidden;
+    padding: 4px 0;
+    position: relative;
+    top: -51px;
+    width: 300px;
+    z-index: 50;
+}
+#quick-view .thumbs a:link, #quick-view .thumbs a:visited {
+    display: block;
+    float: left;
+    height: 110px;
+    margin-right: 4px;
+    position: relative;
+    width: 70px;
+    z-index: 90;
+}
+#quick-view .thumbs a.selected:link, #quick-view .thumbs a.selected:visited {
+    background: url("../Content/images/bg/selected_photo_small.png") no-repeat scroll 0 0 transparent;
+}
+#quick-view .thumbs a, #quick-view .thumbs a {
+    display: block;
+    float: left;
+    height: 110px;
+    margin-right: 4px;
+    position: relative;
+    width: 70px;
+    z-index: 90;
+}
+/*#quick-view .thumbs a img{
+     width:62px;
+     height:62px;
+}*/
+
+#quick-view .thumbs img {
+    height: 62px;
+    left: 4px;
+    position: absolute;
+    top: 3px;
+    width: 62px;
+}
+
+#quick-view #listing-photo #photo-slide {
+    height: 540px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 3px;
+    width: 1640px;
+}
+/*#quick-view #listing-photo #photo-slide a img
+{
+ width:300px;
+ height:400px;   
+}*/
+
+#quick-view #listing-photo #photo-slide img {
+    float: left;
+    max-height: 450px;
+    width: 300px;
+}
+
+#quick-view .item-detail p.views {
+    padding-bottom: 25px;
+}
+#quick-view .item-detail .views {
+    color: #B0C1CC;
+    font-size: 22px;
+    text-align: right;
+    text-transform: uppercase;
+}
+.modal div p {
+    font-size: 12px;
+    line-height: 20px;
+    margin: 10px 0;
+}
+
+#quick-view .item-detail p.title {
+    overflow: hidden;
+    padding-bottom: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 420px;
+}
+#quick-view .item-detail .title a {
+    color: #152027;
+    font-size: 22px;
+    line-height: 22px;
+    text-decoration: none;
+}
+
+#quick-view .item-detail .price {
+    color: #CE534D;
+    font-size: 38px;
+    padding-right: 10px;
+}
+
+#quick-view .item-detail .action-block {
+    background: url("../Content/images/bg/modal-shipping-lineBreak.gif") no-repeat scroll center bottom transparent;
+    padding-bottom: 5px;
+}
+
+#quick-view .item-detail p.details {
+    font-size: 16px;
+    padding: 5px 0;
+}
+#quick-view .item-detail p.details {
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+#quick-view .item-detail .seller {
+    background: url("../Content/images/bg/modal-shipping-lineBreak.gif") no-repeat scroll center top transparent;
+    padding-top: 25px;
+}
+#quick-view .item-detail .seller img {
+    float: left;
+    height: 80px;
+    padding-right: 15px;
+    width: 73px;
+}
+#quick-view .item-detail .seller p {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+#quick-view .item-detail .seller strong {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#quick-view .item-detail .action-block a.add-to-cart:link, #quick-view .item-detail .action-block a.add-to-cart:visited {
+    font-size: 12px;
+    margin: 5px 0;
+}
+a.button-med:link, a.button-med:visited, .submit input {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #FFFFFF;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 34px;
+    padding: 12px 18px 8px;
+    text-transform: uppercase;
+}
+a.red, .submit input {
+    background: none repeat scroll 0 0 #CE534D;
+    color: #FFFFFF;
+}
+a:link, a:visited {
+    color: #CE534D;
+    outline: medium none;
+    text-decoration: none;
+}
+
+
+/**ClothesDetails************/

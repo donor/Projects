@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ConsolR</id>
+    <version>0.1.0.0</version>
+    <title>ConsolR</title>
+    <authors>AppHarbor</authors>
+    <owners>AppHarbor</owners>
+    <licenseUrl>https://github.com/appharbor/ConsolR/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>http://github.com/appharbor/consolr</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ConsolR enables you to execute C# code against a running .NET web application</description>
+    <copyright>Copyright ©  AppHarbor 2012</copyright>
+    <dependencies>
+      <dependency id="Roslyn" version="1.0.11014.5" />
+      <dependency id="SignalR.Hosting.AspNet" version="0.5.0" />
+    </dependencies>
+    <references>
+      <reference file="ConsolR.Core.dll" />
+      <reference file="ConsolR.Hosting.dll" />
+    </references>
+  </metadata>
+</package>

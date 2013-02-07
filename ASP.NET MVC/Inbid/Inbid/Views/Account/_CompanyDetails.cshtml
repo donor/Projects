@@ -1,0 +1,121 @@
+﻿@model Inbid.ViewModels.CompanyViewModel
+
+
+<div id ="companyDetails">
+
+ <table id="tbCompanyProporties">
+     <thead>
+            <tr>
+            <td colspan="6" class="hea">
+            Dane Firmy <strong>@Model.CompanyDet.Name</strong>
+            </td>
+
+            </tr>
+           <tr />
+        </thead>
+        <tbody>
+           <tr>
+            <td>
+            Nazwa Admina:
+            </td>
+            <td>
+            @Model.CompanyDet.UserName
+            </td>
+            <td>
+            Adress:
+            </td>
+            <td>
+            @Model.CompanyDet.Adress
+            </td>
+            <td>
+            Bidders:
+            </td>
+            <td>
+            @Model.CompanyDet.CurrentBidderQuality/@Model.CompanyDet.BidderQuality
+            </td>
+           </tr>
+           <tr>
+            <td>
+            Imie:
+            </td>
+            <td>
+            @Model.CompanyDet.FirstName
+            </td>
+            <td>
+            Miasto:
+            </td>
+            <td>
+            @Model.CompanyDet.City
+            </td>
+            <td>
+            BidderViews:
+            </td>
+            <td>
+            @Model.CompanyDet.CurrentBidderViewQuality/@Model.CompanyDet.BidderViewQuality
+            </td>
+           </tr>
+           <tr>
+            <td>
+            Nazwisko:
+            </td>
+            <td>
+            @Model.CompanyDet.LastName
+            </td>
+            <td>
+            Województwo:
+            </td>
+            <td>
+            @Model.CompanyDet.Region
+            </td>
+            <td>
+            Aukcie:
+            </td>
+            <td>
+            @Model.CompanyDet.CurrentAuctionQuality/@Model.CompanyDet.AuctionQuality
+            </td>
+           </tr>
+           <tr>
+            <td>
+            Telefon:
+            </td>
+            <td>
+            @Model.CompanyDet.Phone
+            </td>
+            <td>
+            Kod Pocztowy:
+            </td>
+            <td>
+            @Model.CompanyDet.PostalCode
+            </td>
+            <td>
+             Data edycij Firmy:
+            </td>
+            <td>
+            @Model.CompanyDet.DateEditAuctionQuality
+            </td>
+           </tr>
+           <tr>
+            <td>
+            Email:
+            </td>
+            <td>
+            @Model.CompanyDet.Email
+            </td>
+            <td>
+            Kraj:
+            </td>
+            <td>
+            @Model.CompanyDet.CountryName
+            </td>
+            <td>
+             
+            </td>
+            <td>
+            
+            </td>
+           </tr>
+        </tbody>
+    </table>
+
+
+</div>

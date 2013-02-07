@@ -1,0 +1,28 @@
+﻿
+ .input[type="submit"] {
+    background: none repeat scroll 0 0 #CE534D;
+    color: #FFFFFF;
+}
+
+ input[type="submit"] {
+    background: none repeat scroll 0 0 #D9D9D9;
+    border: medium none;
+    color: #152027;
+    text-transform: uppercase;
+}
+input[type="submit"]:link, input[type="submit"]:visited {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #FFFFFF;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+    /*color: #FFFFFF;*/
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 34px;
+    padding: 5px 13px;
+    text-transform: uppercase;
+}

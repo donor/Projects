@@ -1,0 +1,127 @@
+﻿@model UsedClothes.ViewModels.ClothesDetailsWithPicturesViewModel
+@using UsedClothes.Helpers
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.thumbs a').mouseenter(function (e) {
+            var i, to;
+            if (e.target.tagName === 'IMG')
+                e.target = e.target.parentNode;
+            $('.thumbs a').removeClass('selected');
+            $(e.target).addClass('selected');
+            i = $('.thumbs a').index(e.target);
+            to = i * 300 * -1;
+            return $('#photo-slide').stop().animate({
+                "left": to
+            }, 'fast');
+        });
+         $('#addToCart').click(function (e) {       
+                        
+            id = $(this).attr('itemId');
+          
+            $.ajax({
+                url: 'ShoppingCart/AddToCart/' + id,
+            }).done(function(data){
+             
+                    $('.action-block .added-to-cart').css({
+                        display: 'block'
+                    });
+                    if (data!=-1){
+                        $('.action-block .added-to-cart').text("The item has been added to your cart");
+                        $('#cart-status').text('Cart('+data+')');
+                    }
+                    else{
+                        $('.action-block .added-to-cart').text("Can't add this item to your cart");
+                    }
+                //});
+
+                //
+               // if (data==-1)
+                //$('#cart-status').text('Cart('+data+')');
+
+                
+
+                //
+            });
+        });
+   });
+    //    function ModalClose() {
+    //        jQuery('#info-window').fadeOut().remove();
+    //        jQuery('.m-screen').remove();
+    //    }
+ </script>
+    
+
+    <a class="m-close" href="javascript:ModalClose();">
+        <span>close</span>
+    </a>
+    @*<div id="quick-view" style="width: 785px; height: 565px;">*@
+    <div id="quick-view" >
+        <div class="quick-view">
+        
+            <div class="item-photos"> 
+                <div class="thumbs">          
+                    @{byte counter=0;}
+                    @foreach (var item in Model.PicturesForClothes)
+                    {                   
+                        if (counter == 0)
+                        {  
+                             @:<a href="javascript:void(0)" class="selected" > @Html.ImageData(item.PictureId, null) </a>                      
+                        }
+                        else
+                        {
+                            @:<a href="javascript:void(0)" class=""> @Html.ImageData(item.PictureId, null)</a>  
+                        }
+                        counter++;                  
+                    }                    
+                 </div>
+              <div id="listing-photo">	  
+              <div id="photo-slide" style="left: 0px;">
+              @*@Html.Action("Details", "Store", new { id = @Model.ClothesDetails.ClothesId })*@
+                <a href="@Url.Action("Details", "Store", new { id = Model.ClothesDetails.ClothesId, @class="button-med red add-to-cart" })">       
+                  @foreach (var item in  Model.PicturesForClothes)
+                  {             
+                    @Html.ImageData(item.PictureId, null)
+                  }                  
+                 </a>
+              </div>
+           </div>
+        </div>
+        <div class="item-detail">  
+            <p class="views">  Views: <strong>@Model.ClothesDetails.DisplayCount</strong>  </p>  
+            <p class="title">        
+               @Html.ActionLink(@Model.ClothesDetails.ClothesName, "Details", "Store", new { id = @Model.ClothesDetails.ClothesId }, null)
+            </p>
+            <p class="price"> @Model.ClothesDetails.Price</p>       
+       
+            <div class="action-block">      
+                <a  id="addToCart" itemId="@Model.ClothesDetails.ClothesId" class="button-med red add-to-cart" href="javascript:void(0)">Add To Cart</a>
+                @*<a id="fav-1289216153" class="button-med grey favorite" href="javascript:void(0)">Add To Favorites</a>*@
+                <a class="added-to-cart" href="@Url.Action("Index", "ShoppingCart")"></a>    
+              
+             </div>    
+             <p class="details">  
+                <strong>Condition:</strong>
+                    @Html.ConditionData(Model.ClothesDetails.Condition,Model.ClothesDetails.IsVintage)
+                    <br>    
+                <strong>Size:</strong>@Model.ClothesDetails.SizeName <br>
+                <strong>Brand:</strong>@Model.ClothesDetails.BrandName <br>    
+                <strong>Material:</strong> @Model.ClothesDetails.MaterialName <br>      
+                <strong>Color/Pattern:</strong>@Model.ClothesDetails.ColorName/@Model.ClothesDetails.PatternName<br>    
+                <strong>Quantity:</strong>@Model.ClothesDetails.Quantity <br>
+              </p>      
+              @*<a href="/listings/item/1289216153" class="button-small grey">More Details</a>*@
+              @Html.ActionLink("More Details", "Details", "Store", new { id = @Model.ClothesDetails.ClothesId }, new {@class = "button-med red add-to-cart"})
+              <div class="seller">    
+                <img alt="Avatar" >      
+                <p>
+                    <strong>Seller:</strong>@Model.ClothesDetails.UserName       
+                </p>
+                <p>                  
+                    @*<strong>Rating:</strong> Not yet rated.   *@
+                </p>    
+               @* <a class="button-small grey" href="/Tangerina">Tangerina's Store</a>*@
+           </div>  
+       </div>   
+    </div>  
+  </div>

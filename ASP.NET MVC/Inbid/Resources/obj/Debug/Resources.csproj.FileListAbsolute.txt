@@ -1,0 +1,14 @@
+C:\zlecenia\projekt\Inbid\Resources\bin\Debug\Resources.dll
+C:\zlecenia\projekt\Inbid\Resources\bin\Debug\Resources.pdb
+C:\zlecenia\projekt\Inbid\Resources\obj\Debug\ResolveAssemblyReference.cache
+C:\zlecenia\projekt\Inbid\Resources\obj\Debug\Resources.dll
+C:\zlecenia\projekt\Inbid\Resources\obj\Debug\Resources.pdb
+C:\zlecenia\projekt\Inbid\Resources\obj\Debug\Resources.Resources.resources
+C:\zlecenia\projekt\Inbid\Resources\obj\Debug\GenerateResource.read.1.tlog
+C:\zlecenia\projekt\Inbid\Resources\obj\Debug\GenerateResource.write.1.tlog
+C:\zlecenia\projekt\Inbid\Resources\bin\Debug\de-DE\Resources.resources.dll
+C:\zlecenia\projekt\Inbid\Resources\bin\Debug\en-GB\Resources.resources.dll
+C:\zlecenia\projekt\Inbid\Resources\obj\Debug\Resources.Resources.de-DE.resources
+C:\zlecenia\projekt\Inbid\Resources\obj\Debug\Resources.Resources.en-GB.resources
+C:\zlecenia\projekt\Inbid\Resources\obj\Debug\de-DE\Resources.resources.dll
+C:\zlecenia\projekt\Inbid\Resources\obj\Debug\en-GB\Resources.resources.dll

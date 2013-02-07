@@ -1,0 +1,268 @@
+﻿@model Inbid.Models.Auction
+@using System.Globalization;           
+
+@{
+    ViewBag.Title = "Edit " + Model.Name;
+    }
+
+
+
+
+@*<script src="@Url.Content("~/Scripts/jquery-1.5.2.min.js")" type="text/javascript"></script>*@
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/clientvalidation.js")" type="text/javascript"></script>
+
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Auction</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+
+        <div class="startTime">
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StartTime)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StartTime)
+            @Html.ValidationMessageFor(model => model.StartTime)
+        </div>
+        </div>
+     
+
+        <div class="editor-label">
+         @if (Model.RelatedAuction == null)
+         {
+            <input type="checkbox" class="afterAuction"   
+                name="IsAfterAuction"
+                value="-1" 
+                />          
+            <text>Po aukcji  </text>          
+         }
+         else
+         {
+
+            <input type="checkbox" class="afterAuction"   
+                name="IsAfterAuction"
+                value="-1"
+                 checked="checked"
+                />          
+            <text>Po aukcji  </text>          
+         }
+         
+         
+         
+         
+         @* @Html.CheckBox("IsAfterAuction", true, new { value = "-1", @class="afterAuction" })*@
+
+       </div>
+
+      <div class="timeInterval"  style="display:none;">
+     
+       
+            <div class="editor-field">
+
+             @Html.DropDownList("RelatedAuction", "-")
+             @Html.ValidationMessageFor(model => model.RelatedAuction)
+      </div>
+
+
+       <div class="editor-label">
+            
+             @Html.ValidationMessageFor(model => model.IntervalDays)
+             @Html.ValidationMessageFor(model => model.IntervalHours)
+              @Html.ValidationMessageFor(model => model.IntervalMinutes)
+               @Html.ValidationMessageFor(model => model.IntervalSeconds)
+         </div>
+         <div class="editor-field">
+            @Html.LabelFor(model => model.IntervalDays)             
+            @Html.TextBoxFor(model => model.IntervalDays, new { @style = "width:35px;" })           
+
+            @Html.LabelFor(model => model.IntervalHours)             
+            @Html.TextBoxFor(model => model.IntervalHours, new { @style = "width:35px;" })           
+            
+             @Html.LabelFor(model => model.IntervalMinutes)             
+            @Html.TextBoxFor(model => model.IntervalMinutes, new { @style = "width:35px;" })           
+
+            @Html.LabelFor(model => model.IntervalSeconds)             
+            @Html.TextBoxFor(model => model.IntervalSeconds, new { @style = "width:35px;" })           
+        </div>
+      
+      </div>
+
+
+         <div class="editor-label">
+            Duration
+             @Html.ValidationMessageFor(model => model.Days)
+             @Html.ValidationMessageFor(model => model.Hours)
+              @Html.ValidationMessageFor(model => model.Minutes)
+               @Html.ValidationMessageFor(model => model.Seconds)
+         </div>
+         <div class="editor-field">
+            @Html.LabelFor(model => model.Days)             
+            @Html.TextBoxFor(model => model.Days, new { @style = "width:35px;" })           
+
+            @Html.LabelFor(model => model.Hours)             
+            @Html.TextBoxFor(model => model.Hours, new { @style = "width:35px;" })           
+            
+             @Html.LabelFor(model => model.Minutes)             
+            @Html.TextBoxFor(model => model.Minutes, new { @style = "width:35px;" })           
+
+            @Html.LabelFor(model => model.Seconds)             
+            @Html.TextBoxFor(model => model.Seconds, new { @style = "width:35px;" })           
+        </div>
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Currency)
+        </div>
+        <div class="editor-field">
+         @Html.RadioButton("Currency", "PLN")PLN
+         @Html.RadioButton("Currency", "$")$
+         @Html.RadioButton("Currency", "€")€
+           
+           @Html.ValidationMessageFor(model => model.Currency)
+        </div>
+        
+      @*  <div class="editor-label">
+            @Html.LabelFor(model => model.StartPrice)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StartPrice)
+            @Html.ValidationMessageFor(model => model.StartPrice)
+        </div>*@
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MinJump)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MinJump)
+            @Html.ValidationMessageFor(model => model.MinJump)
+        </div>
+        
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Direction)
+        </div>
+      @*  <div class="editor-field">
+            @Html.RadioButton("Direction", "True")Kupno
+         @Html.RadioButton("Direction", "False")Sprzedaz
+        
+            @Html.ValidationMessageFor(model => model.Direction)
+        </div>   *@
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ViewTopOffer)
+        </div>
+        <div class="editor-field">
+            @Html.RadioButton("ViewTopOffer", "True")Tak
+            @Html.RadioButton("ViewTopOffer", "False")Nie
+        
+            @Html.ValidationMessageFor(model => model.ViewTopOffer)
+        </div>
+
+         <div class="editor-label">
+            @Html.LabelFor(model => model.EnableDisable)
+        </div>
+        <div class="editor-field">
+            @Html.RadioButton("EnableDisable", "True")Tak
+            @Html.RadioButton("EnableDisable", "False")Nie
+        
+            @Html.ValidationMessageFor(model => model.EnableDisable)
+        </div>
+
+
+        @*<div class="editor-label">
+            @Html.LabelFor(model => model.PreviousAuction)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PreviousAuction)
+            @Html.ValidationMessageFor(model => model.PreviousAuction)
+        </div>*@
+
+        <p>
+            <input type="submit" value="Zapisz" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $('.datetimefield').datetimepicker({
+            timeFormat: 'hh:mm:ss TT',
+            showSecond: true
+
+        });
+
+    });
+
+
+
+</script>
+
+
+<script type="text/javascript" >
+    $(document).ready(function () {
+
+        var f = 0;
+        if ($('input[name=IsAfterAuction]').is(':checked')) {
+            $('.startTime').hide(0);
+            $('.timeInterval').show(0);
+        }
+        switchStartTime();
+    });
+
+
+    function switchStartTime() {
+
+        $('input[name=IsAfterAuction]').change(function () {
+
+            if ($(this).is(':checked')) {
+                $('.startTime').hide("slow");
+                $('.timeInterval').show("slow");
+            }
+            else {
+                $('.startTime').show("slow");
+                $('.timeInterval').hide("slow");
+            }
+
+
+        });
+
+    }
+
+//<![CDATA[
+
+
+    // Override default jQuery Validation number method
+    $.validator.methods.number = function (value, element) {
+        return this.optional(element) || !isNaN(Globalize.parseFloat(value));
+    }
+
+        
+
+       
+
+//]]>
+</script>

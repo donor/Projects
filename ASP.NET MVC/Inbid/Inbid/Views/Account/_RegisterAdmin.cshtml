@@ -1,0 +1,168 @@
+﻿@model Inbid.Models.RegistrationModel
+
+  
+
+  
+        <fieldset>
+            <legend>Account Information</legend>
+
+            <div class="editor-label">
+                @Resources.Resources.UserName
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+            </div>
+           
+           <div class="editor-label">
+                * Email
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.Email)
+                @Html.ValidationMessageFor(m => m.Email)
+            </div>
+
+            @if (Inbid.Helpers.LocationHelper.IsCurrentControllerAndAction("Account", "RegisterAdmin", ViewContext))
+            {
+                <div class="editor-label">
+                    @Resources.Resources.Password
+                </div>
+                <div class="editor-field">
+                    @Html.PasswordFor(m => m.Password)
+                    @Html.ValidationMessageFor(m => m.Password)
+                </div>
+
+                <div class="editor-label">
+                    @Resources.Resources.ConfirmPassword
+                </div>
+                <div class="editor-field">
+                    @Html.PasswordFor(m => m.ConfirmPassword)
+                    @Html.ValidationMessageFor(m => m.ConfirmPassword)
+                </div>
+            }
+            else
+            {
+            @Html.HiddenFor(x => x.Password)
+            @Html.HiddenFor(x => x.ConfirmPassword)
+        @*    @Html.HiddenFor(x => x.CompanyId)
+*@
+            }
+                      
+             <div class="editor-label">                
+                @Resources.Resources.FirstName
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.FirstName)
+                @Html.ValidationMessageFor(m => m.FirstName)
+            </div>
+
+             <div class="editor-label">
+                @Resources.Resources.LastName
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.LastName)
+                @Html.ValidationMessageFor(m => m.LastName)
+            </div>
+            
+             <div class="editor-label">
+               @Resources.Resources.Language
+            </div>
+            <div class="editor-field">
+             @Html.DropDownList("LanguageId", "-")
+             @Html.ValidationMessageFor(m => m.LanguageId)
+            </div>
+            
+            @*--------------------------------------------------------------------*@
+            <div class="company"> 
+            
+            <strong class="companyMessage">Nazwa firmy i adres</strong>
+            
+            
+            @*--------------------------------------------------------------------*@
+
+            <div class="editor-label">                
+                Nazwa Firmy
+            </div>
+            <div class="editor-field">
+                @Html.TextAreaFor(m => m.Name)
+                @Html.ValidationMessageFor(m => m.Name)
+            </div>
+
+
+            <div class="editor-label">                
+                @Resources.Resources.Address
+            </div>
+            <div class="editor-field">
+                @Html.TextAreaFor(m => m.Adress)
+                @Html.ValidationMessageFor(m => m.Adress)
+            </div>
+            
+            <div class="editor-label">                
+                @Resources.Resources.City
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.City)
+                @Html.ValidationMessageFor(m => m.City)
+            </div>
+
+            <div class="editor-label">                
+                @Resources.Resources.Region
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.Region)
+                @Html.ValidationMessageFor(m => m.Region)
+            </div>
+
+            <div class="editor-label">                
+                @Resources.Resources.PostalCode
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.PostalCode)
+                @Html.ValidationMessageFor(m => m.PostalCode)
+            </div>
+            
+
+            <div class="editor-label">                
+                @Resources.Resources.Country
+            </div>
+            <div class="editor-field">
+                @Html.DropDownList("CountryId", "-")
+                @Html.ValidationMessageFor(m => m.CountryId)
+            </div>
+            </div>
+
+            
+
+             <div class="editor-label">                
+                @Resources.Resources.Phone
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.Phone)
+                @Html.ValidationMessageFor(m => m.Phone)
+            </div>
+
+            <div class="editor-label">                
+                @Html.LabelFor(m=>m.BidderQuality)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(m=>m.BidderQuality)
+                @Html.ValidationMessageFor(m => m.BidderQuality)
+            </div>                     
+
+            <div class="editor-label">                
+                @Html.LabelFor(m=>m.BidderViewQuality)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(m => m.BidderViewQuality)
+                @Html.ValidationMessageFor(m => m.BidderViewQuality)
+            </div>
+
+           <div class="editor-label">                
+                @Html.LabelFor(m=>m.AuctionQuality)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(m => m.AuctionQuality)
+                @Html.ValidationMessageFor(m => m.AuctionQuality)
+            </div>
+
+        </fieldset>

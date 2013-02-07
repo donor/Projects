@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Application";
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+     
+    });
+    jQuery(function ($) {     
+        var browserHeight = $('ul#browser').height();
+        $('.left').height(browserHeight + 30);
+        $('.right').height(browserHeight + 30);
+        $('#widget').width('auto').height(browserHeight+50).split({ orientation: 'vertical', limit: 100, position: '200' });
+    });
+    $(window).resize(function () {
+        var mainwidth = $('#main').width();
+        var leftwidth = $('.left').width();
+        $(".right").width(mainwidth - leftwidth);
+        $("#filecontent").width(mainwidth - leftwidth-40);
+    });
+
+    </script>
+
+    <div id="widget">
+<div class="left">
+@Html.Partial("_FileBrowser")
+
+</div>
+   
+<div class="right" style="overflow:hidden ;">
+<p id="filename" style="">Kliknji wybrany plik w panelu po lewej aby go wyświetlić tutaj.</p>
+<div id="filecontent">
+
+<pre >
+ 
+</pre>
+</div>
+</div>
+
+</div>

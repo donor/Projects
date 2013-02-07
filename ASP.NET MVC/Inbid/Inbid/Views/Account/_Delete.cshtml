@@ -1,0 +1,22 @@
+﻿@model Inbid.Models.Company
+@using Resources
+
+
+
+<h2>
+	@Resources.DeleteConfirmation
+</h2>
+
+<div>
+	<p>Potwierdź usunięcie firmy <strong>@Model.Name</strong>. 
+    </br>
+     Spowoduje to usuniecie jej czlonków oraz aukcji oraz ofert tworzonych przez nich.</p>
+	@*<i> @Model.Name ? </i> </p>*@
+</div>
+	
+@using (Html.BeginForm())
+{ 
+
+	<input name="confirmButton" type="submit" value="@Resources.Delete" />        
+
+}

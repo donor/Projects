@@ -1,0 +1,17 @@
+C:\nauka\specjalność\rok VI\Technika kompilacji\Projekt\ObslugaBazyDanychSQL\obj\x86\Release\ResolveAssemblyReference.cache
+C:\nauka\specjalność\rok VI\Technika kompilacji\Projekt\ObslugaBazyDanychSQL\bin\Release\ObslugaBazyDanychSQL.exe
+C:\nauka\specjalność\rok VI\Technika kompilacji\Projekt\ObslugaBazyDanychSQL\bin\Release\ObslugaBazyDanychSQL.pdb
+C:\nauka\specjalność\rok VI\Technika kompilacji\Projekt\ObslugaBazyDanychSQL\obj\x86\Release\ObslugaBazyDanychSQL.exe
+C:\nauka\specjalność\rok VI\Technika kompilacji\Projekt\ObslugaBazyDanychSQL\obj\x86\Release\ObslugaBazyDanychSQL.pdb
+C:\nauka\specjalność\rok VI\Technika kompilacji\Projekt\ObslugaBazyDanychSQL v2\bin\Release\ObslugaBazyDanychSQL.exe
+C:\nauka\specjalność\rok VI\Technika kompilacji\Projekt\ObslugaBazyDanychSQL v2\bin\Release\ObslugaBazyDanychSQL.pdb
+C:\nauka\specjalność\rok VI\Technika kompilacji\Projekt\ObslugaBazyDanychSQL v2\obj\x86\Release\ResolveAssemblyReference.cache
+C:\nauka\specjalność\rok VI\Technika kompilacji\Projekt\ObslugaBazyDanychSQL v2\obj\x86\Release\ObslugaBazyDanychSQL.exe
+C:\nauka\specjalność\rok VI\Technika kompilacji\Projekt\ObslugaBazyDanychSQL v2\obj\x86\Release\ObslugaBazyDanychSQL.pdb
+C:\nauka\specjalność\rok VI\Technika kompilacji\Projekt\ObslugaBazyDanychSQL v2\bin\Release\BazaDanych0.xml
+C:\nauka\specjalność\rok VI\Technika kompilacji\Projekt\ObslugaBazyDanychSQL v3\bin\Release\BazaDanych0.xml
+C:\nauka\specjalność\rok VI\Technika kompilacji\Projekt\ObslugaBazyDanychSQL v3\bin\Release\ObslugaBazyDanychSQL.exe
+C:\nauka\specjalność\rok VI\Technika kompilacji\Projekt\ObslugaBazyDanychSQL v3\bin\Release\ObslugaBazyDanychSQL.pdb
+C:\nauka\specjalność\rok VI\Technika kompilacji\Projekt\ObslugaBazyDanychSQL v3\obj\x86\Release\ResolveAssemblyReference.cache
+C:\nauka\specjalność\rok VI\Technika kompilacji\Projekt\ObslugaBazyDanychSQL v3\obj\x86\Release\ObslugaBazyDanychSQL.exe
+C:\nauka\specjalność\rok VI\Technika kompilacji\Projekt\ObslugaBazyDanychSQL v3\obj\x86\Release\ObslugaBazyDanychSQL.pdb

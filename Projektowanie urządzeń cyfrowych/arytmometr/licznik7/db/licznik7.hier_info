@@ -1,0 +1,12 @@
+|licznik7
+zegar => q[0]~reg0.CLK
+zegar => q[1]~reg0.CLK
+zegar => q[2]~reg0.CLK
+zegar => \licz:wartosc[0].CLK
+zegar => \licz:wartosc[1].CLK
+zegar => \licz:wartosc[2].CLK
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

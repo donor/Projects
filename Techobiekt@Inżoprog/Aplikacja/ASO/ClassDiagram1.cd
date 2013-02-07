@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ASO.Czesc">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAhgAAAAAAAAQAAAQAAAAAAEAAAAQAA=</HashCode>
+      <FileName>Czesc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASO.Faktura" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAgAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Faktura.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASO.Harmonogram" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAgIAAIAAAAEAAAAEAAAAQAAAAAEAAA=</HashCode>
+      <FileName>Harmonogram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASO.Klient" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAQAAAAAAAAA=</HashCode>
+      <FileName>Klient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASO.Logowanie" Collapsed="true">
+    <Position X="5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAQAAAAAAAAAAAAAAAAgAAAEAAAAAAARA=</HashCode>
+      <FileName>Logowanie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASO.MainWindow">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/7jbHm8/fP5j+f/UtfbAyuIjQOV94XQu91b8mhBq67E=</HashCode>
+      <FileName>MainWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASO.Pracownik" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAABAAAgAAAAAAAAAAAAAAAAAAAAAIAAgAAA=</HashCode>
+      <FileName>Pracownik.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASO.Program" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASO.Usluga" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAACIAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Usluga.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASO.Zlecenie">
+    <Position X="8.25" Y="2.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EAAgAgAAAAAAAggAADAEAAACAAAAAAEAAAAAAAABAAA=</HashCode>
+      <FileName>Zlecenie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASO.ZmianaIlosci" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAgABAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>ZmianaIlosci.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASO.Properties.Resources">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASO.Properties.Settings">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

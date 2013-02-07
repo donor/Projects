@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BazaRezerwacjeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="BazaRezerwacjeModelStoreContainer">
+    <EntitySet Name="Imprezy" EntityType="BazaRezerwacjeModel.Store.Imprezy" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Klienci" EntityType="BazaRezerwacjeModel.Store.Klienci" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Imprezy">
+    <Key>
+      <PropertyRef Name="IdImprezy" />
+    </Key>
+    <Property Name="IdImprezy" Type="int" Nullable="false" />
+    <Property Name="nazwa" Type="varchar" MaxLength="50" />
+    <Property Name="data" Type="date" />
+    <Property Name="miejsce" Type="varchar" MaxLength="50" />
+    <Property Name="cenaPodstawowa" Type="varchar" MaxLength="50" />
+    <Property Name="liczbaBiletów" Type="nchar" MaxLength="10" />
+    <Property Name="obrazek" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Klienci">
+    <Key>
+      <PropertyRef Name="IdKlienta" />
+    </Key>
+    <Property Name="IdKlienta" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="wiek" Type="int" />
+  </EntityType>
+</Schema>

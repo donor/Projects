@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EDS_ImprezyStoreContainer" CdmEntityContainer="BazaRezerwacjeEntities1">
+    <EntitySetMapping Name="Imprezy">
+      <EntityTypeMapping TypeName="EDS_Imprezy.Imprezy">
+        <MappingFragment StoreEntitySet="Imprezy">
+          <ScalarProperty Name="IdImprezy" ColumnName="IdImprezy" />
+          <ScalarProperty Name="nazwa" ColumnName="nazwa" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="miejsce" ColumnName="miejsce" />
+          <ScalarProperty Name="cenaPodstawowa" ColumnName="cenaPodstawowa" />
+          <ScalarProperty Name="liczbaBiletów" ColumnName="liczbaBiletów" />
+          <ScalarProperty Name="obrazek" ColumnName="obrazek" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

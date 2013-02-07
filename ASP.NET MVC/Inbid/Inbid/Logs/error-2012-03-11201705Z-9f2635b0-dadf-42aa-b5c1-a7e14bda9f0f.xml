@@ -1,0 +1,180 @@
+﻿<error errorId="9f2635b0-dadf-42aa-b5c1-a7e14bda9f0f" application="/LM/W3SVC/1/ROOT/Inbid" host="DONOR-HP" type="System.InvalidOperationException" message="There is no ViewData item of type 'IEnumerable&lt;SelectListItem&gt;' that has the key 'RelatedAuction'." source="System.Web.Mvc" detail="System.InvalidOperationException: There is no ViewData item of type 'IEnumerable&lt;SelectListItem&gt;' that has the key 'RelatedAuction'.&#xD;&#xA;   at System.Web.Mvc.Html.SelectExtensions.GetSelectData(HtmlHelper htmlHelper, String name)&#xD;&#xA;   at System.Web.Mvc.Html.SelectExtensions.SelectInternal(HtmlHelper htmlHelper, String optionLabel, String name, IEnumerable`1 selectList, Boolean allowMultiple, IDictionary`2 htmlAttributes)&#xD;&#xA;   at System.Web.Mvc.Html.SelectExtensions.DropDownList(HtmlHelper htmlHelper, String name, String optionLabel)&#xD;&#xA;   at ASP._Page_Views_Auction_Edit_cshtml.Execute() in c:\zlecenia\projekt\Inbid\Inbid\Views\Auction\Edit.cshtml:line 81&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.StartPage.RunPage()&#xD;&#xA;   at System.Web.WebPages.StartPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)&#xD;&#xA;   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)&#xD;&#xA;   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)&#xD;&#xA;   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass1c.&lt;InvokeActionResultWithFilters&gt;b__19()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass1c.&lt;&gt;c__DisplayClass1e.&lt;InvokeActionResultWithFilters&gt;b__1b()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)&#xD;&#xA;   at System.Web.Mvc.Controller.ExecuteCore()&#xD;&#xA;   at Inbid.Infrastructure.BaseController.ExecuteCore() in C:\zlecenia\projekt\Inbid\Inbid\Infrastructure\BaseController.cs:line 46&#xD;&#xA;   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClass6.&lt;&gt;c__DisplayClassb.&lt;BeginProcessRequest&gt;b__5()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass1.&lt;MakeVoidDelegate&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass8`1.&lt;BeginSynchronous&gt;b__7(IAsyncResult _)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClasse.&lt;EndProcessRequest&gt;b__d()&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.&lt;GetCallInAppTrustThunk&gt;b__0(Action f)&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="franek0" time="2012-03-11T20:17:05.4378449Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pl,de-at;q=0.8,en-gb;q=0.6,en-us;q=0.4,en;q=0.2&#xD;&#xA;HTTP_COOKIE:Culture=en-GB; TimeZone=1; __utma=111872281.92061411.1331496974.1331496974.1331496974.1; __utmb=111872281.6.10.1331496974; __utmc=111872281; __utmz=111872281.1331496974.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); .ASPXAUTH=1C73CA65EEB8CFCAB1FFB8438D9C3F1A4C19182A58F84F747F5660BEEBFD74DF1A84918D4C28C46D91FA00ACA979F816DDBDE619CA25B2AD0E69A8DB08BFA16A9C338321A1A21B3975093A1D1E199FE746E7911A17032D8C10827C93E41F16B04B322025BB334B28A879CC96B5F2893D655E88444960C5D8AABF906AB078ACA5D84CA238754A00DCB08A5D8984F5E694&#xD;&#xA;HTTP_HOST:localhost&#xD;&#xA;HTTP_REFERER:http://localhost/Inbid/Account/Company?companyAdmin=admin1&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; rv:10.0.2) Gecko/20100101 Firefox/10.0.2&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: pl,de-at;q=0.8,en-gb;q=0.6,en-us;q=0.4,en;q=0.2&#xD;&#xA;Cookie: Culture=en-GB; TimeZone=1; __utma=111872281.92061411.1331496974.1331496974.1331496974.1; __utmb=111872281.6.10.1331496974; __utmc=111872281; __utmz=111872281.1331496974.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); .ASPXAUTH=1C73CA65EEB8CFCAB1FFB8438D9C3F1A4C19182A58F84F747F5660BEEBFD74DF1A84918D4C28C46D91FA00ACA979F816DDBDE619CA25B2AD0E69A8DB08BFA16A9C338321A1A21B3975093A1D1E199FE746E7911A17032D8C10827C93E41F16B04B322025BB334B28A879CC96B5F2893D655E88444960C5D8AABF906AB078ACA5D84CA238754A00DCB08A5D8984F5E694&#xD;&#xA;Host: localhost&#xD;&#xA;Referer: http://localhost/Inbid/Account/Company?companyAdmin=admin1&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:10.0.2) Gecko/20100101 Firefox/10.0.2&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/1/ROOT/Inbid" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\zlecenia\projekt\Inbid\Inbid\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="In" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="franek0" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="franek0" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="franek0" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="1" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/1" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Inbid/Auction/Edit/51" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\zlecenia\projekt\Inbid\Inbid\Auction\Edit\51" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="54235" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Inbid/Auction/Edit/51" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="80" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/7.5" />
+    </item>
+    <item name="URL">
+      <value string="/Inbid/Auction/Edit/51" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pl,de-at;q=0.8,en-gb;q=0.6,en-us;q=0.4,en;q=0.2" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="Culture=en-GB; TimeZone=1; __utma=111872281.92061411.1331496974.1331496974.1331496974.1; __utmb=111872281.6.10.1331496974; __utmc=111872281; __utmz=111872281.1331496974.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); .ASPXAUTH=1C73CA65EEB8CFCAB1FFB8438D9C3F1A4C19182A58F84F747F5660BEEBFD74DF1A84918D4C28C46D91FA00ACA979F816DDBDE619CA25B2AD0E69A8DB08BFA16A9C338321A1A21B3975093A1D1E199FE746E7911A17032D8C10827C93E41F16B04B322025BB334B28A879CC96B5F2893D655E88444960C5D8AABF906AB078ACA5D84CA238754A00DCB08A5D8984F5E694" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost/Inbid/Account/Company?companyAdmin=admin1" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; rv:10.0.2) Gecko/20100101 Firefox/10.0.2" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="Culture">
+      <value string="en-GB" />
+    </item>
+    <item name="TimeZone">
+      <value string="1" />
+    </item>
+    <item name="__utma">
+      <value string="111872281.92061411.1331496974.1331496974.1331496974.1" />
+    </item>
+    <item name="__utmb">
+      <value string="111872281.6.10.1331496974" />
+    </item>
+    <item name="__utmc">
+      <value string="111872281" />
+    </item>
+    <item name="__utmz">
+      <value string="111872281.1331496974.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)" />
+    </item>
+    <item name=".ASPXAUTH">
+      <value string="1C73CA65EEB8CFCAB1FFB8438D9C3F1A4C19182A58F84F747F5660BEEBFD74DF1A84918D4C28C46D91FA00ACA979F816DDBDE619CA25B2AD0E69A8DB08BFA16A9C338321A1A21B3975093A1D1E199FE746E7911A17032D8C10827C93E41F16B04B322025BB334B28A879CC96B5F2893D655E88444960C5D8AABF906AB078ACA5D84CA238754A00DCB08A5D8984F5E694" />
+    </item>
+  </cookies>
+</error>

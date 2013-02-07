@@ -1,0 +1,145 @@
+﻿@model Inbid.ViewModels.OfferViewModel
+@using Resources
+
+
+         
+<div id="auctionProporties">
+    <table id="tbAuctionProporties">
+     <thead>
+            <tr>
+            <td colspan="6" class="hea">
+            Informacje o Aukcji
+            </td>
+
+            </tr>
+           <tr />
+        </thead>
+        <tr>
+            <td class="label">
+                ID:
+            </td>
+            <td class="secondColumn">
+                @Model.Auction.AuctionNumber
+            </td>
+            <td class="label">
+           Currency:
+            </td >
+            <td>
+                @Model.Auction.Currency        
+            </td>
+            <td class="label">
+              Min Jump:
+            </td>
+              <td>
+              @Model.Auction.MinJump.ToString("N02")
+            </td>
+        </tr>
+        <tr>
+        <td class="label">
+             Publisher:
+            </td>            
+            <td>
+             @Model.Auction.GetUserName()
+            </td>
+                <td class="label">
+               Kupno/Sprzedaz
+            </td>
+             <td>
+             @if (Model.Auction.Direction == true)
+             {
+            @Resources.Reverse
+             }
+             else if (false == Model.Auction.Direction)
+             {
+            @Resources.Forward
+             }
+            </td>     
+           
+            <td class="label">
+              Start Time:
+            </td>
+              <td>
+              @Model.Auction.StartTime
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="label">
+             Name:
+            </td>
+             <td rowspan="2">
+             @Html.DisplayTextFor(model => model.Auction.Name)
+         @*     @Model.Auction.Name*@
+            </td>
+            <td class="label">
+           Start Price:
+            </td>
+            <td>
+              @Model.Auction.StartPrice.ToString("N02")
+            </td>
+              <td class="label">
+              End Time:
+            </td>
+             <td id="endTime">
+              @Model.Auction.EndTime
+            </td>
+        </tr>
+        <tr>
+                 
+            
+            <td class="label">
+            Current Price:
+            </td>
+            <td>
+            @Model.Auction.CurrentPrice.ToString("N02")
+            </td>
+            <td class="label">
+                Status:
+            </td>
+              <td class="AuctionStatus" state="@Model.Auction.EnableDisable">              
+                 @if (@Model.Auction.StartTime.ToUniversalTime() > System.DateTime.Now.ToUniversalTime())
+                 {
+                    @:Nie rozpoczęta
+                 }
+                 else if (@Model.Auction.EndTime.ToUniversalTime() < System.DateTime.Now.ToUniversalTime())
+                 {
+                    @:Zakończona   
+                 }
+                 else if ((@Model.Auction.EnableDisable == true) && (@Model.Auction.StartTime.ToUniversalTime() < System.DateTime.Now.ToUniversalTime()) && (@Model.Auction.EndTime.ToUniversalTime() > System.DateTime.Now.ToUniversalTime()))
+                 {
+                    @:Trwa
+                 }
+                 else if ((@Model.Auction.EnableDisable == false) && (@Model.Auction.StartTime.ToUniversalTime() < System.DateTime.Now.ToUniversalTime()) && (@Model.Auction.EndTime > System.DateTime.Now.ToUniversalTime()))
+                 {
+                    @:Zawieszona             
+                }
+            </td>
+        </tr>
+        <tr>
+            <td  rowspan="2" class="label" >
+              Description:
+            </td>
+            <td rowspan="2" colspan="3" class="description">
+                @Model.Auction.Description
+            </td>
+            
+           
+            <td class="label">
+           Bid counter:
+            </td>
+              <td>
+              @Model.Auction.OfferCounter
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            
+           
+        </tr>
+    </table>
+
+</div>

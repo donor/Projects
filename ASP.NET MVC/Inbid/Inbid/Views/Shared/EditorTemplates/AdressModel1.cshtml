@@ -1,0 +1,53 @@
+﻿@model Inbid.Models.AdressModel
+
+
+ <fieldset>
+            <div class="editor-label">                
+                Name
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.Name)
+                @Html.ValidationMessageFor(m => m.Name)
+            </div>
+
+            @*<div class="editor-label">                
+                @Resources.Resources.Address
+            </div>
+            <div class="editor-field">
+                @Html.TextAreaFor(m => m.Adress.Adress)
+                @Html.ValidationMessageFor(m => m.Adress.Adress1)
+            </div>*@
+            
+            <div class="editor-label">                
+                @Resources.Resources.City
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.Adress)
+                @Html.ValidationMessageFor(m => m.Adress)
+            </div>
+
+            <div class="editor-label">                
+                @Resources.Resources.Region
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.Region)
+                @Html.ValidationMessageFor(m => m.Region)
+            </div>
+
+            <div class="editor-label">                
+                @Resources.Resources.PostalCode
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.PostalCode)
+                @Html.ValidationMessageFor(m => m.PostalCode)
+            </div>
+            
+@*
+            <div class="editor-label">                
+                @Resources.Resources.Country
+            </div>
+            <div class="editor-field">
+                @Html.DropDownList("CountryId", "-")
+                @Html.ValidationMessageFor(m => m.CountryId)
+            </div>*@
+      </fieldset>

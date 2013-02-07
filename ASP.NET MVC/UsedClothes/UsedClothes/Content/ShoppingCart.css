@@ -1,0 +1,202 @@
+﻿
+h1
+{
+    color: #CE534D;
+    font-family: 'Segoe Print';
+    font-size: 20px;
+    font-weight: normal;
+    margin: 5px 0 10px;
+    text-transform: lowercase;
+}
+
+.cart br, .cart div {
+    clear: both;
+}
+.cart div, .cart p, .cart br {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.purchase img {
+    border: 1px solid #C7C7C7;
+    clear: both;
+    float: left;
+    margin: 0 10px 10px 0;
+    padding: 3px;
+    width: 45px;
+    height:49px;
+}
+.cart .item-title {
+    clear: none;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    /*padding-top: 15px;*/
+    width: 200px;
+}
+
+/*p.step
+{
+        background: url("../content/images/bg/step-line.gif") repeat-x scroll left top #FFFFFF;
+    clear: both;
+    color: #B0C1CC;
+    font-weight: bold;
+    height: 10px;
+    margin: 0;
+    padding: 8px 0;
+    text-transform: uppercase;
+}*/
+.cart td {
+    position: relative;
+ 
+}
+.cart td.removetd
+{
+ padding:15px 0 0 25px;
+}
+.cart td a.remove
+{
+    background: transparent url("../content/images/buttons/remove-x.png") no-repeat scroll 0 0;
+    color: #B0C1CC;
+    font-size: 10px;
+    padding:  7px 20px 0 0;
+    /*rgin: 0 0 0 25px;*/
+}
+.cart td a.remove:hover {
+    background: url("../content/images/buttons/remove-x.png") no-repeat scroll 0 -20px transparent;
+    color: #CE534D;
+}
+.cart td a span
+{
+    opacity:0;
+}
+.cart td {
+    color: #152027;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/*select {
+    margin: 5px 0 0;
+}*/
+
+.cart select {
+    margin-right: 5px;
+}
+.cart .label {
+    color: #C6C6C6;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+.cart td.subtotal {
+    color: #74787A;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 40px;
+    padding-right: 10px;
+}
+.cart td.subtotal .subtotalShip {
+    color: #979EA2;
+    font-size: 12px;
+}
+.cart td.total a {
+    background: url("../images/buttons/icon_snd_msg.png") no-repeat scroll 0 0 transparent;
+    float: right;
+    font-size: 11px;
+    font-weight: normal;
+    padding: 3px 0 0 35px;
+}
+.cart td.section {
+    background: none repeat scroll 0 0 #F7F7F7;
+    border-top: 1px solid #C7C7C7;
+   /* padding: 10px;*/
+}
+.cart td.total {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #152027;
+    font-size: 14px;
+    font-weight: bold;
+}
+/*.cart td.total span:last-child
+{
+    margin-top:10px;
+}*/
+
+.purchase .item-title {
+    padding-bottom: 10px;
+    top: 5px;
+    width: 200px;
+}
+.purchase img {
+    border: 1px solid #C7C7C7;
+    clear: both;
+    float: left;
+    margin: 0 10px 10px 0;
+    padding: 3px;
+    width: 45px;
+}
+
+.purchase .summary {
+    color: #747474;
+    font-size: 12px;
+    padding-bottom: 3px;
+}
+/*.cart .button {
+    float: right;
+}
+.cart .button input {
+    color: #FFFFFF;
+}
+.cart .button input:hover {
+    color: #FFFFFF;
+}
+
+.cart .sellerButtons .button {
+    float: left;
+}*/
+a.button-lrg:link, a.button-lrg:visited {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #FFFFFF;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 100;
+    padding: 5px 13px;
+    text-transform: uppercase;
+    margin-bottom:20px;
+}
+a.red, .submit input {
+    background: none repeat scroll 0 0 #CE534D;
+    color: #FFFFFF;
+}
+
+a.grey:link, a.grey:visited, .button input {
+    background: none repeat scroll 0 0 #D9D9D9;
+    border: medium none;
+    color: #152027;
+    text-transform: uppercase;
+}
+a.button-med:link, a.button-med:visited, .submit input {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #FFFFFF;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+    /*color: #FFFFFF;*/
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 34px;
+    padding: 5px 13px;
+    text-transform: uppercase;
+}

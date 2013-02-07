@@ -1,0 +1,51 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" ctype="Workspace" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Server/POPserwer.cs" ctype="Workbench">
+    <Files>
+      <File FileName="Server/SMTPSerwer.cs" Line="105" Column="7" />
+      <File FileName="Server/Wiadomosc.cs" Line="42" Column="1" />
+      <File FileName="Server/Komunikaty.cs" Line="31" Column="5" />
+      <File FileName="Server/Program.cs" Line="58" Column="53" />
+      <File FileName="Server/POPserwer.cs" Line="291" Column="1" />
+      <File FileName="Server/Teksty.cs" Line="25" Column="18" />
+      <File FileName="Server/Zapis.cs" Line="50" Column="4" />
+      <File FileName="Server/User.cs" Line="26" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Server" expanded="True">
+            <Node name="POPserwer.cs" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>messageReceived.Trim()</Value>
+          <Value>Komunikaty.komunikatyKlientaSMTP[4]</Value>
+          <Value>Komunikaty.komunikatyKlientaSMTP[4]</Value>
+          <Value>((messageReceived.StartsWith(Komunikaty.komunikatyKlientaSMTP[4]))&amp;&amp;(messageReceived.Length&lt;5))</Value>
+          <Value>messageReceived.Length</Value>
+          <Value>!Teksty.sprawdzIstnienieAdresu(Program.listaUser,messageReceived.Substring(9))</Value>
+          <Value>user.Adres.ToLower()+"\r"</Value>
+          <Value>adres.ToLower()</Value>
+          <Value>user.Adres.ToString()==urzytkownik.ToString()</Value>
+          <Value>user.Haslo.ToString()==haslo.ToString()</Value>
+          <Value>Teksty.sprawdzNumer(messageReceived.Substring(5))</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/root/Pulpit/Mail Server/Server/Server/ChatClient.cs" line="164" />
+      <Breakpoint file="/root/Pulpit/Mail Server/Server/Server/ChatClient.cs" line="212" />
+      <Breakpoint file="/root/Pulpit/Mail Server/Server/Server/POPserwer.cs" line="297" />
+      <Breakpoint file="/root/Pulpit/Mail Server/Server/Server/POPserwer.cs" line="294" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches ctype="PinnedWatchStore" />
+</Properties>

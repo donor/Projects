@@ -1,0 +1,157 @@
+﻿@model UsedClothes.ViewModels.ClothesDetailsWithPicturesViewModel
+@using UsedClothes.Helpers
+@using ClientDependency.Core.Mvc  
+
+@{
+    ViewBag.Title = Model.ClothesDetails.ClothesName;
+    Html.RequiresJs("jquery-1.8.3.js", "Scripts", 1);
+    Html.RequiresCss("Store.css", "Content", 2);
+      
+
+}
+
+
+
+<script type="text/javascript"> 
+$(document).ready(function () {
+    $('.addToCartLink').click(function () {
+        var id=$(this).attr('id');
+        $.ajax({
+            url: '@Url.Action("AddToCart","ShoppingCart")'+'/'+id
+        }).done(function(data){
+            $('#cart-status').text('Cart('+data+')');
+        });
+    });
+    $('.thumbs a').mouseenter(function (e) {
+        var i, to;
+        if (e.target.tagName === 'IMG')
+            e.target = e.target.parentNode;
+        $('.thumbs a').removeClass('selected');
+        $(e.target).addClass('selected');
+        i = $('.thumbs a').index(e.target);
+        to = i * 410 * -1;
+        return $('#photo-slide').stop().animate({
+            "left": to
+        }, 'fast');
+    });
+});
+
+function addToCart(id) {
+    $.ajax({
+        url: '@Url.Action("AddToCart0","ShoppingCart")' + '/' + id
+    }).done(function (data) {
+        if(data==-1)
+            $('#msg').text("Can't add this item to your cart");
+        else
+            window.location.href='@Url.Action("Index","ShoppingCart")';
+    });
+}
+
+//function success(data) {
+//    var json = $.parseJSON(data.responseText);
+//     $('#cart-status').text('Cart('+json+')');
+//}
+
+</script>
+
+<div id="content">
+<div class="columns listing">	
+	
+
+    <div class="top">
+		<a onclick="javascript:history.go(-1)" id="back-to" href="javascript:void(0)">Back to search results</a>		<h3 class="title">Brand New Volcom Scoop Neck 1/2 sleeve tee!</h3>				
+	</div>	
+	<div class="left">		
+		<div class="price-block">
+			<h4>@Model.ClothesDetails.Price</h4>		
+		</div>
+		<div class="action-block">
+			@*<a id="atc" href="@Url.Action("AddToCart0", "ShoppingCart", new { id = Model.ClothesDetails.ClothesId })">      *@
+            <a id="atc" href="javascript:addToCart(@Model.ClothesDetails.ClothesId)">
+                <em>Add To Cart</em>
+            </a>
+        </div>		
+		<div class="info-block">        
+			<p><strong>Item #:</strong> @Model.ClothesDetails.ClothesId</p>			
+			<p><strong>Views:</strong> @Model.ClothesDetails.DisplayCount</p>
+		</div>
+		<div class="info-block">
+			<p><strong>Condition:</strong>  @Html.ConditionData(Model.ClothesDetails.Condition,Model.ClothesDetails.IsVintage)</p>
+            <p><strong>Size:</strong> @Model.ClothesDetails.SizeName</p>
+	        <p><strong>Brand:</strong> @Model.ClothesDetails.BrandName</p>
+			<p><strong>Material(s):</strong> @Model.ClothesDetails.MaterialName</p>
+			<p><strong>Color/Pattern:</strong> @Model.ClothesDetails.ColorName/@Model.ClothesDetails.PatternName</p>
+            <p><strong>Quantity:</strong> @Model.ClothesDetails.Quantity</p>
+		</div>
+		<div class="info-block">
+		<p style="text-transform:none; font-size:14px; font-weight:100;">
+		    @Model.ClothesDetails.Description	
+        </p>	
+		</div>
+        <br>
+                
+                
+	</div>
+	<div class="main">
+	 	<div class="listing-photos">
+	<div class="thumbs">			
+         @{byte counter=0;}
+                    @foreach (var item in Model.PicturesForClothes)
+                    {                   
+                        if (counter == 0)
+                        {  
+                             @:<a href="javascript:void(0)" class="selected" > @Html.ImageData(item.PictureId, null) </a>                      
+                        }
+                        else
+                        {
+                            @:<a href="javascript:void(0)" class=""> @Html.ImageData(item.PictureId, null)</a>  
+                        }
+                        counter++;                  
+                    }                    
+    </div>
+	<div id="listing-photo">
+		<div id="photo-slide" style="left: 0px;">
+		      @foreach (var item in  Model.PicturesForClothes)
+                  {             
+                    @Html.ImageData(item.PictureId, null)
+                  }       
+        </div>
+	</div>	
+</div>
+
+
+<script type="text/javascript">
+
+    jQuery('.thumbs a').each(function () {
+        jQuery(this).mouseover(function () {
+
+            jQuery('.thumbs a').removeClass('selected');
+            jQuery(this).addClass('selected');
+
+            var to = parseInt(jQuery(this).attr('rel')) * 410 * -1;
+            jQuery('#photo-slide').animate({ "left": to }, 'fast');
+        });
+    });
+
+</script>	</div>	
+	<div class="right"><br>
+		<div class="sellerBio">
+            <div id="pimg">
+	            <img alt="avatar">
+            </div>
+            <a href="adresSprzedającego">
+                <h3>@Model.ClothesDetails.UserName</h3>
+            </a>
+            @*<span class="location">Portland, OR</span>
+            <div class="stats">
+                <p></p><h2>100%</h2> from <a href="/users/profile/62101108/feedback">10 reviews</a><p></p></div>
+                <div class="desc"><h3>About redtruck</h3>        I'm someone with a lot of cloths and I'm very excited to be up-cycling them on to new owners.  Feel free to ask questions about any of my listings.  Happy shopping.     
+            </div>*@
+            <div class="actions">
+                <a onclick="window.location='/redtruck';" class="listings button-med grey" href="javascript:void(0)">Inne pozycj sprzedającego</a><br>	
+            </div>
+        </div>	
+     </div>
+	 <br>    
+   </div>
+</div>

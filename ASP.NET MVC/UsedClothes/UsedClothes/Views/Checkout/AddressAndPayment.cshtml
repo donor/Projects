@@ -1,0 +1,125 @@
+﻿@model UsedClothes.Models.Order
+@using ClientDependency.Core.Mvc
+@{
+    ViewBag.Title = "Address And Payment";
+    //Html.RequiresJs("jquery-1.8.3.js", "Scripts", 1);
+    Html.RequiresJs("jquery-1.8.3.min.js", "Scripts", 1);
+    //Html.RequiresCss("Checkout.css", "Content",2);
+  //  Html.RequiresJs("jquery.validate.min.js", "Scripts", 2);
+  //  Html.RequiresJs("jquery.validate.unobtrusive.min.js", "Scripts", 2);
+}
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@*<h2>AddressAndPAyment</h2>*@
+
+<div class="list-rows">
+@using (Html.BeginForm("AddressAndPayment", "Checkout", FormMethod.Post, new { @class = "checkout" }))
+{
+    @Html.ValidationSummary(true)
+   @* <fieldset>*@
+        <legend>Shipping Information</legend>
+    
+       <p class="list-label">
+            @Html.LabelFor(model => model.FirstName)
+        </p>
+        <p class="fieldwrap"> 
+            @Html.EditorFor(model => model.FirstName)
+        </p>
+        <p class="validwrap">
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </p>
+
+        <p class="list-label">
+            @Html.LabelFor(model => model.LastName)
+        </p>
+        <p class="fieldwrap"> 
+            @Html.EditorFor(model => model.LastName)
+         </p>
+        <p class="validwrap">
+            @Html.ValidationMessageFor(model => model.LastName)
+        </p>
+
+      <p class="list-label">
+            @Html.LabelFor(model => model.Address)
+        </p>
+        <p class="fieldwrap"> 
+            @Html.EditorFor(model => model.Address)
+         </p>
+        <p class="validwrap">
+            @Html.ValidationMessageFor(model => model.Address)
+        </p>
+
+       <p class="list-label">
+            @Html.LabelFor(model => model.City)
+        </p>
+        <p class="fieldwrap"> 
+            @Html.EditorFor(model => model.City)
+         </p>
+        <p class="validwrap">
+            @Html.ValidationMessageFor(model => model.City)
+        </p>
+
+        <p class="list-label">
+            @Html.LabelFor(model => model.State)
+        </p>
+        <p class="fieldwrap"> 
+            @Html.EditorFor(model => model.State)
+         </p>
+        <p class="validwrap">
+            @Html.ValidationMessageFor(model => model.State)
+        </p>
+
+        <p class="list-label">
+            @Html.LabelFor(model => model.PostalCode)
+        </p>
+        <p class="fieldwrap"> 
+            @Html.EditorFor(model => model.PostalCode)
+         </p>
+        <p class="validwrap">
+            @Html.ValidationMessageFor(model => model.PostalCode)
+        </p>
+
+       <p class="list-label">
+            @Html.LabelFor(model => model.Country)
+        </p>
+        <p class="fieldwrap"> 
+            @Html.EditorFor(model => model.Country)
+         </p>
+        <p class="validwrap">
+            @Html.ValidationMessageFor(model => model.Country)
+        </p>
+
+      <p class="list-label">
+            @Html.LabelFor(model => model.Phone)
+        </p>
+        <p class="fieldwrap"> 
+            @Html.EditorFor(model => model.Phone)
+         </p>
+        <p class="validwrap">
+            @Html.ValidationMessageFor(model => model.Phone)
+        </p>
+
+       <p class="list-label">
+            @Html.LabelFor(model => model.Email)
+        </p>
+        <p class="fieldwrap"> 
+            @Html.EditorFor(model => model.Email)
+         </p>
+        <p class="validwrap">
+            @Html.ValidationMessageFor(model => model.Email)
+        </p>
+        <br />
+        <div style=" margin-right:262px; float:right;">        
+            <p class="button">
+                <input type="submit" value="Submit order" />                  
+            </p>
+        </div>
+
+        @*<p>
+            <input type="submit" value="Submit order" />
+        </p>*@
+  @*  </fieldset>*@
+}
+
+</div>

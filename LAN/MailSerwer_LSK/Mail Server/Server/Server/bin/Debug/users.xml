@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <User>
+    <Adres>jeden@poczta</Adres>
+    <Haslo>haslo1</Haslo>
+  </User>
+  <User>
+    <Adres>dwa@poczta</Adres>
+    <Haslo>haslo2</Haslo>
+  </User>
+  <User>
+    <Adres>trzy@poczta</Adres>
+    <Haslo>haslo3</Haslo>
+  </User>
+</ArrayOfUser>

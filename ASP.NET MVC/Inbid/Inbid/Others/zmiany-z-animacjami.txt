@@ -1,0 +1,217 @@
+﻿
+
+
+
+
+function update() {
+    $.ajax({
+        url: '/Inbid/Offer/Update/' + $("#oferts tbody").attr("id"),
+        type: 'POST',
+        data: {}, //JSON.stringify(null),
+        dataType: 'json',
+        contentType: 'application/json; charset=utf-8',
+        success: function (data) {
+            if (data != null) {
+
+                var changes = JSON.parse(data);
+                var setInt = null;
+
+                var time = 2500;
+                
+                if (changes.length > 0) {
+
+                    setInt = window.setInterval(function () {
+
+                        if (null == changes || changes.length == 0)
+                            clearInterval(setInt);
+                    
+                        var lower = false;
+
+                        for (i = 0; i < changes.length; i++) {
+                            var c = changes[i].NextRowId;
+                            for (var j = 0; j < changes.length; j++) {
+                                if (c == changes[j].RowId) {
+                                    lower = true;
+                                    break;
+                                }
+                                else
+                                    lower = false;
+
+                            }
+                            if ((!lower)&&(!changes[i].Remove))
+                                break;
+                        }
+
+                        if (!lower) {
+                            //dodawanie wiersza
+                            if (changes[i].Add == true) {
+
+                                var id = changes[i].RowId;
+                                var status = changes[i].IsOnline;
+                                var online = changes[i].IsOnline;
+                                var userName = changes[i].UserName;
+                                var currentPrice = changes[i].Value;
+                                var startValue = changes[i].StartValue;
+                                var change = changes[i].Change;
+                                var labelName = changes[i].LabelName;
+                                var nextRow = changes[i].NextRowId;
+
+                                changes.splice(i, 1);
+                                i = 0;
+
+                                var insertHtml = '<tr id="row-' + id + '" value="' + currentPrice + '" >' +
+                                            '<td id="row-' + id + '" >' +
+                                             online +
+                                            '<br />' +
+                                            '<img src="/Inbid/Content/OnlineStatus/' + online + '.png")"  alt="' + online + '"/>' +
+
+                                            '</td >' +
+                                            '<td>' +
+                                            '<table  class="innerOfferts" >' +
+                                            '<tr>' +
+                                            '<td class="firstColumn" nowrap="nowrap">' +
+                                            'Id: </td' +
+                                            '<td class="secondColumn">' + id + '</td>' +
+                                            '</tr>' +
+                                            '<tr>' +
+                                            '<td class="firstColumn" nowrap="nowrap">' +
+                                            labelName +
+                                            '</td>' +
+                                            '<td class="secondColumn">' + userName + '</td>' +
+                                            '</tr>' +
+                                            '</table>' +
+                                            '</td>' +
+                                            '<td id="value-' + id + '">' +
+                                            currentPrice +
+                                            '</td>' +
+                                            '<td>' +
+                                            startValue +
+                                            '</td>' +
+                                            '<td id="change-' + id + '">' +
+                                            change +
+                                            '</td>' +
+                                            '<td class="editRow">' +
+                                            '</td>' +
+                                            '</tr>';
+
+                                if (nextRow == -1) {
+                                    // $(insertHtml).addClass('hiding');
+                                    $('#oferts >tbody').append(insertHtml);
+                                    // $("#row-"+changes[i].RowId).delay(10000).removeClass('addRow');
+                                }
+                                else {                                    
+                                    var insertPos = $('#row-' + nextRow);
+                                    $(insertHtml).insertBefore(insertPos);
+                                }
+                                if (null == changes || changes.length == 0)
+                                    clearInterval(setInt);
+                            }
+
+                            //sekcja do podmiany--------------------------------------------------------------//
+                            if ((changes[i].Add == false) && (changes[i].Remove == false)) {
+
+                                var row = $('#row-' + changes[i].RowId);  //document.getElementById('row-' + changes[i].RowId);
+
+                                if (changes[i].NextRowId != -1)
+                                    var insertPos = $('#row-' + changes[i].NextRowId);
+                                else
+                                    var insertPos = -1
+
+                                var rowId = changes[i].RowId;
+
+                                var value = changes[i].Value;
+                                var change = changes[i].Change;
+
+                                changes.splice(i, 1);
+                                i = 0;
+
+                                $(row).fadeTo('slow', 0.33, function () {
+
+                                    $('#value-' + rowId).text(value);
+                                    $('#change-' + rowId).text(change);
+
+                                    if (insertPos != -1) {
+                                        $(row).insertBefore(insertPos);
+                                        $(row).fadeTo(700, 1);
+                                    }
+                                    else {
+                                        $('#oferts >tbody').append(row);
+                                        $(row).delay(400).fadeTo(700, 1);
+                                    }
+                                });
+                               
+                                if (null == changes || changes.length == 0)
+                                    clearInterval(setInt);
+                            }
+
+                            //usuwanie---------------------------------------------------------*/
+                                                        var counter = 0;
+                                                        for (k = 0; k < changes.length; k++) {
+                                                            if (changes[k].Remove == true)
+                                                                counter += 1;
+                                                        }
+                                                        if (changes.length == counter && changes.length > 0) {
+                                                            var rowId = changes[0].RowId;
+                                                            changes.splice(0, 1);
+                                                            $('#row-' + rowId).fadeOut(1200, function () {
+                                                                $('#row-' + rowId).remove();
+                                                            });
+
+
+                                                        }
+                            /*-----------------------------------------------------------------*/
+                        }
+                        if (null == changes || changes.length == 0)
+                            clearInterval(setInt);
+
+                    }, time);
+                }              
+            }
+        },
+        error: function () {
+            history.go(0);          //alert('Błąd w aktualizacji aukcji');
+        }
+    });
+    return false;
+};
+
+function getStatus() {
+    $.ajax({
+        url: '/Inbid/Offer/UpdateStatus/' + $("#oferts tbody").attr("id"),
+        type: 'POST',
+        data: {}, //JSON.stringify(null),
+        dataType: 'json',
+        contentType: 'application/json; charset=utf-8',
+        success: function (info) {
+            if (info != null) {
+                for (var i = 0; i < info.length; i++) {
+                    var insert = info[i].State + ' <br /><img src="/Inbid/Content/OnlineStatus/' + info[i].State + '.png"  alt=' + info[i].State + '  />'
+
+                    $('#status-' + info[i].RowId).html(insert);
+                }
+            }
+        },
+        error: function () {
+
+            history.go(0);                //  alert('Błąd w aktualizacji aukcji');
+        }
+    });
+    return false;
+}
+
+
+
+
+function powtarzanie() {
+    setInterval(update, 30000); //odświerzanie listy co 1 minute= 60000
+    setInterval(getStatus, 120000); //odświeżanie czy user jest online czy ofline co 2 minuty
+    // setInterval(history.go(0), 600000);  //odświeżanie strony co 10 minut bezwzględne
+}
+
+
+$(document).ready(function () {
+    powtarzanie();
+});
+
+
+

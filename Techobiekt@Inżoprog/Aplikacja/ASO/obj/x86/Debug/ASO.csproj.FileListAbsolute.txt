@@ -1,0 +1,10 @@
+C:\ASO\bin\Debug\ASO.exe.config
+C:\ASO\bin\Debug\ASO.exe
+C:\ASO\bin\Debug\ASO.pdb
+C:\ASO\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\ASO\obj\x86\Debug\ASO.Properties.Resources.resources
+C:\ASO\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\ASO\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\ASO\obj\x86\Debug\ASO.exe
+C:\ASO\obj\x86\Debug\ASO.pdb
+C:\ASO\obj\x86\Debug\ASO.MainWindow.resources

@@ -1,0 +1,19 @@
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\bin\Release\RaiDSyM.exe
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\bin\Release\RaiDSyM.pdb
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\obj\x86\Release\RaiDSyM.Properties.Resources.resources
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\obj\x86\Release\RaiDSyM.RaiDSyM.resources
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\obj\x86\Release\RaiDSyM.exe
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\obj\x86\Release\RaiDSyM.pdb
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\bin\Release\RaiDSyM.exe
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\bin\Release\RaiDSyM.pdb
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\obj\x86\Release\ResolveAssemblyReference.cache
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\obj\x86\Release\RaiDSyM.Properties.Resources.resources
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\obj\x86\Release\RaiDSyM.RaiDSyM.resources
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\obj\x86\Release\GenerateResource.read.1.tlog
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\obj\x86\Release\GenerateResource.write.1.tlog
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\obj\x86\Release\RaiDSyM.exe
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\obj\x86\Release\RaiDSyM.pdb
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\bin\Release\Wyjscie.txt

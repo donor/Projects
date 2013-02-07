@@ -1,0 +1,22 @@
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\bin\Debug\RaiDSyM.exe
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\bin\Debug\RaiDSyM.pdb
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\obj\x86\Debug\RaiDSyM.Properties.Resources.resources
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\obj\x86\Debug\RaiDSyM.RaiDSyM.resources
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\obj\x86\Debug\RaiDSyM.exe
+C:\Users\donor\AppData\Local\Temporary Projects\RaiDSyM\obj\x86\Debug\RaiDSyM.pdb
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\obj\x86\Debug\RaiDSyM.exe
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\obj\x86\Debug\RaiDSyM.pdb
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\bin\Debug\RaiDSyM.exe
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\bin\Debug\RaiDSyM.pdb
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\obj\x86\Debug\RaiDSyM.Properties.Resources.resources
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\obj\x86\Debug\RaiDSyM.RaiDSyM.resources
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\bin\Debug\Wyjscie.txt
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\bin\Debug\RaiDSyM.exe.config
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+C:\nauka\specjalność\rok VI\Systemy tolerujące błędy\Teesty\RaiDSyM\RaiDSyM\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog

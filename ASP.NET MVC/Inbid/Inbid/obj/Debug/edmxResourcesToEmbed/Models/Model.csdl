@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InBidModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="InBidEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Auctions" EntityType="InBidModel.Auction" />
+    <EntitySet Name="Bidders" EntityType="InBidModel.Bidder" />
+    <EntitySet Name="Offers" EntityType="InBidModel.Offer" />
+    <EntitySet Name="View_Offers" EntityType="InBidModel.View_Offers" />
+    <AssociationSet Name="FK_Offers_Auctions" Association="InBidModel.FK_Offers_Auctions">
+      <End Role="Auctions" EntitySet="Auctions" />
+      <End Role="Offers" EntitySet="Offers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Offers_Bidders1" Association="InBidModel.FK_Offers_Bidders1">
+      <End Role="Bidders" EntitySet="Bidders" />
+      <End Role="Offers" EntitySet="Offers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Auction">
+    <Key>
+      <PropertyRef Name="AuctionId" />
+    </Key>
+    <Property Name="AuctionId" Type="Int32" Nullable="false" />
+    <Property Name="AuctionName" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="StartTime" Type="DateTime" />
+    <Property Name="Status" Type="Int32" />
+    <NavigationProperty Name="Offers" Relationship="InBidModel.FK_Offers_Auctions" FromRole="Auctions" ToRole="Offers" />
+  </EntityType>
+  <EntityType Name="Bidder">
+    <Key>
+      <PropertyRef Name="BidderId" />
+    </Key>
+    <Property Name="BidderId" Type="Int32" Nullable="false" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Offer" Relationship="InBidModel.FK_Offers_Bidders1" FromRole="Bidders" ToRole="Offers" />
+  </EntityType>
+  <EntityType Name="Offer">
+    <Key>
+      <PropertyRef Name="OfferId" />
+    </Key>
+    <Property Name="OfferId" Type="Int32" Nullable="false" />
+    <Property Name="StartPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="CurrentPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="AuctionId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Auction" Relationship="InBidModel.FK_Offers_Auctions" FromRole="Offers" ToRole="Auctions" />
+    <NavigationProperty Name="Bidder" Relationship="InBidModel.FK_Offers_Bidders1" FromRole="Offers" ToRole="Bidders" />
+  </EntityType>
+  <EntityType Name="View_Offers">
+    <Key>
+      <PropertyRef Name="OfferId" />
+      <PropertyRef Name="CompanyName" />
+      <PropertyRef Name="StartPrice" />
+      <PropertyRef Name="CurrentPrice" />
+    </Key>
+    <Property Name="OfferId" Type="Int32" Nullable="false" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="StartPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="CurrentPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+  </EntityType>
+  <Association Name="FK_Offers_Auctions">
+    <End Role="Auctions" Type="InBidModel.Auction" Multiplicity="1" />
+    <End Role="Offers" Type="InBidModel.Offer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Auctions">
+        <PropertyRef Name="AuctionId" />
+      </Principal>
+      <Dependent Role="Offers">
+        <PropertyRef Name="AuctionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Offers_Bidders1">
+    <End Role="Bidders" Type="InBidModel.Bidder" Multiplicity="1" />
+    <End Role="Offers" Type="InBidModel.Offer" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Bidders">
+        <PropertyRef Name="BidderId" />
+      </Principal>
+      <Dependent Role="Offers">
+        <PropertyRef Name="OfferId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

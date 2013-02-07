@@ -1,0 +1,97 @@
+﻿@model Inbid.Models.RegistrationBidderOrBidderViewModel
+
+    <div>
+        <fieldset>
+            <legend>Account Information</legend>
+
+            <div class="editor-label">
+            Rola użytkownika`
+            </div>
+            <div class="editor-field">
+
+            @Html.RadioButtonFor(x=>x.Bidder,true)
+            Bidder
+            @Html.RadioButtonFor(x=>x.Bidder,false)
+            BidderView    
+       
+            </div>
+
+            <div class="editor-label">
+                @Resources.Resources.UserName
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+            </div>
+           
+           <div class="editor-label">
+                * Email
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.Email)
+                @Html.ValidationMessageFor(m => m.Email)
+            </div>
+
+
+              @if (Inbid.Helpers.LocationHelper.IsCurrentControllerAndAction("Account", "RegisterBidderOrBidderView", ViewContext))
+              {
+           <div class="editor-label">
+            @Resources.Resources.Password
+            </div>
+            <div class="editor-field">
+                @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
+
+            <div class="editor-label">
+            @Resources.Resources.ConfirmPassword
+            </div>
+            <div class="editor-field">
+                @Html.PasswordFor(m => m.ConfirmPassword)
+                @Html.ValidationMessageFor(m => m.ConfirmPassword)
+            </div>
+              }
+              else
+              {
+                     @Html.HiddenFor(x => x.Password)
+            @Html.HiddenFor(x => x.ConfirmPassword)
+
+              }
+                       
+             <div class="editor-label">                
+                @Resources.Resources.FirstName
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.FirstName)
+                @Html.ValidationMessageFor(m => m.FirstName)
+            </div>
+
+             <div class="editor-label">
+                @Resources.Resources.LastName
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.LastName)
+                @Html.ValidationMessageFor(m => m.LastName)
+            </div>
+            
+             <div class="editor-label">
+               @Resources.Resources.Language
+            </div>
+            <div class="editor-field">
+             @Html.DropDownList("LanguageId", "-")
+             @Html.ValidationMessageFor(m => m.LanguageId)
+            </div>
+            
+       
+
+             <div class="editor-label">                
+                @Resources.Resources.Phone
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.Phone)
+                @Html.ValidationMessageFor(m => m.Phone)
+            </div>
+            </fieldset>
+            </div>
+
+           

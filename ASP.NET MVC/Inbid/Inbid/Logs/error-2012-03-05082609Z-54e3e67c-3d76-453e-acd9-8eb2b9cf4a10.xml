@@ -1,0 +1,188 @@
+﻿<error errorId="54e3e67c-3d76-453e-acd9-8eb2b9cf4a10" application="/LM/W3SVC/1/ROOT/Inbid" host="DONOR-HP" type="System.Web.HttpCompileException" message="c:\zlecenia\projekt\Inbid\Inbid\Views\Account\_CompanyDetails.cshtml(54): error CS1061: Element „Inbid.ViewModels.CompanyDetails” nie zawiera definicji „CurrentBidderViewsQuality”, a nie odnaleziono metody rozszerzającej „CurrentBidderViewsQuality”, która przyjmuje pierwszy argument typu „Inbid.ViewModels.CompanyDetails” (czy nie brakuje dyrektywy using lub odwołania do zestawu?)." source="System.Web" detail="System.Web.HttpCompileException (0x80004005): c:\zlecenia\projekt\Inbid\Inbid\Views\Account\_CompanyDetails.cshtml(54): error CS1061: Element „Inbid.ViewModels.CompanyDetails” nie zawiera definicji „CurrentBidderViewsQuality”, a nie odnaleziono metody rozszerzającej „CurrentBidderViewsQuality”, która przyjmuje pierwszy argument typu „Inbid.ViewModels.CompanyDetails” (czy nie brakuje dyrektywy using lub odwołania do zestawu?).&#xD;&#xA;   at System.Web.Compilation.AssemblyBuilder.Compile()&#xD;&#xA;   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()&#xD;&#xA;   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)&#xD;&#xA;   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)&#xD;&#xA;   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)&#xD;&#xA;   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)&#xD;&#xA;   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.FileExists(String virtualPath)&#xD;&#xA;   at System.Web.Mvc.BuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath)&#xD;&#xA;   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String cacheKey, String[]&amp; searchedLocations)&#xD;&#xA;   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String cacheKeyPrefix, Boolean useCache, String[]&amp; searchedLocations)&#xD;&#xA;   at System.Web.Mvc.VirtualPathProviderViewEngine.FindPartialView(ControllerContext controllerContext, String partialViewName, Boolean useCache)&#xD;&#xA;   at System.Web.Mvc.ViewEngineCollection.&lt;&gt;c__DisplayClass8.&lt;FindPartialView&gt;b__7(IViewEngine e)&#xD;&#xA;   at System.Web.Mvc.ViewEngineCollection.Find(Func`2 lookup, Boolean trackSearchedPaths)&#xD;&#xA;   at System.Web.Mvc.ViewEngineCollection.FindPartialView(ControllerContext controllerContext, String partialViewName)&#xD;&#xA;   at System.Web.Mvc.HtmlHelper.FindPartialView(ViewContext viewContext, String partialViewName, ViewEngineCollection viewEngineCollection)&#xD;&#xA;   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)&#xD;&#xA;   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)&#xD;&#xA;   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName)&#xD;&#xA;   at ASP._Page_Views_Account_Company_cshtml.Execute() in c:\zlecenia\projekt\Inbid\Inbid\Views\Account\Company.cshtml:line 67&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.StartPage.RunPage()&#xD;&#xA;   at System.Web.WebPages.StartPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)&#xD;&#xA;   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)&#xD;&#xA;   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)&#xD;&#xA;   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass1c.&lt;InvokeActionResultWithFilters&gt;b__19()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass1c.&lt;&gt;c__DisplayClass1e.&lt;InvokeActionResultWithFilters&gt;b__1b()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)&#xD;&#xA;   at System.Web.Mvc.Controller.ExecuteCore()&#xD;&#xA;   at Inbid.Infrastructure.BaseController.ExecuteCore() in C:\zlecenia\projekt\Inbid\Inbid\Infrastructure\BaseController.cs:line 46&#xD;&#xA;   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClass6.&lt;&gt;c__DisplayClassb.&lt;BeginProcessRequest&gt;b__5()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass1.&lt;MakeVoidDelegate&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass8`1.&lt;BeginSynchronous&gt;b__7(IAsyncResult _)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClasse.&lt;EndProcessRequest&gt;b__d()&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.&lt;GetCallInAppTrustThunk&gt;b__0(Action f)&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="franek0" time="2012-03-05T08:26:09.2656195Z" statusCode="500" webHostHtmlMessage="&lt;html&gt;&#xD;&#xA;    &lt;head&gt;&#xD;&#xA;        &lt;title&gt;Compilation Error&lt;/title&gt;&#xD;&#xA;        &lt;style&gt;&#xD;&#xA;         body {font-family:&quot;Verdana&quot;;font-weight:normal;font-size: .7em;color:black;} &#xD;&#xA;         p {font-family:&quot;Verdana&quot;;font-weight:normal;color:black;margin-top: -5px}&#xD;&#xA;         b {font-family:&quot;Verdana&quot;;font-weight:bold;color:black;margin-top: -5px}&#xD;&#xA;         H1 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:18pt;color:red }&#xD;&#xA;         H2 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:14pt;color:maroon }&#xD;&#xA;         pre {font-family:&quot;Lucida Console&quot;;font-size: .9em}&#xD;&#xA;         .marker {font-weight: bold; color: black;text-decoration: none;}&#xD;&#xA;         .version {color: gray;}&#xD;&#xA;         .error {margin-bottom: 10px;}&#xD;&#xA;         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }&#xD;&#xA;        &lt;/style&gt;&#xD;&#xA;    &lt;/head&gt;&#xD;&#xA;&#xD;&#xA;    &lt;body bgcolor=&quot;white&quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;span&gt;&lt;H1&gt;Server Error in '/Inbid' Application.&lt;hr width=100% size=1 color=silver&gt;&lt;/H1&gt;&#xD;&#xA;&#xD;&#xA;            &lt;h2&gt; &lt;i&gt;Compilation Error&lt;/i&gt; &lt;/h2&gt;&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;            &lt;font face=&quot;Arial, Helvetica, Geneva, SunSans-Regular, sans-serif &quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Description: &lt;/b&gt;An error occurred during the compilation of a resource required to service this request. Please review the following specific error details and modify your source code appropriately.&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Compiler Error Message: &lt;/b&gt;CS1061: Element „Inbid.ViewModels.CompanyDetails” nie zawiera definicji „CurrentBidderViewsQuality”, a nie odnaleziono metody rozszerzającej „CurrentBidderViewsQuality”, kt&amp;#243;ra przyjmuje pierwszy argument typu „Inbid.ViewModels.CompanyDetails” (czy nie brakuje dyrektywy using lub odwołania do zestawu?).&lt;br&gt;&lt;br&gt;&#xD;&#xA;&lt;b&gt;Source Error:&lt;/b&gt;&lt;br&gt;&lt;br&gt;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&lt;td&gt;&#xD;&#xA;                              &lt;/td&gt;&lt;/tr&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&lt;pre&gt;&#xD;&#xA;&#xD;&#xA;Line 52:             &amp;lt;/td&amp;gt;&#xD;&#xA;Line 53:             &amp;lt;td&amp;gt;&#xD;&#xA;&lt;font color=red&gt;Line 54:             @Model.CompanyDet.CurrentBidderViewsQuality/@Model.CompanyDet.BidderViewsQuality&#xD;&#xA;&lt;/font&gt;Line 55:             &amp;lt;/td&amp;gt;&#xD;&#xA;Line 56:            &amp;lt;/tr&amp;gt;&lt;/pre&gt;&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Source File:&lt;/b&gt; c:\zlecenia\projekt\Inbid\Inbid\Views\Account\_CompanyDetails.cshtml&#xD;&#xA;            &amp;nbsp;&amp;nbsp; &lt;b&gt;Line:&lt;/b&gt;  54&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&lt;div class=&quot;expandable&quot; onclick=&quot;OnToggleTOCLevel1('compilerOutputDiv')&quot;&gt;Show Detailed Compiler Output:&lt;/div&gt;&#xD;&#xA;&lt;div id=&quot;compilerOutputDiv&quot; style=&quot;display: none;&quot;&gt;&#xD;&#xA;            &lt;br&gt;&lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&lt;pre&gt;&#xD;&#xA;&#xD;&#xA;c:\windows\system32\inetsrv&amp;gt; &amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe&amp;quot; /t:library /utf8output /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.IdentityModel\v4.0_4.0.0.0__b77a5c561934e089\System.IdentityModel.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.WebPages.Deployment\v4.0_1.0.0.0__31bf3856ad364e35\System.Web.WebPages.Deployment.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll&amp;quot; /R:&amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\inbid\dfaadae0\caaa6b80\assembly\dl3\0272886a\24d00c73_a7facc01\Inbid.DLL&amp;quot; /R:&amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\inbid\dfaadae0\caaa6b80\assembly\dl3\78a30bc4\d9129488_dbe9cc01\Elmah.DLL&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.ServiceModel.Web\v4.0_4.0.0.0__31bf3856ad364e35\System.ServiceModel.Web.dll&amp;quot; /R:&amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\inbid\dfaadae0\caaa6b80\App_global.asax.aqtbrg-c.dll&amp;quot; /R:&amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\inbid\dfaadae0\caaa6b80\assembly\dl3\3f22fe47\0c499481_909dcc01\EntityFramework.DLL&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.ComponentModel.DataAnnotations\v4.0_4.0.0.0__31bf3856ad364e35\System.ComponentModel.DataAnnotations.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.ServiceModel.Activities\v4.0_4.0.0.0__31bf3856ad364e35\System.ServiceModel.Activities.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.ApplicationServices\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.ApplicationServices.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.Extensions\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.Extensions.dll&amp;quot; /R:&amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\inbid\dfaadae0\caaa6b80\assembly\dl3\48f94660\009a503b_fddec901\System.Data.SQLite.DLL&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.ServiceModel.Activation\v4.0_4.0.0.0__31bf3856ad364e35\System.ServiceModel.Activation.dll&amp;quot; /R:&amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\inbid\dfaadae0\caaa6b80\assembly\dl3\82d68787\009ea163_1247ca01\Mono.Security.DLL&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Serialization\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.Routing\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.Routing.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.CSharp\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.CSharp.dll&amp;quot; /R:&amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_32\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll&amp;quot; /R:&amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\inbid\dfaadae0\caaa6b80\assembly\dl3\43217e58\3f026754_d4e9cc01\MvcContrib.DLL&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.Services\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll&amp;quot; /R:&amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\inbid\dfaadae0\caaa6b80\assembly\dl3\e30249cb\00e851e6_8182ca01\MySql.Data.DLL&amp;quot; /R:&amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\inbid\dfaadae0\caaa6b80\assembly\dl3\40ccd946\6e02847b_5edecc01\Resources.DLL&amp;quot; /R:&amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\inbid\dfaadae0\caaa6b80\assembly\dl3\4cf8230c\782d6554_d4e9cc01\Microsoft.Web.Mvc.DLL&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.DynamicData\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.DynamicData.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Data.Entity\v4.0_4.0.0.0__b77a5c561934e089\System.Data.Entity.dll&amp;quot; /R:&amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\inbid\dfaadae0\caaa6b80\assembly\dl3\5614a06b\009ea163_1247ca01\Npgsql.DLL&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.Helpers\v4.0_1.0.0.0__31bf3856ad364e35\System.Web.Helpers.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.WebPages\v4.0_1.0.0.0__31bf3856ad364e35\System.Web.WebPages.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.ServiceModel\v4.0_4.0.0.0__b77a5c561934e089\System.ServiceModel.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Activities\v4.0_4.0.0.0__31bf3856ad364e35\System.Activities.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.Mvc\v4.0_3.0.0.0__31bf3856ad364e35\System.Web.Mvc.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.Abstractions\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.Abstractions.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.WorkflowServices\v4.0_4.0.0.0__31bf3856ad364e35\System.WorkflowServices.dll&amp;quot; /R:&amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\inbid\dfaadae0\caaa6b80\assembly\dl3\9dc42913\ecf58396_0fa6cc01\Newtonsoft.Json.DLL&amp;quot; /R:&amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\inbid\dfaadae0\caaa6b80\assembly\dl3\8e5741cc\406c4fd6_72eacc01\PagedList.DLL&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Data.DataSetExtensions\v4.0_4.0.0.0__b77a5c561934e089\System.Data.DataSetExtensions.dll&amp;quot; /R:&amp;quot;C:\windows\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll&amp;quot; /out:&amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\inbid\dfaadae0\caaa6b80\App_Web__companydetails.cshtml.5f83eb8c.c-tuzjbn.dll&amp;quot; /D:DEBUG /debug+ /optimize- /w:4 /nowarn:1659;1699;1701 /warnaserror-  &amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\inbid\dfaadae0\caaa6b80\App_Web__companydetails.cshtml.5f83eb8c.c-tuzjbn.0.cs&amp;quot; &amp;quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\inbid\dfaadae0\caaa6b80\App_Web__companydetails.cshtml.5f83eb8c.c-tuzjbn.1.cs&amp;quot;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Kompilator Microsoft (R) Visual C# 2010 w wersji 4.0.30319.1&#xD;&#xA;Copyright (C) Microsoft Corporation. Wszelkie prawa zastrzeżone.&#xD;&#xA;&#xD;&#xA;c:\zlecenia\projekt\Inbid\Inbid\Views\Account\_CompanyDetails.cshtml(54,31): error CS1061: Element „Inbid.ViewModels.CompanyDetails” nie zawiera definicji „CurrentBidderViewsQuality”, a nie odnaleziono metody rozszerzającej „CurrentBidderViewsQuality”, kt&amp;#243;ra przyjmuje pierwszy argument typu „Inbid.ViewModels.CompanyDetails” (czy nie brakuje dyrektywy using lub odwołania do zestawu?).&#xD;&#xA;c:\zlecenia\projekt\Inbid\Inbid\Views\Account\_CompanyDetails.cshtml(54,75): error CS1061: Element „Inbid.ViewModels.CompanyDetails” nie zawiera definicji „BidderViewsQuality”, a nie odnaleziono metody rozszerzającej „BidderViewsQuality”, kt&amp;#243;ra przyjmuje pierwszy argument typu „Inbid.ViewModels.CompanyDetails” (czy nie brakuje dyrektywy using lub odwołania do zestawu?).&#xD;&#xA;&lt;/pre&gt;&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &#xD;&#xA;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;br&gt;&lt;div class=&quot;expandable&quot; onclick=&quot;OnToggleTOCLevel1('dynamicCodeDiv')&quot;&gt;Show Complete Compilation Source:&lt;/div&gt;&#xD;&#xA;&lt;div id=&quot;dynamicCodeDiv&quot; style=&quot;display: none;&quot;&gt;&#xD;&#xA;            &lt;br&gt;&lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&lt;pre&gt;&#xD;&#xA;&#xD;&#xA;Line 1:    #pragma checksum &amp;quot;C:\zlecenia\projekt\Inbid\Inbid\Views\Account\_CompanyDetails.cshtml&amp;quot; &amp;quot;{406ea660-64cf-4c82-b6f0-42d48172a799}&amp;quot; &amp;quot;7D37EA7CF43C53A9815ABBB08292D72B&amp;quot;&#xD;Line 2:    //------------------------------------------------------------------------------&#xD;Line 3:    // &amp;lt;auto-generated&amp;gt;&#xD;Line 4:    //     This code was generated by a tool.&#xD;Line 5:    //     Runtime Version:4.0.30319.488&#xD;Line 6:    //&#xD;Line 7:    //     Changes to this file may cause incorrect behavior and will be lost if&#xD;Line 8:    //     the code is regenerated.&#xD;Line 9:    // &amp;lt;/auto-generated&amp;gt;&#xD;Line 10:   //------------------------------------------------------------------------------&#xD;Line 11:   &#xD;Line 12:   namespace ASP {&#xD;Line 13:       using System;&#xD;Line 14:       using System.Collections.Generic;&#xD;Line 15:       using System.IO;&#xD;Line 16:       using System.Linq;&#xD;Line 17:       using System.Net;&#xD;Line 18:       using System.Web;&#xD;Line 19:       using System.Web.Helpers;&#xD;Line 20:       using System.Web.Security;&#xD;Line 21:       using System.Web.UI;&#xD;Line 22:       using System.Web.WebPages;&#xD;Line 23:       using System.Web.Mvc;&#xD;Line 24:       using System.Web.Mvc.Ajax;&#xD;Line 25:       using System.Web.Mvc.Html;&#xD;Line 26:       using System.Web.Routing;&#xD;Line 27:       &#xD;Line 28:       &#xD;Line 29:       public class _Page_Views_Account__CompanyDetails_cshtml : System.Web.Mvc.WebViewPage&amp;lt;Inbid.ViewModels.CompanyViewModel&amp;gt; {&#xD;Line 30:           &#xD;Line 31:   #line hidden&#xD;Line 32:   &#xD;Line 33:           &#xD;Line 34:           public _Page_Views_Account__CompanyDetails_cshtml() {&#xD;Line 35:           }&#xD;Line 36:           &#xD;Line 37:           protected ASP.global_asax ApplicationInstance {&#xD;Line 38:               get {&#xD;Line 39:                   return ((ASP.global_asax)(Context.ApplicationInstance));&#xD;Line 40:               }&#xD;Line 41:           }&#xD;Line 42:           &#xD;Line 43:           public override void Execute() {&#xD;Line 44:   &#xD;Line 45:   WriteLiteral(&amp;quot;\r\n\r\n&amp;lt;div id =\&amp;quot;companyDetails\&amp;quot;&amp;gt;\r\n\r\n &amp;lt;table id=\&amp;quot;tbCompanyProporties\&amp;quot;&amp;gt;\r\n     &amp;lt;thead&amp;gt;&amp;quot; +&#xD;Line 46:   &amp;quot;\r\n            &amp;lt;tr&amp;gt;\r\n            &amp;lt;td colspan=\&amp;quot;6\&amp;quot; class=\&amp;quot;hea\&amp;quot;&amp;gt;\r\n            Dane F&amp;quot; +&#xD;Line 47:   &amp;quot;irmy &amp;quot;);&#xD;Line 48:   &#xD;Line 49:   &#xD;Line 50:               &#xD;Line 51:               #line 10 &amp;quot;C:\zlecenia\projekt\Inbid\Inbid\Views\Account\_CompanyDetails.cshtml&amp;quot;&#xD;Line 52:                     Write(Model.CompanyDet.Name);&#xD;Line 53:   &#xD;Line 54:               &#xD;Line 55:               #line default&#xD;Line 56:               #line hidden&#xD;Line 57:   WriteLiteral(&amp;quot;\r\n            &amp;lt;/td&amp;gt;\r\n\r\n            &amp;lt;/tr&amp;gt;\r\n           &amp;lt;tr /&amp;gt;\r\n        &amp;lt;/thead&amp;gt;\r\n  &amp;quot; +&#xD;Line 58:   &amp;quot;      &amp;lt;tbody&amp;gt;\r\n           &amp;lt;tr&amp;gt;\r\n            &amp;lt;td&amp;gt;\r\n            Nazwa Admina:\r\n   &amp;quot; +&#xD;Line 59:   &amp;quot;         &amp;lt;/td&amp;gt;\r\n            &amp;lt;td&amp;gt;\r\n            &amp;quot;);&#xD;Line 60:   &#xD;Line 61:   &#xD;Line 62:               &#xD;Line 63:               #line 22 &amp;quot;C:\zlecenia\projekt\Inbid\Inbid\Views\Account\_CompanyDetails.cshtml&amp;quot;&#xD;Line 64:          Write(Model.CompanyDet.UserName);&#xD;Line 65:   &#xD;Line 66:               &#xD;Line 67:               #line default&#xD;Line 68:               #line hidden&#xD;Line 69:   WriteLiteral(&amp;quot;\r\n            &amp;lt;/td&amp;gt;\r\n            &amp;lt;td&amp;gt;\r\n            Adress:\r\n            &amp;lt;/td&amp;gt;\r\n  &amp;quot; +&#xD;Line 70:   &amp;quot;          &amp;lt;td&amp;gt;\r\n            &amp;quot;);&#xD;Line 71:   &#xD;Line 72:   &#xD;Line 73:               &#xD;Line 74:               #line 28 &amp;quot;C:\zlecenia\projekt\Inbid\Inbid\Views\Account\_CompanyDetails.cshtml&amp;quot;&#xD;Line 75:          Write(Model.CompanyDet.Adress);&#xD;Line 76:   &#xD;Line 77:               &#xD;Line 78:               #line default&#xD;Line 79:               #line hidden&#xD;Line 80:   WriteLiteral(&amp;quot;\r\n            &amp;lt;/td&amp;gt;\r\n            &amp;lt;td&amp;gt;\r\n            Bidders:\r\n            &amp;lt;/td&amp;gt;\r\n &amp;quot; +&#xD;Line 81:   &amp;quot;           &amp;lt;td&amp;gt;\r\n            &amp;quot;);&#xD;Line 82:   &#xD;Line 83:   &#xD;Line 84:               &#xD;Line 85:               #line 34 &amp;quot;C:\zlecenia\projekt\Inbid\Inbid\Views\Account\_CompanyDetails.cshtml&amp;quot;&#xD;Line 86:          Write(Model.CompanyDet.CurrentBidderQuality);&#xD;Line 87:   &#xD;Line 88:               &#xD;Line 89:               #line default&#xD;Line 90:               #line hidden&#xD;Line 91:   WriteLiteral(&amp;quot;/&amp;quot;);&#xD;Line 92:   &#xD;Line 93:   &#xD;Line 94:               &#xD;Line 95:               #line 34 &amp;quot;C:\zlecenia\projekt\Inbid\Inbid\Views\Account\_CompanyDetails.cshtml&amp;quot;&#xD;Line 96:                                                 Write(Model.CompanyDet.BidderQuality);&#xD;Line 97:   &#xD;Line 98:               &#xD;Line 99:               #line default&#xD;Line 100:              #line hidden&#xD;Line 101:  WriteLiteral(&amp;quot;\r\n            &amp;lt;/td&amp;gt;\r\n           &amp;lt;/tr&amp;gt;\r\n           &amp;lt;tr&amp;gt;\r\n            &amp;lt;td&amp;gt;\r\n       &amp;quot; +&#xD;Line 102:  &amp;quot;     Imie:\r\n            &amp;lt;/td&amp;gt;\r\n            &amp;lt;td&amp;gt;\r\n            &amp;quot;);&#xD;Line 103:  &#xD;Line 104:  &#xD;Line 105:              &#xD;Line 106:              #line 42 &amp;quot;C:\zlecenia\projekt\Inbid\Inbid\Views\Account\_CompanyDetails.cshtml&amp;quot;&#xD;Line 107:         Write(Model.CompanyDet.FirstName);&#xD;Line 108:  &#xD;Line 109:              &#xD;Line 110:              #line default&#xD;Line 111:              #line hidden&#xD;Line 112:  WriteLiteral(&amp;quot;\r\n            &amp;lt;/td&amp;gt;\r\n            &amp;lt;td&amp;gt;\r\n            Miasto:\r\n            &amp;lt;/td&amp;gt;\r\n  &amp;quot; +&#xD;Line 113:  &amp;quot;          &amp;lt;td&amp;gt;\r\n            &amp;quot;);&#xD;Line 114:  &#xD;Line 115:  &#xD;Line 116:              &#xD;Line 117:              #line 48 &amp;quot;C:\zlecenia\projekt\Inbid\Inbid\Views\Account\_CompanyDetails.cshtml&amp;quot;&#xD;Line 118:         Write(Model.CompanyDet.City);&#xD;Line 119:  &#xD;Line 120:              &#xD;Line 121:              #line default&#xD;Line 122:              #line hidden&#xD;Line 123:  WriteLiteral(&amp;quot;\r\n            &amp;lt;/td&amp;gt;\r\n            &amp;lt;td&amp;gt;\r\n            BidderViews:\r\n            &amp;lt;/td&amp;quot; +&#xD;Line 124:  &amp;quot;&amp;gt;\r\n            &amp;lt;td&amp;gt;\r\n            &amp;quot;);&#xD;Line 125:  &#xD;Line 126:  &#xD;Line 127:              &#xD;Line 128:              #line 54 &amp;quot;C:\zlecenia\projekt\Inbid\Inbid\Views\Account\_CompanyDetails.cshtml&amp;quot;&#xD;Line 129:         Write(Model.CompanyDet.CurrentBidderViewsQuality);&#xD;Line 130:  &#xD;Line 131:              &#xD;Line 132:              #line default&#xD;Line 133:              #line hidden&#xD;Line 134:  WriteLiteral(&amp;quot;/&amp;quot;);&#xD;Line 135:  &#xD;Line 136:  &#xD;Line 137:              &#xD;Line 138:              #line 54 &amp;quot;C:\zlecenia\projekt\Inbid\Inbid\Views\Account\_CompanyDetails.cshtml&amp;quot;&#xD;Line 139:                                                     Write(Model.CompanyDet.BidderViewsQuality);&#xD;Line 140:  &#xD;Line 141:              &#xD;Line 142:              #line default&#xD;Line 143:              #line hidden&#xD;Line 144:  WriteLiteral(&amp;quot;\r\n            &amp;lt;/td&amp;gt;\r\n           &amp;lt;/tr&amp;gt;\r\n           &amp;lt;tr&amp;gt;\r\n        \r\n           &amp;lt;/tr&amp;quot; +&#xD;Line 145:  &amp;quot;&amp;gt;\r\n           &amp;lt;tr&amp;gt;\r\n        \r\n           &amp;lt;/tr&amp;gt;\r\n           &amp;lt;tr&amp;gt;\r\n        \r\n     &amp;quot; +&#xD;Line 146:  &amp;quot;      &amp;lt;/tr&amp;gt;\r\n        &amp;lt;/tbody&amp;gt;\r\n    &amp;lt;/table&amp;gt;\r\n\r\n\r\n&amp;lt;/div&amp;gt;&amp;quot;);&#xD;Line 147:  &#xD;Line 148:  &#xD;Line 149:          }&#xD;Line 150:      }&#xD;Line 151:  }&#xD;Line 152:  &lt;/pre&gt;&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &#xD;&#xA;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;    &lt;script type=&quot;text/javascript&quot;&gt;&#xD;&#xA;    function OnToggleTOCLevel1(level2ID)&#xD;&#xA;    {&#xD;&#xA;      var elemLevel2 = document.getElementById(level2ID);&#xD;&#xA;      if (elemLevel2.style.display == 'none')&#xD;&#xA;      {&#xD;&#xA;        elemLevel2.style.display = '';&#xD;&#xA;      }&#xD;&#xA;      else {&#xD;&#xA;        elemLevel2.style.display = 'none';&#xD;&#xA;      }&#xD;&#xA;    }&#xD;&#xA;    &lt;/script&gt;&#xD;&#xA;                          &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;    &lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pl,de-at;q=0.8,en-gb;q=0.6,en-us;q=0.4,en;q=0.2&#xD;&#xA;HTTP_COOKIE:Culture=en-GB; TimeZone=1; __utma=111872281.614224946.1330935786.1330935786.1330935786.1; __utmb=111872281.5.10.1330935786; __utmc=111872281; __utmz=111872281.1330935786.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); .ASPXAUTH=A73C629EC4012F5256E52457851A3B44C6E8D62AA28F83581C5656544B62ACC2947F0C1B7C55FEB79B0CE10AF46F38FFBA2EDC9E36186BADA7C7A4859726DB13850756B46ADC32AE2EDB8EB6925919E7B6AF6FCEB3CB434FB578B33C3124B27CD3630C1890362B1D4D1D7E4456DC78FB38AD0A610047A310257CFFCD637FA71C2D7E1981E851D28D40B28632A9E7884E&#xD;&#xA;HTTP_HOST:localhost&#xD;&#xA;HTTP_REFERER:http://localhost/Inbid/Account/CompanyAdmins&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; rv:10.0.2) Gecko/20100101 Firefox/10.0.2&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: pl,de-at;q=0.8,en-gb;q=0.6,en-us;q=0.4,en;q=0.2&#xD;&#xA;Cookie: Culture=en-GB; TimeZone=1; __utma=111872281.614224946.1330935786.1330935786.1330935786.1; __utmb=111872281.5.10.1330935786; __utmc=111872281; __utmz=111872281.1330935786.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); .ASPXAUTH=A73C629EC4012F5256E52457851A3B44C6E8D62AA28F83581C5656544B62ACC2947F0C1B7C55FEB79B0CE10AF46F38FFBA2EDC9E36186BADA7C7A4859726DB13850756B46ADC32AE2EDB8EB6925919E7B6AF6FCEB3CB434FB578B33C3124B27CD3630C1890362B1D4D1D7E4456DC78FB38AD0A610047A310257CFFCD637FA71C2D7E1981E851D28D40B28632A9E7884E&#xD;&#xA;Host: localhost&#xD;&#xA;Referer: http://localhost/Inbid/Account/CompanyAdmins&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:10.0.2) Gecko/20100101 Firefox/10.0.2&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/1/ROOT/Inbid" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\zlecenia\projekt\Inbid\Inbid\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="In" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="franek0" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="franek0" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="franek0" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="1" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/1" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Inbid/Account/Company" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\zlecenia\projekt\Inbid\Inbid\Account\Company" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="companyAdmin=admin1" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="65314" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Inbid/Account/Company" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="80" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/7.5" />
+    </item>
+    <item name="URL">
+      <value string="/Inbid/Account/Company" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pl,de-at;q=0.8,en-gb;q=0.6,en-us;q=0.4,en;q=0.2" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="Culture=en-GB; TimeZone=1; __utma=111872281.614224946.1330935786.1330935786.1330935786.1; __utmb=111872281.5.10.1330935786; __utmc=111872281; __utmz=111872281.1330935786.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); .ASPXAUTH=A73C629EC4012F5256E52457851A3B44C6E8D62AA28F83581C5656544B62ACC2947F0C1B7C55FEB79B0CE10AF46F38FFBA2EDC9E36186BADA7C7A4859726DB13850756B46ADC32AE2EDB8EB6925919E7B6AF6FCEB3CB434FB578B33C3124B27CD3630C1890362B1D4D1D7E4456DC78FB38AD0A610047A310257CFFCD637FA71C2D7E1981E851D28D40B28632A9E7884E" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost/Inbid/Account/CompanyAdmins" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; rv:10.0.2) Gecko/20100101 Firefox/10.0.2" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="companyAdmin">
+      <value string="admin1" />
+    </item>
+  </queryString>
+  <cookies>
+    <item name="Culture">
+      <value string="en-GB" />
+    </item>
+    <item name="TimeZone">
+      <value string="1" />
+    </item>
+    <item name="__utma">
+      <value string="111872281.614224946.1330935786.1330935786.1330935786.1" />
+    </item>
+    <item name="__utmb">
+      <value string="111872281.5.10.1330935786" />
+    </item>
+    <item name="__utmc">
+      <value string="111872281" />
+    </item>
+    <item name="__utmz">
+      <value string="111872281.1330935786.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)" />
+    </item>
+    <item name=".ASPXAUTH">
+      <value string="A73C629EC4012F5256E52457851A3B44C6E8D62AA28F83581C5656544B62ACC2947F0C1B7C55FEB79B0CE10AF46F38FFBA2EDC9E36186BADA7C7A4859726DB13850756B46ADC32AE2EDB8EB6925919E7B6AF6FCEB3CB434FB578B33C3124B27CD3630C1890362B1D4D1D7E4456DC78FB38AD0A610047A310257CFFCD637FA71C2D7E1981E851D28D40B28632A9E7884E" />
+    </item>
+  </cookies>
+</error>

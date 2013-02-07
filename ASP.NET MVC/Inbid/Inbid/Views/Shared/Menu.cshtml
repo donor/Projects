@@ -1,0 +1,38 @@
+﻿<ul id="menu">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Info", "Info", "Home")</li>
+               
+               <li>@Html.ActionLink(@Resources.Resources.Auctions, "Index", "Auction")</li>      
+                @if ((Inbid.Helpers.LocationHelper.IsCurrentControllerAndAction("Auction", "Index", ViewContext))&&(Roles.IsUserInRole(User.Identity.Name,@"Admin"))&&(!Roles.IsUserInRole(User.Identity.Name,@"SuperAdmin")))
+                {                  
+                    <li> @Html.ActionLink("Add Auction", "Create")</li>
+                }
+
+
+
+               @if (Inbid.Helpers.LocationHelper.IsCurrentControllerAndAction("Offer", "Index", ViewContext))
+                {                  
+                    <li> @Html.ActionLink("Add Offer", "Create", new { auctionNumber = Request.QueryString["auctionNumber"]  })</li>
+                }
+              
+               @if (Request.IsAuthenticated && Roles.IsUserInRole(@"SuperAdmin"))
+               {
+                    <li>@Html.ActionLink("Company Admins", "CompanyAdmins","Account")</li>
+               }
+               
+               @if (Request.IsAuthenticated && Roles.IsUserInRole(@"Admin") && !Roles.IsUserInRole(@"SuperAdmin"))
+               {
+                    <li>@Html.ActionLink("Your Company", "Company", "Account")</li>                   
+               }
+                @if (Request.IsAuthenticated && Roles.IsUserInRole(@"Bidder"))
+               {
+                    <li>@Html.ActionLink("Your Account", "Bidder","Account")</li>
+               }
+
+            </ul>
+
+
+
+            @*    @if ( Request.IsAuthenticated && HttpContext.Current.User.IsInRole( "Admin" ) ) *@
+
+            @*((Roles.IsUserInRole(User.Identity.Name, @"SuperAdmin"))&&(CanAddOffer(offer.AuctionId, offer.UserId)))*@

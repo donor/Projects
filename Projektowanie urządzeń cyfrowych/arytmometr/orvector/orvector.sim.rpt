@@ -1,0 +1,367 @@
+Simulator report for orvector
+Thu Apr 01 23:19:42 2010
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 112 nodes    ;
+; Simulation Coverage         ;       0.00 % ;
+; Total Number of Transitions ; 14           ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
+; Device                      ; EP3C5F256C6  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport  ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport  ; Transport     ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       0.00 % ;
+; Total nodes checked                                 ; 112          ;
+; Total output ports checked                          ; 112          ;
+; Total output ports with complete 1/0-value coverage ; 0            ;
+; Total output ports with no 1/0-value coverage       ; 93           ;
+; Total output ports with no 1-value coverage         ; 112          ;
+; Total output ports with no 0-value coverage         ; 93           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------+
+; Complete 1/0-Value Coverage                     ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                   ;
++----------------------------+----------------------------+------------------+
+; Node Name                  ; Output Port Name           ; Output Port Type ;
++----------------------------+----------------------------+------------------+
+; |orvector|inst             ; |orvector|inst             ; combout          ;
+; |orvector|inst1            ; |orvector|inst1            ; combout          ;
+; |orvector|inst2            ; |orvector|inst2            ; combout          ;
+; |orvector|inst3            ; |orvector|inst3            ; combout          ;
+; |orvector|inst4            ; |orvector|inst4            ; combout          ;
+; |orvector|inst5            ; |orvector|inst5            ; combout          ;
+; |orvector|inst6            ; |orvector|inst6            ; combout          ;
+; |orvector|inst7            ; |orvector|inst7            ; combout          ;
+; |orvector|inst8            ; |orvector|inst8            ; combout          ;
+; |orvector|inst9            ; |orvector|inst9            ; combout          ;
+; |orvector|inst10           ; |orvector|inst10           ; combout          ;
+; |orvector|inst11           ; |orvector|inst11           ; combout          ;
+; |orvector|inst12           ; |orvector|inst12           ; combout          ;
+; |orvector|inst13           ; |orvector|inst13           ; combout          ;
+; |orvector|inst14           ; |orvector|inst14           ; combout          ;
+; |orvector|inst15           ; |orvector|inst15           ; combout          ;
+; |orvector|OrWyj[15]~output ; |orvector|OrWyj[15]~output ; o                ;
+; |orvector|OrWyj[15]        ; |orvector|OrWyj[15]        ; padout           ;
+; |orvector|OrWyj[14]~output ; |orvector|OrWyj[14]~output ; o                ;
+; |orvector|OrWyj[14]        ; |orvector|OrWyj[14]        ; padout           ;
+; |orvector|OrWyj[13]~output ; |orvector|OrWyj[13]~output ; o                ;
+; |orvector|OrWyj[13]        ; |orvector|OrWyj[13]        ; padout           ;
+; |orvector|OrWyj[12]~output ; |orvector|OrWyj[12]~output ; o                ;
+; |orvector|OrWyj[12]        ; |orvector|OrWyj[12]        ; padout           ;
+; |orvector|OrWyj[11]~output ; |orvector|OrWyj[11]~output ; o                ;
+; |orvector|OrWyj[11]        ; |orvector|OrWyj[11]        ; padout           ;
+; |orvector|OrWyj[10]~output ; |orvector|OrWyj[10]~output ; o                ;
+; |orvector|OrWyj[10]        ; |orvector|OrWyj[10]        ; padout           ;
+; |orvector|OrWyj[9]~output  ; |orvector|OrWyj[9]~output  ; o                ;
+; |orvector|OrWyj[9]         ; |orvector|OrWyj[9]         ; padout           ;
+; |orvector|OrWyj[8]~output  ; |orvector|OrWyj[8]~output  ; o                ;
+; |orvector|OrWyj[8]         ; |orvector|OrWyj[8]         ; padout           ;
+; |orvector|OrWyj[7]~output  ; |orvector|OrWyj[7]~output  ; o                ;
+; |orvector|OrWyj[7]         ; |orvector|OrWyj[7]         ; padout           ;
+; |orvector|OrWyj[6]~output  ; |orvector|OrWyj[6]~output  ; o                ;
+; |orvector|OrWyj[6]         ; |orvector|OrWyj[6]         ; padout           ;
+; |orvector|OrWyj[5]~output  ; |orvector|OrWyj[5]~output  ; o                ;
+; |orvector|OrWyj[5]         ; |orvector|OrWyj[5]         ; padout           ;
+; |orvector|OrWyj[4]~output  ; |orvector|OrWyj[4]~output  ; o                ;
+; |orvector|OrWyj[4]         ; |orvector|OrWyj[4]         ; padout           ;
+; |orvector|OrWyj[3]~output  ; |orvector|OrWyj[3]~output  ; o                ;
+; |orvector|OrWyj[3]         ; |orvector|OrWyj[3]         ; padout           ;
+; |orvector|OrWyj[2]~output  ; |orvector|OrWyj[2]~output  ; o                ;
+; |orvector|OrWyj[2]         ; |orvector|OrWyj[2]         ; padout           ;
+; |orvector|OrWyj[1]~output  ; |orvector|OrWyj[1]~output  ; o                ;
+; |orvector|OrWyj[1]         ; |orvector|OrWyj[1]         ; padout           ;
+; |orvector|OrWyj[0]~output  ; |orvector|OrWyj[0]~output  ; o                ;
+; |orvector|OrWyj[0]         ; |orvector|OrWyj[0]         ; padout           ;
+; |orvector|B[15]~input      ; |orvector|B[15]~input      ; o                ;
+; |orvector|B[15]            ; |orvector|B[15]            ; padout           ;
+; |orvector|A[15]~input      ; |orvector|A[15]~input      ; o                ;
+; |orvector|A[15]            ; |orvector|A[15]            ; padout           ;
+; |orvector|B[14]~input      ; |orvector|B[14]~input      ; o                ;
+; |orvector|B[14]            ; |orvector|B[14]            ; padout           ;
+; |orvector|A[14]~input      ; |orvector|A[14]~input      ; o                ;
+; |orvector|A[14]            ; |orvector|A[14]            ; padout           ;
+; |orvector|B[13]~input      ; |orvector|B[13]~input      ; o                ;
+; |orvector|B[13]            ; |orvector|B[13]            ; padout           ;
+; |orvector|A[13]~input      ; |orvector|A[13]~input      ; o                ;
+; |orvector|A[13]            ; |orvector|A[13]            ; padout           ;
+; |orvector|B[12]~input      ; |orvector|B[12]~input      ; o                ;
+; |orvector|B[12]            ; |orvector|B[12]            ; padout           ;
+; |orvector|A[12]~input      ; |orvector|A[12]~input      ; o                ;
+; |orvector|A[12]            ; |orvector|A[12]            ; padout           ;
+; |orvector|B[11]~input      ; |orvector|B[11]~input      ; o                ;
+; |orvector|B[11]            ; |orvector|B[11]            ; padout           ;
+; |orvector|A[11]~input      ; |orvector|A[11]~input      ; o                ;
+; |orvector|A[11]            ; |orvector|A[11]            ; padout           ;
+; |orvector|B[10]~input      ; |orvector|B[10]~input      ; o                ;
+; |orvector|B[10]            ; |orvector|B[10]            ; padout           ;
+; |orvector|A[10]~input      ; |orvector|A[10]~input      ; o                ;
+; |orvector|A[10]            ; |orvector|A[10]            ; padout           ;
+; |orvector|B[9]~input       ; |orvector|B[9]~input       ; o                ;
+; |orvector|B[9]             ; |orvector|B[9]             ; padout           ;
+; |orvector|A[9]~input       ; |orvector|A[9]~input       ; o                ;
+; |orvector|A[9]             ; |orvector|A[9]             ; padout           ;
+; |orvector|B[8]~input       ; |orvector|B[8]~input       ; o                ;
+; |orvector|B[8]             ; |orvector|B[8]             ; padout           ;
+; |orvector|A[8]~input       ; |orvector|A[8]~input       ; o                ;
+; |orvector|A[8]             ; |orvector|A[8]             ; padout           ;
+; |orvector|B[7]~input       ; |orvector|B[7]~input       ; o                ;
+; |orvector|B[7]             ; |orvector|B[7]             ; padout           ;
+; |orvector|A[7]~input       ; |orvector|A[7]~input       ; o                ;
+; |orvector|A[7]             ; |orvector|A[7]             ; padout           ;
+; |orvector|B[6]~input       ; |orvector|B[6]~input       ; o                ;
+; |orvector|B[6]             ; |orvector|B[6]             ; padout           ;
+; |orvector|A[6]~input       ; |orvector|A[6]~input       ; o                ;
+; |orvector|A[6]             ; |orvector|A[6]             ; padout           ;
+; |orvector|B[5]~input       ; |orvector|B[5]~input       ; o                ;
+; |orvector|B[5]             ; |orvector|B[5]             ; padout           ;
+; |orvector|A[5]~input       ; |orvector|A[5]~input       ; o                ;
+; |orvector|A[5]             ; |orvector|A[5]             ; padout           ;
+; |orvector|B[4]~input       ; |orvector|B[4]~input       ; o                ;
+; |orvector|B[4]             ; |orvector|B[4]             ; padout           ;
+; |orvector|A[4]~input       ; |orvector|A[4]~input       ; o                ;
+; |orvector|A[4]             ; |orvector|A[4]             ; padout           ;
+; |orvector|B[3]~input       ; |orvector|B[3]~input       ; o                ;
+; |orvector|B[3]             ; |orvector|B[3]             ; padout           ;
+; |orvector|A[3]~input       ; |orvector|A[3]~input       ; o                ;
+; |orvector|A[3]             ; |orvector|A[3]             ; padout           ;
+; |orvector|B[2]~input       ; |orvector|B[2]~input       ; o                ;
+; |orvector|B[2]             ; |orvector|B[2]             ; padout           ;
+; |orvector|A[2]~input       ; |orvector|A[2]~input       ; o                ;
+; |orvector|A[2]             ; |orvector|A[2]             ; padout           ;
+; |orvector|B[1]~input       ; |orvector|B[1]~input       ; o                ;
+; |orvector|B[1]             ; |orvector|B[1]             ; padout           ;
+; |orvector|A[1]~input       ; |orvector|A[1]~input       ; o                ;
+; |orvector|A[1]             ; |orvector|A[1]             ; padout           ;
+; |orvector|B[0]~input       ; |orvector|B[0]~input       ; o                ;
+; |orvector|B[0]             ; |orvector|B[0]             ; padout           ;
+; |orvector|A[0]~input       ; |orvector|A[0]~input       ; o                ;
+; |orvector|A[0]             ; |orvector|A[0]             ; padout           ;
++----------------------------+----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                   ;
++----------------------------+----------------------------+------------------+
+; Node Name                  ; Output Port Name           ; Output Port Type ;
++----------------------------+----------------------------+------------------+
+; |orvector|inst             ; |orvector|inst             ; combout          ;
+; |orvector|inst1            ; |orvector|inst1            ; combout          ;
+; |orvector|inst2            ; |orvector|inst2            ; combout          ;
+; |orvector|inst3            ; |orvector|inst3            ; combout          ;
+; |orvector|inst4            ; |orvector|inst4            ; combout          ;
+; |orvector|inst5            ; |orvector|inst5            ; combout          ;
+; |orvector|inst6            ; |orvector|inst6            ; combout          ;
+; |orvector|inst7            ; |orvector|inst7            ; combout          ;
+; |orvector|inst8            ; |orvector|inst8            ; combout          ;
+; |orvector|inst9            ; |orvector|inst9            ; combout          ;
+; |orvector|inst10           ; |orvector|inst10           ; combout          ;
+; |orvector|inst11           ; |orvector|inst11           ; combout          ;
+; |orvector|inst12           ; |orvector|inst12           ; combout          ;
+; |orvector|OrWyj[15]~output ; |orvector|OrWyj[15]~output ; o                ;
+; |orvector|OrWyj[15]        ; |orvector|OrWyj[15]        ; padout           ;
+; |orvector|OrWyj[14]~output ; |orvector|OrWyj[14]~output ; o                ;
+; |orvector|OrWyj[14]        ; |orvector|OrWyj[14]        ; padout           ;
+; |orvector|OrWyj[13]~output ; |orvector|OrWyj[13]~output ; o                ;
+; |orvector|OrWyj[13]        ; |orvector|OrWyj[13]        ; padout           ;
+; |orvector|OrWyj[12]~output ; |orvector|OrWyj[12]~output ; o                ;
+; |orvector|OrWyj[12]        ; |orvector|OrWyj[12]        ; padout           ;
+; |orvector|OrWyj[11]~output ; |orvector|OrWyj[11]~output ; o                ;
+; |orvector|OrWyj[11]        ; |orvector|OrWyj[11]        ; padout           ;
+; |orvector|OrWyj[10]~output ; |orvector|OrWyj[10]~output ; o                ;
+; |orvector|OrWyj[10]        ; |orvector|OrWyj[10]        ; padout           ;
+; |orvector|OrWyj[9]~output  ; |orvector|OrWyj[9]~output  ; o                ;
+; |orvector|OrWyj[9]         ; |orvector|OrWyj[9]         ; padout           ;
+; |orvector|OrWyj[8]~output  ; |orvector|OrWyj[8]~output  ; o                ;
+; |orvector|OrWyj[8]         ; |orvector|OrWyj[8]         ; padout           ;
+; |orvector|OrWyj[7]~output  ; |orvector|OrWyj[7]~output  ; o                ;
+; |orvector|OrWyj[7]         ; |orvector|OrWyj[7]         ; padout           ;
+; |orvector|OrWyj[6]~output  ; |orvector|OrWyj[6]~output  ; o                ;
+; |orvector|OrWyj[6]         ; |orvector|OrWyj[6]         ; padout           ;
+; |orvector|OrWyj[5]~output  ; |orvector|OrWyj[5]~output  ; o                ;
+; |orvector|OrWyj[5]         ; |orvector|OrWyj[5]         ; padout           ;
+; |orvector|OrWyj[4]~output  ; |orvector|OrWyj[4]~output  ; o                ;
+; |orvector|OrWyj[4]         ; |orvector|OrWyj[4]         ; padout           ;
+; |orvector|OrWyj[3]~output  ; |orvector|OrWyj[3]~output  ; o                ;
+; |orvector|OrWyj[3]         ; |orvector|OrWyj[3]         ; padout           ;
+; |orvector|B[15]~input      ; |orvector|B[15]~input      ; o                ;
+; |orvector|B[15]            ; |orvector|B[15]            ; padout           ;
+; |orvector|A[15]~input      ; |orvector|A[15]~input      ; o                ;
+; |orvector|A[15]            ; |orvector|A[15]            ; padout           ;
+; |orvector|B[14]~input      ; |orvector|B[14]~input      ; o                ;
+; |orvector|B[14]            ; |orvector|B[14]            ; padout           ;
+; |orvector|A[14]~input      ; |orvector|A[14]~input      ; o                ;
+; |orvector|A[14]            ; |orvector|A[14]            ; padout           ;
+; |orvector|B[13]~input      ; |orvector|B[13]~input      ; o                ;
+; |orvector|B[13]            ; |orvector|B[13]            ; padout           ;
+; |orvector|A[13]~input      ; |orvector|A[13]~input      ; o                ;
+; |orvector|A[13]            ; |orvector|A[13]            ; padout           ;
+; |orvector|B[12]~input      ; |orvector|B[12]~input      ; o                ;
+; |orvector|B[12]            ; |orvector|B[12]            ; padout           ;
+; |orvector|A[12]~input      ; |orvector|A[12]~input      ; o                ;
+; |orvector|A[12]            ; |orvector|A[12]            ; padout           ;
+; |orvector|B[11]~input      ; |orvector|B[11]~input      ; o                ;
+; |orvector|B[11]            ; |orvector|B[11]            ; padout           ;
+; |orvector|A[11]~input      ; |orvector|A[11]~input      ; o                ;
+; |orvector|A[11]            ; |orvector|A[11]            ; padout           ;
+; |orvector|B[10]~input      ; |orvector|B[10]~input      ; o                ;
+; |orvector|B[10]            ; |orvector|B[10]            ; padout           ;
+; |orvector|A[10]~input      ; |orvector|A[10]~input      ; o                ;
+; |orvector|A[10]            ; |orvector|A[10]            ; padout           ;
+; |orvector|B[9]~input       ; |orvector|B[9]~input       ; o                ;
+; |orvector|B[9]             ; |orvector|B[9]             ; padout           ;
+; |orvector|A[9]~input       ; |orvector|A[9]~input       ; o                ;
+; |orvector|A[9]             ; |orvector|A[9]             ; padout           ;
+; |orvector|B[8]~input       ; |orvector|B[8]~input       ; o                ;
+; |orvector|B[8]             ; |orvector|B[8]             ; padout           ;
+; |orvector|A[8]~input       ; |orvector|A[8]~input       ; o                ;
+; |orvector|A[8]             ; |orvector|A[8]             ; padout           ;
+; |orvector|B[7]~input       ; |orvector|B[7]~input       ; o                ;
+; |orvector|B[7]             ; |orvector|B[7]             ; padout           ;
+; |orvector|A[7]~input       ; |orvector|A[7]~input       ; o                ;
+; |orvector|A[7]             ; |orvector|A[7]             ; padout           ;
+; |orvector|B[6]~input       ; |orvector|B[6]~input       ; o                ;
+; |orvector|B[6]             ; |orvector|B[6]             ; padout           ;
+; |orvector|A[6]~input       ; |orvector|A[6]~input       ; o                ;
+; |orvector|A[6]             ; |orvector|A[6]             ; padout           ;
+; |orvector|B[5]~input       ; |orvector|B[5]~input       ; o                ;
+; |orvector|B[5]             ; |orvector|B[5]             ; padout           ;
+; |orvector|A[5]~input       ; |orvector|A[5]~input       ; o                ;
+; |orvector|A[5]             ; |orvector|A[5]             ; padout           ;
+; |orvector|B[4]~input       ; |orvector|B[4]~input       ; o                ;
+; |orvector|B[4]             ; |orvector|B[4]             ; padout           ;
+; |orvector|A[4]~input       ; |orvector|A[4]~input       ; o                ;
+; |orvector|A[4]             ; |orvector|A[4]             ; padout           ;
+; |orvector|B[3]~input       ; |orvector|B[3]~input       ; o                ;
+; |orvector|B[3]             ; |orvector|B[3]             ; padout           ;
+; |orvector|A[3]~input       ; |orvector|A[3]~input       ; o                ;
+; |orvector|A[3]             ; |orvector|A[3]             ; padout           ;
+; |orvector|A[1]~input       ; |orvector|A[1]~input       ; o                ;
+; |orvector|A[1]             ; |orvector|A[1]             ; padout           ;
++----------------------------+----------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Apr 01 23:19:40 2010
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off orvector -c orvector
+Info: Using vector source file "F:/orvector/orvector.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       0.00 %
+Info: Number of transitions in simulation is 14
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 117 megabytes
+    Info: Processing ended: Thu Apr 01 23:19:43 2010
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Web Developer Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inbid", "Inbid\Inbid.csproj", "{ACB8D264-75E4-4005-B018-8A8AAB41AABD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Resources.csproj", "{179B5F9E-6FC9-471A-ADC0-4587928BF2B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACB8D264-75E4-4005-B018-8A8AAB41AABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACB8D264-75E4-4005-B018-8A8AAB41AABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB8D264-75E4-4005-B018-8A8AAB41AABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACB8D264-75E4-4005-B018-8A8AAB41AABD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{179B5F9E-6FC9-471A-ADC0-4587928BF2B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{179B5F9E-6FC9-471A-ADC0-4587928BF2B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{179B5F9E-6FC9-471A-ADC0-4587928BF2B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{179B5F9E-6FC9-471A-ADC0-4587928BF2B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

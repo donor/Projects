@@ -1,0 +1,195 @@
+﻿@*@model IEnumerable<Inbid.Models.vw_CompanyMembers>*@
+@model Inbid.ViewModels.CompanyViewModel
+
+@{
+    ViewBag.Title = "Company";
+}
+
+<link href="@Url.Content("~/Content/Account.css")" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $.ajaxSetup({ cache: false });
+
+        $(".openDialog").live("click", function (e) {
+            e.preventDefault();
+
+            $("<div></div>")
+                    .addClass("dialog")
+                    .appendTo("body")
+                    .dialog({
+                        title: $(this).attr("data-dialog-title"),
+                        close: function () { $(this).remove() },
+                        modal: true,
+                        width: 500,
+                        height: 600
+
+                    })
+                    .load(this.href);
+        });
+
+        $(".close").live("click", function (e) {
+            e.preventDefault();
+            $(this).closest(".dialog").dialog("close");
+        });
+
+        $('.auctions tr td:not(.editRow)').click(function () {
+            var href = $(this).parent().attr("id");
+            if (href)
+            //window.location = 'Offer/index?auctionNumber=' + href;
+                var url = '@Url.Action("Index","Offer")?auctionNumber=' + href;
+            window.location = url;
+        });
+        updateAuctionSource();
+        updateMembersSource();
+    });
+
+    function updateMembersSource() {
+
+        $('#membersSource').find("> a").click(function () {
+
+            $(this).toggleClass("source-closed").toggleClass("source-opened").next().toggle();
+            return false;
+        }).end().find(".emplyess").hide();
+
+
+    }
+
+
+    function updateAuctionSource() {
+
+            $('#auctionSource').find("> a").click(function () {
+
+                    $(this).toggleClass("source-closed").toggleClass("source-opened").next().toggle();
+                    return false;
+                }).end().find(".auctionDiv").hide();
+            
+           
+        }
+
+
+</script>
+
+<h4>@ViewBag.Message</h4>
+<h4>@TempData["Message"]</h4>
+
+
+
+@Html.Partial("_CompanyDetails")
+
+
+<p />
+
+<div id="membersSource">
+<a class="source-closed"  href="#">Pracownicy Firmy</a>
+
+<div class="emplyess" style="display:none;">
+
+<p>
+    @Html.ActionLink("Add Bidder/BidderView", "RegisterBidderOrBidderView", new {companyAdmin=Request.QueryString["companyAdmin"] })
+</p>
+
+@if (Model.Members.Count() > 0)
+{
+    
+    
+<table id="members" >
+    <thead>
+    <tr>
+    <th colspan="8">
+    Zarejestrowani pracownicy firmy
+    </th>
+    </tr>
+    <tr>
+         <th>
+            User Name
+        </th>
+         <th>
+            Rola
+        </th>
+        <th>
+            FirstName
+        </th>
+        <th>
+            LastName
+        </th>
+        <th>
+            Email
+        </th>      
+        <th>
+            Phone
+        </th>
+        <th>
+            Aktywny
+        </th>
+        <th></th>
+        </tr>
+    </thead>
+
+@foreach (var item in Model.Members)
+{
+    <tr id="@item.UserName"  role="@item.RoleName">
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td >
+            @Html.DisplayFor(modelItem => item.RoleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsApproved)
+        </td>
+        <td class="editRow">
+            @Html.ActionLink("Edit", "EditBidderOrBidderView", new { id = item.UserName }) |
+            @Html.ActionLink("Details", "Bidder", new { id = item.UserName }) |
+            @Html.ActionLink("Delete", "DeleteBidderOrBidderView", new { id = item.UserName })
+        </td>
+    </tr>
+     
+        <script type="text/javascript">
+            $(function () {
+                var userName = '@item.UserName';
+                var roleName = '@item.RoleName';
+                if (roleName=='Bidder')
+                {
+                $('#' + userName).css("background-color", "rgb(231,231,231)");
+                $('#' + userName).css("cursor", "pointer");
+
+                $('#' + userName + ' td:not(.editRow)').bind("click", function () {
+                    //var id = $(this).attr("id");                    
+                    var url = '@Url.Action("Bidder","Account")/' + userName;
+                    window.location = url;
+
+                });
+                }
+            });   
+        </script>
+}
+
+</table>
+}
+else
+{
+<p class="empty">Firma nie ma zarejestrowanych pracowników</p>
+}
+<br/>
+</div>
+</div>
+<br/>
+
+@Html.Partial("_Auctions")

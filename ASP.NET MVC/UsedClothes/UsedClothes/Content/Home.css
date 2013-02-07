@@ -1,0 +1,218 @@
+﻿
+
+.home-listings {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.listings div, .dresm p, .dresm br {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.listings .grid-view {
+    left: 4px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.grid-view .shopAllLink {
+    font-size: 22px;
+}
+.home-listings h3 {
+    font-weight: 100;
+    text-align: center;
+}
+.home-listings h3 {
+    left: 1px;
+    position: relative;
+}
+ .grid-view .slide-prev {
+    background: url("/content/images/slideshow/red-left.png") no-repeat scroll 20px 0 transparent;
+    height: 22px;
+    padding: 0 100px;
+    width: 22px;
+}
+/*.grid-view .slide-prev:hover {
+    background: url("/images/slideshow/red-left.png") no-repeat scroll 20px -22px transparent;
+}*/
+ .slide-next,  .slide-prev {
+    float: left;
+    margin:   -40px 0 0;
+    position: relative;
+}
+ .grid-view .slide-next {
+    background: url("/content/images/slideshow/red-right.png") no-repeat scroll 175px 0 transparent;
+    height: 22px;
+    padding: 0 100px;
+    width: 22px;
+}
+/*.grid-view .slide-next:hover {
+    background: url("/images/slideshow/red-right.png") no-repeat scroll 175px -22px transparent;
+}*/
+.slide-next {
+    float: right;
+}
+.home-grid-frame {
+    height: 250px;
+    overflow: hidden;
+    width: 980px;
+    position:relative;
+  /*  margin-top:20px;*/
+}
+ br,  div {
+    clear: both;
+    position:relative;
+}
+
+.home-grid-slide {
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.25s ease-out 0s;
+    width: 5000px;
+}
+
+ .grid-view {
+    left: 4px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.grid-view .item {
+    margin:   0 16px 5px 0;
+}
+.grid-view .item {
+    margin: 0 12px 35px 0;
+}
+.grid-view .item {
+    border: medium none;
+    clear: none;
+    float: left;
+    margin: 0 16px 5px 0;
+    padding: 0;
+}
+
+.grid-view .item .price {
+    background-color: #152027;
+    display: inline;
+    left: 10px;
+    opacity: 0.84;
+   /* padding: 7px 9px 5px;*/
+    position: absolute;
+    top: -4px;
+    
+}
+.grid-view .item .price p {
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 100;
+    line-height: 18px;
+    margin:6px;
+}
+
+.grid-view img.sold {
+    bottom: 175px;
+    position: absolute;
+    right: -2px;
+    visibility: hidden;
+    width: 36%;
+}
+
+.grid-view .item a img {
+    border-bottom: 1px solid #F2F2F2;
+    height: 197px;
+    opacity: 0;
+    padding: 0;
+    width: 180px;
+}
+ .gridMenu {
+    bottom: 44px;
+    height: 33px;
+    overflow: hidden;
+    position: absolute;
+    width: 180px;
+}
+ .gridMenu a.gridStore {
+    background: url("../content/images/buttons/GridView_Hover-Menu.png") no-repeat scroll left 0 transparent;
+    display: block;
+    float: left;
+    height: 33px;
+    position: relative;
+    top: 35px;
+    transition: all 0.18s ease-out 0s;
+    width: 60px;
+}
+.gridMenu a.gridStore:hover {
+    background-position: left -33px;
+}
+ .gridMenu a.gridCart {
+    background: url("../content/images/buttons/GridView_Hover-Menu.png") no-repeat scroll center 0 transparent;
+    display: block;
+    float: left;
+    height: 33px;
+    position: relative;
+    top: 33px;
+    transition: all 0.18s ease-out 0s;
+    width: 60px;
+}
+.gridMenu a.gridCart:hover {
+    background-position: center -33px;
+}
+ .gridMenu a.gridQuick {
+    background: url("../content/images/buttons/GridView_Hover-Menu.png") no-repeat scroll right 0 transparent;
+    display: block;
+    float: left;
+    height: 33px;
+    position: relative;
+    top: 33px;
+    transition: all 0.18s ease-out 0s;
+    width: 60px;
+}
+.gridMenu a.gridQuick:hover {
+    background-position: right -33px;
+}
+.grid-view .item .title {
+    font-weight: 100;
+    margin-top: 2px;
+    overflow: hidden;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 180px;
+}
+.grid-view .slide-prev span,  .grid-view .slide-next span {
+    visibility: hidden;
+}
+.grid-view .item .added-to-cart {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    display: none;
+    font-size: 14px;
+    font-weight: 100;
+    left: 12px;
+    padding: 5px 8px;
+    position: absolute;
+    text-align: center;
+    top: 122px;
+    width: 140px;
+}
+.home-listings {
+    font-size: 12px;
+    line-height: 14px;
+}
+.grid-view .item .title a {
+    color: #2B3A43;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    width: 100%;
+}
+.grid-view .item .title span {
+    font-size: 12px;
+}
+
+/*#logo
+{
+    clear:none;
+}*/

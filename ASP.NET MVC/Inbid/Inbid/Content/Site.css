@@ -1,0 +1,595 @@
+﻿/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+body
+{
+    background-color: #D0D0CE;
+    font-size: .85em;
+    font-family: "Trebuchet MS" , Verdana, Helvetica, Sans-Serif;
+  margin-left: auto;
+    margin-right: auto;
+    width: 988px;
+}
+
+
+
+a:link {
+    color: #034af3;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #505abc;
+}
+
+a:hover {
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active {
+    color: #12eb87;
+}
+
+p, ul {
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+
+/*.footer
+{
+ color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+
+}*/
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: #000;
+}
+
+h1 {
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    padding: 0 0 10px 0;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+/*.page {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+*/
+header, #header
+{
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    width: 984px;
+  
+   
+}
+
+header h1, #header h1 {
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 0;
+    color: #fff;
+    border: none;
+    line-height: 2em;
+    font-size: 32px !important;
+   
+}
+
+#main {
+   overflow: hidden;
+	padding: 0 0 15px 10px;
+	float: left;
+	min-height:500px;
+}
+
+.footer, #footer
+{
+    /*font-size: xx-large;
+    font-weight: bolder;
+    text-decoration: underline;*/
+    color: #2C2328;
+    text-align: center;
+    vertical-align: bottom;
+    border-top-style: solid;
+    border-top-width: thin;
+    border-top-color: #FFFFFF;
+}
+
+
+ul#menu, header, #header
+{
+  border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #FFFFFF;   
+} 
+/* TAB MENU   
+----------------------------------------------------------*/
+
+
+ul#menu {
+ /*   border-bottom: 1px #5C87B2 solid;*/
+    padding: 0 0 2px;
+    position: relative;
+    margin: 0;
+    text-align:center;
+}
+
+ul#menu li {
+    display: inline;
+    list-style: none;
+}
+
+ul#menu li#greeting {
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    color: #fff;
+}
+
+ul#menu li a {
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    background-color: #e8eef4;
+    color: #034af3;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+}
+
+ul#menu li a:hover {
+    background-color: #fff;
+    text-decoration: none;
+}
+
+ul#menu li a:active {
+    background-color: #a6e2a6;
+    text-decoration: none;
+}
+
+ul#menu li.selected a {
+    background-color: #fff;
+    color: #000;
+}
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+input[type="text"], 
+input[type="password"] {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+    width: 200px;
+}
+
+select {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+}
+
+input[type="submit"] {
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+
+
+
+
+
+.clear {
+    clear: both;
+}
+
+.error {
+    color: Red;
+}
+
+nav, 
+#menucontainer {
+    margin-top: 2px;
+}
+
+div#title {
+    display: block;
+    float: left;
+    text-align: left;
+}
+
+
+
+#logo
+{
+    margin-left:25px;
+    float: left;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: normal;
+    color: #333333;
+}
+
+#logo a:link
+{
+    color: #464246;
+    text-decoration: none;
+    }
+
+#clock, #logindisplay,  #changePassword
+{
+     margin-top:4px;
+}
+#clock
+{ 
+  margin-left: 10px;    
+ float:right;   
+ text-align:right;
+}
+
+#culturedisplay
+{ 
+     margin-left: 10px;
+        float:right;
+    text-align: center;
+}
+
+   
+#culturedisplay a 
+{
+    text-decoration:none !important;
+}   
+
+
+   
+#culturedisplay img
+{   
+    border:none;
+   
+}
+ 
+
+
+#logindisplay , #changePassword
+{
+   float: right;
+     margin-left: 10px;
+ 
+}
+
+
+#logindisplay, #changePassword a:link, #culturedisplay a:link
+{
+    color: #464246;
+    text-decoration: underline;
+}
+
+#logindisplay, #changePassword a:visited, #culturedisplay a:visited, #logo a:visited {
+    color: #464246;
+    text-decoration: underline;
+}
+
+#logindisplay, #changePassword a:hover, #culturedisplay a:hover, #logo a:hover  {
+    color: #464246;
+    text-decoration: none;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #ff0000;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label, 
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.display-field, 
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+.text-box {
+    width: 30em;
+   
+}
+
+.text-box.multi-line {
+    height: 6.5em;
+}
+
+.tri-state {
+    width: 6em;
+}
+
+
+
+
+
+
+
+
+/*#nowy
+{
+    border-color: #FF0000;
+    background-color: FFFFFF;
+    color: #666666;
+}
+*/
+.page
+{
+    height: auto;
+    margin: -7px 0 0;
+    min-height: 10px;
+    padding: 0 0 5px;
+    width: 988px;
+}
+
+#pagination
+{
+ text-align:center;
+}
+
+
+
+
+
+/*.lang-picker-wrapper
+{
+   
+  position: absolute; 
+    right: 0px; 
+    z-index: 1000; 
+    top: 10px;
+    
+    
+    
+}
+
+
+.lang-picker 
+{
+    background: url("img/lang-picker-arrow-down.png") no-repeat scroll right top #A5D03C;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 24px;
+    line-height: 12px;
+    margin: -2px 0 0 5px;
+    overflow: hidden;
+    padding: 0 7px;
+    position: relative;
+    border-radius: 6px;
+}
+.lang-picker a 
+{
+    border-bottom: 1px solid #98C038;
+    border-top: 1px solid #BAD836;
+    color: #FFFFFF;
+    display: block;
+    line-height: 22px;
+    padding: 0 16px 0 20px;
+    text-align: left;
+    text-decoration: none;
+}
+.lang-picker a:hover 
+{
+    color: #003300;
+}
+
+.lang-picker.hover
+{
+    background-image: url("img/lang-picker-arrow-up.png");
+}
+
+*/
+
+.datewithoutsec
+{
+    color:green;
+}
+
+/*Auctions/Index.chtml*/
+.editRow
+{
+    word-spacing: normal;
+}
+
+/* przy dodawania wiersza to toffers zeby zrobic fade in*/
+
+.addRow
+{
+    background-color: #C0C0C0;
+}
+
+
+/*table auctions***********************************/
+table#tbauctions  {
+    border-collapse: collapse;   
+}
+#tbauctions tr
+{
+    background-color: #eee;
+    border-top: 1px solid #fff;
+    text-align: center;
+}
+#tbauctions tr:hover {
+    background-color: #ccc;
+}
+#tbauctions th {
+    background-color: #fff;
+}
+#tbauctions th, #tbauctions td {
+    padding: 3px 5px;
+}
+#tbauctions td:hover
+{
+  
+    cursor: pointer;
+}
+/***************************************************/
+
+
+
+
+/* TABLE
+----------------------------------------------------------*/
+/*table
+{
+    border: 2px solid #666666;
+    border-collapse: collapse;
+    
+    width: 700px;
+    background-color: #CCCCCC;
+    font-size: 12px;
+}
+
+table tr
+{
+    border: 2px groove #808080;
+    padding: 5px;
+    margin: 5px;
+    width: 700px;
+    z-index: 0;
+    min-height: 50px;
+    
+    }
+
+table td
+{
+    padding: 5px;
+   
+   
+}
+
+table th {
+    padding: 6px 5px;
+    text-align: left;
+    background-color: #e8eef4;
+    border: solid 1px #e8eef4;
+   
+}
+
+table tr:hover {
+  
+    text-decoration: none;
+    background-color:rgb(231,231,231);
+}
+
+
+
+*/
+/*table
+{
+    border: 1px solid #000;
+    border-collapse: collapse;
+    color: #666666;
+    min-width: 500px;
+    width: 100%;
+    background-color: #CCFFCC;
+}
+
+table tr
+{
+    background-color: #FFFF99;
+}
+
+table td {
+    padding: 5px;
+    border: solid 1px #e8eef4;
+    background-color: #FFFF99;
+}
+
+table th {
+    padding: 6px 5px;
+    text-align: left;
+    background-color: #e8eef4;
+    border: solid 1px #e8eef4;
+    background-color: #FFFF99;
+}*/
+
+/* MISC  
+----------------------------------------------------------*/

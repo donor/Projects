@@ -1,0 +1,92 @@
+﻿@model Inbid.ViewModels.OfferViewModel
+
+<table id="tbMessages">
+<thead>
+<tr><td>
+Wiadomości od Właściciela aukcji
+</td></tr>
+</thead>
+<tbody>
+@foreach (var item in Model.Messages)
+{
+<tr id="@item.MessageId">
+<td>
+@item.Information
+</td>
+</tr>
+
+
+}
+</tbody>
+</table>
+
+<script type="text/javascript">
+//    $(document).ready(function () {
+//        var period = 5000;   
+//         AddMessages(period);
+//        
+
+//    });
+
+//    function AddMessages(t) {
+
+//        i = 0;
+//        var Rows = new Array();
+//        $("#tbMessages tbody tr").each(function () {
+//            Rows[i] = $(this).attr("id").toString();
+//            i++;
+//        });
+
+//        //var Rows = getMessageIds()
+//        var id = $("#tOferts").attr("aId");
+//        var json = { 'ids':Rows};
+
+//        if (id != '') {
+//            jQuery.ajaxSettings.traditional = true;
+//            //$.post("/Inbid/Offer/GetMessages/" + id, json,
+//            var url = '@Url.Action("GetMessages","Offer")/' + $("#tOferts").attr("aId");
+
+//          //  $.post("GetMessages/" + id, json,
+//            $.post(url, json,
+//                    function (data) {
+//                        if (data != null) {
+//                            var newRows = JSON.parse(data);
+
+//                            for (i = 0; i < newRows.length; i++) {
+
+//                                var rowId = newRows[i].MessageId;
+//                                var msg = newRows[i].Information;
+
+//                                var insertHtml = '<tr  id="' + rowId + '">' +
+//                                                    '<td>' +
+//                                                       msg +
+//                                                    '</td>' +
+//                                                 '</tr>';
+
+////                                $(insertHtml).fadeTo(0, 0, function(){
+////                                    $("#tbMessages tbody").prepend(insertHtml).fadeTo('2000',1);
+////                                });
+//                                
+//                                $("#tbMessages tbody").prepend(insertHtml);
+//                            }
+//                        }
+//                    });
+//        }
+//        t += 5000;
+//        setTimeout(function () { AddMessages(t) }, t);
+//    }
+
+//    function getMessageIds() {
+//        i = 0;
+//        var rows = new Array();
+//        $("#tbMessages tbody tr").each(function () {
+//            //rows[i] = '{\"MessageId\": ' + $(this).attr("id") + '}';
+//            //var z = $(this).attr("id").toString();
+//            //rows[i] = z;
+//            rows[i] = $(this).attr("id").toString();
+//            i++;
+//        });
+//        return rows;
+//    }
+
+</script>

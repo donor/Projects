@@ -1,0 +1,49 @@
+﻿
+<ul id="menu">
+                <li>
+                    @Html.ActionLink("Womens", "Index", "Clothes", new {gender="Womens" })
+                    <span>
+                        @Html.ActionLink("Tops", "Index", "Home")
+                        @Html.ActionLink("Dresses", "Index", "Home")
+                        @Html.ActionLink("Bottoms", "Index", "Home")
+                        @Html.ActionLink("Headwear", "Index", "Home")
+                        @Html.ActionLink("Accessorie", "Index", "Home")
+                        @Html.ActionLink("Outerwear", "Index", "Home")
+                        @Html.ActionLink("Shoes", "Index", "Home")
+                    </span>
+                </li>
+                <li>
+                    @Html.ActionLink("Mens", "Index", "Clothes", new { gender = "Mens" })
+                    <span>
+                        @Html.ActionLink("Tops", "Index", "Home")                        
+                        @Html.ActionLink("Bottoms", "Index", "Home")
+                        @Html.ActionLink("Headwear", "Index", "Home")
+                        @Html.ActionLink("Accessorie", "Index", "Home")
+                        @Html.ActionLink("Outerwear", "Index", "Home")
+                        @Html.ActionLink("Shoes", "Index", "Home")
+                    </span>
+                </li>
+                <li>
+                    @Html.ActionLink("Youth", "Index", "Clothes", new { gender = "Youths" })
+                    <span>
+                        @Html.ActionLink("Boys", "Index", "Home")
+                        @Html.ActionLink("Girls", "Index", "Home")
+                        @Html.ActionLink("Toodler", "Index", "Home")                        
+                        @Html.ActionLink("Accessorie", "Index", "Home")
+                        @Html.ActionLink("Infant", "Index", "Home")                        
+                    </span>
+                </li>
+
+                               
+            
+            </ul>
+
+
+
+
+
+
+
+            @*    @if ( Request.IsAuthenticated && HttpContext.Current.User.IsInRole( "Admin" ) ) *@
+
+            @*((Roles.IsUserInRole(User.Identity.Name, @"SuperAdmin"))&&(CanAddOffer(offer.AuctionId, offer.UserId)))*@

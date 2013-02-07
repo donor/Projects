@@ -1,0 +1,49 @@
+library ieee; 
+
+use ieee.std_logic_1164.all; 
+
+entity swap is 
+  
+  port ( 
+    A  : in  std_logic_vector(15 downto 0); 
+   
+    SWAPWyj  : out  std_logic_vector(15 downto 0)); 
+   
+    
+end swap; 
+
+architecture behave of swap is 
+
+begin 
+process(A) 
+begin 
+
+  
+   SWAPWyj(15) <= A(7);
+   SWAPWyj(14) <= A(6);
+   SWAPWyj(13) <= A(5);
+   SWAPWyj(12) <= A(4);
+   SWAPWyj(11) <= A(3);
+   SWAPWyj(10) <= A(2);
+   SWAPWyj(9) <= A(1);
+   SWAPWyj(8) <= A(0);
+
+   
+
+
+   SWAPWyj(7) <= A(15);
+   SWAPWyj(6) <= A(14);
+   SWAPWyj(5) <= A(13);
+   SWAPWyj(4) <= A(12);
+   SWAPWyj(3) <= A(11);
+   SWAPWyj(2) <= A(10);
+   SWAPWyj(1) <= A(9);
+   SWAPWyj(0) <= A(8);
+   
+   
+
+
+
+
+end process; 
+end behave; 

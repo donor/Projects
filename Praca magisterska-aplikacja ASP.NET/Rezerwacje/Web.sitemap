@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode  roles="*" >
+        <siteMapNode url="~/Pracownicy/ZarzadzanieImprezami.aspx" title="Zarządzanie imprezami"  description="dodaj, usuń, zobacz imprezy"  roles="Pracownik, Admin"/>
+        <siteMapNode url="~/Pracownicy/Klienci.aspx" title="Klienci"  description="dodaj, usuń, zobacz klientów"  roles="Pracownik, Admin"/>
+      <siteMapNode url="~/Pracownicy/Wplaty.aspx" title="Wplaty"  description="obsługa wpłat i potwierdzanie biletów"  roles="Pracownik"/>
+        <siteMapNode url="~/Admin/ZarzadzaniePracownikami.aspx" title="Pracownicy"  description="Zarządzanie pracownikami"  roles="Admin"/>
+      <siteMapNode url="~/ListaImprez.aspx" title="Imprezy"  description="Lista imprez w ofercie" roles="*" />
+      <siteMapNode url="~/CheckOut.aspx" title="Koszyk"  description="Zawartość twojego koszyka" roles="*"   />
+    </siteMapNode>
+</siteMap>

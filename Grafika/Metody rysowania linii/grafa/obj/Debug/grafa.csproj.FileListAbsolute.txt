@@ -1,0 +1,50 @@
+C:\Documents and Settings\donor\Ustawienia lokalne\Dane aplikacji\Temporary Projects\grafa\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\donor\Ustawienia lokalne\Dane aplikacji\Temporary Projects\grafa\obj\Debug\grafa.MainWindow.resources
+C:\Documents and Settings\donor\Ustawienia lokalne\Dane aplikacji\Temporary Projects\grafa\obj\Debug\grafa.Properties.Resources.resources
+C:\Documents and Settings\donor\Ustawienia lokalne\Dane aplikacji\Temporary Projects\grafa\obj\Debug\grafa.csproj.GenerateResource.Cache
+C:\Documents and Settings\donor\Ustawienia lokalne\Dane aplikacji\Temporary Projects\grafa\bin\Debug\grafa.exe
+C:\Documents and Settings\donor\Ustawienia lokalne\Dane aplikacji\Temporary Projects\grafa\bin\Debug\grafa.pdb
+C:\Documents and Settings\donor\Ustawienia lokalne\Dane aplikacji\Temporary Projects\grafa\obj\Debug\grafa.exe
+C:\Documents and Settings\donor\Ustawienia lokalne\Dane aplikacji\Temporary Projects\grafa\obj\Debug\grafa.pdb
+D:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Debug\grafa.exe
+D:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Debug\grafa.pdb
+D:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\bin\Debug\grafa.exe
+D:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\bin\Debug\grafa.pdb
+D:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Debug\ResolveAssemblyReference.cache
+D:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Debug\grafa.MainWindow.resources
+D:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Debug\grafa.Properties.Resources.resources
+D:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Debug\grafa.csproj.GenerateResource.Cache
+F:\grafa\grafa\obj\Debug\grafa.exe
+F:\grafa\grafa\obj\Debug\grafa.pdb
+F:\grafa\grafa\bin\Debug\grafa.exe
+F:\grafa\grafa\bin\Debug\grafa.pdb
+F:\grafa\grafa\obj\Debug\ResolveAssemblyReference.cache
+F:\grafa\grafa\obj\Debug\grafa.MainWindow.resources
+F:\grafa\grafa\obj\Debug\grafa.Properties.Resources.resources
+F:\grafa\grafa\obj\Debug\grafa.csproj.GenerateResource.Cache
+G:\grafa\grafa\obj\Debug\grafa.exe
+G:\grafa\grafa\obj\Debug\grafa.pdb
+G:\grafa\grafa\bin\Debug\grafa.exe
+G:\grafa\grafa\bin\Debug\grafa.pdb
+G:\grafa\grafa\obj\Debug\ResolveAssemblyReference.cache
+G:\grafa\grafa\obj\Debug\grafa.MainWindow.resources
+G:\grafa\grafa\obj\Debug\grafa.Properties.Resources.resources
+G:\grafa\grafa\obj\Debug\grafa.csproj.GenerateResource.Cache
+F:\grafa\grafa\obj\Debug\grafa.Autorzy.resources
+F:\grafa\grafa\obj\Debug\grafa.InstrukcjaObslugi.resources
+F:\grafa\grafa\obj\Debug\grafa.Algorytm.resources
+G:\grafa\grafa\obj\Debug\grafa.Algorytm.resources
+G:\grafa\grafa\obj\Debug\grafa.Autorzy.resources
+G:\grafa\grafa\obj\Debug\grafa.InstrukcjaObslugi.resources
+C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Debug\grafa.exe
+C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Debug\grafa.pdb
+C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\bin\Debug\grafa.exe
+C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\bin\Debug\grafa.pdb
+C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Debug\ResolveAssemblyReference.cache
+C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Debug\grafa.Algorytm.resources
+C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Debug\grafa.Autorzy.resources
+C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Debug\grafa.InstrukcjaObslugi.resources
+C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Debug\grafa.MainWindow.resources
+C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Debug\grafa.Properties.Resources.resources
+C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Debug\GenerateResource.read.1.tlog
+C:\nauka\specjalność\rok V\semestr II\Grafika komputerowa\grafa\grafa\obj\Debug\GenerateResource.write.1.tlog

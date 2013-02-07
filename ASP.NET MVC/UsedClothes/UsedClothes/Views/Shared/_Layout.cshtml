@@ -1,0 +1,81 @@
+﻿@using ClientDependency.Core
+@using ClientDependency.Core.Mvc
+<!DOCTYPE html>
+<html>
+<head>
+	<title>@ViewBag.Title</title>
+	
+	@MvcHtmlString.Create(Html.RenderCssHere(new List<IClientDependencyPath>
+												{
+													new BasicPath("Base", "~/Content/themes/base"),
+													new BasicPath("Content", "~/Content")
+												}))
+
+	@MvcHtmlString.Create(Html.RenderJsHere(new List<IClientDependencyPath>
+											   {
+												   new BasicPath("Scripts", "~/Scripts"),
+												   new BasicPath("googleCDN", "http://ajax.googleapis.com/ajax/libs/"),
+												   new BasicPath("Content", "~/Content")
+												   
+											   }))
+
+	@{
+        Html.RequiresCss("Site.css", "Content", 1);
+	}
+
+   @* <link href="@Url.Content("~/Content/themes/base/jquery.ui.all.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.8.3.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.9.2.min.js")" type="text/javascript"></script>
+      <script src="@Url.Content("~/Scripts/autocomplete.js")" type="text/javascript"></script>
+
+   *@
+
+</head>
+<body>
+   <div class="page">
+       <div id="header">
+         <div id="logo" style="clear:none;" >
+            <a href="@(Url.Action("Index","Home"))" >
+            <img id="imglogo" src="@Url.Content("~/Content/logo.png")" />
+            </a>
+         </div>
+        
+         @if (Request.IsAuthenticated)
+        {
+        <div id="changePassword" style="clear:none;">
+           <a href="@Url.Action("ChangePassword", "Account")">Zmien haslo </a>
+        </div>
+        }
+               
+        <div id="logindisplay" style="clear:none;">
+      
+            @Html.Partial("_LogOnPartial")
+        </div> 
+
+        <div id="topmenu" style="clear:none;">
+            @Html.Partial("_TopMenu")          
+               @{Html.RenderAction("CartSummary", "ShoppingCart");}          
+         </div>
+
+        
+    @Html.Partial("_Menu")
+     </div>
+    
+  <div id="main">
+  
+  <h2 id="msg0">@ViewBag.Message</h2>
+<h4 id="msg">@TempData["Message"]</h4>
+    
+     
+            @RenderBody()
+     </div>   
+     <div class="clear">
+        </div>
+    
+
+    </div>
+
+
+<div class="footer">Copyright &copy; 2012 uOdzież</div>
+</body>
+</html>

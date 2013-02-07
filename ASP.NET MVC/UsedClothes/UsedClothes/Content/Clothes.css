@@ -1,0 +1,18 @@
+﻿.main .view-opts {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #BFBFC1;
+    height: 38px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    width: 963px;
+    z-index: 100;
+}
+.view-opts {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #BFBFC1;
+    height: 38px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    width: 100%;
+    z-index: 100;
+}

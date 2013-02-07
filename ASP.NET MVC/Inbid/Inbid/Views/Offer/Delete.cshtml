@@ -1,0 +1,27 @@
+﻿@model Inbid.Models.Offer
+
+@using Resources
+
+@{
+	ViewBag.Title = Resources.DeleteConfirmation + ": " + Model.OfferId;
+}
+
+<h2>
+	@Resources.DeleteConfirmation
+</h2>
+
+<div>
+	<p>Potwierdz usuniecie oferty 
+    @*@Resources.PleaseConfirmCancelOffer*@
+	<i> @Model.OfferId ? </i> </p>
+</div>
+	
+
+
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> 
+     
+    </p>
+}
+   @Html.ActionLink("Back to List", "Index", new {auctionNumber=Model.AuctionId })

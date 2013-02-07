@@ -1,0 +1,119 @@
+﻿body {
+}
+
+.company
+{
+      border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin:  1.5em 0 1.5em 0;
+}
+
+.bidderOffers
+{
+    float: right;
+    width: 500px; /*height:150px;
+    max-height:600px;*/
+}
+
+.bidderInfo
+{
+ float: left;
+    width: 450px;   
+}
+
+
+/*table of offerts*/
+#members
+{
+      border-collapse: collapse;   
+    /*
+   
+    border-collapse: collapse;
+    width: 700px;
+    background-color: #FFFF99;
+    font-size: 12px;*/
+}
+
+#members tr
+{
+    
+   
+    text-align: center;
+    
+    }
+
+#members td
+{
+    text-align: center;
+  
+}
+#members thead
+{
+    text-align: center;
+      background-color: #FFFFFF;
+}
+
+#members thead td
+{
+    padding:5px;   
+}
+
+#members th {
+    padding: 6px 5px;
+    text-align:center;
+  
+  
+   
+}
+
+ 
+
+#members tr:hover {
+    /*color: white;*/
+    /*  cursor: pointer;
+    text-decoration: none;*/
+    /*background-color:rgb(231,231,231);*/
+}
+
+
+#auctionSource, #membersSources
+{
+   
+    clear: both;
+}
+
+#auctionSource a:link, #auctionSource a:visited, #auctionSource a:hover, #auctionSource a:active,
+#membersSource a:link, #membersSource a:visited, #membersSource a:hover, #membersSource a:active
+{
+     background-position: left center;
+    background-repeat: no-repeat;
+    font-size: 14px;
+    padding-left: 12px;
+}
+
+a.source-closed:link, a.source-closed:visited, a.source-closed:hover, a.source-closed:active
+{
+    /*background-image: url('Img/arrowDown.png');*/
+    background-image: url('Img/childClosed.gif');
+}
+
+a.source-opened:link, a.source-opened:visited, a.source-opened:hover, a.source-opened:active
+{
+    /*background-image: url('Img/arrowUp.png');*/
+    background-image: url('Img/childOpened.gif');
+}
+
+.empty
+{
+    margin-left:12px;
+}
+
+#companyDetails
+{
+ margin: 0 0 0 100px;   
+}
+
+#tbCompanyProporties thead
+{
+    text-align: center;
+}

@@ -1,0 +1,17 @@
+﻿@*@Html.TextBox(/*""*/null, /*ViewData.TemplateInfo.FormattedModelValue*/null, new { @class = "datetimefield"/*, type = "datetime"*/ })*@
+@*@Html.TextBox("", ViewData.TemplateInfo.FormattedModelValue, new { @class = "datetimefield", type = "datetime" })*@
+
+@*<script type="text/javascript">
+    $(function () {
+        if (!Modernizr.inputtypes.date) {
+            //            $("input[type='datetime']").datetime({
+            //                userLang: 'en',
+            //                americanMode: true
+            //            });
+        }
+    });
+</script>
+*@
+
+
+@Html.TextBox("",ViewData.TemplateInfo.FormattedModelValue  ,new { @class = "datetimefield", type = "datetime" })

@@ -1,0 +1,481 @@
+﻿@using Resources
+
+  @*<script src="@Url.Content("~/Scripts/zmiany.js")" type="text/javascript"></script>*@
+<link href="@Url.Content("~/Content/offers.css")" rel="stylesheet" type="text/css" />
+ 
+    
+@*@model IEnumerable<Inbid.Models.Offer>*@
+@model Inbid.ViewModels.OfferViewModel
+          
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p/>
+ @*@Html.ActionLink("Add Offer", "Create", new { auctionNumber = Request.QueryString["auctionNumber"],  })*@
+@*</p>*@
+
+ 
+         
+
+ <div id="body">
+   @Html.Partial("_AuctionDetails")                     
+ 
+ @*@Html.Partial("_DeadlineTimer")*@
+ @*@if ((Model.Auction.EnableDisable) && (Model.Auction.StartTime < System.DateTime.Now) && (Model.Auction.EndTime > System.DateTime.Now))
+ {
+  
+ }*@
+ 
+ <label id="data"> </label>
+
+<div id="tOferts" aId="@Request.QueryString["auctionNumber"]"> 
+@if (Model.Offers.Count() > 0)
+{ 
+<table id="oferts">
+  <thead>
+
+ 
+  <tr>
+  <td>@Resources.Status</td>
+  <td>@Resources.DataOffer</td>
+  <td nowrap="nowrap"> @Resources.CurrentPrice</td>
+  <td nowrap="nowrap"> @Resources.StartPrice</td>
+  <td nowrap="nowrap">@Resources.Change</td>
+ @* <td>tymczasowa</td>*@
+  </tr>
+  </thead>
+   <tbody id="@Request.QueryString["auctionNumber"]" >
+    @foreach (var item in Model.Offers)
+    {       
+        <tr id="row-@item.OfferId" value="@item.CurrentPrice"   >
+        <td id="status-@item.OfferId" >      
+        @if (item.IsOnline())
+        {
+           @:online
+           <br />
+           <img src="@Url.Content("~/Content/OnlineStatus/online.png")"  alt="online"  />
+        }
+        else
+        {           
+           @:offline 
+           <br />
+           <img src="@Url.Content("~/Content/OnlineStatus/offline.png")"  alt="offline"  />
+        }
+        </td>
+
+        <td>
+            <table  class="innerOfferts" >
+            <tr>
+            <td class="firstColumn" nowrap="nowrap"> 
+                Id: 
+            </td>
+            <td class="secondColumn">
+                @item.OfferId
+            </td>
+            </tr>
+            <tr>
+            <td  class="firstColumn"nowrap="nowrap" > 
+                @Resources.Name:
+            </td>
+            <td class="secondColumn"> @item.GetUserName()</td>
+            </tr>               
+        </table>
+        </td>       
+            <td id="value-@item.OfferId">                                   
+                 @item.CurrentPrice.ToString("N02")                                
+            </td>
+            <td>                
+                 @item.StartPrice.ToString("N02") 
+            </td>
+            <td id="change-@item.OfferId">           
+                @item.Change()                   
+            </td>       
+        </tr>
+        if ((Request.IsAuthenticated) && ((User.Identity.Name == item.GetUserName())||Roles.IsUserInRole(User.Identity.Name, @"SuperAdmin")))
+        {
+        <script type="text/javascript">
+        $(function(){
+        var offerId='@item.OfferId';
+        $('#row-' + offerId).css("background-color", "rgb(231,231,231)");
+        $('#row-' + offerId).css("cursor", "pointer");
+             
+             $('#row-'+offerId).bind("click",function () {              
+                var id = $(this).attr("id").substring(4, $(this).attr("id").length);
+             //   window.location = 'Offer/Edit/'+ id;            
+                var url = '@Url.Action("Edit","Offer")/' + id;
+                window.location=url;
+                  
+            });
+        });   
+        </script>
+        }
+    }
+    </tbody>   
+</table>
+}
+else if (Model.Offers.Count() == 0)
+{
+<p>Brak ofert</p>
+}
+
+</div>
+
+@if (((Model.Auction.StartTime.ToUniversalTime() < System.DateTime.Now.ToUniversalTime()) && (Model.Auction.EndTime.ToUniversalTime() > System.DateTime.Now.ToUniversalTime())))
+{
+    if ((Request.IsAuthenticated) && (Roles.IsUserInRole(User.Identity.Name, @"SuperAdmin") || Model.Auction.IsHostedBy()))
+    {
+        <div id="mesagesAndAdminPanel">
+        <strong>Zawieś lub wznów aukcje</strong>
+        <button class="EnableDisable" auctionId="@Request.QueryString["auctionNumber"]" value="@Model.Auction.EnableDisable">
+        @if (@Model.Auction.EnableDisable == true)
+        {
+            @:Pause
+        }
+        else
+        {
+            @:Play
+        }
+    
+        </button>
+         @Html.Partial("_Publisher")
+        </div>
+    
+    }
+    else
+    {
+   
+    <div id="messages">
+  @Html.Partial("_Messanger")
+
+    </div>
+   
+    }
+    
+}
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        
+        var time = 3000;        
+        var period=1000;
+        //update(time);
+      setInterval(function () { update(time) }, time);
+
+            setInterval(function() {goingToDeath()},period );
+    
+       Switch();
+    });
+
+
+    function goingToDeath()
+    {     
+      //$(".AuctionStatus").attr("state", auctionStatus.Value);
+
+
+      if (($(".AuctionStatus").attr("state")=="true"))
+           downCounting();
+      else
+          $("#data").text("");                                    
+    }
+
+   
+    function Switch() {
+        $(".EnableDisable").click(function () {
+            var id = $(this).attr("auctionId");
+
+            var Value = $(this).attr("value");
+
+            if (Value == "True") {
+                $(this).text("Play");
+                $(this).attr("value", "False");
+                $(".AuctionStatus").text("Zawieszona");
+                $(".AuctionStatus").attr("state")=="false";
+                  $("#data").text("");         
+            }
+            if (Value == "False") {
+                $(this).text("Pause");
+                $(this).attr("value", "True");
+                $(".AuctionStatus").text("Trwa");
+                $(".AuctionStatus").attr("state")=="true";
+            }
+
+            
+            if (id != '') {
+                //$.post("/Inbid/Offer/EnableDisableAuction/" + id)
+                var url = '@Url.Action("EnableDisableAuction","Offer")/' + id;
+                $.post(url);
+            }
+
+
+        });
+    }
+
+   
+     function downCounting() {
+        var year=@Model.Auction.EndTime.Year;
+        var month=@Model.Auction.EndTime.Month-1;
+        var day=@Model.Auction.EndTime.Day;
+        var hour=@Model.Auction.EndTime.Hour;
+        var minute=@Model.Auction.EndTime.Minute;
+        var second=@Model.Auction.EndTime.Second;
+
+            var auctionEndTime = new Date(year,month,day,hour,minute,second);
+            var now = new Date();           
+            var display = auctionEndTime - now;
+            var date = getTimeSpan(display);            
+            $("#data").html("Do zakończenia aukcji pozostało: "+date.hour+" godzin "+date.minute+" minut "+date.second +" sekund");            
+            //perio+=1000
+          //  setTimeout("downCounting()", perio);
+        };
+
+        function getTimeSpan(ticks) {
+            var d = new Date(ticks);
+            return {   
+                hour: Math.floor(ticks / 3600000),              
+                minute: d.getMinutes(),
+                second: d.getSeconds()
+            }
+        }
+
+
+    function update(t) {
+
+     i = 0;
+        var Rows = new Array();
+        $("#tbMessages tbody tr").each(function () {
+            Rows[i] = $(this).attr("id").toString();
+            i++;
+        });
+                
+        var id = $("#tOferts").attr("aId");
+        var json = { 'ids':Rows};
+        
+        var url = '@Url.Action("Update","Offer")/' + id;       
+        jQuery.ajaxSettings.traditional = true;
+
+        $.post(url, json,
+         function (data) {
+
+        if (data != null) {
+        
+           var json = JSON.parse(data);
+           var changes=json.UpdateRows;
+
+            for (var i = 0; i < changes.length; i++) {
+
+                var c = changes[i].NextRowId;
+                var stop = false;
+                for (var j = 0; j < changes.length; j++) {
+                    if (c == changes[j].RowId) {
+                        stop = true;
+                        break;
+                    }
+                }
+
+                if (!stop) {
+                    //dodawanie wiersza
+                    if (changes[i].Add == true) {
+
+                        var id = changes[i].RowId;
+                        var status = changes[i].IsOnline;
+                        var online = changes[i].IsOnline;
+                        var userName = changes[i].UserName;
+                        var currentPrice = changes[i].Value;
+                        var startValue = changes[i].StartValue;
+                        var change = changes[i].Change;
+                        var labelName = changes[i].LabelName;
+
+                        var insertHtml = '<tr id="row-' + id + '" value="' + currentPrice + '" >' +
+                            '<td id="row-' + id + '" >' +
+                            online +
+                            '<br />' +
+                            '<img src="/Inbid/Content/OnlineStatus/' + online + '.png")"  alt="' + online + '"/>' +
+
+                                            '</td >' +
+                                            '<td>' +
+                                            '<table  class="innerOfferts" >' +
+                                            '<tr>' +
+                                            '<td class="firstColumn" nowrap="nowrap">' +
+                                            'Id: </td' +
+                                            '<td class="secondColumn">' + id + '</td>' +
+                                            '</tr>' +
+                                            '<tr>' +
+                                            '<td class="firstColumn" nowrap="nowrap">' +
+                                            labelName +
+                                            '</td>' +
+                                            '<td class="secondColumn">' + userName + '</td>' +
+                                            '</tr>' +
+                                            '</table>' +
+                                            '</td>' +
+                                            '<td id="value-' + id + '">' +
+                                            currentPrice +
+                                            '</td>' +
+                                            '<td>' +
+                                            startValue +
+                                            '</td>' +
+                                            '<td id="change-' + id + '">' +
+                                            change +
+                                            '</td>' +
+                                            '<td class="editRow">' +
+                                            '</td>' +
+                                            '</tr>';
+
+
+
+
+                        if (changes[i].NextRowId == -1) {
+                            // $(insertHtml).addClass('hiding');
+
+                            $('#oferts >tbody').append(insertHtml);
+                            // $("#row-"+changes[i].RowId).delay(10000).removeClass('addRow');
+                        }
+                        else {
+                            //var insertPos = document.getElementById('row-' + changes[i].NextRowId);
+                            var insertPos = $('#row-' + changes[i].NextRowId);
+
+
+                            $(insertHtml).insertBefore(insertPos);
+                        }
+                        changes.splice(i, 1);
+                        // i = -1;
+                        i = changes.length == i ? -1 : --i;
+                        continue;
+                    }
+                    //}
+
+                    //sekcja do podmiany--------------------------------------------------------------//
+                    if ((changes[i].Add == false) && (changes[i].Remove == false)) {
+
+                        var row = $('#row-' + changes[i].RowId);  //document.getElementById('row-' + changes[i].RowId);
+
+                        if (changes[i].NextRowId != -1)
+                            var insertPos = $('#row-' + changes[i].NextRowId);
+                        else
+                            var insertPos = -1
+
+                        // var parent = row.parentNode;
+
+                        var rowId = changes[i].RowId;
+
+                        var value = changes[i].Value;
+                        var change = changes[i].Change;
+
+
+                        // $(row).fadeTo('slow', 0.33, function () {
+
+                        //var insertPos = $('#row-' + changes[i].NextRowId);
+                        $('#value-' + rowId).text(value);
+                        $('#change-' + rowId).text(change);
+
+
+                        if (insertPos != -1) {
+                            $(row).insertBefore(insertPos);
+                            // $(row).fadeTo('slow', 1);
+                        }
+                        else {
+                            $('#oferts >tbody').append(row);
+                            //$(row).fadeTo('slow', 1);
+                        }
+                        changes.splice(i, 1);
+                        i = changes.length == i ? -1 : --i;
+                    }
+                }
+                var counter = 0;
+                for (k = 0; k < changes.length; k++) {
+                    if (changes[k].Remove == true)
+                        counter += 1;
+                }
+                if (counter == changes.length || changes.length == 0)
+                    break;
+                //--------------------------------------------------------------------------------------//
+            }
+
+            //usuwania wiersza
+            for (i = 0; i < changes.length; i++) {
+                if (changes[i].Remove == true) {
+                    var rowId = changes[i].RowId;
+                    //   $('#row-' + rowId).fadeOut('slow', function () {
+                    $('#row-' + rowId).remove();
+                    // });
+                }
+            }
+        //} tu był koniec ifa data!=null
+
+        //update online/offline
+        var updates=json.States
+         if (updates != null) {
+            for (var i = 0; i < updates.length; i++) {
+
+                var urlImg = '@Url.Content("~/Content/OnlineStatus/")';
+                // var insert = info[i].State + ' <br /><img src="/Inbid/Content/OnlineStatus/' + info[i].State + '.png"  alt=' + info[i].State + '  />'
+                var insert = updates[i].State + ' <br /><img src="' + urlImg + updates[i].State + '.png"  alt=' + updates[i].State + '  />'
+
+                $('#status-' + updates[i].RowId).html(insert);
+            }
+        }
+
+       
+        var auctionEndTime=json.AuctionEndTime.replace(/\/Date\((-?\d+)\)\//, '$1');
+         var enddate =new Date(parseInt(auctionEndTime));
+         var dateText=Globalize.format(enddate,"d");      
+         var timeText=Globalize.format(enddate,"T");      
+        $('#endTime').text(dateText+" "+timeText);
+
+
+        //status czyt trwa/zakonczona/nie rozpoczeta/zawieszona
+
+   
+        var auctionStatus=json.AuctionStatus; 
+         if (auctionStatus != null) {
+                            $(".AuctionStatus").attr("state", auctionStatus.Value);
+                            if ((auctionStatus.Value == true)) //||($(".EnableDisable").attr("value")=="True"))
+                                 downCounting();
+                               else
+                                 $("#data").text("");                                    
+
+
+                            $(".AuctionStatus").text(auctionStatus.Status);
+                            if ($(".EnableDisable") != null) {
+                                if ((auctionStatus.Value == true) ||($(".EnableDisable").attr("value")=="True"))
+                                   $(".EnableDisable").text("Pause");
+                                if ((auctionStatus.Value == false) ||($(".EnableDisable").attr("value")=="False"))
+                                   $(".EnableDisable").text("Play");
+                                }
+                        }
+                        
+    //dodawanie wiadomości
+                   var shortMessages=json.ShortMessages
+
+                        if (shortMessages != null) {
+                           // var newRows = JSON.parse(data);
+
+                            for (i = 0; i < shortMessages.length; i++) {
+
+                                var rowId = shortMessages[i].MessageId;
+                                var msg = shortMessages[i].Information;
+
+                                var insertHtml = '<tr  id="' + rowId + '">' +
+                                                    '<td>' +
+                                                       msg +
+                                                    '</td>' +
+                                                 '</tr>';
+                                $("#tbMessages tbody").prepend(insertHtml);
+                            }
+                        }
+    /////////////////////////////
+    }
+    })
+
+
+     //   t += 8000;
+        //t = 5000;
+       //setTimeout(function () { update(t) }, t);
+       //setInterval(function () { update(t) }, t);
+    };
+    
+</script>
+

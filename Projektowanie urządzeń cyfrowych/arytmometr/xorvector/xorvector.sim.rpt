@@ -1,0 +1,353 @@
+Simulator report for xorvector
+Fri Apr 02 17:27:24 2010
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 112 nodes    ;
+; Simulation Coverage         ;       5.36 % ;
+; Total Number of Transitions ; 32           ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
+; Device                      ; EP3C5F256C6  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport  ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport  ; Transport     ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       5.36 % ;
+; Total nodes checked                                 ; 112          ;
+; Total output ports checked                          ; 112          ;
+; Total output ports with complete 1/0-value coverage ; 6            ;
+; Total output ports with no 1/0-value coverage       ; 78           ;
+; Total output ports with no 1-value coverage         ; 106          ;
+; Total output ports with no 0-value coverage         ; 78           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                ;
++----------------------------+----------------------------+------------------+
+; Node Name                  ; Output Port Name           ; Output Port Type ;
++----------------------------+----------------------------+------------------+
+; |xorvector|inst13          ; |xorvector|inst13          ; combout          ;
+; |xorvector|inst14          ; |xorvector|inst14          ; combout          ;
+; |xorvector|OrWyj[2]~output ; |xorvector|OrWyj[2]~output ; o                ;
+; |xorvector|OrWyj[2]        ; |xorvector|OrWyj[2]        ; padout           ;
+; |xorvector|OrWyj[1]~output ; |xorvector|OrWyj[1]~output ; o                ;
+; |xorvector|OrWyj[1]        ; |xorvector|OrWyj[1]        ; padout           ;
++----------------------------+----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                     ;
++-----------------------------+-----------------------------+------------------+
+; Node Name                   ; Output Port Name            ; Output Port Type ;
++-----------------------------+-----------------------------+------------------+
+; |xorvector|inst             ; |xorvector|inst             ; combout          ;
+; |xorvector|inst1            ; |xorvector|inst1            ; combout          ;
+; |xorvector|inst2            ; |xorvector|inst2            ; combout          ;
+; |xorvector|inst3            ; |xorvector|inst3            ; combout          ;
+; |xorvector|inst4            ; |xorvector|inst4            ; combout          ;
+; |xorvector|inst5            ; |xorvector|inst5            ; combout          ;
+; |xorvector|inst6            ; |xorvector|inst6            ; combout          ;
+; |xorvector|inst7            ; |xorvector|inst7            ; combout          ;
+; |xorvector|inst8            ; |xorvector|inst8            ; combout          ;
+; |xorvector|inst9            ; |xorvector|inst9            ; combout          ;
+; |xorvector|inst10           ; |xorvector|inst10           ; combout          ;
+; |xorvector|inst11           ; |xorvector|inst11           ; combout          ;
+; |xorvector|inst12           ; |xorvector|inst12           ; combout          ;
+; |xorvector|inst15           ; |xorvector|inst15           ; combout          ;
+; |xorvector|OrWyj[15]~output ; |xorvector|OrWyj[15]~output ; o                ;
+; |xorvector|OrWyj[15]        ; |xorvector|OrWyj[15]        ; padout           ;
+; |xorvector|OrWyj[14]~output ; |xorvector|OrWyj[14]~output ; o                ;
+; |xorvector|OrWyj[14]        ; |xorvector|OrWyj[14]        ; padout           ;
+; |xorvector|OrWyj[13]~output ; |xorvector|OrWyj[13]~output ; o                ;
+; |xorvector|OrWyj[13]        ; |xorvector|OrWyj[13]        ; padout           ;
+; |xorvector|OrWyj[12]~output ; |xorvector|OrWyj[12]~output ; o                ;
+; |xorvector|OrWyj[12]        ; |xorvector|OrWyj[12]        ; padout           ;
+; |xorvector|OrWyj[11]~output ; |xorvector|OrWyj[11]~output ; o                ;
+; |xorvector|OrWyj[11]        ; |xorvector|OrWyj[11]        ; padout           ;
+; |xorvector|OrWyj[10]~output ; |xorvector|OrWyj[10]~output ; o                ;
+; |xorvector|OrWyj[10]        ; |xorvector|OrWyj[10]        ; padout           ;
+; |xorvector|OrWyj[9]~output  ; |xorvector|OrWyj[9]~output  ; o                ;
+; |xorvector|OrWyj[9]         ; |xorvector|OrWyj[9]         ; padout           ;
+; |xorvector|OrWyj[8]~output  ; |xorvector|OrWyj[8]~output  ; o                ;
+; |xorvector|OrWyj[8]         ; |xorvector|OrWyj[8]         ; padout           ;
+; |xorvector|OrWyj[7]~output  ; |xorvector|OrWyj[7]~output  ; o                ;
+; |xorvector|OrWyj[7]         ; |xorvector|OrWyj[7]         ; padout           ;
+; |xorvector|OrWyj[6]~output  ; |xorvector|OrWyj[6]~output  ; o                ;
+; |xorvector|OrWyj[6]         ; |xorvector|OrWyj[6]         ; padout           ;
+; |xorvector|OrWyj[5]~output  ; |xorvector|OrWyj[5]~output  ; o                ;
+; |xorvector|OrWyj[5]         ; |xorvector|OrWyj[5]         ; padout           ;
+; |xorvector|OrWyj[4]~output  ; |xorvector|OrWyj[4]~output  ; o                ;
+; |xorvector|OrWyj[4]         ; |xorvector|OrWyj[4]         ; padout           ;
+; |xorvector|OrWyj[3]~output  ; |xorvector|OrWyj[3]~output  ; o                ;
+; |xorvector|OrWyj[3]         ; |xorvector|OrWyj[3]         ; padout           ;
+; |xorvector|OrWyj[0]~output  ; |xorvector|OrWyj[0]~output  ; o                ;
+; |xorvector|OrWyj[0]         ; |xorvector|OrWyj[0]         ; padout           ;
+; |xorvector|A[15]~input      ; |xorvector|A[15]~input      ; o                ;
+; |xorvector|A[15]            ; |xorvector|A[15]            ; padout           ;
+; |xorvector|B[15]~input      ; |xorvector|B[15]~input      ; o                ;
+; |xorvector|B[15]            ; |xorvector|B[15]            ; padout           ;
+; |xorvector|A[14]~input      ; |xorvector|A[14]~input      ; o                ;
+; |xorvector|A[14]            ; |xorvector|A[14]            ; padout           ;
+; |xorvector|B[14]~input      ; |xorvector|B[14]~input      ; o                ;
+; |xorvector|B[14]            ; |xorvector|B[14]            ; padout           ;
+; |xorvector|A[13]~input      ; |xorvector|A[13]~input      ; o                ;
+; |xorvector|A[13]            ; |xorvector|A[13]            ; padout           ;
+; |xorvector|B[13]~input      ; |xorvector|B[13]~input      ; o                ;
+; |xorvector|B[13]            ; |xorvector|B[13]            ; padout           ;
+; |xorvector|A[12]~input      ; |xorvector|A[12]~input      ; o                ;
+; |xorvector|A[12]            ; |xorvector|A[12]            ; padout           ;
+; |xorvector|B[12]~input      ; |xorvector|B[12]~input      ; o                ;
+; |xorvector|B[12]            ; |xorvector|B[12]            ; padout           ;
+; |xorvector|A[11]~input      ; |xorvector|A[11]~input      ; o                ;
+; |xorvector|A[11]            ; |xorvector|A[11]            ; padout           ;
+; |xorvector|B[11]~input      ; |xorvector|B[11]~input      ; o                ;
+; |xorvector|B[11]            ; |xorvector|B[11]            ; padout           ;
+; |xorvector|A[10]~input      ; |xorvector|A[10]~input      ; o                ;
+; |xorvector|A[10]            ; |xorvector|A[10]            ; padout           ;
+; |xorvector|B[10]~input      ; |xorvector|B[10]~input      ; o                ;
+; |xorvector|B[10]            ; |xorvector|B[10]            ; padout           ;
+; |xorvector|A[9]~input       ; |xorvector|A[9]~input       ; o                ;
+; |xorvector|A[9]             ; |xorvector|A[9]             ; padout           ;
+; |xorvector|B[9]~input       ; |xorvector|B[9]~input       ; o                ;
+; |xorvector|B[9]             ; |xorvector|B[9]             ; padout           ;
+; |xorvector|A[8]~input       ; |xorvector|A[8]~input       ; o                ;
+; |xorvector|A[8]             ; |xorvector|A[8]             ; padout           ;
+; |xorvector|B[8]~input       ; |xorvector|B[8]~input       ; o                ;
+; |xorvector|B[8]             ; |xorvector|B[8]             ; padout           ;
+; |xorvector|A[7]~input       ; |xorvector|A[7]~input       ; o                ;
+; |xorvector|A[7]             ; |xorvector|A[7]             ; padout           ;
+; |xorvector|B[7]~input       ; |xorvector|B[7]~input       ; o                ;
+; |xorvector|B[7]             ; |xorvector|B[7]             ; padout           ;
+; |xorvector|A[6]~input       ; |xorvector|A[6]~input       ; o                ;
+; |xorvector|A[6]             ; |xorvector|A[6]             ; padout           ;
+; |xorvector|B[6]~input       ; |xorvector|B[6]~input       ; o                ;
+; |xorvector|B[6]             ; |xorvector|B[6]             ; padout           ;
+; |xorvector|A[5]~input       ; |xorvector|A[5]~input       ; o                ;
+; |xorvector|A[5]             ; |xorvector|A[5]             ; padout           ;
+; |xorvector|B[5]~input       ; |xorvector|B[5]~input       ; o                ;
+; |xorvector|B[5]             ; |xorvector|B[5]             ; padout           ;
+; |xorvector|A[4]~input       ; |xorvector|A[4]~input       ; o                ;
+; |xorvector|A[4]             ; |xorvector|A[4]             ; padout           ;
+; |xorvector|B[4]~input       ; |xorvector|B[4]~input       ; o                ;
+; |xorvector|B[4]             ; |xorvector|B[4]             ; padout           ;
+; |xorvector|A[3]~input       ; |xorvector|A[3]~input       ; o                ;
+; |xorvector|A[3]             ; |xorvector|A[3]             ; padout           ;
+; |xorvector|B[3]~input       ; |xorvector|B[3]~input       ; o                ;
+; |xorvector|B[3]             ; |xorvector|B[3]             ; padout           ;
+; |xorvector|A[2]~input       ; |xorvector|A[2]~input       ; o                ;
+; |xorvector|A[2]             ; |xorvector|A[2]             ; padout           ;
+; |xorvector|B[2]~input       ; |xorvector|B[2]~input       ; o                ;
+; |xorvector|B[2]             ; |xorvector|B[2]             ; padout           ;
+; |xorvector|A[1]~input       ; |xorvector|A[1]~input       ; o                ;
+; |xorvector|A[1]             ; |xorvector|A[1]             ; padout           ;
+; |xorvector|B[1]~input       ; |xorvector|B[1]~input       ; o                ;
+; |xorvector|B[1]             ; |xorvector|B[1]             ; padout           ;
+; |xorvector|A[0]~input       ; |xorvector|A[0]~input       ; o                ;
+; |xorvector|A[0]             ; |xorvector|A[0]             ; padout           ;
+; |xorvector|B[0]~input       ; |xorvector|B[0]~input       ; o                ;
+; |xorvector|B[0]             ; |xorvector|B[0]             ; padout           ;
++-----------------------------+-----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                     ;
++-----------------------------+-----------------------------+------------------+
+; Node Name                   ; Output Port Name            ; Output Port Type ;
++-----------------------------+-----------------------------+------------------+
+; |xorvector|inst             ; |xorvector|inst             ; combout          ;
+; |xorvector|inst1            ; |xorvector|inst1            ; combout          ;
+; |xorvector|inst2            ; |xorvector|inst2            ; combout          ;
+; |xorvector|inst3            ; |xorvector|inst3            ; combout          ;
+; |xorvector|inst4            ; |xorvector|inst4            ; combout          ;
+; |xorvector|inst5            ; |xorvector|inst5            ; combout          ;
+; |xorvector|inst6            ; |xorvector|inst6            ; combout          ;
+; |xorvector|inst11           ; |xorvector|inst11           ; combout          ;
+; |xorvector|inst12           ; |xorvector|inst12           ; combout          ;
+; |xorvector|inst15           ; |xorvector|inst15           ; combout          ;
+; |xorvector|OrWyj[15]~output ; |xorvector|OrWyj[15]~output ; o                ;
+; |xorvector|OrWyj[15]        ; |xorvector|OrWyj[15]        ; padout           ;
+; |xorvector|OrWyj[14]~output ; |xorvector|OrWyj[14]~output ; o                ;
+; |xorvector|OrWyj[14]        ; |xorvector|OrWyj[14]        ; padout           ;
+; |xorvector|OrWyj[13]~output ; |xorvector|OrWyj[13]~output ; o                ;
+; |xorvector|OrWyj[13]        ; |xorvector|OrWyj[13]        ; padout           ;
+; |xorvector|OrWyj[12]~output ; |xorvector|OrWyj[12]~output ; o                ;
+; |xorvector|OrWyj[12]        ; |xorvector|OrWyj[12]        ; padout           ;
+; |xorvector|OrWyj[11]~output ; |xorvector|OrWyj[11]~output ; o                ;
+; |xorvector|OrWyj[11]        ; |xorvector|OrWyj[11]        ; padout           ;
+; |xorvector|OrWyj[10]~output ; |xorvector|OrWyj[10]~output ; o                ;
+; |xorvector|OrWyj[10]        ; |xorvector|OrWyj[10]        ; padout           ;
+; |xorvector|OrWyj[9]~output  ; |xorvector|OrWyj[9]~output  ; o                ;
+; |xorvector|OrWyj[9]         ; |xorvector|OrWyj[9]         ; padout           ;
+; |xorvector|OrWyj[4]~output  ; |xorvector|OrWyj[4]~output  ; o                ;
+; |xorvector|OrWyj[4]         ; |xorvector|OrWyj[4]         ; padout           ;
+; |xorvector|OrWyj[3]~output  ; |xorvector|OrWyj[3]~output  ; o                ;
+; |xorvector|OrWyj[3]         ; |xorvector|OrWyj[3]         ; padout           ;
+; |xorvector|OrWyj[0]~output  ; |xorvector|OrWyj[0]~output  ; o                ;
+; |xorvector|OrWyj[0]         ; |xorvector|OrWyj[0]         ; padout           ;
+; |xorvector|A[15]~input      ; |xorvector|A[15]~input      ; o                ;
+; |xorvector|A[15]            ; |xorvector|A[15]            ; padout           ;
+; |xorvector|B[15]~input      ; |xorvector|B[15]~input      ; o                ;
+; |xorvector|B[15]            ; |xorvector|B[15]            ; padout           ;
+; |xorvector|A[14]~input      ; |xorvector|A[14]~input      ; o                ;
+; |xorvector|A[14]            ; |xorvector|A[14]            ; padout           ;
+; |xorvector|B[14]~input      ; |xorvector|B[14]~input      ; o                ;
+; |xorvector|B[14]            ; |xorvector|B[14]            ; padout           ;
+; |xorvector|A[13]~input      ; |xorvector|A[13]~input      ; o                ;
+; |xorvector|A[13]            ; |xorvector|A[13]            ; padout           ;
+; |xorvector|B[13]~input      ; |xorvector|B[13]~input      ; o                ;
+; |xorvector|B[13]            ; |xorvector|B[13]            ; padout           ;
+; |xorvector|A[12]~input      ; |xorvector|A[12]~input      ; o                ;
+; |xorvector|A[12]            ; |xorvector|A[12]            ; padout           ;
+; |xorvector|B[12]~input      ; |xorvector|B[12]~input      ; o                ;
+; |xorvector|B[12]            ; |xorvector|B[12]            ; padout           ;
+; |xorvector|A[11]~input      ; |xorvector|A[11]~input      ; o                ;
+; |xorvector|A[11]            ; |xorvector|A[11]            ; padout           ;
+; |xorvector|B[11]~input      ; |xorvector|B[11]~input      ; o                ;
+; |xorvector|B[11]            ; |xorvector|B[11]            ; padout           ;
+; |xorvector|A[10]~input      ; |xorvector|A[10]~input      ; o                ;
+; |xorvector|A[10]            ; |xorvector|A[10]            ; padout           ;
+; |xorvector|B[10]~input      ; |xorvector|B[10]~input      ; o                ;
+; |xorvector|B[10]            ; |xorvector|B[10]            ; padout           ;
+; |xorvector|A[9]~input       ; |xorvector|A[9]~input       ; o                ;
+; |xorvector|A[9]             ; |xorvector|A[9]             ; padout           ;
+; |xorvector|B[9]~input       ; |xorvector|B[9]~input       ; o                ;
+; |xorvector|B[9]             ; |xorvector|B[9]             ; padout           ;
+; |xorvector|B[8]~input       ; |xorvector|B[8]~input       ; o                ;
+; |xorvector|B[8]             ; |xorvector|B[8]             ; padout           ;
+; |xorvector|B[7]~input       ; |xorvector|B[7]~input       ; o                ;
+; |xorvector|B[7]             ; |xorvector|B[7]             ; padout           ;
+; |xorvector|B[6]~input       ; |xorvector|B[6]~input       ; o                ;
+; |xorvector|B[6]             ; |xorvector|B[6]             ; padout           ;
+; |xorvector|B[5]~input       ; |xorvector|B[5]~input       ; o                ;
+; |xorvector|B[5]             ; |xorvector|B[5]             ; padout           ;
+; |xorvector|A[4]~input       ; |xorvector|A[4]~input       ; o                ;
+; |xorvector|A[4]             ; |xorvector|A[4]             ; padout           ;
+; |xorvector|B[4]~input       ; |xorvector|B[4]~input       ; o                ;
+; |xorvector|B[4]             ; |xorvector|B[4]             ; padout           ;
+; |xorvector|A[3]~input       ; |xorvector|A[3]~input       ; o                ;
+; |xorvector|A[3]             ; |xorvector|A[3]             ; padout           ;
+; |xorvector|B[3]~input       ; |xorvector|B[3]~input       ; o                ;
+; |xorvector|B[3]             ; |xorvector|B[3]             ; padout           ;
+; |xorvector|A[0]~input       ; |xorvector|A[0]~input       ; o                ;
+; |xorvector|A[0]             ; |xorvector|A[0]             ; padout           ;
+; |xorvector|B[0]~input       ; |xorvector|B[0]~input       ; o                ;
+; |xorvector|B[0]             ; |xorvector|B[0]             ; padout           ;
++-----------------------------+-----------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Apr 02 17:27:22 2010
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off xorvector -c xorvector
+Info: Using vector source file "f:/xorvector/xorvector.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       5.36 %
+Info: Number of transitions in simulation is 32
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 117 megabytes
+    Info: Processing ended: Fri Apr 02 17:27:25 2010
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,180 @@
+﻿<error errorId="f4e31cb7-6cd1-45a7-9b04-f5c4971bb8cc" application="/LM/W3SVC/1/ROOT/Inbid" host="DONOR-HP" type="System.Web.HttpException" message="Nie znaleziono ścieżki '/Inbid/Views/Offer/Index.cshtml'." source="System.Web" detail="System.Web.HttpException (0x80004005): Nie znaleziono ścieżki '/Inbid/Views/Offer/Index.cshtml'.&#xD;&#xA;   w System.Web.HttpNotFoundHandler.ProcessRequest(HttpContext context)&#xD;&#xA;   w System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   w System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="franek0" time="2012-03-07T16:36:06.9834883Z" statusCode="404">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pl,de-at;q=0.8,en-gb;q=0.6,en-us;q=0.4,en;q=0.2&#xD;&#xA;HTTP_COOKIE:Culture=en-GB; TimeZone=1; __utma=111872281.2051546045.1331137962.1331137962.1331137962.1; __utmb=111872281.7.10.1331137962; __utmc=111872281; __utmz=111872281.1331137962.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); .ASPXAUTH=7168DCCB39159D5030C9903AB08ECD985E3D71B7289E9DAF339EDC9A989F27D972BFEA239078147AC652AC9A6E907262375CB162E33C9805852CF6AB40FBABB34E0EBBFC41771DFAB6388AA6F2EA0A2A512DE62E28B2D66A591EAE493C6D9C49E1F036E5CB3A84BA8842B750619CC42D82A30BBD5D51F5F117FA8A8447F31D06DA80EA690EF9BBDB38E27EB2F0A8CC4F; ASP.NET_SessionId=yllilwv0x0qabn15eiqnnze3&#xD;&#xA;HTTP_HOST:localhost&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; rv:10.0.2) Gecko/20100101 Firefox/10.0.2&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: pl,de-at;q=0.8,en-gb;q=0.6,en-us;q=0.4,en;q=0.2&#xD;&#xA;Cookie: Culture=en-GB; TimeZone=1; __utma=111872281.2051546045.1331137962.1331137962.1331137962.1; __utmb=111872281.7.10.1331137962; __utmc=111872281; __utmz=111872281.1331137962.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); .ASPXAUTH=7168DCCB39159D5030C9903AB08ECD985E3D71B7289E9DAF339EDC9A989F27D972BFEA239078147AC652AC9A6E907262375CB162E33C9805852CF6AB40FBABB34E0EBBFC41771DFAB6388AA6F2EA0A2A512DE62E28B2D66A591EAE493C6D9C49E1F036E5CB3A84BA8842B750619CC42D82A30BBD5D51F5F117FA8A8447F31D06DA80EA690EF9BBDB38E27EB2F0A8CC4F; ASP.NET_SessionId=yllilwv0x0qabn15eiqnnze3&#xD;&#xA;Host: localhost&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:10.0.2) Gecko/20100101 Firefox/10.0.2&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/1/ROOT/Inbid" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\zlecenia\projekt\Inbid\Inbid\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="In" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="franek0" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="franek0" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="franek0" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="1" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/1" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Inbid/Views/Offer/Index.cshtml" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\zlecenia\projekt\Inbid\Inbid\Views\Offer\Index.cshtml" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="57504" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Inbid/Views/Offer/Index.cshtml" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="80" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/7.5" />
+    </item>
+    <item name="URL">
+      <value string="/Inbid/Views/Offer/Index.cshtml" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pl,de-at;q=0.8,en-gb;q=0.6,en-us;q=0.4,en;q=0.2" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="Culture=en-GB; TimeZone=1; __utma=111872281.2051546045.1331137962.1331137962.1331137962.1; __utmb=111872281.7.10.1331137962; __utmc=111872281; __utmz=111872281.1331137962.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); .ASPXAUTH=7168DCCB39159D5030C9903AB08ECD985E3D71B7289E9DAF339EDC9A989F27D972BFEA239078147AC652AC9A6E907262375CB162E33C9805852CF6AB40FBABB34E0EBBFC41771DFAB6388AA6F2EA0A2A512DE62E28B2D66A591EAE493C6D9C49E1F036E5CB3A84BA8842B750619CC42D82A30BBD5D51F5F117FA8A8447F31D06DA80EA690EF9BBDB38E27EB2F0A8CC4F; ASP.NET_SessionId=yllilwv0x0qabn15eiqnnze3" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; rv:10.0.2) Gecko/20100101 Firefox/10.0.2" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="Culture">
+      <value string="en-GB" />
+    </item>
+    <item name="TimeZone">
+      <value string="1" />
+    </item>
+    <item name="__utma">
+      <value string="111872281.2051546045.1331137962.1331137962.1331137962.1" />
+    </item>
+    <item name="__utmb">
+      <value string="111872281.7.10.1331137962" />
+    </item>
+    <item name="__utmc">
+      <value string="111872281" />
+    </item>
+    <item name="__utmz">
+      <value string="111872281.1331137962.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)" />
+    </item>
+    <item name=".ASPXAUTH">
+      <value string="7168DCCB39159D5030C9903AB08ECD985E3D71B7289E9DAF339EDC9A989F27D972BFEA239078147AC652AC9A6E907262375CB162E33C9805852CF6AB40FBABB34E0EBBFC41771DFAB6388AA6F2EA0A2A512DE62E28B2D66A591EAE493C6D9C49E1F036E5CB3A84BA8842B750619CC42D82A30BBD5D51F5F117FA8A8447F31D06DA80EA690EF9BBDB38E27EB2F0A8CC4F" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="yllilwv0x0qabn15eiqnnze3" />
+    </item>
+  </cookies>
+</error>

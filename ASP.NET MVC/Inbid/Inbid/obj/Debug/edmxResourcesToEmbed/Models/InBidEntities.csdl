@@ -1,0 +1,1016 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db8326e1f8beb8414abe659ff600d34854Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="InBidEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Adresses" EntityType="db8326e1f8beb8414abe659ff600d34854Model.Adress" />
+    <EntitySet Name="aspnet_Applications" EntityType="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Applications" />
+    <EntitySet Name="aspnet_Membership" EntityType="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Membership" />
+    <EntitySet Name="aspnet_Paths" EntityType="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Paths" />
+    <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="db8326e1f8beb8414abe659ff600d34854Model.aspnet_PersonalizationAllUsers" />
+    <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="db8326e1f8beb8414abe659ff600d34854Model.aspnet_PersonalizationPerUser" />
+    <EntitySet Name="aspnet_Profile" EntityType="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Profile" />
+    <EntitySet Name="aspnet_Roles" EntityType="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Roles" />
+    <EntitySet Name="aspnet_SchemaVersions" EntityType="db8326e1f8beb8414abe659ff600d34854Model.aspnet_SchemaVersions" />
+    <EntitySet Name="aspnet_Users" EntityType="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Users" />
+    <EntitySet Name="aspnet_UsersInRoles" EntityType="db8326e1f8beb8414abe659ff600d34854Model.aspnet_UsersInRoles" />
+    <EntitySet Name="aspnet_WebEvent_Events" EntityType="db8326e1f8beb8414abe659ff600d34854Model.aspnet_WebEvent_Events" />
+    <EntitySet Name="Auctions" EntityType="db8326e1f8beb8414abe659ff600d34854Model.Auction" />
+    <EntitySet Name="Companies" EntityType="db8326e1f8beb8414abe659ff600d34854Model.Company" />
+    <EntitySet Name="Countries" EntityType="db8326e1f8beb8414abe659ff600d34854Model.Country" />
+    <EntitySet Name="Languages" EntityType="db8326e1f8beb8414abe659ff600d34854Model.Language" />
+    <EntitySet Name="Offers" EntityType="db8326e1f8beb8414abe659ff600d34854Model.Offer" />
+    <EntitySet Name="View_Offers" EntityType="db8326e1f8beb8414abe659ff600d34854Model.View_Offers" />
+    <EntitySet Name="vw_aspnet_Applications" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_aspnet_Applications" />
+    <EntitySet Name="vw_aspnet_MembershipUsers" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_aspnet_MembershipUsers" />
+    <EntitySet Name="vw_aspnet_Profiles" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_aspnet_Profiles" />
+    <EntitySet Name="vw_aspnet_Roles" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_aspnet_Roles" />
+    <EntitySet Name="vw_aspnet_Users" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_aspnet_Users" />
+    <EntitySet Name="vw_aspnet_UsersInRoles" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_aspnet_UsersInRoles" />
+    <EntitySet Name="vw_aspnet_WebPartState_Paths" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_aspnet_WebPartState_Paths" />
+    <EntitySet Name="vw_aspnet_WebPartState_Shared" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_aspnet_WebPartState_Shared" />
+    <EntitySet Name="vw_aspnet_WebPartState_User" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_aspnet_WebPartState_User" />
+    <EntitySet Name="vw_BidderOffers" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_BidderOffers" />
+    <EntitySet Name="vw_CompanyAdmins" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_CompanyAdmins" />
+    <EntitySet Name="vw_CompanyMembers" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_CompanyMembers" />
+    <EntitySet Name="vw_OneCompanyAdmin" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_OneCompanyAdmin" />
+    <AssociationSet Name="FK_Adress_Countries" Association="db8326e1f8beb8414abe659ff600d34854Model.FK_Adress_Countries">
+      <End Role="Countries" EntitySet="Countries" />
+      <End Role="Adress" EntitySet="Adresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aspnet_Users_Adress" Association="db8326e1f8beb8414abe659ff600d34854Model.FK_aspnet_Users_Adress">
+      <End Role="Adress" EntitySet="Adresses" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Company_Adress" Association="db8326e1f8beb8414abe659ff600d34854Model.FK_Company_Adress">
+      <End Role="Adress" EntitySet="Adresses" />
+      <End Role="Company" EntitySet="Companies" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Me__Appli__02084FDA" Association="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Me__Appli__02084FDA">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Me__Appli__671F4F74" Association="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Me__Appli__671F4F74">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pa__Appli__03F0984C" Association="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pa__Appli__03F0984C">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pa__Appli__690797E6" Association="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pa__Appli__690797E6">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Ro__Appli__08B54D69" Association="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Ro__Appli__08B54D69">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Ro__Appli__6DCC4D03" Association="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Ro__Appli__6DCC4D03">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__Appli__0DAF0CB0" Association="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Us__Appli__0DAF0CB0">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Me__UserI__22AA2996" Association="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Me__UserI__22AA2996">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__04E4BC85" Association="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pe__PathI__04E4BC85">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__05D8E0BE" Association="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pe__PathI__05D8E0BE">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__69FBBC1F" Association="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pe__PathI__69FBBC1F">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__6AEFE058" Association="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pe__PathI__6AEFE058">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__UserI__693CA210" Association="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pe__UserI__693CA210">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pr__UserI__38996AB5" Association="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pr__UserI__38996AB5">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__RoleI__0D7A0286" Association="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Us__RoleI__0D7A0286">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__RoleI__72910220" Association="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Us__RoleI__72910220">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__UserI__49C3F6B7" Association="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Us__UserI__49C3F6B7">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aspnet_Users_Company" Association="db8326e1f8beb8414abe659ff600d34854Model.FK_aspnet_Users_Company">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aspnet_Users_Languages" Association="db8326e1f8beb8414abe659ff600d34854Model.FK_aspnet_Users_Languages">
+      <End Role="Languages" EntitySet="Languages" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Auctions_aspnet_Users" Association="db8326e1f8beb8414abe659ff600d34854Model.FK_Auctions_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="Auctions" EntitySet="Auctions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Offers_aspnet_Users" Association="db8326e1f8beb8414abe659ff600d34854Model.FK_Offers_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="Offers" EntitySet="Offers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Offers_Auctions" Association="db8326e1f8beb8414abe659ff600d34854Model.FK_Offers_Auctions">
+      <End Role="Auctions" EntitySet="Auctions" />
+      <End Role="Offers" EntitySet="Offers" />
+    </AssociationSet>
+    <EntitySet Name="vw_CompaniesInAuction" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_CompaniesInAuction" />
+    <AssociationSet Name="FK_aspnet_Paths_aspnet_PersonalizationAllUsers" Association="db8326e1f8beb8414abe659ff600d34854Model.FK_aspnet_Paths_aspnet_PersonalizationAllUsers">
+      <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+    </AssociationSet>
+    <EntitySet Name="vw_CompanyBidders" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_CompanyBidders" />
+    <EntitySet Name="vw_CompanyBidderViews" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_CompanyBidderViews" />
+    <EntitySet Name="vw_CompanyDetails" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_CompanyDetails" />
+    <FunctionImport Name="aspnet_Membership_GetUserByEmail" ReturnType="Collection(db8326e1f8beb8414abe659ff600d34854Model.aspnet_Membership_GetUserByEmail_Result)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="vw_CompanyAuctions" EntityType="db8326e1f8beb8414abe659ff600d34854Model.vw_CompanyAuctions" />
+  </EntityContainer>
+  <EntityType Name="Adress">
+    <Key>
+      <PropertyRef Name="AdressId" />
+    </Key>
+    <Property Name="AdressId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Adress1" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Region" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="CountryId" Type="Int32" />
+    <NavigationProperty Name="Country" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_Adress_Countries" FromRole="Adress" ToRole="Countries" />
+    <NavigationProperty Name="aspnet_Users" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_aspnet_Users_Adress" FromRole="Adress" ToRole="aspnet_Users" />
+    <NavigationProperty Name="Companies" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_Company_Adress" FromRole="Adress" ToRole="Company" />
+  </EntityType>
+  <EntityType Name="aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Membership" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Me__Appli__02084FDA" FromRole="aspnet_Applications" ToRole="aspnet_Membership" />
+    <NavigationProperty Name="aspnet_Membership1" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Me__Appli__671F4F74" FromRole="aspnet_Applications" ToRole="aspnet_Membership" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pa__Appli__03F0984C" FromRole="aspnet_Applications" ToRole="aspnet_Paths" />
+    <NavigationProperty Name="aspnet_Paths1" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pa__Appli__690797E6" FromRole="aspnet_Applications" ToRole="aspnet_Paths" />
+    <NavigationProperty Name="aspnet_Roles" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Ro__Appli__08B54D69" FromRole="aspnet_Applications" ToRole="aspnet_Roles" />
+    <NavigationProperty Name="aspnet_Roles1" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Ro__Appli__6DCC4D03" FromRole="aspnet_Applications" ToRole="aspnet_Roles" />
+    <NavigationProperty Name="aspnet_Users" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Us__Appli__0DAF0CB0" FromRole="aspnet_Applications" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+    <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="MobilePIN" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredEmail" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordQuestion" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordAnswer" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+    <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Me__Appli__02084FDA" FromRole="aspnet_Membership" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Applications1" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Me__Appli__671F4F74" FromRole="aspnet_Membership" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Users" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Me__UserI__22AA2996" FromRole="aspnet_Membership" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Paths">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="Path" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredPath" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pa__Appli__03F0984C" FromRole="aspnet_Paths" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Applications1" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pa__Appli__690797E6" FromRole="aspnet_Paths" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_PersonalizationAllUsers" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pe__PathI__04E4BC85" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationAllUsers" />
+    <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pe__PathI__05D8E0BE" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationPerUser" />
+    <NavigationProperty Name="aspnet_PersonalizationAllUsers1" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pe__PathI__69FBBC1F" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationAllUsers" />
+    <NavigationProperty Name="aspnet_PersonalizationPerUser1" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pe__PathI__6AEFE058" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationPerUser" />
+    <NavigationProperty Name="aspnet_PersonalizationAllUsers_1" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_aspnet_Paths_aspnet_PersonalizationAllUsers" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationAllUsers" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationAllUsers">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pe__PathI__04E4BC85" FromRole="aspnet_PersonalizationAllUsers" ToRole="aspnet_Paths" />
+    <NavigationProperty Name="aspnet_Paths1" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pe__PathI__69FBBC1F" FromRole="aspnet_PersonalizationAllUsers" ToRole="aspnet_Paths" />
+    <NavigationProperty Name="aspnet_Paths_1" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_aspnet_Paths_aspnet_PersonalizationAllUsers" FromRole="aspnet_PersonalizationAllUsers" ToRole="aspnet_Paths" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationPerUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" />
+    <Property Name="UserId" Type="Guid" />
+    <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pe__PathI__05D8E0BE" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Paths" />
+    <NavigationProperty Name="aspnet_Paths1" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pe__PathI__6AEFE058" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Paths" />
+    <NavigationProperty Name="aspnet_Users" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pe__UserI__693CA210" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Profile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="PropertyNames" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PropertyValuesString" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PropertyValuesBinary" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="aspnet_Users" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pr__UserI__38996AB5" FromRole="aspnet_Profile" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredRoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Ro__Appli__08B54D69" FromRole="aspnet_Roles" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Applications1" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Ro__Appli__6DCC4D03" FromRole="aspnet_Roles" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_UsersInRoles" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Us__RoleI__0D7A0286" FromRole="aspnet_Roles" ToRole="aspnet_UsersInRoles" />
+    <NavigationProperty Name="aspnet_UsersInRoles1" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Us__RoleI__72910220" FromRole="aspnet_Roles" ToRole="aspnet_UsersInRoles" />
+  </EntityType>
+  <EntityType Name="aspnet_SchemaVersions">
+    <Key>
+      <PropertyRef Name="Feature" />
+      <PropertyRef Name="CompatibleSchemaVersion" />
+    </Key>
+    <Property Name="Feature" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="CompatibleSchemaVersion" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="IsCurrentVersion" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredUserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
+    <Property Name="CompanyId" Type="Int32" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="11" Unicode="true" FixedLength="true" />
+    <Property Name="LanguageId" Type="Int32" />
+    <Property Name="AdressId" Type="Int32" />
+    <NavigationProperty Name="Adress" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_aspnet_Users_Adress" FromRole="aspnet_Users" ToRole="Adress" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Us__Appli__0DAF0CB0" FromRole="aspnet_Users" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Membership" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Me__UserI__22AA2996" FromRole="aspnet_Users" ToRole="aspnet_Membership" />
+    <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pe__UserI__693CA210" FromRole="aspnet_Users" ToRole="aspnet_PersonalizationPerUser" />
+    <NavigationProperty Name="aspnet_Profile" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Pr__UserI__38996AB5" FromRole="aspnet_Users" ToRole="aspnet_Profile" />
+    <NavigationProperty Name="aspnet_UsersInRoles" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Us__UserI__49C3F6B7" FromRole="aspnet_Users" ToRole="aspnet_UsersInRoles" />
+    <NavigationProperty Name="Company" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_aspnet_Users_Company" FromRole="aspnet_Users" ToRole="Company" />
+    <NavigationProperty Name="Language" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_aspnet_Users_Languages" FromRole="aspnet_Users" ToRole="Languages" />
+    <NavigationProperty Name="Auctions" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_Auctions_aspnet_Users" FromRole="aspnet_Users" ToRole="Auctions" />
+    <NavigationProperty Name="Offers" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_Offers_aspnet_Users" FromRole="aspnet_Users" ToRole="Offers" />
+  </EntityType>
+  <EntityType Name="aspnet_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="aspnet_Roles" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Us__RoleI__0D7A0286" FromRole="aspnet_UsersInRoles" ToRole="aspnet_Roles" />
+    <NavigationProperty Name="aspnet_Roles1" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Us__RoleI__72910220" FromRole="aspnet_UsersInRoles" ToRole="aspnet_Roles" />
+    <NavigationProperty Name="aspnet_Users" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK__aspnet_Us__UserI__49C3F6B7" FromRole="aspnet_UsersInRoles" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_WebEvent_Events">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="true" />
+    <Property Name="EventTimeUtc" Type="DateTime" Nullable="false" />
+    <Property Name="EventTime" Type="DateTime" Nullable="false" />
+    <Property Name="EventType" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="EventSequence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
+    <Property Name="EventOccurrence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
+    <Property Name="EventCode" Type="Int32" Nullable="false" />
+    <Property Name="EventDetailCode" Type="Int32" Nullable="false" />
+    <Property Name="Message" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationPath" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationVirtualPath" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="MachineName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="RequestUrl" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+    <Property Name="ExceptionType" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="Details" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Auction">
+    <Key>
+      <PropertyRef Name="AuctionId" />
+    </Key>
+    <Property Name="AuctionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AuctionNumber" Type="String" Nullable="true" />
+    <Property Name="StartPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CurrentPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Direction" Type="Boolean" Nullable="false" />
+    <Property Name="Currency" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="StartTime" Type="DateTime" Nullable="false" />
+    <Property Name="EndTime" Type="DateTime" Nullable="false" />
+    <Property Name="EnableDisable" Type="Boolean" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="MinJump" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ViewTopOffer" Type="Boolean" />
+    <Property Name="PreviousAuction" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Users" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_Auctions_aspnet_Users" FromRole="Auctions" ToRole="aspnet_Users" />
+    <NavigationProperty Name="Offers" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_Offers_Auctions" FromRole="Auctions" ToRole="Offers" />
+    <Property Type="DateTime" Name="DateAdd" />
+    <Property Type="DateTime" Name="DateEdit" />
+    <Property Type="Int32" Name="RelatedAuction" />
+    <Property Type="Int64" Name="TimeInterval" />
+    <Property Type="DateTime" Name="DisableStartTime" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="AdressId" Type="Int32" />
+    <NavigationProperty Name="Adress" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_Company_Adress" FromRole="Company" ToRole="Adress" />
+    <NavigationProperty Name="aspnet_Users" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_aspnet_Users_Company" FromRole="Company" ToRole="aspnet_Users" />
+    <Property Type="Int32" Name="BidderQuality" />
+    <Property Type="Int32" Name="BidderViewQuality" />
+    <Property Type="Int32" Name="AuctionQuality" />
+    <Property Type="DateTime" Name="DateEditAuctionQuality" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Adresses" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_Adress_Countries" FromRole="Countries" ToRole="Adress" />
+  </EntityType>
+  <EntityType Name="Language">
+    <Key>
+      <PropertyRef Name="LanguageId" />
+    </Key>
+    <Property Name="LanguageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CultureName" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Users" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_aspnet_Users_Languages" FromRole="Languages" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="Offer">
+    <Key>
+      <PropertyRef Name="OfferId" />
+    </Key>
+    <Property Name="OfferId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StartPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CurrentPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="BDCounter" Type="Int32" />
+    <Property Name="AuctionId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="JoinedDate" Type="DateTime" />
+    <Property Name="EditDate" Type="DateTime" />
+    <NavigationProperty Name="aspnet_Users" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_Offers_aspnet_Users" FromRole="Offers" ToRole="aspnet_Users" />
+    <NavigationProperty Name="Auction" Relationship="db8326e1f8beb8414abe659ff600d34854Model.FK_Offers_Auctions" FromRole="Offers" ToRole="Auctions" />
+  </EntityType>
+  <EntityType Name="View_Offers">
+    <Key>
+      <PropertyRef Name="OfferId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="StartPrice" />
+      <PropertyRef Name="CurrentPrice" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="AuctionId" />
+    </Key>
+    <Property Name="OfferId" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="StartPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CurrentPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Change" Type="Decimal" Precision="38" Scale="16" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="AuctionId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationName" />
+      <PropertyRef Name="LoweredApplicationName" />
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_MembershipUsers">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="PasswordFormat" />
+      <PropertyRef Name="IsApproved" />
+      <PropertyRef Name="IsLockedOut" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="LastLoginDate" />
+      <PropertyRef Name="LastPasswordChangedDate" />
+      <PropertyRef Name="LastLockoutDate" />
+      <PropertyRef Name="FailedPasswordAttemptCount" />
+      <PropertyRef Name="FailedPasswordAttemptWindowStart" />
+      <PropertyRef Name="FailedPasswordAnswerAttemptCount" />
+      <PropertyRef Name="FailedPasswordAnswerAttemptWindowStart" />
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="IsAnonymous" />
+      <PropertyRef Name="LastActivityDate" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+    <Property Name="MobilePIN" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredEmail" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordQuestion" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordAnswer" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+    <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_Profiles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+    <Property Name="DataSize" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_Roles">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="RoleName" />
+      <PropertyRef Name="LoweredRoleName" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredRoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_Users">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="LoweredUserName" />
+      <PropertyRef Name="IsAnonymous" />
+      <PropertyRef Name="LastActivityDate" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredUserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_WebPartState_Paths">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="PathId" />
+      <PropertyRef Name="Path" />
+      <PropertyRef Name="LoweredPath" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="Path" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredPath" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_WebPartState_Shared">
+    <Key>
+      <PropertyRef Name="PathId" />
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="DataSize" Type="Int32" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_WebPartState_User">
+    <Key>
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="PathId" Type="Guid" />
+    <Property Name="UserId" Type="Guid" />
+    <Property Name="DataSize" Type="Int32" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_BidderOffers">
+    <Key>
+      <PropertyRef Name="CurrentPrice" />
+      <PropertyRef Name="AuctionCurrentPrice" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="StartTime" />
+      <PropertyRef Name="EndTime" />
+      <PropertyRef Name="EnableDisable" />
+      <PropertyRef Name="AuctionNumber" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="AuctionId" />
+      <PropertyRef Name="OfferId" />
+    </Key>
+    <Property Name="CurrentPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="AuctionCurrentPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="StartTime" Type="DateTime" Nullable="false" />
+    <Property Name="EndTime" Type="DateTime" Nullable="false" />
+    <Property Name="EnableDisable" Type="Boolean" Nullable="false" />
+    <Property Name="AuctionNumber" Type="Int32" Nullable="false" />
+    <Property Name="StartPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="AuctionId" Type="Int32" Nullable="false" />
+    <Property Name="OfferId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_CompanyAdmins">
+    <Key>
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="IsApproved" />
+    </Key>
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="11" Unicode="true" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="vw_CompanyMembers">
+    <Key>
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="Password" />
+      <PropertyRef Name="IsApproved" />
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="RoleName" />
+    </Key>
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="11" Unicode="true" FixedLength="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vw_OneCompanyAdmin">
+    <Key>
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="Password" />
+    </Key>
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyId" Type="Int32" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="11" Unicode="true" FixedLength="true" />
+    <Property Name="LanguageId" Type="Int32" />
+    <Property Name="AdressId" Type="Int32" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Expr1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Expr2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CultureName" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Adress_Countries">
+    <End Role="Countries" Type="db8326e1f8beb8414abe659ff600d34854Model.Country" Multiplicity="0..1" />
+    <End Role="Adress" Type="db8326e1f8beb8414abe659ff600d34854Model.Adress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Countries">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="Adress">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aspnet_Users_Adress">
+    <End Role="Adress" Type="db8326e1f8beb8414abe659ff600d34854Model.Adress" Multiplicity="0..1" />
+    <End Role="aspnet_Users" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adress">
+        <PropertyRef Name="AdressId" />
+      </Principal>
+      <Dependent Role="aspnet_Users">
+        <PropertyRef Name="AdressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Company_Adress">
+    <End Role="Adress" Type="db8326e1f8beb8414abe659ff600d34854Model.Adress" Multiplicity="0..1" />
+    <End Role="Company" Type="db8326e1f8beb8414abe659ff600d34854Model.Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adress">
+        <PropertyRef Name="AdressId" />
+      </Principal>
+      <Dependent Role="Company">
+        <PropertyRef Name="AdressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Me__Appli__02084FDA">
+    <End Role="aspnet_Applications" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Membership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Me__Appli__671F4F74">
+    <End Role="aspnet_Applications" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Membership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pa__Appli__03F0984C">
+    <End Role="aspnet_Applications" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Paths" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Paths" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Paths">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pa__Appli__690797E6">
+    <End Role="aspnet_Applications" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Paths" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Paths" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Paths">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Ro__Appli__08B54D69">
+    <End Role="aspnet_Applications" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Roles" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Roles">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Ro__Appli__6DCC4D03">
+    <End Role="aspnet_Applications" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Roles" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Roles">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__Appli__0DAF0CB0">
+    <End Role="aspnet_Applications" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Users" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Users">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Me__UserI__22AA2996">
+    <End Role="aspnet_Users" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__04E4BC85">
+    <End Role="aspnet_Paths" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Paths" Multiplicity="1" />
+    <End Role="aspnet_PersonalizationAllUsers" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationAllUsers">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__05D8E0BE">
+    <End Role="aspnet_Paths" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Paths" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__69FBBC1F">
+    <End Role="aspnet_Paths" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Paths" Multiplicity="1" />
+    <End Role="aspnet_PersonalizationAllUsers" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationAllUsers">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__6AEFE058">
+    <End Role="aspnet_Paths" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Paths" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__UserI__693CA210">
+    <End Role="aspnet_Users" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Users" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pr__UserI__38996AB5">
+    <End Role="aspnet_Users" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Profile" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Profile" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Profile">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__RoleI__0D7A0286">
+    <End Role="aspnet_Roles" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Roles" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__RoleI__72910220">
+    <End Role="aspnet_Roles" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Roles" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__UserI__49C3F6B7">
+    <End Role="aspnet_Users" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aspnet_Users_Company">
+    <End Role="Company" Type="db8326e1f8beb8414abe659ff600d34854Model.Company" Multiplicity="0..1" />
+    <End Role="aspnet_Users" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="CompanyId" />
+      </Principal>
+      <Dependent Role="aspnet_Users">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aspnet_Users_Languages">
+    <End Role="Languages" Type="db8326e1f8beb8414abe659ff600d34854Model.Language" Multiplicity="0..1" />
+    <End Role="aspnet_Users" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Languages">
+        <PropertyRef Name="LanguageId" />
+      </Principal>
+      <Dependent Role="aspnet_Users">
+        <PropertyRef Name="LanguageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Auctions_aspnet_Users">
+    <End Role="aspnet_Users" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Users" Multiplicity="1" />
+    <End Role="Auctions" Type="db8326e1f8beb8414abe659ff600d34854Model.Auction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Auctions">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Offers_aspnet_Users">
+    <End Role="aspnet_Users" Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Users" Multiplicity="1" />
+    <End Role="Offers" Type="db8326e1f8beb8414abe659ff600d34854Model.Offer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Offers">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Offers_Auctions">
+    <End Role="Auctions" Type="db8326e1f8beb8414abe659ff600d34854Model.Auction" Multiplicity="1" />
+    <End Role="Offers" Type="db8326e1f8beb8414abe659ff600d34854Model.Offer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Auctions">
+        <PropertyRef Name="AuctionId" />
+      </Principal>
+      <Dependent Role="Offers">
+        <PropertyRef Name="AuctionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="vw_CompaniesInAuction">
+    <Key>
+      <PropertyRef Name="AuctionId" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Type="Int32" Name="AuctionId" Nullable="false" />
+    <Property Type="Int32" Name="CompanyId" />
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_aspnet_Paths_aspnet_PersonalizationAllUsers">
+    <End Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_PersonalizationAllUsers" Role="aspnet_PersonalizationAllUsers" Multiplicity="1" />
+    <End Type="db8326e1f8beb8414abe659ff600d34854Model.aspnet_Paths" Role="aspnet_Paths" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_PersonalizationAllUsers">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="vw_CompanyBidders">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CompanyId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_CompanyBidderViews">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CompanyId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_CompanyDetails">
+    <Key>
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Phone" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Adress" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Region" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PostalCode" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BidderQuality" />
+    <Property Type="Int32" Name="BidderViewQuality" />
+    <Property Type="Int32" Name="AuctionQuality" />
+    <Property Type="DateTime" Name="DateEditAuctionQuality" />
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+    <Property Type="Int32" Name="CompanyId" />
+    <Property Type="String" Name="CountryName" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="aspnet_Membership_GetUserByEmail_Result">
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" />
+  </ComplexType>
+  <EntityType Name="vw_CompanyAuctions">
+    <Key>
+      <PropertyRef Name="AuctionId" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Type="Int32" Name="AuctionId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CompanyId" Nullable="false" />
+  </EntityType>
+</Schema>

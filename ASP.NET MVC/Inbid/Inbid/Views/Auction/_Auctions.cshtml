@@ -1,0 +1,101 @@
+﻿@using Resources
+@model IEnumerable<Inbid.Models.Auction>
+
+@if (Model.Count() > 0)
+{
+<table id="tbauctions">
+    <tr>
+       <th>
+         
+        </th>
+        <th>
+            ID
+        </th>
+      <th>
+            Nazwa
+        </th>
+         <th>
+            Początek aukcji
+        </th>   
+        <th>
+           Status
+        </th>
+         <th>
+            Koniec aukcji
+        </th>
+        <th>
+         
+        </th>     
+    </tr>
+
+@foreach (var item in Model)
+{
+    
+    <tr id="@item.AuctionId">
+        <td style="background-color:@item.RelateColor">
+          
+        
+        </td>
+
+    
+        <td >
+            @Html.DisplayFor(m => item.AuctionNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(m => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(m => item.StartTime, "DateWithoutSec")
+        </td>
+       
+        <td>
+            @if (item.StartTime.ToUniversalTime() > System.DateTime.Now.ToUniversalTime())
+            {
+                @:Nie rozpoczęta
+            }
+            else if (item.EndTime.ToUniversalTime() < System.DateTime.Now.ToUniversalTime())
+            {
+                @:Zakończona   
+            }
+            else if ((item.EnableDisable == true) && (item.StartTime.ToUniversalTime() < System.DateTime.Now.ToUniversalTime()) && (item.EndTime.ToUniversalTime() > System.DateTime.Now.ToUniversalTime()))
+            {
+                @:Trwa
+            }
+            else if ((item.EnableDisable == false) && (item.StartTime.ToUniversalTime() < System.DateTime.Now.ToUniversalTime()) && (item.EndTime.ToUniversalTime() > System.DateTime.Now.ToUniversalTime()))
+            {
+                @:Zawieszona             
+            }
+         
+        </td>
+         <td>
+            @Html.DisplayFor(m => item.EndTime, "DateWithoutSec")
+        </td>
+        
+          
+
+        
+        
+        <td class="editRow">
+            @if ((Request.IsAuthenticated) && (Roles.IsUserInRole(User.Identity.Name, @"SuperAdmin") || item.IsHostedBy()))
+            {
+                @Html.ActionLink("Edit", "Edit", new { id = item.AuctionId })@:
+                @*@Html.ActionLink("Details", "Details", new { id = item.AuctionId })@:*@
+             @*   @Ajax.ActionLink("Details", "_Details", new { id = item.AuctionId }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "customerdetails2", InsertionMode = InsertionMode.Replace, OnSuccess = "openPopup" })@:*@
+                @Html.ActionLink("Details", "_Details", "Auction", new { id = item.AuctionId }, new { @class = "openDialog", data_dialog_title = "Details" })@:
+
+                
+                @Html.ActionLink(Resources.Delete, "Delete", new { id = item.AuctionId })
+            }
+        </td>
+      
+    </tr>
+}
+
+</table>
+    
+@*@Html.Partial("_AuctionPagination")*@
+}
+else
+{
+<p>Brak Aukcji</p>
+}

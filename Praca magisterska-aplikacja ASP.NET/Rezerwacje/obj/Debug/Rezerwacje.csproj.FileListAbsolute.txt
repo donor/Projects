@@ -1,0 +1,14 @@
+C:\asp\Rezerwacje\Rezerwacje\bin\Rezerwacje.dll
+C:\asp\Rezerwacje\Rezerwacje\bin\Rezerwacje.pdb
+C:\asp\Rezerwacje\Rezerwacje\obj\Debug\ResolveAssemblyReference.cache
+C:\asp\Rezerwacje\Rezerwacje\obj\Debug\Rezerwacje.dll
+C:\asp\Rezerwacje\Rezerwacje\obj\Debug\Rezerwacje.pdb
+C:\asp\Rezerwacje\Rezerwacje\bin\AjaxControlToolkit.dll
+C:\asp\Rezerwacje\Rezerwacje\bin\WebsitesScreenshot.dll
+C:\asp\Rezerwacje\Rezerwacje\bin\WebsitesScreenshot.xml
+C:\nauka\praca magisterska\aplikacja\Rezerwacje\bin\Rezerwacje.dll
+C:\nauka\praca magisterska\aplikacja\Rezerwacje\bin\Rezerwacje.pdb
+C:\nauka\praca magisterska\aplikacja\Rezerwacje\bin\WebsitesScreenshot.xml
+C:\nauka\praca magisterska\aplikacja\Rezerwacje\obj\Debug\ResolveAssemblyReference.cache
+C:\nauka\praca magisterska\aplikacja\Rezerwacje\obj\Debug\Rezerwacje.dll
+C:\nauka\praca magisterska\aplikacja\Rezerwacje\obj\Debug\Rezerwacje.pdb

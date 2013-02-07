@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EDS_Imprezy" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="BazaRezerwacjeEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Imprezy" EntityType="EDS_Imprezy.Imprezy" />
+  </EntityContainer>
+  <EntityType Name="Imprezy">
+    <Key>
+      <PropertyRef Name="IdImprezy" />
+    </Key>
+    <Property Name="IdImprezy" Type="Int32" Nullable="false" />
+    <Property Name="nazwa" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="data" Type="DateTime" />
+    <Property Name="miejsce" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="cenaPodstawowa" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="liczbaBiletów" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="obrazek" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

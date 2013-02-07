@@ -1,0 +1,308 @@
+﻿@model UsedClothes.Models.LastPositionsViewModel
+@using UsedClothes.Helpers
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('.slide-next').click(function (event) {
+            var left, slide, target;
+            target = event.target;
+            if (target.tagName === 'SPAN') target = target.parentNode;
+            slide = $(target).next().children('div')[0];
+            left = parseInt($(slide).css('left'));
+            if (left > -3000) {
+                left -= 980;
+                return $(slide).css({
+                    left: left + 'px'
+                });
+            }
+        });
+
+        $('.slide-prev').click(function (event) {
+            var left, slide, target;
+            target = event.target;
+            if (target.tagName === 'SPAN') target = target.parentNode;
+            slide = $(target).next().next().children('div')[0];
+            left = parseInt($(slide).css('left'));
+            if (left < 0) {
+                left += 980;
+                return $(slide).css({
+                    left: left + 'px'
+                });
+            }
+        });
+
+        $('.item img,.item a,.item .price,.item .gridMenu').mouseover(function (e) {
+
+            var target;
+            // if (!this.toolbar) return false;
+            target = e.target;
+            while (!$(target).hasClass('item')) {
+                target = target.parentNode;
+            }
+            $('#' + target.getAttribute('id') + ' .gridMenu a').each(function (t) {
+                return $(this).css({
+                    top: '0'
+                });
+            });
+            return $('#' + target.getAttribute('id') + ' .listMenu a').each(function (t) {
+                return $(this).css({
+                    top: '0'
+                });
+            });
+        });
+        $('.item img,.item .title,.item a,.item .price,.item div,.item').mouseout(function (e) {
+            var bottom, right, target, x, y;
+            //if (!this.toolbar) return false;
+            target = e.target;
+            while (!$(target).hasClass('item')) {
+                target = target.parentNode;
+            }
+            x = e.pageX - $(target).offset().left;
+            y = e.pageY - $(target).offset().top;
+            right = this.template === 'list' ? 120 : 180;
+            bottom = this.template === 'list' ? 120 : 210;
+            if (x <= 0 || x >= right || y <= 10 || y >= bottom) {
+                $('#' + target.getAttribute('id') + ' .gridMenu a').each(function (t) {
+                    return $(this).css({
+                        top: '33px'
+                    });
+                });
+                return $('#' + target.getAttribute('id') + ' .listMenu a').each(function (t) {
+                    return $(this).css({
+                        top: '33px'
+                    });
+                });
+            }
+        });
+
+//        $('.item img,.item a,.item .price,.item .gridMenu .gridCart').click(function (e) {
+//            var id, target;
+//            target = e.target;
+//            while (!$(target).hasClass('item')) {
+//                target = target.parentNode;
+//            }
+//            id = $(target).attr('id').replace(/item-/, '');
+//            $('#item-' + id + ' .added-to-cart').css({
+//                display: 'block'
+//            });
+//        });
+        //$('.item img,.item a,.item .price,.item .gridMenu .gridCart').click(function (e) {
+        $('.item .gridMenu a.gridCart,a.listCart').click(function (e) {
+        
+            var id, target;            
+            target = e.target;
+            while (!$(target).hasClass('item')) {
+                target = target.parentNode;
+            }            
+            id = $(target).attr('id').replace(/item-/, '');
+          
+            $.ajax({
+                url: 'ShoppingCart/AddToCart/' + id,
+            }).done(function(data){
+             
+                $('#item-' + id + ' .added-to-cart').css({
+                    display: 'block'
+                });
+                 if (data!=-1){
+                    $('#item-' + id + ' .added-to-cart').text("The item has been added to your cart");
+                    $('#cart-status').text('Cart('+data+')');
+                 }
+                 else
+                 {
+                 $('#item-' + id + ' .added-to-cart').text("Can't add this item to your cart");
+                 }
+
+                //$('#cart-status').text('Cart('+data+')');
+
+
+                //
+            });
+        });
+
+//        $('.thumbs a').mouseenter(function(e){
+//            var i, to;
+//            if (e.target.tagName === 'IMG') 
+//                e.target = e.target.parentNode;
+//            $('.thumbs a').removeClass('selected');
+//            $(e.target).addClass('selected');
+//            i = $('.thumbs a').index(e.target);
+//            to = i * 300 * -1;
+//            return $('#photo-slide').stop().animate({
+//                "left": to
+//            }, 'fast');
+//        });
+       
+
+    });
+
+    function Modal(id){
+        var width = 785;
+        var height = 565;
+        var top = 150;
+        jQuery('body').append('<div class="m-screen" style="height:100%;"> </div><div class="modal" id="info-window" style="z-index:2000;"><div><img src="@Url.Content("~/Content/images/loader-trans.gif")" /></div></div>');
+        var scroll = jQuery(document).scrollTop();
+        var left = (jQuery(window).width() - width) / 2;
+        jQuery('#info-window').css({"top":top + scroll,"left":left});
+        jQuery('#info-window div').css({"width":width, "height":height});
+        $('#info-window div').load('/Store/GetDetailsPartialView/' + id,"",
+            function (responseText, textStatus, XMLHttpRequest) {
+                if((responseText == "")||(textStatus=="error")){
+                    $('#msg').text("Can't display details");
+                    ModalClose();
+                 }
+             });
+        //$('#info-window div').show();
+    }
+
+    function ModalClose(){    
+        jQuery('#info-window').fadeOut().remove();
+        jQuery('.m-screen').remove();
+    }
+   
+</script>
+
+
+    
+
+
+<div id="item-list" class="grid-view home-listings">
+    <h3 class="shopAllLink">
+        <a href="/clothes/Womens">Shop all Women's</a>
+    </h3>
+    <a class="slide-prev" href="javascript:void(0)">
+        <span> &lt;&lt; </span>
+    </a>
+    <a class="slide-next" href="javascript:void(0)">
+        <span> &gt;&gt; </span>
+    </a>
+    <div class="home-grid-frame">
+        <div class="home-grid-slide" style="left: 0px;">
+            <div  class="grid-view">                    
+                    @foreach (var item in Model.Womens)
+                    {
+                    <div data-seller="@item.SellerId" id="item-@item.ClothesId" class="item ">
+                        <div class="price">
+                            <p>@item.Price</p>
+                        </div>
+                        <img class="sold" src="/Content/img/sold-tag.png">
+                        <img class="loader" src="/Content/img/loading.gif" style="opacity: 0; display: none;">
+                        <a href="javascript:Modal(@item.ClothesId)">                          
+                                @Html.ImageData(item.PictureId, item.ClothesName)
+                        </a>
+                        <a class="added-to-cart" href="/checkout/cart">Item added to cart</a>
+                        <div class="gridMenu">
+                            <a class="gridStore" href="adresStronySprzedawcy" style="top: 33px;">
+                                <span></span>
+                            </a>
+                            <a class="gridCart" href="javascript:void(0)" style="top: 33px;">
+                                <span></span>
+                            </a>
+                            <a class="gridQuick" href="javascript:Modal(@item.ClothesId)" style="top: 33px;">
+                                <span></span>
+                            </a>
+                        </div>
+                        <p class="title">
+                            @Html.ActionLink(@item.ClothesName, "Details","Store",new {id=@item.ClothesId},null)
+                            
+                            @*<a href="/listings/item/387497659/lace-up-platform-heel-bootie">@item.ClothesName</a>*@
+                            <br>
+                            <span>SIZE: @item.SizeName</span>
+                        </p>
+                   </div>
+                    }    
+            </div>
+       </div>
+    </div> 
+  <h3 class="shopAllLink">
+        <a href="/clothes/Mens">Shop all Men's</a>
+    </h3>
+    <a class="slide-prev" href="javascript:void(0)">
+        <span> &lt;&lt; </span>
+    </a>
+    <a class="slide-next" href="javascript:void(0)">
+        <span> &gt;&gt; </span>
+    </a>
+    <div class="home-grid-frame">
+        <div class="home-grid-slide" style="left: 0px;">
+            <div  class="grid-view">            
+                    @foreach (var item in Model.Mens)
+                    {
+                    <div data-seller="@item.SellerId" id="item-@item.ClothesId" class="item ">
+                        <div class="price">
+                            <p>@item.Price</p>
+                        </div>
+                        <img class="sold" src="/Content/img/sold-tag.png">
+                        <img class="loader" src="/Content/img/loading.gif" style="opacity: 0; display: none;">
+                        <a href="javascript:Modal(@item.ClothesId)">                          
+                                @Html.ImageData(item.PictureId, item.ClothesName)
+                        </a>
+                        <a class="added-to-cart" href="/checkout/cart">Item added to cart</a>
+                        <div class="gridMenu">
+                            <a class="gridStore" href="adresStronySprzedawcy" style="top: 33px;">
+                                <span></span>
+                            </a>
+                            <a class="gridCart" href="javascript:void(0)" style="top: 33px;">
+                                <span></span>
+                            </a>
+                            <a class="gridQuick" href="javascript:Modal(@item.ClothesId)" style="top: 33px;">
+                                <span></span>
+                            </a>
+                        </div>
+                        <p class="title">
+                            @Html.ActionLink(@item.ClothesName, "Details","Store",new {id=@item.ClothesId},null)
+                            <br>
+                            <span>SIZE: @item.SizeName</span>
+                        </p>
+                   </div>
+                    }    
+            </div>
+       </div>
+    </div>  
+  <h3 class="shopAllLink">
+        <a href="/clothes/Youths">Shop all Youth's</a>
+    </h3>
+    <a class="slide-prev" href="javascript:void(0)">
+        <span> &lt;&lt; </span>
+    </a>
+    <a class="slide-next" href="javascript:void(0)">
+        <span> &gt;&gt; </span>
+    </a>
+    <div class="home-grid-frame">
+        <div class="home-grid-slide" style="left: 0px;">
+            <div class="grid-view">                 
+                    @foreach (var item in Model.Youths)
+                    {
+                    <div data-seller="@item.SellerId" id="item-@item.ClothesId" class="item ">
+                        <div class="price">
+                            <p>@item.Price</p>
+                        </div>
+                        <img class="sold" src="/Content/img/sold-tag.png">
+                        <img class="loader" src="/Content/img/loading.gif" style="opacity: 0; display: none;">
+                        <a href="javascript:Modal(@item.ClothesId)">                          
+                                @Html.ImageData(item.PictureId, item.ClothesName)
+                        </a>
+                        <a class="added-to-cart" href="/checkout/cart">Item added to cart</a>
+                        <div class="gridMenu">
+                            <a class="gridStore" href="adresStronySprzedawcy" style="top: 33px;">
+                                <span></span>
+                            </a>
+                            <a class="gridCart" href="javascript:void(0)" style="top: 33px;">
+                                <span></span>
+                            </a>
+                            <a class="gridQuick" href="javascript:Modal(@item.ClothesId)" style="top: 33px;">
+                                <span></span>
+                            </a>
+                        </div>
+                        <p class="title">
+                            @Html.ActionLink(@item.ClothesName, "Details","Store",new {id=@item.ClothesId},null)
+                            <br>
+                            <span>SIZE: @item.SizeName</span>
+                        </p>
+                   </div>
+                    }    
+            </div>
+       </div>
+    </div>  
+</div>
+    

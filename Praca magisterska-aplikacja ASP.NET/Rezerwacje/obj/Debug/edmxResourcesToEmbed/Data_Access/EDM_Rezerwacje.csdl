@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BazaRezerwacjeModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="BazaRezerwacjeEntiti" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Imprezies" EntityType="BazaRezerwacjeModel.Imprezy" />
+    <EntitySet Name="Kliencis" EntityType="BazaRezerwacjeModel.Klienci" />
+    <EntitySet Name="Koszyks" EntityType="BazaRezerwacjeModel.Koszyk" />
+    <EntitySet Name="sysdiagrams" EntityType="BazaRezerwacjeModel.sysdiagram" />
+    <AssociationSet Name="FK_Klienci_Imprezy" Association="BazaRezerwacjeModel.FK_Klienci_Imprezy">
+      <End Role="Imprezy" EntitySet="Imprezies" />
+      <End Role="Klienci" EntitySet="Kliencis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Koszyk_Imprezy" Association="BazaRezerwacjeModel.FK_Koszyk_Imprezy">
+      <End Role="Imprezy" EntitySet="Imprezies" />
+      <End Role="Koszyk" EntitySet="Koszyks" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Imprezy">
+    <Key>
+      <PropertyRef Name="idImprezy" />
+    </Key>
+    <Property Name="idImprezy" Type="Int32" Nullable="false" />
+    <Property Name="nazwa" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="data" Type="DateTime" />
+    <Property Name="miejsce" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="cenaPodstawowa" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="liczbaBiletów" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="obrazek" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="szczegoly" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Kliencis" Relationship="BazaRezerwacjeModel.FK_Klienci_Imprezy" FromRole="Imprezy" ToRole="Klienci" />
+    <NavigationProperty Name="Koszyks" Relationship="BazaRezerwacjeModel.FK_Koszyk_Imprezy" FromRole="Imprezy" ToRole="Koszyk" />
+  </EntityType>
+  <EntityType Name="Klienci">
+    <Key>
+      <PropertyRef Name="IdKlienta" />
+    </Key>
+    <Property Name="IdKlienta" Type="Guid" Nullable="false" />
+    <Property Name="wiek" Type="Int32" />
+    <Property Name="idImprezy" Type="Int32" />
+    <NavigationProperty Name="Imprezy" Relationship="BazaRezerwacjeModel.FK_Klienci_Imprezy" FromRole="Klienci" ToRole="Imprezy" />
+  </EntityType>
+  <EntityType Name="Koszyk">
+    <Key>
+      <PropertyRef Name="RekordID" />
+    </Key>
+    <Property Name="RekordID" Type="Int32" Nullable="false" />
+    <Property Name="KoszykID" Type="Int32" />
+    <Property Name="Ilosc" Type="Int32" />
+    <Property Name="ImprezaID" Type="Int32" />
+    <Property Name="DataUtworzenia" Type="DateTime" />
+    <NavigationProperty Name="Imprezy" Relationship="BazaRezerwacjeModel.FK_Koszyk_Imprezy" FromRole="Koszyk" ToRole="Imprezy" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Klienci_Imprezy">
+    <End Role="Imprezy" Type="BazaRezerwacjeModel.Imprezy" Multiplicity="0..1" />
+    <End Role="Klienci" Type="BazaRezerwacjeModel.Klienci" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Imprezy">
+        <PropertyRef Name="idImprezy" />
+      </Principal>
+      <Dependent Role="Klienci">
+        <PropertyRef Name="idImprezy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Koszyk_Imprezy">
+    <End Role="Imprezy" Type="BazaRezerwacjeModel.Imprezy" Multiplicity="0..1" />
+    <End Role="Koszyk" Type="BazaRezerwacjeModel.Koszyk" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Imprezy">
+        <PropertyRef Name="idImprezy" />
+      </Principal>
+      <Dependent Role="Koszyk">
+        <PropertyRef Name="Ilosc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

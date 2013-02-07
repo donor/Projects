@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InBidModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="InBidModelStoreContainer">
+    <EntitySet Name="Auctions" EntityType="InBidModel.Store.Auctions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Bidders" EntityType="InBidModel.Store.Bidders" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Offers" EntityType="InBidModel.Store.Offers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="View_Offers" EntityType="InBidModel.Store.View_Offers" store:Type="Views" store:Schema="dbo" store:Name="View_Offers">
+      <DefiningQuery>SELECT 
+      [View_Offers].[OfferId] AS [OfferId], 
+      [View_Offers].[CompanyName] AS [CompanyName], 
+      [View_Offers].[StartPrice] AS [StartPrice], 
+      [View_Offers].[CurrentPrice] AS [CurrentPrice]
+      FROM [dbo].[View_Offers] AS [View_Offers]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Offers_Auctions" Association="InBidModel.Store.FK_Offers_Auctions">
+      <End Role="Auctions" EntitySet="Auctions" />
+      <End Role="Offers" EntitySet="Offers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Offers_Bidders1" Association="InBidModel.Store.FK_Offers_Bidders1">
+      <End Role="Bidders" EntitySet="Bidders" />
+      <End Role="Offers" EntitySet="Offers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Auctions">
+    <Key>
+      <PropertyRef Name="AuctionId" />
+    </Key>
+    <Property Name="AuctionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AuctionName" Type="text" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="Bidders">
+    <Key>
+      <PropertyRef Name="BidderId" />
+    </Key>
+    <Property Name="BidderId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Offers">
+    <Key>
+      <PropertyRef Name="OfferId" />
+    </Key>
+    <Property Name="OfferId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="StartPrice" Type="money" Nullable="false" />
+    <Property Name="CurrentPrice" Type="money" Nullable="false" />
+    <Property Name="AuctionId" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'C:\USERS\ADMINISTRATOR\DESKTOP\TABELA\TABELA\APP_DATA\INBID.MDF.dbo.View_Offers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_Offers">
+    <Key>
+      <PropertyRef Name="OfferId" />
+      <PropertyRef Name="CompanyName" />
+      <PropertyRef Name="StartPrice" />
+      <PropertyRef Name="CurrentPrice" />
+    </Key>
+    <Property Name="OfferId" Type="int" Nullable="false" />
+    <Property Name="CompanyName" Type="text" Nullable="false" />
+    <Property Name="StartPrice" Type="money" Nullable="false" />
+    <Property Name="CurrentPrice" Type="money" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Offers_Auctions">
+    <End Role="Auctions" Type="InBidModel.Store.Auctions" Multiplicity="1" />
+    <End Role="Offers" Type="InBidModel.Store.Offers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Auctions">
+        <PropertyRef Name="AuctionId" />
+      </Principal>
+      <Dependent Role="Offers">
+        <PropertyRef Name="AuctionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Offers_Bidders1">
+    <End Role="Bidders" Type="InBidModel.Store.Bidders" Multiplicity="1" />
+    <End Role="Offers" Type="InBidModel.Store.Offers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Bidders">
+        <PropertyRef Name="BidderId" />
+      </Principal>
+      <Dependent Role="Offers">
+        <PropertyRef Name="OfferId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

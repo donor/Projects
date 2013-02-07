@@ -1,0 +1,576 @@
+﻿/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+#main {
+   overflow: hidden;
+	padding: 0 0 15px 10px;
+	float: left;
+/*	min-height:500px;*/
+	 
+
+}
+.page
+{
+    height: 100%;
+    margin: -7px 0 0;
+     margin-left: auto;
+    margin-right: auto;
+    padding: 0 0 5px;
+    width: 988px;
+    min-height:100%;
+  position:relative;
+}
+
+body
+{
+    background-color: #FFFFFF;
+    font-size: .85em;
+    font-family: "Trebuchet MS" , Verdana, Helvetica, Sans-Serif;
+   
+    width: 100%;
+    margin:0;
+         padding:0;
+         height:100%;
+
+     
+}
+
+.footer, #footer
+{
+   /* border-style: double none none none;
+    text-align: center;
+    background: #ECECE9;   
+    min-height: 50px; 
+    width: 100%;
+    z-index: 30;
+    border-top-width: thin;
+    padding-top: 15px;*/
+     position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;  /* Wysokość stopki */
+   text-align: center;
+    background: #ECECE9; 
+
+    
+}
+
+
+
+a:link {
+    color: #034af3;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #505abc;
+}
+
+a:hover {
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active {
+    color: #12eb87;
+}
+
+p, ul {
+  /*  margin-bottom: 20px;*/
+    /*line-height: 1.6em;*/
+}
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+
+/*.footer
+{
+ color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+
+}*/
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: #000;
+}
+
+h1 {
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    padding: 0 0 10px 0;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+/*.page {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+*/
+header, #header
+{
+    height: 120px;
+    margin: 30 0 0 0;
+    padding: 0;
+    width: 988px;
+  padding: 0;
+   position: relative;
+    /*width: 100%;*/
+   
+}
+
+header h1, #header h1 {
+    font-weight: bold;
+   /* padding: 5px 0;*/
+    margin: 0;
+    color: #fff;
+    border: none;
+    line-height: 2em;
+    font-size: 32px !important;
+   
+}
+
+
+
+
+
+
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+input[type="text"], 
+input[type="password"] {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+    width: 200px;
+}
+
+select {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+}
+
+input[type="submit"] {
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+
+
+
+
+
+.clear {
+    clear: both;
+}
+
+.error {
+    color: Red;
+}
+
+nav{
+    margin-top: 2px;
+}
+
+div#title {
+    display: block;
+    float: left;
+    text-align: left;
+}
+
+
+
+#logo
+{ 
+    border: 0 none;
+    left: 15px;
+    position: absolute;
+    top: 0;
+    z-index: 201;
+  /*  margin-left:25px;
+    float: left;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: normal;
+    color: #333333;*/
+}
+
+#logo a:link
+{
+    color: #464246;
+    text-decoration: none;
+    }
+
+#topmenu, #logindisplay,  #changePassword
+{
+     margin-top:4px;
+}
+#clock
+{ 
+  margin-left: 10px;    
+ float:right;   
+ text-align:right;
+}
+
+#topmenu
+{ 
+     margin-left: 10px;
+        float:right;
+    text-align: center;
+}
+
+   
+#topmenu a 
+{
+   /* text-decoration:none !important;*/
+}   
+
+
+   
+#topmenu img
+{   
+    border:none;
+   
+}
+ 
+
+
+#logindisplay , #changePassword
+{
+   float: right;
+     margin-left: 10px;
+ 
+}
+
+
+#logindisplay, #changePassword a:link, #topmenu a:link
+{
+    color: #464246;
+    text-decoration: underline;
+}
+
+#logindisplay, #changePassword a:visited, #topmenu a:visited, #logo a:visited {
+    color: #464246;
+    text-decoration: underline;
+}
+
+#logindisplay, #changePassword a:hover, #topmenu a:hover, #logo a:hover  {
+    color: #464246;
+    text-decoration: none;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #ff0000;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label, 
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.display-field, 
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+.text-box {
+    width: 30em;
+   
+}
+
+.text-box.multi-line {
+    height: 6.5em;
+}
+
+.tri-state {
+    width: 6em;
+}
+
+
+
+
+#pagination
+{
+ text-align:center;
+}
+
+
+
+
+
+.datewithoutsec
+{
+    color:green;
+}
+
+/*Auctions/Index.chtml*/
+.editRow
+{
+    word-spacing: normal;
+}
+
+/* przy dodawania wiersza to toffers zeby zrobic fade in*/
+
+.addRow
+{
+    background-color: #C0C0C0;
+}
+
+
+/*table auctions***********************************/
+table#tbauctions  {
+    border-collapse: collapse;   
+}
+#tbauctions tr
+{
+    background-color: #eee;
+    border-top: 1px solid #fff;
+    text-align: center;
+}
+#tbauctions tr:hover {
+    background-color: #ccc;
+}
+#tbauctions th {
+    background-color: #fff;
+}
+#tbauctions th, #tbauctions td {
+    padding: 3px 5px;
+}
+#tbauctions td:hover
+{
+  
+    cursor: pointer;
+}
+/**Menu*************************************************/
+        
+ul#menu {
+margin:   0 0 0 250px; padding: 0;
+
+float: left;
+width: 700px;
+list-style: none;
+position: relative;
+font-size: 1.2em;
+background: url(img/topnav_stretch.gif) repeat-x;
+}
+
+
+ul#menu li {
+float: left;
+margin: 0; padding: 0;
+/*border-right: 1px solid #555;*/
+}
+ul#menu li a {
+padding: 10px 15px;
+display: block;
+color: Black;
+text-decoration: none;
+}
+ul#menu li:hover { background: #1376c9 url(img/topnav_active.gif) repeat-x; }
+ul#menu li span
+{
+    float: left;
+    padding: 15px 0;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    display: none;
+    width: 737px;
+    background: #ECECE9;
+    color: #333333;
+    -moz-border-radius-bottomright: 5px;
+    -khtml-border-radius-bottomright: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -khtml-border-radius-bottomleft: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+}
+ul#menu li:hover span { display: block; }
+ul#menu li span a { display: inline; }
+ul#menu li span a:hover {text-decoration: underline;} 
+
+
+
+
+
+
+/*CreateClothes****************/
+.list-rows
+{
+ clear:both;
+ width:750px; 
+ 
+}
+
+
+.list-rows .longer-drops {
+    clear: none;
+    float: left;
+    width: 800px;
+}
+
+.list-label
+{
+    border-bottom: 1px solid #BFBFC1;
+    line-height:35px;
+ float:left;
+ height:35px;
+ text-align:right;   
+ width:195px;
+ clear: both;
+/* margin: 0 15px 0 0;   */
+}
+
+.selectwrap, .radiowrap, .checkboxwrap
+{
+    clear:none;
+    float:left;
+    width:180px;
+    height:55px;
+}
+
+.fieldwrap
+{
+    /*width:250px;
+    /*clear:both;*/
+}
+
+.list-rows .selectwrap select, input
+  {
+    margin:  8px 0 0 10px;
+}
+
+.longer-drops .disclaimer {
+    color: #5B7381;
+    font-size: 11px;
+    font-style: italic;
+    line-height: 30px;
+}
+
+.list-rows p.step
+{
+    /* background: url("../Content/images/step-line.gif") repeat-x scroll left top #FFFFFF;*/
+     border-top: 2px solid #BFBFC1;
+    clear: both;
+    color: #B0C1CC;
+    font-weight: bold;
+    height: 10px;
+    margin: 0;
+    padding: 8px 0;
+    text-transform: uppercase;
+}
+
+.modal, .dresm .modal {
+    background: none repeat scroll 0 0 rgba(100, 100, 100, 0.5);
+    border-radius: 6px 6px 6px 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 100000;
+}
+.modal div {
+    background: url("../Content/imagesbg//login_popup.jpg") repeat-x scroll left top #FFFFFF;
+    border-radius: 4px 4px 4px 4px;
+    overflow: hidden;
+    padding: 15px;
+    z-index: 5;
+}
+.modal div div {
+    background: none repeat scroll 0 0 transparent;
+    padding: 0;
+}
+.modal div p {
+    font-size: 12px;
+    line-height: 20px;
+    margin: 10px 0;
+}
+.modal .m-close {
+    background: url("../images/buttons/modal-close.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 56px;
+    left: -28px;
+    position: absolute;
+    top: -28px;
+    width: 56px;
+    z-index: 10000;
+}
+.modal .m-close span {
+    display: none;
+}
+
+
+/****************/

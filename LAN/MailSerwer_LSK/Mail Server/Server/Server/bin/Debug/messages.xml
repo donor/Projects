@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfWiadomosc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Wiadomosc>
+    <adresat>jeden@poczta</adresat>
+    <odbiorca>dwa@poczta</odbiorca>
+    <temat>Temat</temat>
+    <tresc>Tresc listu</tresc>
+    <data>2010-12-20T18:28:46.155204+01:00</data>
+  </Wiadomosc>
+  <Wiadomosc>
+    <adresat>dwa@poczta</adresat>
+    <odbiorca>jeden@poczta</odbiorca>
+    <temat>List</temat>
+    <tresc>Tresc wiaomosci</tresc>
+    <data>2010-12-20T18:50:26.155204+01:00</data>
+  </Wiadomosc>
+  <Wiadomosc>
+    <adresat>jeden@poczta</adresat>
+    <odbiorca>dwa@poczta</odbiorca>
+    <temat> temat wiadomosci</temat>
+    <tresc>Tresc wiadomosci</tresc>
+    <data>2010-12-21T11:12:59.525632+01:00</data>
+  </Wiadomosc>
+</ArrayOfWiadomosc>

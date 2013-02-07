@@ -1,0 +1,26 @@
+﻿@model Inbid.Models.RegistrationBidderOrBidderViewModel
+
+@{
+    ViewBag.Title = "EditBidderOrBidderView";
+}
+ 
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<link href="@Url.Content("~/Content/Account.css")" rel="stylesheet" type="text/css" />
+
+<h2>Edit Bidder Or BidderView</h2>
+
+<p>
+    Passwords are required to be a minimum of 6 characters in length.
+</p>
+
+ @using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Edycja danych nieprawidøowa. Popraw wprowadzone dane.")
+    @Html.Partial("_RegisterBidderOrBidderView")
+    
+     <p>
+        <input type="submit" value="Zapisz" />
+     </p>   
+}
+

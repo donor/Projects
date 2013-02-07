@@ -1,0 +1,139 @@
+﻿@model Inbid.Models.Auction
+@using Resources;
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Auction</legend>
+    
+     <p>
+    <strong>@Html.LabelFor(model => model.Name):</strong>
+    <span>
+        @Html.DisplayFor(model => model.Name)
+    </span>
+    </p>
+
+      <p>
+    <strong>@Html.LabelFor(model => model.Description):</strong>
+    <span>
+        @Html.DisplayFor(model => model.Description)
+    </span>
+    </p>
+
+    <p>
+    <strong>@Html.LabelFor(model => model.Name):</strong>
+    <span>
+        @Html.DisplayFor(model => model.StartPrice)
+    </span>
+    </p>
+
+    <p>
+    <strong>@Html.LabelFor(model => model.CurrentPrice):</strong>
+    <span>
+        @Html.DisplayFor(model => model.CurrentPrice)
+    </span>
+    </p>
+
+    <p>
+    <strong>@Html.LabelFor(model => model.Direction):</strong>
+    <span>
+        @if (Model.Direction==true)
+        {
+            @Resources.Reverse
+        }
+        else if (false==Model.Direction)
+        {
+            @Resources.Forward
+            }
+    </span>
+    </p>
+
+    <p>
+    <strong>@Html.LabelFor(model => model.Currency):</strong>
+    <span>
+        @Html.DisplayFor(model => model.Currency)
+    </span>
+    </p>
+       
+    <p>
+    <strong>@Html.LabelFor(model => model.StartTime):</strong>
+    <span>
+        @Html.DisplayFor(model => model.StartTime)
+    </span>
+    </p>
+
+    <p>
+    <strong>@Html.LabelFor(model => model.EndTime):</strong>
+    <span>
+        @Html.DisplayFor(model => model.EndTime)
+    </span>
+    </p>
+
+    <p>
+    <strong>Status:</strong>
+    <span>
+            @if (@Model.StartTime>System.DateTime.Now)
+            {
+                @:Nie rozpoczęta
+            }
+            else if (@Model.EndTime < System.DateTime.Now)
+            {
+                @:Zakończona   
+            }
+            else if ((@Model.EnableDisable == true) && (@Model.StartTime < System.DateTime.Now) && (@Model.EndTime > System.DateTime.Now))
+            {
+                @:Trwa
+            }
+            else if ((@Model.EnableDisable == false) && (@Model.StartTime < System.DateTime.Now) && (@Model.EndTime > System.DateTime.Now))
+            {
+                @:Zawieszona             
+            }
+         
+     </span>
+     </p>
+
+      @if (Roles.IsUserInRole(User.Identity.Name, @"SuperAdmin"))
+      {
+        <p>
+        <strong>@Resources.UserN</strong>
+        <span>
+            @Model.GetUserName()
+        </span>
+        </p>
+      }
+      
+    <p>
+    <strong>@Html.LabelFor(model => model.MinJump):</strong>
+    <span>
+        @Html.DisplayFor(model => model.MinJump)
+    </span>
+    </p>
+
+    <p>
+    <strong>@Html.LabelFor(model => model.ViewTopOffer):</strong>
+    <span>
+           @if (Model.EnableDisable==true)
+        {
+            @Resources.Yes
+        }
+        else if (false==Model.EnableDisable)
+        {
+            @Resources.No
+            }
+    </span>
+    </p>
+
+    @*<div class="display-label">NextAuction</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NextAuction)
+    </div>*@
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.AuctionId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,35 @@
+|rejestr
+Wej[0] => Wyj[0].DATAIN
+Wej[1] => Wyj[1].DATAIN
+Wej[2] => Wyj[2].DATAIN
+Wej[3] => Wyj[3].DATAIN
+Wej[4] => Wyj[4].DATAIN
+Wej[5] => Wyj[5].DATAIN
+Wej[6] => Wyj[6].DATAIN
+Wej[7] => Wyj[7].DATAIN
+Wej[8] => Wyj[8].DATAIN
+Wej[9] => Wyj[9].DATAIN
+Wej[10] => Wyj[10].DATAIN
+Wej[11] => Wyj[11].DATAIN
+Wej[12] => Wyj[12].DATAIN
+Wej[13] => Wyj[13].DATAIN
+Wej[14] => Wyj[14].DATAIN
+Wej[15] => Wyj[15].DATAIN
+Wyj[0] <= Wej[0].DB_MAX_OUTPUT_PORT_TYPE
+Wyj[1] <= Wej[1].DB_MAX_OUTPUT_PORT_TYPE
+Wyj[2] <= Wej[2].DB_MAX_OUTPUT_PORT_TYPE
+Wyj[3] <= Wej[3].DB_MAX_OUTPUT_PORT_TYPE
+Wyj[4] <= Wej[4].DB_MAX_OUTPUT_PORT_TYPE
+Wyj[5] <= Wej[5].DB_MAX_OUTPUT_PORT_TYPE
+Wyj[6] <= Wej[6].DB_MAX_OUTPUT_PORT_TYPE
+Wyj[7] <= Wej[7].DB_MAX_OUTPUT_PORT_TYPE
+Wyj[8] <= Wej[8].DB_MAX_OUTPUT_PORT_TYPE
+Wyj[9] <= Wej[9].DB_MAX_OUTPUT_PORT_TYPE
+Wyj[10] <= Wej[10].DB_MAX_OUTPUT_PORT_TYPE
+Wyj[11] <= Wej[11].DB_MAX_OUTPUT_PORT_TYPE
+Wyj[12] <= Wej[12].DB_MAX_OUTPUT_PORT_TYPE
+Wyj[13] <= Wej[13].DB_MAX_OUTPUT_PORT_TYPE
+Wyj[14] <= Wej[14].DB_MAX_OUTPUT_PORT_TYPE
+Wyj[15] <= Wej[15].DB_MAX_OUTPUT_PORT_TYPE
+
+

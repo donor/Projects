@@ -1,0 +1,61 @@
+    ======  ======
+    Time:2012-02-09 21:57:34
+    Title: Initiate log
+    Message: 
+    Time:2012-02-09 21:57:34
+    Title: Initiate InternalManager
+    Message: Trying to Validate License
+    Time:2012-02-09 21:57:34
+    Title: Requesting EVT
+    Message: EVTP
+    Time:2012-02-09 21:57:34
+    Title: Requesting Validation
+    Message: ILMValidate
+    Time:2012-02-09 21:57:34
+    Title: ILMValidate action
+    Message: Set PC
+    Time:2012-02-09 21:57:34
+    Title: ILMValidate action
+    Message: Check for VL
+    Time:2012-02-09 21:57:35
+    Title: LICENSER
+    Message: TRL MODE
+    Time:2012-02-09 21:57:35
+    Title: LICENSER
+    Message: DS LEFT-71
+    Time:2012-02-09 21:57:35
+    Title: LICENSER
+    Message: DT MARK PASSED-71.00:00:00
+    Time:2012-02-09 21:57:35
+    Title: ILMValidate action
+    Message: ITM TRUE
+    Time:2012-02-09 21:57:35
+    Title: MLW action
+    Message: MLW  CNSTR: True
+    Time:2012-02-09 21:57:35
+    Title: MLW action
+    Message: MLW  IC SUCCESS
+    Time:2012-02-09 21:57:35
+    Title: MLW action
+    Message: MLW LITS REQ
+    Time:2012-02-09 21:57:37
+    Title: LICENSER - TGO
+    Message: Start
+    Time:2012-02-09 21:57:38
+    Title: MLW action
+    Message: MLW LITS REQ SUCCESS
+    Time:2012-02-09 21:57:38
+    Title: ILMValidate action
+    Message: ITM SHD
+    Time:2012-02-09 21:57:39
+    Title: MLW action
+    Message: MLW  ONOP REQ
+    Time:2012-02-09 21:57:42
+    Title: MLW action
+    Message: MLW CANCEL REQ
+    Time:2012-02-09 21:57:42
+    Title: ILMValidate action
+    Message: AF-DR NULL
+    Time:2012-02-09 21:57:42
+    Title: ILM action
+    Message: SHUT DOWN QA

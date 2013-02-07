@@ -1,0 +1,112 @@
+﻿
+
+@model Inbid.ViewModels.CompanyViewModel
+ @using Resources
+
+ <div id="auctionSource"> 
+<a class="source-closed"  href="#">Aukcje Firmy</a>
+ 
+ <div id="auctionDiv" style="display:none;">
+ <p>
+ @Html.ActionLink("Add Auction", "Create","Auction", new { companyAdmin = Request.QueryString["companyAdmin"] },null)
+</p>
+
+@if (Model.Auctions.Count() > 0)
+{
+<table id="tbauctions" class="auctions">
+    <thead>
+    <tr>
+    <th colspan="6">
+        Aukcje Firmy
+    </th>
+    </tr>
+    <tr>
+        <th>
+            ID
+        </th>
+      <th>
+            Nazwa
+        </th>
+         <th>
+            Początek aukcji
+        </th>   
+        <th>
+           Status
+        </th>
+         <th>
+            Koniec aukcji
+        </th>
+        <th>
+         
+        </th>     
+    </tr>
+    </thead>
+@foreach (var item in Model.Auctions)
+{
+    
+    <tr id="@item.AuctionId">
+    
+        <td >
+            @Html.DisplayFor(m => item.AuctionNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(m => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(m => item.StartTime, "DateWithoutSec")
+        </td>
+       
+        <td>
+            @if (item.StartTime > System.DateTime.Now)
+            {
+                @:Nie rozpoczęta
+            }
+            else if (item.EndTime < System.DateTime.Now)
+            {
+                @:Zakończona   
+            }
+            else if ((item.EnableDisable == true) && (item.StartTime < System.DateTime.Now) && (item.EndTime > System.DateTime.Now))
+            {
+                @:Trwa
+            }
+            else if ((item.EnableDisable == false) && (item.StartTime < System.DateTime.Now) && (item.EndTime > System.DateTime.Now))
+            {
+                @:Zawieszona             
+            }
+         
+        </td>
+         <td>
+            @Html.DisplayFor(m => item.EndTime, "DateWithoutSec")
+        </td>
+        
+          
+
+        
+        
+        <td class="editRow">
+            @if ((Request.IsAuthenticated) && (Roles.IsUserInRole(User.Identity.Name, @"SuperAdmin") || item.IsHostedBy()))
+            {
+                @Html.ActionLink("Edit", "Edit","Auction", new { id = item.AuctionId },null)@:
+           
+                @Html.ActionLink("Details", "_Details", "Auction", new { id = item.AuctionId }, new { @class = "openDialog", data_dialog_title = "Details" })@:
+
+                
+                @Html.ActionLink(Resources.Delete, "Delete","Auction", new { id = item.AuctionId },null)
+            }
+        </td>
+      
+    </tr>
+
+    }
+</table>
+
+    
+@*@Html.Partial("_AuctionPagination")*@
+}
+else
+{
+<p class="empty">Firma nie ma aukcji</p>
+}
+</div>
+
+</div>
