@@ -1,1 +1,17 @@
- Repozytorium zawierajace moje projekty od czasów studiów. 
+Repozytorium zawierajace moje projekty od czasów studiów. 
+Wiekszosc projektó zostala zrobiona Visual Studio 2010 Express.
+Projekty w katalogach ASP.NET MVC I ASP.NET sa aplikacjami webowymi
+ Aplikacja Inbid w katalogu ASP.NET MVC jest dostepna pod adresem inbid.apphb.com.Jest to applikacja do organizowania
+przetargów za porednictwem internetu. 
+ Aplikacja Browser w katalogu ASP.NET MVC jest dostepna pod adresem browser.apphb.com. Jest to aplikacja do przegladania
+katalogów oraz zawartosci plików.
+ Kolejna aplikacja UsedClosed pozwala na wystawianie na sprzedaż ubrań oraz ich kupno.
+ Aplikacja Rezerwacie w katalogu PracaMagisterska-ASP.NET jest aplikacja ktora napisalem w zwiazku z praca magistersko 
+pt."Internetowa aplikacja dla rejestracji uzytkownikow imprez". Aplikacja ta slużu do rezerwowaniu biletów na imperezy 
+tworzone przez administratora.
+W innych katalogach znajduja sie aplikacje okienkowe i konsolowe napisane w .NET oraz projekty w innych technologiach.
+(Przepraszam za brak polskich znakow- pisane z poziomu gitHub)
+
+
+
+
